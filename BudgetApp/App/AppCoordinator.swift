@@ -23,11 +23,27 @@ final class AppCoordinator: Coordinator{
     }
     
     func start() {
+        openLoginScene()
         window.makeKeyAndVisible()
     }
     
     func finish() {
 
+    }
+    func openLoginScene(){
+        let loginCoordinator = LoginCoordinator(rootNavigationController: rootNavigationController, rootCoordinator: self)
+        childCoordinators.append(loginCoordinator)
+        loginCoordinator.start()
+    }
+    
+}
+
+
+extension AppCoordinator: LoginRootCoordinatorController{
+    func finishedLogging(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
     }
     
     

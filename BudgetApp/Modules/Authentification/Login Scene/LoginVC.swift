@@ -31,7 +31,6 @@ final class LoginVC: UIViewController{
     @IBAction private func buttonLoginDidTap(){
         print("Login did tap in LoginVC")
         viewModel.login()
-        
     }
     @IBAction private func buttonRegisterDidTap(){
         print("Register did tap in LoginVC")

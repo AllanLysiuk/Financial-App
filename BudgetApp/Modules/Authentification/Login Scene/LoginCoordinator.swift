@@ -38,7 +38,9 @@ extension LoginCoordinator: LoginCoordinatorProtocol{
     }
     
     func openForgotPasswordScene() {
-        
+        let coordinator = ForgotPasswordCoordinator(parentNavigationController: rootNavigationController, parentCoordinator: self)
+        childCoordinators.append(coordinator)
+        coordinator.start()
     }
     
     
@@ -50,6 +52,11 @@ extension LoginCoordinator: RegisterRootCoordinatorProtocol{
             tmp === coordinator
         }
     }
-    
-    
+}
+extension LoginCoordinator: ForgotPasswordRootCoordinatorProtocol{
+    func changePasswordFinished(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
+    }
 }

@@ -9,7 +9,7 @@ import Foundation
 final class RegisterVM: RegisterViewModelProtocol{
     
     private var authService: RegisterAuthServiceProtocol
-    private var coordinator: RegisterCoordinatorProtocol
+    private weak var coordinator: RegisterCoordinatorProtocol?
     
     init (authService: RegisterAuthServiceProtocol, coordinator: RegisterCoordinatorProtocol){
         self.authService = authService
@@ -18,8 +18,11 @@ final class RegisterVM: RegisterViewModelProtocol{
     
     func register() {
         authService.register()
-        coordinator.finish()
+        coordinator?.finish(shouldMoveToParent: true)
     }
     
+    func finish(shouldMoveToParent: Bool) {
+        coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
+    }
     
 }

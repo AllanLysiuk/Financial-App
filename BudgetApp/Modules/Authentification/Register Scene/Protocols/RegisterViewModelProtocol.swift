@@ -8,5 +8,6 @@
 import Foundation
 
 protocol RegisterViewModelProtocol{
+    func finish(shouldMoveToParent: Bool)
     func register()
 }

@@ -6,7 +6,7 @@
 //
 
 import Foundation
-protocol LoginCoordinatorProtocol{
+protocol LoginCoordinatorProtocol: AnyObject{
     
     func openRegisterScene()
     func openForgotPasswordScene()

@@ -9,4 +9,5 @@ import Foundation
 
 protocol ForgotPasswordViewModelProtocol{
     func changePassword()
+    func finish(shouldMoveToParent: Bool)
 }

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ForgotPasswordCoordinatorProtocol{
-    func finish()
+protocol ForgotPasswordCoordinatorProtocol: AnyObject{
+    func finish(shouldMoveToParent: Bool)
 }

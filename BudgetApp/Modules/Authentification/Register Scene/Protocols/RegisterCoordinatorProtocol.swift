@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol RegisterCoordinatorProtocol{
-    func finish()
+protocol RegisterCoordinatorProtocol: AnyObject{
+    func finish(shouldMoveToParent: Bool)
 }

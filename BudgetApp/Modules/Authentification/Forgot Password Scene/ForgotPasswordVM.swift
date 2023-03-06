@@ -9,8 +9,8 @@ import Foundation
 final class ForgotPasswordVM: ForgotPasswordViewModelProtocol{
     
     private let authService: ForgotPasswordAuthServiceProtocol
-    private let coordinator: ForgotPasswordCoordinatorProtocol
-    
+    private weak var coordinator: ForgotPasswordCoordinatorProtocol?
+
     init (authService: ForgotPasswordAuthServiceProtocol, coordinator: ForgotPasswordCoordinatorProtocol){
         self.authService = authService
         self.coordinator = coordinator
@@ -18,7 +18,11 @@ final class ForgotPasswordVM: ForgotPasswordViewModelProtocol{
     
     func changePassword() {
         authService.forgotPassword()
-        coordinator.finish()
+        coordinator?.finish(shouldMoveToParent: true)
+    }
+    
+    func finish(shouldMoveToParent: Bool){
+        coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
     }
     
 }

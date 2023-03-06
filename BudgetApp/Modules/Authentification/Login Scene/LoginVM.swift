@@ -10,7 +10,7 @@ import Foundation
 final class LoginVM: LoginViewModelProtocol{
     
     private var authService: LoginAuthServiceProtocol
-    private var coordinator: LoginCoordinatorProtocol
+    private weak var coordinator: LoginCoordinatorProtocol?
     
     init(authService: LoginAuthServiceProtocol, coordinator: LoginCoordinatorProtocol){
         self.authService = authService
@@ -20,17 +20,17 @@ final class LoginVM: LoginViewModelProtocol{
     func login() {
         print("Login did tap in LoginVM")
         authService.login()
-        coordinator.finish()
+        coordinator?.finish()
     }
     
     func openRegisterScene() {
         print("Register did tap in LoginVC")
-        coordinator.openRegisterScene()
+        coordinator?.openRegisterScene()
     }
     
     func openForgotPasswordScene() {
         print("Forgot password did tap in LoginVC")
-        coordinator.openForgotPasswordScene()
+        coordinator?.openForgotPasswordScene()
     }
     
     

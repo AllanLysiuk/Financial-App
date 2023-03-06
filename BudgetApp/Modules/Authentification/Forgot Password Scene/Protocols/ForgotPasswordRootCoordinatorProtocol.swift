@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ForgotPasswordRootCoordinatorProtocol{
+protocol ForgotPasswordRootCoordinatorProtocol: AnyObject{
     func changePasswordFinished(_ coordinator: Coordinator)
 }

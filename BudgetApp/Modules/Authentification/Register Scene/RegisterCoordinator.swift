@@ -25,11 +25,19 @@ final class RegisterCoordinator: Coordinator{
     }
     
     func finish() {
-        parentNavigationController.popViewController(animated: true)
         rootCoordinator.registerFinished(self)
     }
     
     
 }
 
-extension RegisterCoordinator: RegisterCoordinatorProtocol{}
+extension RegisterCoordinator: RegisterCoordinatorProtocol{
+    
+    func finish(shouldMoveToParent: Bool) {
+        if shouldMoveToParent {
+            parentNavigationController.popViewController(animated: true)
+        }
+        finish()
+    }
+    
+}

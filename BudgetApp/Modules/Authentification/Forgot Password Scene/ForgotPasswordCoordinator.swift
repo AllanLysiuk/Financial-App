@@ -25,11 +25,18 @@ final class ForgotPasswordCoordinator: Coordinator{
     }
     
     func finish() {
-        parentNavigationController.popViewController(animated: true)
         parentCoordinator.changePasswordFinished(self)
     }
     
-    
 }
 
-extension ForgotPasswordCoordinator: ForgotPasswordCoordinatorProtocol{ }
+extension ForgotPasswordCoordinator: ForgotPasswordCoordinatorProtocol{
+    
+    func finish(shouldMoveToParent: Bool) {
+        if shouldMoveToParent {
+            parentNavigationController.popViewController(animated: true)
+        }
+        finish()
+    }
+    
+}

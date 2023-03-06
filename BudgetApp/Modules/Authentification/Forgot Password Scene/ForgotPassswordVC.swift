@@ -28,7 +28,13 @@ final class ForgotPasswordVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    override func willMove(toParent parent: UIViewController?) {
+            super.willMove(toParent: parent)
+            if parent == nil
+            {
+                viewModel.finish(shouldMoveToParent: false)
+            }
+    }
     @IBAction private func changePasswordDidTap(){
         viewModel.changePassword()
     }

@@ -11,16 +11,19 @@ final class RegisterAssembler{
     private init() { }
     
     static func makeRegisterVC(coordinator: RegisterCoordinatorProtocol) -> UIViewController{
-        let authService = makeAuthService()
-        let registerVC = RegisterVC(viewModel: makeRegisterViewModel(authService: authService, coordinator: coordinator))
+        let registerVC = RegisterVC(viewModel: makeRegisterViewModel(coordinator: coordinator))
         return registerVC
     }
     
-    private static func makeRegisterViewModel(authService: RegisterAuthServiceProtocol, coordinator: RegisterCoordinatorProtocol) -> RegisterViewModelProtocol{
-        return RegisterVM(authService: authService, coordinator: coordinator)
+    private static func makeRegisterViewModel(coordinator: RegisterCoordinatorProtocol) -> RegisterViewModelProtocol{
+        return RegisterVM(authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory())
     }
     
     private static func makeAuthService() -> RegisterAuthServiceProtocol{
         return AuthService()
+    }
+    
+    private static func makeAlertFactory() -> AlertControllerFactoryProtocol{
+        return AlertControllerFactory()
     }
 }

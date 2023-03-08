@@ -32,6 +32,10 @@ final class ForgotPasswordCoordinator: Coordinator{
 
 extension ForgotPasswordCoordinator: ForgotPasswordCoordinatorProtocol{
     
+    func presentAlert(_ alert: UIViewController) {
+        parentNavigationController.present(alert, animated: true)
+    }
+    
     func finish(shouldMoveToParent: Bool) {
         if shouldMoveToParent {
             parentNavigationController.popViewController(animated: true)

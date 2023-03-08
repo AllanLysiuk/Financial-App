@@ -10,15 +10,24 @@ final class ForgotPasswordVM: ForgotPasswordViewModelProtocol{
     
     private let authService: ForgotPasswordAuthServiceProtocol
     private weak var coordinator: ForgotPasswordCoordinatorProtocol?
+    private let alertFactory: AlertControllerFactoryProtocol
 
-    init (authService: ForgotPasswordAuthServiceProtocol, coordinator: ForgotPasswordCoordinatorProtocol){
+    init (authService: ForgotPasswordAuthServiceProtocol, coordinator: ForgotPasswordCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
         self.authService = authService
         self.coordinator = coordinator
+        self.alertFactory = alertFactory
     }
     
     func changePassword() {
         authService.forgotPassword()
-        coordinator?.finish(shouldMoveToParent: true)
+        openAlert()
+    }
+    
+    private func openAlert(){
+        let alert = alertFactory.makeActionSheet(title: "Success", message: "You've changed password", actions: [.default("Ok", {
+            self.finish(shouldMoveToParent: true)
+        })])
+        coordinator?.presentAlert(alert)
     }
     
     func finish(shouldMoveToParent: Bool){

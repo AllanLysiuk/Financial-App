@@ -6,8 +6,9 @@
 //
 
 import Foundation
+import UIKit
 protocol LoginCoordinatorProtocol: AnyObject{
-    
+    func presentAlert(_ alert: UIViewController)
     func openRegisterScene()
     func openForgotPasswordScene()
     func finish()

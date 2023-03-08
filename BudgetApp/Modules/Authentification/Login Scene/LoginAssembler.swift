@@ -12,16 +12,19 @@ final class LoginAssembler{
     private init(){ }
     
     static func makeLoginVC(coordinator: LoginCoordinatorProtocol) -> UIViewController{
-        let authService = makeAuthService()
-        let vc = LoginVC(viewModel: makeViewModel(authService: authService, coordinator: coordinator))
+        let vc = LoginVC(viewModel: makeViewModel(coordinator: coordinator))
         return vc
     }
     
-    private static func makeViewModel(authService: LoginAuthServiceProtocol, coordinator: LoginCoordinatorProtocol) -> LoginViewModelProtocol{
-        return LoginVM(authService: authService, coordinator: coordinator)
+    private static func makeViewModel( coordinator: LoginCoordinatorProtocol) -> LoginViewModelProtocol{
+        return LoginVM(authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory())
     }
     
     private static func makeAuthService() -> LoginAuthServiceProtocol{
         return AuthService()
+    }
+    
+    private static func makeAlertFactory() -> AlertControllerFactoryProtocol {
+        return AlertControllerFactory()
     }
 }

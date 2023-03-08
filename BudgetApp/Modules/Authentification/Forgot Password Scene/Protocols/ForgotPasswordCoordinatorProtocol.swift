@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol ForgotPasswordCoordinatorProtocol: AnyObject{
+    func presentAlert(_ alert: UIViewController)
     func finish(shouldMoveToParent: Bool)
 }

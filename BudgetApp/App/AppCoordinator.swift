@@ -9,31 +9,32 @@ import Foundation
 import UIKit
 
 final class AppCoordinator: Coordinator{
-    private var window: UIWindow
+    private var windowScene: UIWindowScene
+    private var window: UIWindow?
     var childCoordinators: [Coordinator] = []
     
-    private lazy var rootNavigationController: UINavigationController = {
-        let nc = UINavigationController()
-        window.rootViewController = nc
-        return nc
-    }()
-    
-    init (window: UIWindow){
-        self.window = window
+    init (windowScene: UIWindowScene){
+        self.windowScene = windowScene
     }
     
     func start() {
         openLoginScene()
-        window.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
     }
     
     func finish() {
 
     }
     func openLoginScene(){
-        let loginCoordinator = LoginCoordinator(rootNavigationController: rootNavigationController, rootCoordinator: self)
+        let loginWindow = UIWindow(windowScene: windowScene)
+        let nc = UINavigationController()
+        loginWindow.rootViewController = nc
+        
+        let loginCoordinator = LoginCoordinator(rootNavigationController: nc, rootCoordinator: self)
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start()
+        
+        window = loginWindow
     }
     
 }

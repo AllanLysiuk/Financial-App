@@ -32,6 +32,9 @@ final class RegisterCoordinator: Coordinator{
 }
 
 extension RegisterCoordinator: RegisterCoordinatorProtocol{
+    func presentAlert(_ alert: UIViewController) {
+        parentNavigationController.present(alert, animated: true)
+    }
     
     func finish(shouldMoveToParent: Bool) {
         if shouldMoveToParent {

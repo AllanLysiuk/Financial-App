@@ -20,7 +20,11 @@ final class ForgotPasswordCoordinator: Coordinator{
     }
     
     func start() {
-        let vc = ForgotPasswordAssembler.makeForgotPasswordVC(coordinator: self)
+        assert(false, "Should be open with login, please use start(login:)")
+    }
+    
+    func start(delegate: ForgotPasswordViewModelDelegate?, email: String?) {
+        let vc = ForgotPasswordAssembler.makeForgotPasswordVC(delegate: delegate, coordinator: self, email: email ?? "")
         parentNavigationController.pushViewController(vc, animated: true)
     }
     

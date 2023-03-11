@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginVC" customModule="BudgetApp" customModuleProvider="target">
             <connections>
-                <outlet property="loginTextField" destination="Fe3-sl-SkX" id="8rF-N1-d4D"/>
+                <outlet property="emailTextField" destination="Fe3-sl-SkX" id="t5z-fM-wZJ"/>
                 <outlet property="passwordTextField" destination="Sa7-yV-S4T" id="AKP-68-4A0"/>
                 <outlet property="view" destination="iN0-l3-epB" id="AzM-fp-AjV"/>
             </connections>

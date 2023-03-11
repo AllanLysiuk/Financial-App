@@ -10,13 +10,13 @@ import UIKit
 final class RegisterAssembler{
     private init() { }
     
-    static func makeRegisterVC(coordinator: RegisterCoordinatorProtocol) -> UIViewController{
-        let registerVC = RegisterVC(viewModel: makeRegisterViewModel(coordinator: coordinator))
+    static func makeRegisterVC(delegate: RegisterViewModelDelegate, coordinator: RegisterCoordinatorProtocol, email: String?) -> UIViewController{
+        let registerVC = RegisterVC(viewModel: makeRegisterViewModel(delegate: delegate, coordinator: coordinator), email: email ?? "")
         return registerVC
     }
     
-    private static func makeRegisterViewModel(coordinator: RegisterCoordinatorProtocol) -> RegisterViewModelProtocol{
-        return RegisterVM(authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory())
+    private static func makeRegisterViewModel(delegate: RegisterViewModelDelegate,coordinator: RegisterCoordinatorProtocol) -> RegisterViewModelProtocol{
+        return RegisterVM(delegate: delegate, authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory())
     }
     
     private static func makeAuthService() -> RegisterAuthServiceProtocol{

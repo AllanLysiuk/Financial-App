@@ -6,20 +6,29 @@
 //
 
 import Foundation
+
+protocol ForgotPasswordViewModelDelegate: AnyObject {
+    func changePasswordFinished(with email: String)
+}
+
 final class ForgotPasswordVM: ForgotPasswordViewModelProtocol{
     
     private let authService: ForgotPasswordAuthServiceProtocol
     private weak var coordinator: ForgotPasswordCoordinatorProtocol?
     private let alertFactory: AlertControllerFactoryProtocol
 
-    init (authService: ForgotPasswordAuthServiceProtocol, coordinator: ForgotPasswordCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
+    private weak var delegate: ForgotPasswordViewModelDelegate?
+    
+    init (delegate: ForgotPasswordViewModelDelegate?,authService: ForgotPasswordAuthServiceProtocol, coordinator: ForgotPasswordCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
         self.authService = authService
         self.coordinator = coordinator
         self.alertFactory = alertFactory
+        self.delegate = delegate
     }
     
-    func changePassword() {
+    func changePassword(email: String?) {
         authService.forgotPassword()
+        delegate?.changePasswordFinished(with: email ?? "")
         openAlert()
     }
     

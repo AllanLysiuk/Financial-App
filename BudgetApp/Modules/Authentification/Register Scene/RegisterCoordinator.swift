@@ -19,8 +19,12 @@ final class RegisterCoordinator: Coordinator{
         self.parentNavigationController = parentNavigationController
     }
     
-    func start() {
-        let registerVC = RegisterAssembler.makeRegisterVC(coordinator: self)
+    func start(){
+        assert(false, "Should be open with login, please use start(login:)")
+    }
+    
+    func start(delegate: RegisterViewModelDelegate, email: String?) {
+        let registerVC = RegisterAssembler.makeRegisterVC(delegate: delegate, coordinator: self, email: email)
         parentNavigationController.pushViewController(registerVC, animated: true)
     }
     

@@ -17,6 +17,6 @@ extension AlertControllerFactoryProtocol{
         self.makeAlert(title: title, message: message, actions: actions)
     }
     func makeActionSheet(title: String? = nil, message: String? = nil, actions: [AlertControllerFactory.AlertAction]) -> UIAlertController {
-        self.makeAlert(title: title, message: message, actions: actions)
+        self.makeActionSheet(title: title, message: message, actions: actions)
     }
 }

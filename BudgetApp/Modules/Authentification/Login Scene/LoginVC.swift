@@ -10,7 +10,7 @@ import UIKit
 
 final class LoginVC: UIViewController{
     
-    @IBOutlet private weak var loginTextField: UITextField!
+    @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     
     private var viewModel: LoginViewModelProtocol
@@ -18,6 +18,7 @@ final class LoginVC: UIViewController{
     init (viewModel: LoginViewModelProtocol){
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        self.viewModel.delegate = self
     }
     
     required init?(coder: NSCoder) {
@@ -34,12 +35,18 @@ final class LoginVC: UIViewController{
     }
     @IBAction private func buttonRegisterDidTap(){
         print("Register did tap in LoginVC")
-        viewModel.openRegisterScene()
+        viewModel.openRegisterScene(with: emailTextField.text)
         
     }
     @IBAction private func buttonForgotPasswordDidTap(){
         print("Forgot password did tap in LoginVC")
-        viewModel.openForgotPasswordScene()
+        viewModel.openForgotPasswordScene(with: emailTextField.text)
        
+    }
+}
+
+extension LoginVC: LoginVCDelegate{
+    func getEmail(_ email: String) {
+        emailTextField.text = email
     }
 }

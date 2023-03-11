@@ -6,20 +6,30 @@
 //
 
 import Foundation
-final class RegisterVM: RegisterViewModelProtocol{
+
+protocol RegisterViewModelDelegate: AnyObject {
+    func registerFinished(with email: String)
+}
+
+
+final class RegisterVM: RegisterViewModelProtocol{    
     
     private var authService: RegisterAuthServiceProtocol
     private weak var coordinator: RegisterCoordinatorProtocol?
     private var alertFactory: AlertControllerFactoryProtocol
     
-    init (authService: RegisterAuthServiceProtocol, coordinator: RegisterCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
+    private weak var delegate: RegisterViewModelDelegate?
+    
+    init (delegate: RegisterViewModelDelegate, authService: RegisterAuthServiceProtocol, coordinator: RegisterCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
         self.authService = authService
         self.coordinator = coordinator
         self.alertFactory = alertFactory
+        self.delegate = delegate
     }
     
-    func register() {
+    func register(email: String?) {
         authService.register()
+        delegate?.registerFinished(with: email ?? "")
         openAlert()
     }
     

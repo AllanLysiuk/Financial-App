@@ -9,5 +9,5 @@ import Foundation
 
 protocol RegisterViewModelProtocol{
     func finish(shouldMoveToParent: Bool)
-    func register()
+    func register(email: String?)
 }

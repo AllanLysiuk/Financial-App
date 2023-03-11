@@ -7,11 +7,17 @@
 
 import Foundation
 
-final class LoginVM: LoginViewModelProtocol{
+protocol LoginVCDelegate: AnyObject{
+    func getEmail(_ email: String)
+}
+
+final class LoginVM: LoginViewModelProtocol{    
     
     private var authService: LoginAuthServiceProtocol
     private weak var coordinator: LoginCoordinatorProtocol?
     private var alertFactory: AlertControllerFactoryProtocol
+    
+    weak var delegate: LoginVCDelegate?
     
     init(authService: LoginAuthServiceProtocol, coordinator: LoginCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
         self.authService = authService
@@ -34,16 +40,28 @@ final class LoginVM: LoginViewModelProtocol{
         coordinator?.presentAlert(alert)
     }
     
-    func openRegisterScene() {
+    func openRegisterScene(with email: String?) {
         print("Register did tap in LoginVC")
-        coordinator?.openRegisterScene()
+        coordinator?.openRegisterScene(delegate: self, email: email)
     }
     
-    func openForgotPasswordScene() {
+    func openForgotPasswordScene(with email: String?) {
         print("Forgot password did tap in LoginVC")
-        coordinator?.openForgotPasswordScene()
+        coordinator?.openForgotPasswordScene(delegate: self, email: email)
     }
     
     
-    
+}
+
+
+extension LoginVM: ForgotPasswordViewModelDelegate {
+    func changePasswordFinished(with email: String) {
+        delegate?.getEmail(email)
+    }
+}
+
+extension LoginVM: RegisterViewModelDelegate{
+    func registerFinished(with email: String) {
+        delegate?.getEmail(email)
+    }
 }

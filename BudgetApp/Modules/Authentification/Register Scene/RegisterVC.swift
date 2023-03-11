@@ -10,16 +10,16 @@ import UIKit
 
 final class RegisterVC: UIViewController{
     
-    @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
     @IBOutlet private weak var checkPasswordTextField: UITextField!
     
     
     private var viewModel: RegisterViewModelProtocol
-    
-    init (viewModel: RegisterViewModelProtocol){
+    private var email: String
+    init (viewModel: RegisterViewModelProtocol, email: String){
         self.viewModel = viewModel
+        self.email = email
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,6 +29,7 @@ final class RegisterVC: UIViewController{
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.text = email
     }
     
     override func willMove(toParent parent: UIViewController?) {
@@ -40,7 +41,7 @@ final class RegisterVC: UIViewController{
     }
     
     @IBAction private func register(){
-        viewModel.register()
+        viewModel.register(email: emailTextField.text)
     }
     
 }

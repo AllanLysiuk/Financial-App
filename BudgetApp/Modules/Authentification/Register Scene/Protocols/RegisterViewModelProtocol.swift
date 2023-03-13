@@ -8,6 +8,8 @@
 import Foundation
 
 protocol RegisterViewModelProtocol{
+    var email: String? { get }
+    
     func finish(shouldMoveToParent: Bool)
-    func register(email: String?)
+    func register(email: String?, password: String?)
 }

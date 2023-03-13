@@ -30,8 +30,7 @@ final class LoginVC: UIViewController{
     }
     
     @IBAction private func buttonLoginDidTap(){
-        print("Login did tap in LoginVC")
-        viewModel.login()
+        viewModel.login(email: emailTextField.text, password: passwordTextField.text)
     }
     @IBAction private func buttonRegisterDidTap(){
         print("Register did tap in LoginVC")

@@ -8,6 +8,9 @@
 import Foundation
 
 protocol ForgotPasswordViewModelProtocol{
+    
+    var email: String? { get }
+    
     func changePassword(email: String?)
     func finish(shouldMoveToParent: Bool)
 }

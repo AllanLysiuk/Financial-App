@@ -10,7 +10,7 @@ import Foundation
 protocol LoginViewModelProtocol{
     var delegate: LoginVCDelegate? { get set }
     
-    func login()
+    func login(email: String?, password: String?)
     func openRegisterScene(with email: String?)
     func openForgotPasswordScene(with email: String?)
 }

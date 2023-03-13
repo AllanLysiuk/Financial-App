@@ -25,17 +25,27 @@ final class LoginVM: LoginViewModelProtocol{
         self.alertFactory = alertFactory
     }
     
-    func login() {
-        print("Login did tap in LoginVM")
-        authService.login()
-        openAlert()
+    func login(email: String?, password: String?) {
+        guard let email = email, let password = password else {
+            return
+        }
+        if email == "" && password == "" {
+            openAlertDefault(title: "Wrong Input", message: "Email or pasword can't be empty")
+            return
+        }
+        authService.login(email: email, password: password) { error in
+            if error == nil{
+                self.openAlertDefault(title: "Login operation", message: "You've succsesfully signed in")
+            }else{
+                self.openAlertDefault(title: "Error", message: error?.localizedDescription)
+            }
+        }
+        
     }
     
-    private func openAlert(){
-        let alert = alertFactory.makeAlert(title: "Login operation", message: "You've succsesfully signed in", actions: [
-            .default("Ok", {
-               // self.coordinator?.finish()
-            })
+    private func openAlertDefault(title: String?, message: String?){
+        let alert = alertFactory.makeAlert(title: title, message: message, actions: [
+            .default("Ok", { })
         ])
         coordinator?.presentAlert(alert)
     }

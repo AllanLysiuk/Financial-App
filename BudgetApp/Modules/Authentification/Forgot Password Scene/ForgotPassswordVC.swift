@@ -15,11 +15,9 @@ final class ForgotPasswordVC: UIViewController{
     @IBOutlet private weak var repeatPasswordTextField: UITextField!
     
     private var viewModel: ForgotPasswordViewModelProtocol
-    private var email: String
     
-    init(viewModel: ForgotPasswordViewModelProtocol, email: String){
+    init(viewModel: ForgotPasswordViewModelProtocol){
         self.viewModel = viewModel
-        self.email = email
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,7 +27,7 @@ final class ForgotPasswordVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.text = email
+        emailTextField.text = viewModel.email
     }
     override func willMove(toParent parent: UIViewController?) {
             super.willMove(toParent: parent)

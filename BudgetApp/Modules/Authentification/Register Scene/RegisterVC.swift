@@ -16,10 +16,9 @@ final class RegisterVC: UIViewController{
     
     
     private var viewModel: RegisterViewModelProtocol
-    private var email: String
-    init (viewModel: RegisterViewModelProtocol, email: String){
+    
+    init (viewModel: RegisterViewModelProtocol){
         self.viewModel = viewModel
-        self.email = email
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,7 +28,7 @@ final class RegisterVC: UIViewController{
  
     override func viewDidLoad() {
         super.viewDidLoad()
-        emailTextField.text = email
+        emailTextField.text = viewModel.email
     }
     
     override func willMove(toParent parent: UIViewController?) {
@@ -41,7 +40,7 @@ final class RegisterVC: UIViewController{
     }
     
     @IBAction private func register(){
-        viewModel.register(email: emailTextField.text)
+        viewModel.register(email: emailTextField.text, password: passwordTextField.text)
     }
     
 }

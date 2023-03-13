@@ -7,5 +7,5 @@
 
 import Foundation
 protocol ForgotPasswordAuthServiceProtocol{
-    func forgotPassword()
+    func forgotPassword(email: String, completion: @escaping (_ error: Error?) -> Void)
 }

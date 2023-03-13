@@ -12,31 +12,49 @@ protocol RegisterViewModelDelegate: AnyObject {
 }
 
 
-final class RegisterVM: RegisterViewModelProtocol{    
-    
+final class RegisterVM: RegisterViewModelProtocol{
+  
     private var authService: RegisterAuthServiceProtocol
     private weak var coordinator: RegisterCoordinatorProtocol?
     private var alertFactory: AlertControllerFactoryProtocol
     
     private weak var delegate: RegisterViewModelDelegate?
+    var email: String?
     
-    init (delegate: RegisterViewModelDelegate, authService: RegisterAuthServiceProtocol, coordinator: RegisterCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
+    init (delegate: RegisterViewModelDelegate, authService: RegisterAuthServiceProtocol, coordinator: RegisterCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol, email: String){
         self.authService = authService
         self.coordinator = coordinator
         self.alertFactory = alertFactory
         self.delegate = delegate
+        self.email = email
     }
     
-    func register(email: String?) {
-        authService.register()
-        delegate?.registerFinished(with: email ?? "")
-        openAlert()
+    func register(email: String?, password: String?) {
+        guard let email = email, let password = password else { return }
+        
+        if email == "" && password == ""{
+            openAlert(title: "Wrong Input", message: "Email or password can't be empty", closeScreen: false)
+            return
+        } else {
+            authService.register(email: email, password: password) {error in
+                if error == nil{
+                    self.delegate?.registerFinished(with: email)
+                    self.openAlert(title: "Register operation", message: "You've succsesfully signed up", closeScreen: true)
+                }else{
+                    self.openAlert(title: "Error", message: error?.localizedDescription, closeScreen: false)
+                    print(error)
+                }
+            }
+        }
     }
+       
     
-    private func openAlert(){
-        let alert = alertFactory.makeAlert(title: "Register operation", message: "You've succsesfully signed up", actions: [
+    private func openAlert(title: String?, message: String?, closeScreen: Bool){
+        let alert = alertFactory.makeAlert(title: title, message: message, actions: [
             .default("Ok", {
-                self.finish(shouldMoveToParent: true)
+                if closeScreen{
+                    self.finish(shouldMoveToParent: true)
+                }
             })
         ])
         coordinator?.presentAlert(alert)

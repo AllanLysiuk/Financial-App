@@ -29,6 +29,9 @@ final class RegisterVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         emailTextField.text = viewModel.email
+        createRightViewButton(textField: passwordTextField, selector: #selector(secureInputButonDidTap), tag: 0)
+        createRightViewButton(textField: checkPasswordTextField, selector: #selector(secureInputButonDidTap), tag: 1)
+        
     }
     
     override func willMove(toParent parent: UIViewController?) {
@@ -39,8 +42,28 @@ final class RegisterVC: UIViewController{
             }
     }
     
+    @objc func secureInputButonDidTap(sender: UIButton!) {
+        if sender.tag == 0{
+            passwordTextField.togglePasswordVisibility()
+            sender.secureButtonToggle(isSecure: passwordTextField.isSecureTextEntry)
+        }else{
+            checkPasswordTextField.togglePasswordVisibility()
+            sender.secureButtonToggle(isSecure: checkPasswordTextField.isSecureTextEntry)
+        }
+        
+    }
+    
     @IBAction private func register(){
         viewModel.register(email: emailTextField.text, password: passwordTextField.text)
+    }
+                              
+    private func createRightViewButton(textField: UITextField, selector: Selector, tag: Int) {
+        let rightButton  = UIButton(type: .custom)
+        rightButton.tag = tag
+        rightButton.prepareButtonForRightView()
+        rightButton.addTarget(self, action: selector, for: .touchUpInside)
+        textField.rightViewMode = .always
+        textField.rightView = rightButton
     }
     
 }

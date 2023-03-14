@@ -42,12 +42,12 @@ final class RegisterVM: RegisterViewModelProtocol{
                     self.openAlert(title: "Register operation", message: "You've succsesfully signed up", closeScreen: true)
                 }else{
                     self.openAlert(title: "Error", message: error?.localizedDescription, closeScreen: false)
-                    print(error)
                 }
             }
         }
     }
        
+    
     
     private func openAlert(title: String?, message: String?, closeScreen: Bool){
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [

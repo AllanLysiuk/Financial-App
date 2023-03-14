@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */; };
+		9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */; };
 		9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F278929AE51C000075C8B /* RegisterVC.xib */; };
 		9D7F27E029B2478200075C8B /* ForgotPassswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27DF29B2478200075C8B /* ForgotPassswordVC.swift */; };
 		9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27E129B2479900075C8B /* ForgotPasswordVM.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
+		9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		9D7F278929AE51C000075C8B /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		9D7F27DF29B2478200075C8B /* ForgotPassswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassswordVC.swift; sourceTree = "<group>"; };
 		9D7F27E129B2479900075C8B /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
@@ -109,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D75CD3329C0EE5C00186E75 /* GlobalExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */,
+				9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */,
+			);
+			path = GlobalExtensions;
+			sourceTree = "<group>";
+		};
 		9D7F27DE29B2476200075C8B /* Forgot Password Scene */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,6 +188,7 @@
 				9DD7D6DF29ADE9E20087E8F1 /* Modules */,
 				9DB802DD29B7A89600D57CB4 /* Factories */,
 				9DD7D6EF29ADEF900087E8F1 /* Services */,
+				9D75CD3329C0EE5C00186E75 /* GlobalExtensions */,
 				9DD7D6CF29ADE3B30087E8F1 /* Assets.xcassets */,
 				9DD7D6D129ADE3B30087E8F1 /* LaunchScreen.storyboard */,
 				9DD7D6D429ADE3B30087E8F1 /* Info.plist */,
@@ -371,6 +385,7 @@
 				9DD7D6E729ADEECF0087E8F1 /* LoginVC.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
 				9D7F27F229B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift in Sources */,
+				9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */,
 				9DD7D6E529ADEB1F0087E8F1 /* LoginAssembler.swift in Sources */,
 				9DD7D70429AE20900087E8F1 /* RegisterViewModelProtocol.swift in Sources */,
 				9D7F27E629B247D400075C8B /* AuthService+ForgotPassword.swift in Sources */,
@@ -396,6 +411,7 @@
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
 				9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */,
+				9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */,
 				9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */,
 				9DB802DF29B7A8BE00D57CB4 /* AlertControllerFactory.swift in Sources */,
 				9DD7D70929AE22420087E8F1 /* RegisterAuthServiceProtocol.swift in Sources */,

@@ -30,22 +30,28 @@ final class LoginVM: LoginViewModelProtocol{
             return
         }
         if email == "" && password == "" {
-            openAlertDefault(title: "Wrong Input", message: "Email or pasword can't be empty")
+            openAlertDefault(title: "Wrong Input", message: "Email or pasword can't be empty", closeScreen: false)
             return
         }
         authService.login(email: email, password: password) { error in
             if error == nil{
-                self.openAlertDefault(title: "Login operation", message: "You've succsesfully signed in")
+                let ud = UserDefaults()
+                ud.set(true, forKey: "isRegistered")
+                self.openAlertDefault(title: "Login operation", message: "You've succsesfully signed in", closeScreen: true)
             }else{
-                self.openAlertDefault(title: "Error", message: error?.localizedDescription)
+                self.openAlertDefault(title: "Error", message: error?.localizedDescription, closeScreen: false)
             }
         }
         
     }
     
-    private func openAlertDefault(title: String?, message: String?){
+    private func openAlertDefault(title: String?, message: String?, closeScreen: Bool){
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [
-            .default("Ok", { })
+            .default("Ok", {
+                if closeScreen{
+                    self.coordinator?.finish()
+                }
+            })
         ])
         coordinator?.presentAlert(alert)
     }

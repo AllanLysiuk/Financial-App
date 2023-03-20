@@ -12,13 +12,12 @@ final class LoginVC: UIViewController{
     
     @IBOutlet private weak var emailTextField: UITextField!
     @IBOutlet private weak var passwordTextField: UITextField!
-    //@IBOutlet private weak var secureInputButton: UIButton!
     private var viewModel: LoginViewModelProtocol
     
     init (viewModel: LoginViewModelProtocol){
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
-        self.viewModel.delegate = self
+        self.viewModel.setupViewDelegate(self)
     }
     
     required init?(coder: NSCoder) {

@@ -18,12 +18,15 @@ final class AppCoordinator: Coordinator{
     }
     
     func start() {
-        let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
-        let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
+        let isRegistered = true
+        //let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
+        let shouldShowOnboarding = true
+        //let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
+        
         if !isRegistered {
             openLoginScene()
         } else if shouldShowOnboarding {
-           // openOnboardingScene()
+           openOnBoardingScene()
         } else {
             openMainScene()
         }
@@ -60,6 +63,17 @@ final class AppCoordinator: Coordinator{
         window = mainWindow
     }
     
+    private func openOnBoardingScene(){
+        let onBoardingWindow = UIWindow(windowScene: windowScene)
+        let nc = UINavigationController()
+        onBoardingWindow.rootViewController = nc
+        
+       let coordinator = OnBoardingCoordinator(rootNavigationController: nc, rootCoordinator: self)
+        childCoordinators.append(coordinator)
+        coordinator.start()
+        self.window = onBoardingWindow
+    }
+    
 }
 
 
@@ -74,6 +88,15 @@ extension AppCoordinator: LoginRootCoordinatorController{
 
 extension AppCoordinator: HomePageRootCoordinatorProtocol{
     func finished(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
+        start()
+    }
+}
+
+extension AppCoordinator: OnBoardingRootCoordinatorProtocol{
+    func finishedOnBoarding(_ coordinator: Coordinator) {
         childCoordinators.removeAll { tmp in
             tmp === coordinator
         }

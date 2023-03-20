@@ -20,6 +20,8 @@
 		9D7F27F029B25DCF00075C8B /* ForgotPasswordAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27EF29B25DCF00075C8B /* ForgotPasswordAssembler.swift */; };
 		9D7F27F229B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27F129B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift */; };
 		9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F27F329B261A100075C8B /* ForgotPasswordVC.xib */; };
+		9D80152129C7306A00C22EE1 /* PageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80151F29C7306A00C22EE1 /* PageViewAdapter.swift */; };
+		9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */; };
 		9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1229C2313D0020E637 /* HomePageVC.swift */; };
 		9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */; };
 		9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1629C232500020E637 /* HomePageVM.swift */; };
@@ -27,6 +29,13 @@
 		9DA81A1B29C232C90020E637 /* HomePageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1A29C232C90020E637 /* HomePageCoordinator.swift */; };
 		9DA81A1D29C2334F0020E637 /* HomePageAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1C29C2334F0020E637 /* HomePageAssembler.swift */; };
 		9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1E29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift */; };
+		9DA81A2329C5BC670020E637 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A2229C5BC670020E637 /* OnBoardingVC.swift */; };
+		9DA81A2529C5BC7A0020E637 /* OnBoardingVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A2429C5BC7A0020E637 /* OnBoardingVM.swift */; };
+		9DA81A2729C5BC8D0020E637 /* OnBoardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A2629C5BC8D0020E637 /* OnBoardingCoordinator.swift */; };
+		9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A2829C5BCA70020E637 /* OnBoardingAssembler.swift */; };
+		9DA81A2B29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A2A29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift */; };
+		9DA81A2D29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A2C29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift */; };
+		9DA81A2F29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A2E29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift */; };
 		9DB802DF29B7A8BE00D57CB4 /* AlertControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB802DE29B7A8BE00D57CB4 /* AlertControllerFactory.swift */; };
 		9DB802E129B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DB802E029B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift */; };
 		9DB802E629BDCBB200D57CB4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DB802E529BDCBB200D57CB4 /* FirebaseAuth */; };
@@ -74,6 +83,8 @@
 		9D7F27EF29B25DCF00075C8B /* ForgotPasswordAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordAssembler.swift; sourceTree = "<group>"; };
 		9D7F27F129B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D7F27F329B261A100075C8B /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
+		9D80151F29C7306A00C22EE1 /* PageViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewAdapter.swift; sourceTree = "<group>"; };
+		9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewAdapterProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1229C2313D0020E637 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1629C232500020E637 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
@@ -81,6 +92,13 @@
 		9DA81A1A29C232C90020E637 /* HomePageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCoordinator.swift; sourceTree = "<group>"; };
 		9DA81A1C29C2334F0020E637 /* HomePageAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageAssembler.swift; sourceTree = "<group>"; };
 		9DA81A1E29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9DA81A2229C5BC670020E637 /* OnBoardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
+		9DA81A2429C5BC7A0020E637 /* OnBoardingVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingVM.swift; sourceTree = "<group>"; };
+		9DA81A2629C5BC8D0020E637 /* OnBoardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinator.swift; sourceTree = "<group>"; };
+		9DA81A2829C5BCA70020E637 /* OnBoardingAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingAssembler.swift; sourceTree = "<group>"; };
+		9DA81A2A29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModelProtocol.swift; sourceTree = "<group>"; };
+		9DA81A2C29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9DA81A2E29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DB802DE29B7A8BE00D57CB4 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		9DB802E029B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactoryProtocol.swift; sourceTree = "<group>"; };
 		9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -199,6 +217,45 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		9DA81A2029C5BC060020E637 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				9DA81A2129C5BC200020E637 /* Protocols */,
+				9DA81A2229C5BC670020E637 /* OnBoardingVC.swift */,
+				9DA81A2429C5BC7A0020E637 /* OnBoardingVM.swift */,
+				9DA81A2629C5BC8D0020E637 /* OnBoardingCoordinator.swift */,
+				9DA81A2829C5BCA70020E637 /* OnBoardingAssembler.swift */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		9DA81A2129C5BC200020E637 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9DA81A2A29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift */,
+				9DA81A2C29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift */,
+				9DA81A2E29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9DA81A3229C725AE0020E637 /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				9DA81A3329C725C90020E637 /* PageViewAdapter */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		9DA81A3329C725C90020E637 /* PageViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				9D80151F29C7306A00C22EE1 /* PageViewAdapter.swift */,
+				9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */,
+			);
+			path = PageViewAdapter;
+			sourceTree = "<group>";
+		};
 		9DB802DD29B7A89600D57CB4 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +290,7 @@
 				9DB802DD29B7A89600D57CB4 /* Factories */,
 				9DD7D6EF29ADEF900087E8F1 /* Services */,
 				9D75CD3329C0EE5C00186E75 /* GlobalExtensions */,
+				9DA81A3229C725AE0020E637 /* Adapters */,
 				9DD7D6CF29ADE3B30087E8F1 /* Assets.xcassets */,
 				9DD7D6D129ADE3B30087E8F1 /* LaunchScreen.storyboard */,
 				9DD7D6D429ADE3B30087E8F1 /* Info.plist */,
@@ -254,6 +312,7 @@
 		9DD7D6DF29ADE9E20087E8F1 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9DA81A2029C5BC060020E637 /* OnBoarding */,
 				9DA81A0F29C230120020E637 /* MainApp */,
 				9DD7D6E029ADEA180087E8F1 /* Authentification */,
 			);
@@ -427,13 +486,16 @@
 			files = (
 				9DD7D6DB29ADE5FC0087E8F1 /* Coordinator.swift in Sources */,
 				9DD7D6DD29ADE6660087E8F1 /* AppCoordinator.swift in Sources */,
+				9DA81A2D29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift in Sources */,
 				9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */,
 				9DD7D6E729ADEECF0087E8F1 /* LoginVC.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
 				9D7F27F229B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift in Sources */,
+				9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */,
 				9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */,
 				9DD7D6E529ADEB1F0087E8F1 /* LoginAssembler.swift in Sources */,
 				9DD7D70429AE20900087E8F1 /* RegisterViewModelProtocol.swift in Sources */,
+				9DA81A2329C5BC670020E637 /* OnBoardingVC.swift in Sources */,
 				9D7F27E629B247D400075C8B /* AuthService+ForgotPassword.swift in Sources */,
 				9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */,
 				9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */,
@@ -441,11 +503,15 @@
 				9DD7D6EB29ADEEE30087E8F1 /* LoginVM.swift in Sources */,
 				9D7F27F029B25DCF00075C8B /* ForgotPasswordAssembler.swift in Sources */,
 				9D7F27EC29B25D7B00075C8B /* ForgotPasswordCoordinatorProtocol.swift in Sources */,
+				9D80152129C7306A00C22EE1 /* PageViewAdapter.swift in Sources */,
+				9DA81A2729C5BC8D0020E637 /* OnBoardingCoordinator.swift in Sources */,
+				9DA81A2F29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift in Sources */,
 				9DD7D6F629ADF03C0087E8F1 /* AuthService+Login.swift in Sources */,
 				9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
 				9D7F27E029B2478200075C8B /* ForgotPassswordVC.swift in Sources */,
 				9D7F27E829B2480000075C8B /* ForgotPasswordAuthServiceProtocol.swift in Sources */,
+				9DA81A2B29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift in Sources */,
 				9DD7D70B29AE251A0087E8F1 /* RegisterCoordinator.swift in Sources */,
 				9DA81A1929C232970020E637 /* HomePageCoordinatorProtocol.swift in Sources */,
 				9DD7D6F329ADEFF50087E8F1 /* LoginAuthServiceProtocol.swift in Sources */,
@@ -467,7 +533,9 @@
 				9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */,
 				9DB802DF29B7A8BE00D57CB4 /* AlertControllerFactory.swift in Sources */,
 				9DD7D70929AE22420087E8F1 /* RegisterAuthServiceProtocol.swift in Sources */,
+				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,
+				9DA81A2529C5BC7A0020E637 /* OnBoardingVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

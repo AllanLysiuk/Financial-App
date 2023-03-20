@@ -11,13 +11,13 @@ protocol LoginVCDelegate: AnyObject{
     func getEmail(_ email: String)
 }
 
-final class LoginVM: LoginViewModelProtocol{    
+final class LoginVM: LoginViewModelProtocol{
     
     private var authService: LoginAuthServiceProtocol
     private weak var coordinator: LoginCoordinatorProtocol?
     private var alertFactory: AlertControllerFactoryProtocol
     
-    weak var delegate: LoginVCDelegate?
+    private weak var delegate: LoginVCDelegate?
     
     init(authService: LoginAuthServiceProtocol, coordinator: LoginCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
         self.authService = authService
@@ -66,6 +66,9 @@ final class LoginVM: LoginViewModelProtocol{
         coordinator?.openForgotPasswordScene(delegate: self, email: email)
     }
     
+    func setupViewDelegate(_ delegate: LoginVCDelegate) {
+        self.delegate = delegate
+    }
     
 }
 

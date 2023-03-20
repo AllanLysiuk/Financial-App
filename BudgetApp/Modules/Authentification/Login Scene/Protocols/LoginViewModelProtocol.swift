@@ -8,7 +8,8 @@
 import Foundation
 
 protocol LoginViewModelProtocol{
-    var delegate: LoginVCDelegate? { get set }
+    
+    func setupViewDelegate(_ delegate: LoginVCDelegate)
     
     func login(email: String?, password: String?)
     func openRegisterScene(with email: String?)

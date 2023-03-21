@@ -11,5 +11,5 @@ protocol RegisterViewModelProtocol{
     var email: String? { get }
     
     func finish(shouldMoveToParent: Bool)
-    func register(email: String?, password: String?)
+    func register(email: String?, password: String?, checkPassword: String?)
 }

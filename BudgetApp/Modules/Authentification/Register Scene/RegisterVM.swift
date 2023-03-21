@@ -29,10 +29,15 @@ final class RegisterVM: RegisterViewModelProtocol{
         self.email = email
     }
     
-    func register(email: String?, password: String?) {
-        guard let email = email, let password = password else { return }
+    func register(email: String?, password: String?, checkPassword: String?) {
+        guard let email = email, let password = password, let checkPassword = checkPassword else { return }
         
-        if email == "" && password == ""{
+        if !checkPasswordsIdentity(password, checkPassword){
+            openAlert(title: "Incorrect Input", message: "Passwords are different, try one more time", closeScreen: false)
+            return
+        }
+        
+        if email == "" || password == "" || checkPassword == ""{
             openAlert(title: "Wrong Input", message: "Email or password can't be empty", closeScreen: false)
             return
         } else {
@@ -47,7 +52,12 @@ final class RegisterVM: RegisterViewModelProtocol{
         }
     }
        
-    
+    private func checkPasswordsIdentity(_ passsword: String, _ checkPassword: String) -> Bool{
+        if passsword == checkPassword{
+            return true
+        }
+        return false
+    }
     
     private func openAlert(title: String?, message: String?, closeScreen: Bool){
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [

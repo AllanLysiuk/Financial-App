@@ -10,7 +10,11 @@ import UIKit
 
 final class OnBoardingVM: OnBoardingViewModelProtocol{
 
-    var pages: [UIViewController] = []
+    var pages: [UIViewController] = [
+        PageViewController(image: UIImage(named: "OnBoardingImage")!, title: "First Screen", subtitle: "Start your career in iOS development"),
+        PageViewController(image: UIImage(named: "OnBoardingImage")!, title: "Second Screen", subtitle: "Start your career in iOS development Start your career in iOS development Start your career in iOS development"),
+        PageViewController(image: UIImage(named: "OnBoardingImage")!, title: "Third Screen", subtitle: "Start your career in iOS development Start your career in iOS development Start your career in iOS development Start your career in iOS development")]
+    
     var pageControl = UIPageControl()
     private var adapter: PageViewAdapterProtocol
     
@@ -22,7 +26,7 @@ final class OnBoardingVM: OnBoardingViewModelProtocol{
     }
     
     func setUp(with pageView: UIPageViewController, with pageControl: UIPageControl) {
-        adapter.setupPageView(pageView, pageControl)
+        adapter.setupPageView(pageView, pageControl, pages)
     }
     
     

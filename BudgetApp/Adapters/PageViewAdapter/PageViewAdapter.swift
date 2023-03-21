@@ -16,9 +16,10 @@ final class PageViewAdapter: NSObject, PageViewAdapterProtocol {
     private var pages: [UIViewController] = []
     private var initialPage: Int = 0
     
-    func setupPageView(_ pageView: UIPageViewController, _ pageControl: UIPageControl) {
+    func setupPageView(_ pageView: UIPageViewController, _ pageControl: UIPageControl, _ pages: [UIViewController]) {
         self.pageView = pageView
         self.pageControl = pageControl
+        self.pages = pages
         setupPageView()
     }
     
@@ -38,14 +39,6 @@ final class PageViewAdapter: NSObject, PageViewAdapterProtocol {
     
     private func setUp() {
         pageControl?.addTarget(self, action: #selector(pageControllerTapped(_:)), for: .valueChanged)
-         
-        let arrOfColors = [UIColor.systemBlue, UIColor.systemRed, UIColor.systemCyan]
-        for index in 0..<3{
-            let page = UIViewController()
-            page.view.backgroundColor = arrOfColors[index]
-            pages.append(page)
-        }
-        
         pageView?.setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
      }
      

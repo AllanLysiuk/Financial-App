@@ -11,8 +11,7 @@ import UIKit
 final class ForgotPasswordVC: UIViewController{
     
     @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var passwordTextField: UITextField!
-    @IBOutlet private weak var repeatPasswordTextField: UITextField!
+
     
     private var viewModel: ForgotPasswordViewModelProtocol
     
@@ -27,6 +26,7 @@ final class ForgotPasswordVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
         emailTextField.text = viewModel.email
     }
     override func willMove(toParent parent: UIViewController?) {
@@ -40,4 +40,11 @@ final class ForgotPasswordVC: UIViewController{
         viewModel.changePassword(email: emailTextField.text)
     }
     
+}
+
+extension ForgotPasswordVC: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        emailTextField.resignFirstResponder()
+        return true
+    }
 }

@@ -26,6 +26,8 @@ final class LoginVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         createRightViewButton(textField: passwordTextField, selector: #selector(secureInputButonDidTap))
     }
     
@@ -64,5 +66,10 @@ extension LoginVC: LoginVCDelegate{
     }
 }
 
-
+extension LoginVC: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
 

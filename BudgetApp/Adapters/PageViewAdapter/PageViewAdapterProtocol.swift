@@ -9,6 +9,6 @@ import Foundation
 import UIKit
 
 protocol PageViewAdapterProtocol {
-    func setupPageView(_ pageView: UIPageViewController, _ pageControl: UIPageControl)
+    func setupPageView(_ pageView: UIPageViewController, _ pageControl: UIPageControl, _ pages: [UIViewController])
     func setupPages(_ pages: [UIViewController])
 }

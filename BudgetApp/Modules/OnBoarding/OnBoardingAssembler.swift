@@ -23,4 +23,5 @@ final class OnBoardingAssembler{
     private static func makeAdapter() -> PageViewAdapterProtocol{
         return PageViewAdapter()
     }
+    
 }

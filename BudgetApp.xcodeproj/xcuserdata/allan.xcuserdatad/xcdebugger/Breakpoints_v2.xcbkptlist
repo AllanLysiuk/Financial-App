@@ -64,7 +64,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
             endingLineNumber = "32"
-            landmarkName = "register(email:password:)"
+            landmarkName = "register(email:password:checkPassword:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -96,7 +96,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "register(email:password:)"
+            landmarkName = "register(email:password:checkPassword:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -110,8 +110,8 @@
             filePath = "BudgetApp/Modules/Authentification/Register Scene/RegisterVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
             landmarkName = "secureInputButonDidTap(sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -225,6 +225,22 @@
             startingLineNumber = "53"
             endingLineNumber = "53"
             landmarkName = "openMainScene()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2A7FAA7-A3DF-44C9-840C-E2346CA130C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetApp/Modules/Authentification/Register Scene/RegisterVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "register(email:password:checkPassword:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

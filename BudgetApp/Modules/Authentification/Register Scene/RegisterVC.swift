@@ -28,6 +28,9 @@ final class RegisterVC: UIViewController{
  
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        checkPasswordTextField.delegate = self
         emailTextField.text = viewModel.email
         createRightViewButton(textField: passwordTextField, selector: #selector(secureInputButonDidTap), tag: 0)
         createRightViewButton(textField: checkPasswordTextField, selector: #selector(secureInputButonDidTap), tag: 1)
@@ -54,7 +57,7 @@ final class RegisterVC: UIViewController{
     }
     
     @IBAction private func register(){
-        viewModel.register(email: emailTextField.text, password: passwordTextField.text)
+        viewModel.register(email: emailTextField.text, password: passwordTextField.text, checkPassword: checkPasswordTextField.text)
     }
                               
     private func createRightViewButton(textField: UITextField, selector: Selector, tag: Int) {
@@ -66,4 +69,11 @@ final class RegisterVC: UIViewController{
         textField.rightView = rightButton
     }
     
+}
+
+extension RegisterVC: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

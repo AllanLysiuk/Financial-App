@@ -8,16 +8,16 @@
 import Foundation
 import UIKit
 
-final class PageViewController: UIViewController{
+final class OnBoardingPageList: UIViewController {
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
-    
+
     private var image: UIImage
     private var titleText: String
     private var subtitle: String
     
-    init (image: UIImage, title: String, subtitle: String){
+    init (image: UIImage, title: String, subtitle: String) {
         self.image = image
         self.titleText = title
         self.subtitle = subtitle
@@ -29,7 +29,7 @@ final class PageViewController: UIViewController{
     }
     
     override func viewDidLoad() {
-            super.viewDidLoad()
+        super.viewDidLoad()
         imageView.image = image
         titleLabel.text = titleText
         subtitleLabel.text = subtitle

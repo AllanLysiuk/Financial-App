@@ -18,14 +18,14 @@ final class AppCoordinator: Coordinator{
     }
     
     func start() {
-        let isRegistered = false
-        //let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
-        let shouldShowOnboarding = false
-        //let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
+       // let isRegistered = true
+        let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
+       // let shouldShowOnboarding = false
+        let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
         
         if !isRegistered {
             openLoginScene()
-        } else if shouldShowOnboarding {
+        } else if !shouldShowOnboarding {
            openOnBoardingScene()
         } else {
             openMainScene()

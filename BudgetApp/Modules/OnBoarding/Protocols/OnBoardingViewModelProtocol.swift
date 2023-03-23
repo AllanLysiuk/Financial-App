@@ -9,4 +9,7 @@ import Foundation
 import UIKit
 protocol OnBoardingViewModelProtocol: AnyObject{
     func setUp(with pageView: UIPageViewController, with pageControl: UIPageControl)
+    func getPagesNumber() -> Int
+    func skipButtonTapped()
+    func nextButtonTapped()
 }

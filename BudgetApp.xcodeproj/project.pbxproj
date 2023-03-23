@@ -22,8 +22,8 @@
 		9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F27F329B261A100075C8B /* ForgotPasswordVC.xib */; };
 		9D80152129C7306A00C22EE1 /* PageViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80151F29C7306A00C22EE1 /* PageViewAdapter.swift */; };
 		9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */; };
-		9D80152429C8A56800C22EE1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152329C8A56600C22EE1 /* PageViewController.swift */; };
-		9D80152629C8A6C100C22EE1 /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D80152529C8A6C100C22EE1 /* PageViewController.xib */; };
+		9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152329C8A56600C22EE1 /* OnBoardingPageList.swift */; };
+		9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */; };
 		9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1229C2313D0020E637 /* HomePageVC.swift */; };
 		9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */; };
 		9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1629C232500020E637 /* HomePageVM.swift */; };
@@ -87,8 +87,8 @@
 		9D7F27F329B261A100075C8B /* ForgotPasswordVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ForgotPasswordVC.xib; sourceTree = "<group>"; };
 		9D80151F29C7306A00C22EE1 /* PageViewAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewAdapter.swift; sourceTree = "<group>"; };
 		9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewAdapterProtocol.swift; sourceTree = "<group>"; };
-		9D80152329C8A56600C22EE1 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-		9D80152529C8A6C100C22EE1 /* PageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
+		9D80152329C8A56600C22EE1 /* OnBoardingPageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageList.swift; sourceTree = "<group>"; };
+		9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageList.xib; sourceTree = "<group>"; };
 		9DA81A1229C2313D0020E637 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1629C232500020E637 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
@@ -225,12 +225,11 @@
 			isa = PBXGroup;
 			children = (
 				9DA81A2129C5BC200020E637 /* Protocols */,
+				9DCB044629CC6860006D4425 /* PageViewController */,
 				9DA81A2229C5BC670020E637 /* OnBoardingVC.swift */,
 				9DA81A2429C5BC7A0020E637 /* OnBoardingVM.swift */,
 				9DA81A2629C5BC8D0020E637 /* OnBoardingCoordinator.swift */,
 				9DA81A2829C5BCA70020E637 /* OnBoardingAssembler.swift */,
-				9D80152329C8A56600C22EE1 /* PageViewController.swift */,
-				9D80152529C8A6C100C22EE1 /* PageViewController.xib */,
 			);
 			path = OnBoarding;
 			sourceTree = "<group>";
@@ -269,6 +268,15 @@
 				9DB802E029B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift */,
 			);
 			path = Factories;
+			sourceTree = "<group>";
+		};
+		9DCB044629CC6860006D4425 /* PageViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9D80152329C8A56600C22EE1 /* OnBoardingPageList.swift */,
+				9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */,
+			);
+			path = PageViewController;
 			sourceTree = "<group>";
 		};
 		9DD7D6BA29ADE3AF0087E8F1 = {
@@ -476,7 +484,7 @@
 			files = (
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
 				9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */,
-				9D80152629C8A6C100C22EE1 /* PageViewController.xib in Resources */,
+				9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */,
 				9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */,
 				9DD7D6D329ADE3B30087E8F1 /* LaunchScreen.storyboard in Resources */,
 				9DD7D6D029ADE3B30087E8F1 /* Assets.xcassets in Resources */,
@@ -516,7 +524,7 @@
 				9DD7D6F629ADF03C0087E8F1 /* AuthService+Login.swift in Sources */,
 				9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
-				9D80152429C8A56800C22EE1 /* PageViewController.swift in Sources */,
+				9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */,
 				9D7F27E029B2478200075C8B /* ForgotPassswordVC.swift in Sources */,
 				9D7F27E829B2480000075C8B /* ForgotPasswordAuthServiceProtocol.swift in Sources */,
 				9DA81A2B29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift in Sources */,

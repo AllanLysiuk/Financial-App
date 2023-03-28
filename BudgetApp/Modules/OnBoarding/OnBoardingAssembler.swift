@@ -8,19 +8,19 @@
 import Foundation
 import UIKit
 
-final class OnBoardingAssembler{
+final class OnBoardingAssembler {
     private init() { }
     
-    static func makeOnBoardingVC(coordinator: OnBoardingCoordinatorProtocol) -> UIPageViewController{
+    static func makeOnBoardingVC(coordinator: OnBoardingCoordinatorProtocol) -> UIPageViewController {
         let vc = OnBoardingVC(viewModel: makeViewModel(coordinator: coordinator))
         return vc
     }
     
-    private static func makeViewModel(coordinator: OnBoardingCoordinatorProtocol) -> OnBoardingViewModelProtocol{
+    private static func makeViewModel(coordinator: OnBoardingCoordinatorProtocol) -> OnBoardingViewModelProtocol {
         return OnBoardingVM(coordinator: coordinator, adapter: makeAdapter())
     }
     
-    private static func makeAdapter() -> PageViewAdapterProtocol{
+    private static func makeAdapter() -> PageViewAdapterProtocol {
         return PageViewAdapter()
     }
     

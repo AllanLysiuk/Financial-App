@@ -59,16 +59,16 @@ final class OnBoardingVC: UIPageViewController {
 //                nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
 //    }
     
-    private func styleButtons(){
+    private func styleButtons() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipTapped(_:)))
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Next", style: .plain, target: self, action: #selector(nextTapped(_:)))
     }
     
-    @objc func skipTapped(_ sender: UIButton){
+    @objc func skipTapped(_ sender: UIButton) {
        viewModel.skipButtonTapped()
     }
 
-    @objc func nextTapped(_ sender: UIButton){
+    @objc func nextTapped(_ sender: UIButton) {
        viewModel.nextButtonTapped()
     }
     

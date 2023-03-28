@@ -78,25 +78,9 @@
             filePath = "BudgetApp/Modules/Authentification/Login Scene/LoginVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
             landmarkName = "login(email:password:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A941FCE1-6CD5-4B87-863F-AD0DEFC311CF"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BudgetApp/Modules/Authentification/Register Scene/RegisterVM.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "register(email:password:checkPassword:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -142,9 +126,9 @@
             filePath = "BudgetApp/Modules/Authentification/Login Scene/LoginVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "openAlertDefault(title:message:closeScreen:)"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "openAlertDefault(title:message:shouldCloseScreen:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -158,9 +142,9 @@
             filePath = "BudgetApp/Modules/Authentification/Login Scene/LoginVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "openAlertDefault(title:message:closeScreen:)"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "openAlertDefault(title:message:shouldCloseScreen:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -174,9 +158,9 @@
             filePath = "BudgetApp/Modules/Authentification/Login Scene/LoginVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "openAlertDefault(title:message:closeScreen:)"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "openAlertDefault(title:message:shouldCloseScreen:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -206,8 +190,8 @@
             filePath = "BudgetApp/Modules/Authentification/Register Scene/RegisterVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "register(email:password:checkPassword:)"
             landmarkType = "7">
          </BreakpointContent>

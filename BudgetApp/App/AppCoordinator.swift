@@ -8,17 +8,17 @@
 import Foundation
 import UIKit
 
-final class AppCoordinator: Coordinator{
+final class AppCoordinator: Coordinator {
     private var windowScene: UIWindowScene
     private var window: UIWindow?
     var childCoordinators: [Coordinator] = []
     
-    init (windowScene: UIWindowScene){
+    init (windowScene: UIWindowScene) {
         self.windowScene = windowScene
     }
     
     func start() {
-        let isRegistered = true
+        let isRegistered = false
         //let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
        let shouldShowOnboarding = true
         //let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
@@ -37,7 +37,7 @@ final class AppCoordinator: Coordinator{
 
     }
     
-    private func openLoginScene(){
+    private func openLoginScene() {
         let loginWindow = UIWindow(windowScene: windowScene)
         let nc = UINavigationController()
         loginWindow.rootViewController = nc
@@ -63,7 +63,7 @@ final class AppCoordinator: Coordinator{
         window = mainWindow
     }
     
-    private func openOnBoardingScene(){
+    private func openOnBoardingScene() {
         let onBoardingWindow = UIWindow(windowScene: windowScene)
         let nc = UINavigationController()
         onBoardingWindow.rootViewController = nc

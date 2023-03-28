@@ -11,7 +11,7 @@ protocol LoginVCDelegate: AnyObject{
     func getEmail(_ email: String)
 }
 
-final class LoginVM: LoginViewModelProtocol{
+final class LoginVM: LoginViewModelProtocol {
     
     private var authService: LoginAuthServiceProtocol
     private weak var coordinator: LoginCoordinatorProtocol?
@@ -26,28 +26,27 @@ final class LoginVM: LoginViewModelProtocol{
     }
     
     func login(email: String?, password: String?) {
-        guard let email = email, let password = password else {
-            return
-        }
-        if email == "" && password == "" {
-            openAlertDefault(title: "Wrong Input", message: "Email or pasword can't be empty", closeScreen: false)
-            return
-        }
-        authService.login(email: email, password: password) { error in
-            if let error = error {
-                self.openAlertDefault(title: "Error", message: error.localizedDescription, closeScreen: false)
-            } else {
-                let ud = UserDefaults()
-                ud.set(true, forKey: "isRegistered")
-                self.openAlertDefault(title: "Login operation", message: "You've succsesfully signed in", closeScreen: true)
+    
+        if let email = email, let password = password, (email != "" && password != "") {
+            authService.login(email: email, password: password) { error in
+                if let error = error {
+                    self.openAlertDefault(title: "Error", message: error.localizedDescription, shouldCloseScreen: false)
+                } else {
+                    let ud = UserDefaults()
+                    ud.set(true, forKey: "isRegistered")
+                    self.openAlertDefault(title: "Login operation", message: "You've succsesfully signed in", shouldCloseScreen: true)
+                }
             }
+        } else {
+            openAlertDefault(title: "Wrong Input", message: "Email or pasword can't be empty", shouldCloseScreen: false)
+            return
         }
     }
-    #warning("should close screen")
-    private func openAlertDefault(title: String?, message: String?, closeScreen: Bool){
+//    #warning("should close screen")
+    private func openAlertDefault(title: String?, message: String?, shouldCloseScreen: Bool) {
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [
             .default("Ok", {
-                if closeScreen {
+                if shouldCloseScreen {
                     self.coordinator?.finish()
                 }
             })
@@ -79,7 +78,7 @@ extension LoginVM: ForgotPasswordViewModelDelegate {
     }
 }
 
-extension LoginVM: RegisterViewModelDelegate{
+extension LoginVM: RegisterViewModelDelegate {
     func registerFinished(with email: String) {
         delegate?.getEmail(email)
     }

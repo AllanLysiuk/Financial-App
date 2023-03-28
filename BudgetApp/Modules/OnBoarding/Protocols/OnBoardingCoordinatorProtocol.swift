@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol OnBoardingCoordinatorProtocol: AnyObject{
+protocol OnBoardingCoordinatorProtocol: AnyObject {
     func finish()
 }

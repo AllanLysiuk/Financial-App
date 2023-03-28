@@ -12,7 +12,7 @@ protocol RegisterViewModelDelegate: AnyObject {
 }
 
 
-final class RegisterVM: RegisterViewModelProtocol{
+final class RegisterVM: RegisterViewModelProtocol {
   
     private var authService: RegisterAuthServiceProtocol
     private weak var coordinator: RegisterCoordinatorProtocol?
@@ -34,41 +34,30 @@ final class RegisterVM: RegisterViewModelProtocol{
     }
     
     func register(email: String?, password: String?, checkPassword: String?) {
-        guard let email = email, let password = password, let checkPassword = checkPassword else { return }
-        //merge two conditions into into one guard
         if password != checkPassword {
-            openAlert(title: "Incorrect Input", message: "Passwords are different, try one more time", closeScreen: false)
+            openAlert(title: "Incorrect Input", message: "Passwords are different, try one more time", shouldCloseScreen: false)
             return
         }
         
-        if email == "" || password == "" || checkPassword == ""{
-            openAlert(title: "Wrong Input", message: "Email or password can't be empty", closeScreen: false)
-            return
-        } else {
+        if let email = email, let password = password, let checkPassword = checkPassword, (email != "" && password != "" && checkPassword != "") {
             authService.register(email: email, password: password) {error in
-                if error == nil{
+                if error == nil {
                     self.delegate?.registerFinished(with: email)
-                    self.openAlert(title: "Register operation", message: "You've succsesfully signed up", closeScreen: true)
-                }else{
-                    self.openAlert(title: "Error", message: error?.localizedDescription, closeScreen: false)
+                    self.openAlert(title: "Register operation", message: "You've succsesfully signed up", shouldCloseScreen: true)
+                } else {
+                    self.openAlert(title: "Error", message: error?.localizedDescription, shouldCloseScreen: false)
                 }
             }
+        } else {
+            openAlert(title: "Wrong Input", message: "Email or password can't be empty", shouldCloseScreen: false)
+            return
         }
     }
-//
-//    private func checkPasswordsIdentity(_ passsword: String, _ checkPassword: String) -> Bool{
-//        if passsword == checkPassword {
-//            return true
-//        }
-//        return false
-//    }
-//
-    
-    //should close
-    private func openAlert(title: String?, message: String?, closeScreen: Bool) {
+
+    private func openAlert(title: String?, message: String?, shouldCloseScreen: Bool) {
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [
             .default("Ok", {
-                if closeScreen {
+                if shouldCloseScreen {
                     self.finish(shouldMoveToParent: true)
                 }
             })
@@ -79,5 +68,4 @@ final class RegisterVM: RegisterViewModelProtocol{
     func finish(shouldMoveToParent: Bool) {
         coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
     }
-    
 }

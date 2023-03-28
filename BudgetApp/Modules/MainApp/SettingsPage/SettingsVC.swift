@@ -18,7 +18,7 @@ final class SettingsVC: UIViewController {
         requiredInit()
     }
     
-    private func requiredInit(){
+    private func requiredInit() {
         tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "gearshape"), tag: 3)
         navigationController?.tabBarItem = tabBarItem
     }

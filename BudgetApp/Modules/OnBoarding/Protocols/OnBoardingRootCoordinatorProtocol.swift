@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol OnBoardingRootCoordinatorProtocol{
+protocol OnBoardingRootCoordinatorProtocol {
     func finishedOnBoarding(_ coordinator: Coordinator)
 }

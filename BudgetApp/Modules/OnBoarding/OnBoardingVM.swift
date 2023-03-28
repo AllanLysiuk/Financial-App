@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class OnBoardingVM: OnBoardingViewModelProtocol{
+final class OnBoardingVM: OnBoardingViewModelProtocol {
 
     var pages: [UIViewController] = [
         OnBoardingPageList(image: UIImage(named: "OnBoardingImage")!, title: "First Screen", subtitle: "Start your career in iOS development"),
@@ -20,7 +20,7 @@ final class OnBoardingVM: OnBoardingViewModelProtocol{
     
     private weak var coordinator: OnBoardingCoordinatorProtocol?
     
-    init(coordinator: OnBoardingCoordinatorProtocol, adapter: PageViewAdapterProtocol){
+    init(coordinator: OnBoardingCoordinatorProtocol, adapter: PageViewAdapterProtocol) {
         self.coordinator = coordinator
         self.adapter = adapter
         self.adapter.setupActionDelegate(self)

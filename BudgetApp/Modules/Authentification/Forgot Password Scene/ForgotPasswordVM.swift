@@ -29,26 +29,24 @@ final class ForgotPasswordVM: ForgotPasswordViewModelProtocol{
     }
     
     func changePassword(email: String?) {
-        guard let email = email else { return }
-        
-        if email == "" {
-            openAlert(title: "Wrong Input", message: "Email can't be empty", closeScreen: false)
-            return
-        } else {
+        if let email = email, email != "" {
             authService.forgotPassword(email: email){ error in
-                if error == nil{
+                if error == nil {
                     self.delegate?.changePasswordFinished(with: email)
-                    self.openAlert(title: "Change password operation", message: "You've succsesfully changed password", closeScreen: true)
-                }else{
-                    self.openAlert(title: "Error", message: error?.localizedDescription, closeScreen: false)
+                    self.openAlert(title: "Change password operation", message: "You've succsesfully changed password", shouldCloseScreen: true)
+                } else {
+                    self.openAlert(title: "Error", message: error?.localizedDescription, shouldCloseScreen: false)
                 }
             }
+        } else {
+            openAlert(title: "Wrong Input", message: "Email can't be empty", shouldCloseScreen: false)
+            return
         }
     }
     
-    private func openAlert(title: String?, message: String?, closeScreen: Bool){
+    private func openAlert(title: String?, message: String?, shouldCloseScreen: Bool) {
         let alert = alertFactory.makeActionSheet(title: title, message: message, actions: [.default("Ok", {
-            if closeScreen{
+            if shouldCloseScreen {
                 self.finish(shouldMoveToParent: true)
             }
         })])

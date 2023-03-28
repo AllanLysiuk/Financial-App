@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-final class OnBoardingCoordinator: Coordinator{
+final class OnBoardingCoordinator: Coordinator {
     
     var childCoordinators: [Coordinator] = []
     private var rootNavigationController: UINavigationController
     private var rootCoordinator: OnBoardingRootCoordinatorProtocol
     
-    init(rootNavigationController: UINavigationController, rootCoordinator: OnBoardingRootCoordinatorProtocol){
+    init(rootNavigationController: UINavigationController, rootCoordinator: OnBoardingRootCoordinatorProtocol) {
         self.rootCoordinator = rootCoordinator
         self.rootNavigationController = rootNavigationController
     }

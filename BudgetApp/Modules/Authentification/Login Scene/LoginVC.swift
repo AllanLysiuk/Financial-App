@@ -36,21 +36,21 @@ final class LoginVC: UIViewController{
         sender.secureButtonToggle(isSecure: passwordTextField.isSecureTextEntry)
     }
     
-    @IBAction private func buttonLoginDidTap(){
+    @IBAction private func buttonLoginDidTap() {
         viewModel.login(email: emailTextField.text, password: passwordTextField.text)
     }
-    @IBAction private func buttonRegisterDidTap(){
+    @IBAction private func buttonRegisterDidTap() {
         print("Register did tap in LoginVC")
         viewModel.openRegisterScene(with: emailTextField.text)
         
     }
-    @IBAction private func buttonForgotPasswordDidTap(){
+    @IBAction private func buttonForgotPasswordDidTap() {
         print("Forgot password did tap in LoginVC")
         viewModel.openForgotPasswordScene(with: emailTextField.text)
        
     }
     
-    private func createRightViewButton(textField: UITextField, selector: Selector){
+    private func createRightViewButton(textField: UITextField, selector: Selector) {
         let rightButton  = UIButton(type: .custom)
         rightButton.prepareButtonForRightView()
         rightButton.addTarget(self, action: selector, for: .touchUpInside)
@@ -61,13 +61,13 @@ final class LoginVC: UIViewController{
     
 }
 
-extension LoginVC: LoginVCDelegate{
+extension LoginVC: LoginVCDelegate {
     func getEmail(_ email: String) {
         emailTextField.text = email
     }
 }
 
-extension LoginVC: UITextFieldDelegate{
+extension LoginVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

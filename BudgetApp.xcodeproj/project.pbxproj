@@ -24,6 +24,27 @@
 		9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */; };
 		9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152329C8A56600C22EE1 /* OnBoardingPageList.swift */; };
 		9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */; };
+		9D86461C29D2E62700E216A0 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461B29D2E62700E216A0 /* HistoryVC.swift */; };
+		9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461D29D2E63400E216A0 /* HistoryVM.swift */; };
+		9D86462029D2E64E00E216A0 /* HistoryVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461F29D2E64E00E216A0 /* HistoryVCCoordinator.swift */; };
+		9D86462229D2E65F00E216A0 /* HistoryVCAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86462129D2E65F00E216A0 /* HistoryVCAssembler.swift */; };
+		9D86462529D2E6B500E216A0 /* HistoryViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86462429D2E6B500E216A0 /* HistoryViewModelProtocol.swift */; };
+		9D86462729D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86462629D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift */; };
+		9D86462929D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86462829D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift */; };
+		9D86462C29D2EBDB00E216A0 /* ReportVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86462B29D2EBDB00E216A0 /* ReportVC.swift */; };
+		9D86462E29D2EBE700E216A0 /* ReportVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86462D29D2EBE700E216A0 /* ReportVM.swift */; };
+		9D86463029D2EBFA00E216A0 /* ReportVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86462F29D2EBFA00E216A0 /* ReportVCCoordinator.swift */; };
+		9D86463229D2EC0D00E216A0 /* ReportVCAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86463129D2EC0D00E216A0 /* ReportVCAssembler.swift */; };
+		9D86463529D2ECA800E216A0 /* ReportViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86463429D2ECA800E216A0 /* ReportViewModelProtocol.swift */; };
+		9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86463629D2F10D00E216A0 /* ReportCoordinatorProtocol.swift */; };
+		9D86463929D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86463829D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift */; };
+		9D86463C29D313C800E216A0 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86463B29D313C800E216A0 /* SettingsVC.swift */; };
+		9D86463E29D313D600E216A0 /* SettingsVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86463D29D313D600E216A0 /* SettingsVM.swift */; };
+		9D86464029D313EC00E216A0 /* SettingsVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86463F29D313EC00E216A0 /* SettingsVCCoordinator.swift */; };
+		9D86464229D313FC00E216A0 /* SettingsVCAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464129D313FC00E216A0 /* SettingsVCAssembler.swift */; };
+		9D86464529D3144800E216A0 /* SettingsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */; };
+		9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */; };
+		9D86464929D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */; };
 		9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1229C2313D0020E637 /* HomePageVC.swift */; };
 		9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */; };
 		9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1629C232500020E637 /* HomePageVM.swift */; };
@@ -43,6 +64,11 @@
 		9DB802E629BDCBB200D57CB4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DB802E529BDCBB200D57CB4 /* FirebaseAuth */; };
 		9DB802E829BDCBB200D57CB4 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9DB802E729BDCBB200D57CB4 /* FirebaseAuthCombine-Community */; };
 		9DB802EC29BFACCA00D57CB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */; };
+		9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044D29CE0393006D4425 /* TabBarController.swift */; };
+		9DCB045029CE0D0D006D4425 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */; };
+		9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */; };
+		9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB045429CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift */; };
+		9DCB045729CE11C5006D4425 /* TabBarCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB045629CE11C5006D4425 /* TabBarCoordinatorProtocol.swift */; };
 		9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6C629ADE3AF0087E8F1 /* AppDelegate.swift */; };
 		9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6C829ADE3AF0087E8F1 /* SceneDelegate.swift */; };
 		9DD7D6D029ADE3B30087E8F1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DD7D6CF29ADE3B30087E8F1 /* Assets.xcassets */; };
@@ -89,6 +115,27 @@
 		9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewAdapterProtocol.swift; sourceTree = "<group>"; };
 		9D80152329C8A56600C22EE1 /* OnBoardingPageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageList.swift; sourceTree = "<group>"; };
 		9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageList.xib; sourceTree = "<group>"; };
+		9D86461B29D2E62700E216A0 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
+		9D86461D29D2E63400E216A0 /* HistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVM.swift; sourceTree = "<group>"; };
+		9D86461F29D2E64E00E216A0 /* HistoryVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVCCoordinator.swift; sourceTree = "<group>"; };
+		9D86462129D2E65F00E216A0 /* HistoryVCAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVCAssembler.swift; sourceTree = "<group>"; };
+		9D86462429D2E6B500E216A0 /* HistoryViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModelProtocol.swift; sourceTree = "<group>"; };
+		9D86462629D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D86462829D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D86462B29D2EBDB00E216A0 /* ReportVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVC.swift; sourceTree = "<group>"; };
+		9D86462D29D2EBE700E216A0 /* ReportVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVM.swift; sourceTree = "<group>"; };
+		9D86462F29D2EBFA00E216A0 /* ReportVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVCCoordinator.swift; sourceTree = "<group>"; };
+		9D86463129D2EC0D00E216A0 /* ReportVCAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportVCAssembler.swift; sourceTree = "<group>"; };
+		9D86463429D2ECA800E216A0 /* ReportViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewModelProtocol.swift; sourceTree = "<group>"; };
+		9D86463629D2F10D00E216A0 /* ReportCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D86463829D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D86463B29D313C800E216A0 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		9D86463D29D313D600E216A0 /* SettingsVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVM.swift; sourceTree = "<group>"; };
+		9D86463F29D313EC00E216A0 /* SettingsVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVCCoordinator.swift; sourceTree = "<group>"; };
+		9D86464129D313FC00E216A0 /* SettingsVCAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVCAssembler.swift; sourceTree = "<group>"; };
+		9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelProtocol.swift; sourceTree = "<group>"; };
+		9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1229C2313D0020E637 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1629C232500020E637 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
@@ -106,6 +153,11 @@
 		9DB802DE29B7A8BE00D57CB4 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		9DB802E029B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactoryProtocol.swift; sourceTree = "<group>"; };
 		9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DCB044D29CE0393006D4425 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
+		9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		9DCB045429CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9DCB045629CE11C5006D4425 /* TabBarCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DD7D6C329ADE3AF0087E8F1 /* BudgetApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DD7D6C629ADE3AF0087E8F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9DD7D6C829ADE3AF0087E8F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -191,9 +243,79 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9D86461A29D2E60200E216A0 /* HistoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				9D86462329D2E69400E216A0 /* Protocols */,
+				9D86461B29D2E62700E216A0 /* HistoryVC.swift */,
+				9D86461D29D2E63400E216A0 /* HistoryVM.swift */,
+				9D86461F29D2E64E00E216A0 /* HistoryVCCoordinator.swift */,
+				9D86462129D2E65F00E216A0 /* HistoryVCAssembler.swift */,
+			);
+			path = HistoryPage;
+			sourceTree = "<group>";
+		};
+		9D86462329D2E69400E216A0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D86462429D2E6B500E216A0 /* HistoryViewModelProtocol.swift */,
+				9D86462629D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift */,
+				9D86462829D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9D86462A29D2EBB700E216A0 /* ReportPage */ = {
+			isa = PBXGroup;
+			children = (
+				9D86463329D2EC8300E216A0 /* Protocols */,
+				9D86462B29D2EBDB00E216A0 /* ReportVC.swift */,
+				9D86462D29D2EBE700E216A0 /* ReportVM.swift */,
+				9D86462F29D2EBFA00E216A0 /* ReportVCCoordinator.swift */,
+				9D86463129D2EC0D00E216A0 /* ReportVCAssembler.swift */,
+			);
+			path = ReportPage;
+			sourceTree = "<group>";
+		};
+		9D86463329D2EC8300E216A0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D86463429D2ECA800E216A0 /* ReportViewModelProtocol.swift */,
+				9D86463629D2F10D00E216A0 /* ReportCoordinatorProtocol.swift */,
+				9D86463829D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9D86463A29D313AD00E216A0 /* SettingsPage */ = {
+			isa = PBXGroup;
+			children = (
+				9D86464329D3143200E216A0 /* Protocols */,
+				9D86463B29D313C800E216A0 /* SettingsVC.swift */,
+				9D86463D29D313D600E216A0 /* SettingsVM.swift */,
+				9D86463F29D313EC00E216A0 /* SettingsVCCoordinator.swift */,
+				9D86464129D313FC00E216A0 /* SettingsVCAssembler.swift */,
+			);
+			path = SettingsPage;
+			sourceTree = "<group>";
+		};
+		9D86464329D3143200E216A0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */,
+				9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */,
+				9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9DA81A0F29C230120020E637 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
+				9DCB044C29CE0361006D4425 /* TabBarController */,
+				9D86463A29D313AD00E216A0 /* SettingsPage */,
+				9D86462A29D2EBB700E216A0 /* ReportPage */,
+				9D86461A29D2E60200E216A0 /* HistoryPage */,
 				9DA81A1029C230500020E637 /* HomePage */,
 			);
 			path = MainApp;
@@ -224,6 +346,7 @@
 		9DA81A2029C5BC060020E637 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				9DA81A3329C725C90020E637 /* PageViewAdapter */,
 				9DA81A2129C5BC200020E637 /* Protocols */,
 				9DCB044629CC6860006D4425 /* PageViewController */,
 				9DA81A2229C5BC670020E637 /* OnBoardingVC.swift */,
@@ -242,14 +365,6 @@
 				9DA81A2E29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		9DA81A3229C725AE0020E637 /* Adapters */ = {
-			isa = PBXGroup;
-			children = (
-				9DA81A3329C725C90020E637 /* PageViewAdapter */,
-			);
-			path = Adapters;
 			sourceTree = "<group>";
 		};
 		9DA81A3329C725C90020E637 /* PageViewAdapter */ = {
@@ -279,6 +394,26 @@
 			path = PageViewController;
 			sourceTree = "<group>";
 		};
+		9DCB044C29CE0361006D4425 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				9DCB045329CE10E9006D4425 /* Protocols */,
+				9DCB044D29CE0393006D4425 /* TabBarController.swift */,
+				9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */,
+				9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		9DCB045329CE10E9006D4425 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9DCB045429CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift */,
+				9DCB045629CE11C5006D4425 /* TabBarCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9DD7D6BA29ADE3AF0087E8F1 = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +439,6 @@
 				9DB802DD29B7A89600D57CB4 /* Factories */,
 				9DD7D6EF29ADEF900087E8F1 /* Services */,
 				9D75CD3329C0EE5C00186E75 /* GlobalExtensions */,
-				9DA81A3229C725AE0020E637 /* Adapters */,
 				9DD7D6CF29ADE3B30087E8F1 /* Assets.xcassets */,
 				9DD7D6D129ADE3B30087E8F1 /* LaunchScreen.storyboard */,
 				9DD7D6D429ADE3B30087E8F1 /* Info.plist */,
@@ -502,15 +636,24 @@
 				9DD7D6DB29ADE5FC0087E8F1 /* Coordinator.swift in Sources */,
 				9DD7D6DD29ADE6660087E8F1 /* AppCoordinator.swift in Sources */,
 				9DA81A2D29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift in Sources */,
+				9D86464929D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift in Sources */,
+				9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */,
 				9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */,
 				9DD7D6E729ADEECF0087E8F1 /* LoginVC.swift in Sources */,
+				9D86462729D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
 				9D7F27F229B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift in Sources */,
+				9D86464529D3144800E216A0 /* SettingsViewModelProtocol.swift in Sources */,
 				9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */,
+				9D86462E29D2EBE700E216A0 /* ReportVM.swift in Sources */,
 				9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */,
+				9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */,
+				9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */,
 				9DD7D6E529ADEB1F0087E8F1 /* LoginAssembler.swift in Sources */,
+				9D86463229D2EC0D00E216A0 /* ReportVCAssembler.swift in Sources */,
 				9DD7D70429AE20900087E8F1 /* RegisterViewModelProtocol.swift in Sources */,
 				9DA81A2329C5BC670020E637 /* OnBoardingVC.swift in Sources */,
+				9D86462C29D2EBDB00E216A0 /* ReportVC.swift in Sources */,
 				9D7F27E629B247D400075C8B /* AuthService+ForgotPassword.swift in Sources */,
 				9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */,
 				9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */,
@@ -523,19 +666,26 @@
 				9DA81A2F29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift in Sources */,
 				9DD7D6F629ADF03C0087E8F1 /* AuthService+Login.swift in Sources */,
 				9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */,
+				9D86463E29D313D600E216A0 /* SettingsVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
+				9D86462529D2E6B500E216A0 /* HistoryViewModelProtocol.swift in Sources */,
 				9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */,
 				9D7F27E029B2478200075C8B /* ForgotPassswordVC.swift in Sources */,
+				9DCB045029CE0D0D006D4425 /* TabBarAssembler.swift in Sources */,
 				9D7F27E829B2480000075C8B /* ForgotPasswordAuthServiceProtocol.swift in Sources */,
+				9D86463C29D313C800E216A0 /* SettingsVC.swift in Sources */,
 				9DA81A2B29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift in Sources */,
+				9D86461C29D2E62700E216A0 /* HistoryVC.swift in Sources */,
 				9DD7D70B29AE251A0087E8F1 /* RegisterCoordinator.swift in Sources */,
 				9DA81A1929C232970020E637 /* HomePageCoordinatorProtocol.swift in Sources */,
 				9DD7D6F329ADEFF50087E8F1 /* LoginAuthServiceProtocol.swift in Sources */,
+				9D86463529D2ECA800E216A0 /* ReportViewModelProtocol.swift in Sources */,
 				9DD7D6E329ADEA510087E8F1 /* LoginCoordinator.swift in Sources */,
 				9DA81A1B29C232C90020E637 /* HomePageCoordinator.swift in Sources */,
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,
 				9DD7D70729AE22290087E8F1 /* AuthService+Register.swift in Sources */,
+				9DCB045729CE11C5006D4425 /* TabBarCoordinatorProtocol.swift in Sources */,
 				9DA81A1D29C2334F0020E637 /* HomePageAssembler.swift in Sources */,
 				9D7F27EE29B25D9700075C8B /* ForgotPasswordCoordinator.swift in Sources */,
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
@@ -544,13 +694,23 @@
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
+				9D86462229D2E65F00E216A0 /* HistoryVCAssembler.swift in Sources */,
 				9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */,
 				9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */,
+				9D86463929D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift in Sources */,
 				9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */,
 				9DB802DF29B7A8BE00D57CB4 /* AlertControllerFactory.swift in Sources */,
+				9D86462029D2E64E00E216A0 /* HistoryVCCoordinator.swift in Sources */,
+				9D86462929D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift in Sources */,
 				9DD7D70929AE22420087E8F1 /* RegisterAuthServiceProtocol.swift in Sources */,
+				9D86464229D313FC00E216A0 /* SettingsVCAssembler.swift in Sources */,
 				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
+				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
+				9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */,
+				9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,
+				9D86464029D313EC00E216A0 /* SettingsVCCoordinator.swift in Sources */,
+				9D86463029D2EBFA00E216A0 /* ReportVCCoordinator.swift in Sources */,
 				9DA81A2529C5BC7A0020E637 /* OnBoardingVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

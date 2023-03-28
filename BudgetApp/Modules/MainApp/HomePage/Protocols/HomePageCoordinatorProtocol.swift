@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HomePageCoordinatorProtocol: AnyObject{
+protocol HomePageCoordinatorProtocol: AnyObject {
     func finish()
 }

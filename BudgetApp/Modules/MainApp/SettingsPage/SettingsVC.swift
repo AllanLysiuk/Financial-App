@@ -1,25 +1,25 @@
 //
-//  MainScreen.swift
+//  SettingsVC.swift
 //  BudgetApp
 //
-//  Created by Allan on 15.03.23.
+//  Created by Allan on 28.03.23.
 //
 
 import Foundation
 import UIKit
 
-final class HomePageVC: UIViewController{
+final class SettingsVC: UIViewController {
     
-    private var viewModel: HomePageViewModelProtocol
+    private var viewModel: SettingsViewModelProtocol
     
-    init(viewModel: HomePageViewModelProtocol){
+    init(viewModel: SettingsViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         requiredInit()
     }
     
-    private func requiredInit() {
-        tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "circle.grid.3x3"), tag: 0)
+    private func requiredInit(){
+        tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "gearshape"), tag: 3)
         navigationController?.tabBarItem = tabBarItem
     }
     
@@ -29,7 +29,6 @@ final class HomePageVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
-        
+        self.view.backgroundColor = .cyan
     }
 }

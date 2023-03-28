@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol RegisterViewModelProtocol{
+protocol RegisterViewModelProtocol {
     var email: String? { get }
     
     func finish(shouldMoveToParent: Bool)

@@ -19,7 +19,7 @@ final class RegisterCoordinator: Coordinator{
         self.parentNavigationController = parentNavigationController
     }
     
-    func start(){
+    func start() {
         assert(false, "Should be open with login, please use start(login:)")
     }
     

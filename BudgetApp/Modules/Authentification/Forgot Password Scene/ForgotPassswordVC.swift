@@ -29,13 +29,15 @@ final class ForgotPasswordVC: UIViewController{
         emailTextField.delegate = self
         emailTextField.text = viewModel.email
     }
+    
     override func willMove(toParent parent: UIViewController?) {
-            super.willMove(toParent: parent)
-            if parent == nil
-            {
-                viewModel.finish(shouldMoveToParent: false)
-            }
+        super.willMove(toParent: parent)
+        if parent == nil
+        {
+            viewModel.finish(shouldMoveToParent: false)
+        }
     }
+    
     @IBAction private func changePasswordDidTap(){
         viewModel.changePassword(email: emailTextField.text)
     }

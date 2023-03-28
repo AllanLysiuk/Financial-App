@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HomePageRootCoordinatorProtocol{
-    func finished(_ coordinator: Coordinator)
+protocol HomePageRootCoordinatorProtocol {
+    func homePageFinished(_ coordinator: Coordinator)
 }

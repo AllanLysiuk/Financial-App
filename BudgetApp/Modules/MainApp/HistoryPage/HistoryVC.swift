@@ -1,25 +1,25 @@
 //
-//  MainScreen.swift
+//  HistoryVC.swift
 //  BudgetApp
 //
-//  Created by Allan on 15.03.23.
+//  Created by Allan on 28.03.23.
 //
 
 import Foundation
 import UIKit
 
-final class HomePageVC: UIViewController{
+final class HistoryVC: UIViewController {
     
-    private var viewModel: HomePageViewModelProtocol
+    private let viewModel: HistoryViewModelProtocol
     
-    init(viewModel: HomePageViewModelProtocol){
+    init(viewModel: HistoryViewModelProtocol) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
         requiredInit()
     }
     
     private func requiredInit() {
-        tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "circle.grid.3x3"), tag: 0)
+        tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "books.vertical"), tag: 1)
         navigationController?.tabBarItem = tabBarItem
     }
     
@@ -29,7 +29,7 @@ final class HomePageVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .blue
+        self.view.backgroundColor = .red
         
     }
 }

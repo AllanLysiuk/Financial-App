@@ -8,28 +8,28 @@
 import Foundation
 import UIKit
 
-final class HomePageCoordinator: Coordinator{
-    private var rootNavigationController: UINavigationController
+final class HomePageCoordinator: Coordinator {
+    private var tabBarController: UITabBarController
     private var rootCoordinator: HomePageRootCoordinatorProtocol
     var childCoordinators: [Coordinator] = []
     
-    init(rootNavigationController: UINavigationController, rootCoordinator: HomePageRootCoordinatorProtocol){
-        self.rootNavigationController = rootNavigationController
+    init(tabBarController: UITabBarController, rootCoordinator: HomePageRootCoordinatorProtocol) {
+        self.tabBarController = tabBarController
         self.rootCoordinator = rootCoordinator
     }
     
     func start() {
         let vc = HomePageAssembler.makeHomePageVC(coordinator: self)
-        rootNavigationController.pushViewController(vc, animated: false)
+        tabBarController.addChild(vc)
     }
     
     func finish() {
-        rootNavigationController.popViewController(animated: false)
-        rootCoordinator.finished(self)
+        tabBarController.removeFromParent()
+        rootCoordinator.homePageFinished(self)
     }
     
 }
 
-extension HomePageCoordinator: HomePageCoordinatorProtocol{
+extension HomePageCoordinator: HomePageCoordinatorProtocol {
     
 }

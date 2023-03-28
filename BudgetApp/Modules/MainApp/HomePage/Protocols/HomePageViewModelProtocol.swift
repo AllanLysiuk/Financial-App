@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol HomePageViewModelProtocol{
+protocol HomePageViewModelProtocol {
     
 }

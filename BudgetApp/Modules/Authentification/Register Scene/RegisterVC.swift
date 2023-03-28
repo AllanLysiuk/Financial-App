@@ -39,21 +39,19 @@ final class RegisterVC: UIViewController{
     
     override func willMove(toParent parent: UIViewController?) {
             super.willMove(toParent: parent)
-            if parent == nil
-            {
+            if parent == nil {
                 viewModel.finish(shouldMoveToParent: false)
             }
     }
     
     @objc func secureInputButonDidTap(sender: UIButton!) {
-        if sender.tag == 0{
+        if sender.tag == 0 {
             passwordTextField.togglePasswordVisibility()
             sender.secureButtonToggle(isSecure: passwordTextField.isSecureTextEntry)
-        }else{
+        } else {
             checkPasswordTextField.togglePasswordVisibility()
             sender.secureButtonToggle(isSecure: checkPasswordTextField.isSecureTextEntry)
         }
-        
     }
     
     @IBAction private func register(){
@@ -61,14 +59,13 @@ final class RegisterVC: UIViewController{
     }
                               
     private func createRightViewButton(textField: UITextField, selector: Selector, tag: Int) {
-        let rightButton  = UIButton(type: .custom)
+        let rightButton = UIButton(type: .custom)
         rightButton.tag = tag
         rightButton.prepareButtonForRightView()
         rightButton.addTarget(self, action: selector, for: .touchUpInside)
         textField.rightViewMode = .always
         textField.rightView = rightButton
     }
-    
 }
 
 extension RegisterVC: UITextFieldDelegate{

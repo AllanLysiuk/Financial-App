@@ -16,7 +16,7 @@ final class RegisterAssembler{
     }
     
     private static func makeRegisterViewModel(delegate: RegisterViewModelDelegate,coordinator: RegisterCoordinatorProtocol, email: String?) -> RegisterViewModelProtocol{
-        return RegisterVM(delegate: delegate, authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory(), email: email ?? "")
+        return RegisterVM(delegate: delegate, authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory(), email: email)
     }
     
     private static func makeAuthService() -> RegisterAuthServiceProtocol{

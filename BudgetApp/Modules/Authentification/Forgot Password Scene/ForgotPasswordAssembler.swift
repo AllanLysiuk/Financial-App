@@ -8,15 +8,15 @@
 import Foundation
 import UIKit
 
-final class ForgotPasswordAssembler{
-    private init(){ }
+final class ForgotPasswordAssembler {
+    private init() { }
     
-    static func makeForgotPasswordVC(delegate: ForgotPasswordViewModelDelegate?, coordinator: ForgotPasswordCoordinatorProtocol, email: String) -> UIViewController{
+    static func makeForgotPasswordVC(delegate: ForgotPasswordViewModelDelegate?, coordinator: ForgotPasswordCoordinatorProtocol, email: String) -> UIViewController {
         let vm = makeViewModel(delegate: delegate, coordinator: coordinator, email: email)
         return ForgotPasswordVC(viewModel: vm)
     }
     
-    private static func makeViewModel(delegate: ForgotPasswordViewModelDelegate?, coordinator: ForgotPasswordCoordinatorProtocol, email: String) -> ForgotPasswordViewModelProtocol{
+    private static func makeViewModel(delegate: ForgotPasswordViewModelDelegate?, coordinator: ForgotPasswordCoordinatorProtocol, email: String) -> ForgotPasswordViewModelProtocol {
         return ForgotPasswordVM(delegate: delegate, authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory(), email: email)
     }
     

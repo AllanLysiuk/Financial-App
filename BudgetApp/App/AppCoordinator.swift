@@ -18,10 +18,10 @@ final class AppCoordinator: Coordinator{
     }
     
     func start() {
-       // let isRegistered = true
-        let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
-       // let shouldShowOnboarding = false
-        let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
+        let isRegistered = true
+        //let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
+       let shouldShowOnboarding = true
+        //let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
         
         if !isRegistered {
             openLoginScene()
@@ -57,9 +57,9 @@ final class AppCoordinator: Coordinator{
         let nc = UINavigationController()
         mainWindow.rootViewController = nc
         
-       let mainCoordinator = HomePageCoordinator(rootNavigationController: nc, rootCoordinator: self)
-        childCoordinators.append(mainCoordinator)
-        mainCoordinator.start()
+       let tabBarCoordinator = TabBarCoordinator(rootNavigationController: nc, rootCoordinator: self)
+        childCoordinators.append(tabBarCoordinator)
+        tabBarCoordinator.start()
         window = mainWindow
     }
     
@@ -77,7 +77,7 @@ final class AppCoordinator: Coordinator{
 }
 
 
-extension AppCoordinator: LoginRootCoordinatorController{
+extension AppCoordinator: LoginRootCoordinatorController {
     func finishedLogging(_ coordinator: Coordinator) {
         childCoordinators.removeAll { tmp in
             tmp === coordinator
@@ -86,8 +86,8 @@ extension AppCoordinator: LoginRootCoordinatorController{
     }
 }
 
-extension AppCoordinator: HomePageRootCoordinatorProtocol{
-    func finished(_ coordinator: Coordinator) {
+extension AppCoordinator: OnBoardingRootCoordinatorProtocol {
+    func finishedOnBoarding(_ coordinator: Coordinator) {
         childCoordinators.removeAll { tmp in
             tmp === coordinator
         }
@@ -95,8 +95,8 @@ extension AppCoordinator: HomePageRootCoordinatorProtocol{
     }
 }
 
-extension AppCoordinator: OnBoardingRootCoordinatorProtocol{
-    func finishedOnBoarding(_ coordinator: Coordinator) {
+extension AppCoordinator: TabBarRootCoordinatorProtocol {
+    func finished(_ coordinator: Coordinator) {
         childCoordinators.removeAll { tmp in
             tmp === coordinator
         }

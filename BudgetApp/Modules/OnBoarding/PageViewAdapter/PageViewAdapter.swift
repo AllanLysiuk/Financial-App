@@ -131,12 +131,12 @@ extension PageViewAdapter {
         
         guard let currentPage = pageView.viewControllers?[0] else { return }
         guard let nextPage = pageView.dataSource?.pageViewController(pageView, viewControllerAfter: currentPage) else { return }
-            
-        pageView.setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
-        }
         
-        func goToSpecificPage(index: Int, ofViewControllers pages: [UIViewController]) {
-            guard let pageView = pageView else { return }
-            pageView.setViewControllers([pages[index]], direction: .forward, animated: true, completion: nil)
-        }
+        pageView.setViewControllers([nextPage], direction: .forward, animated: animated, completion: completion)
+    }
+    
+    func goToSpecificPage(index: Int, ofViewControllers pages: [UIViewController]) {
+        guard let pageView = pageView else { return }
+        pageView.setViewControllers([pages[index]], direction: .forward, animated: true, completion: nil)
+    }
 }

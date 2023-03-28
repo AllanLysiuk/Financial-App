@@ -20,7 +20,7 @@ final class ForgotPasswordVM: ForgotPasswordViewModelProtocol{
     private weak var delegate: ForgotPasswordViewModelDelegate?
     var email: String?
     
-    init (delegate: ForgotPasswordViewModelDelegate?,authService: ForgotPasswordAuthServiceProtocol, coordinator: ForgotPasswordCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol, email: String){
+    init(delegate: ForgotPasswordViewModelDelegate?, authService: ForgotPasswordAuthServiceProtocol, coordinator: ForgotPasswordCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol, email: String){
         self.authService = authService
         self.coordinator = coordinator
         self.alertFactory = alertFactory

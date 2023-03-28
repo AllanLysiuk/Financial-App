@@ -21,7 +21,11 @@ final class RegisterVM: RegisterViewModelProtocol{
     private weak var delegate: RegisterViewModelDelegate?
     var email: String?
     
-    init (delegate: RegisterViewModelDelegate, authService: RegisterAuthServiceProtocol, coordinator: RegisterCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol, email: String){
+    init (delegate: RegisterViewModelDelegate,
+          authService: RegisterAuthServiceProtocol,
+          coordinator: RegisterCoordinatorProtocol,
+          alertFactory: AlertControllerFactoryProtocol,
+          email: String?) {
         self.authService = authService
         self.coordinator = coordinator
         self.alertFactory = alertFactory
@@ -31,8 +35,8 @@ final class RegisterVM: RegisterViewModelProtocol{
     
     func register(email: String?, password: String?, checkPassword: String?) {
         guard let email = email, let password = password, let checkPassword = checkPassword else { return }
-        
-        if !checkPasswordsIdentity(password, checkPassword){
+        //merge two conditions into into one guard
+        if password != checkPassword {
             openAlert(title: "Incorrect Input", message: "Passwords are different, try one more time", closeScreen: false)
             return
         }
@@ -51,18 +55,20 @@ final class RegisterVM: RegisterViewModelProtocol{
             }
         }
     }
-       
-    private func checkPasswordsIdentity(_ passsword: String, _ checkPassword: String) -> Bool{
-        if passsword == checkPassword{
-            return true
-        }
-        return false
-    }
+//
+//    private func checkPasswordsIdentity(_ passsword: String, _ checkPassword: String) -> Bool{
+//        if passsword == checkPassword {
+//            return true
+//        }
+//        return false
+//    }
+//
     
-    private func openAlert(title: String?, message: String?, closeScreen: Bool){
+    //should close
+    private func openAlert(title: String?, message: String?, closeScreen: Bool) {
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [
             .default("Ok", {
-                if closeScreen{
+                if closeScreen {
                     self.finish(shouldMoveToParent: true)
                 }
             })

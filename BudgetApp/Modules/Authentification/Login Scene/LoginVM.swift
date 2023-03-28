@@ -19,7 +19,7 @@ final class LoginVM: LoginViewModelProtocol{
     
     private weak var delegate: LoginVCDelegate?
     
-    init(authService: LoginAuthServiceProtocol, coordinator: LoginCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol){
+    init(authService: LoginAuthServiceProtocol, coordinator: LoginCoordinatorProtocol, alertFactory: AlertControllerFactoryProtocol) {
         self.authService = authService
         self.coordinator = coordinator
         self.alertFactory = alertFactory
@@ -34,21 +34,20 @@ final class LoginVM: LoginViewModelProtocol{
             return
         }
         authService.login(email: email, password: password) { error in
-            if error == nil{
+            if let error = error {
+                self.openAlertDefault(title: "Error", message: error.localizedDescription, closeScreen: false)
+            } else {
                 let ud = UserDefaults()
                 ud.set(true, forKey: "isRegistered")
                 self.openAlertDefault(title: "Login operation", message: "You've succsesfully signed in", closeScreen: true)
-            }else{
-                self.openAlertDefault(title: "Error", message: error?.localizedDescription, closeScreen: false)
             }
         }
-        
     }
-    
+    #warning("should close screen")
     private func openAlertDefault(title: String?, message: String?, closeScreen: Bool){
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [
             .default("Ok", {
-                if closeScreen{
+                if closeScreen {
                     self.coordinator?.finish()
                 }
             })
@@ -75,6 +74,7 @@ final class LoginVM: LoginViewModelProtocol{
 
 extension LoginVM: ForgotPasswordViewModelDelegate {
     func changePasswordFinished(with email: String) {
+        //not get
         delegate?.getEmail(email)
     }
 }

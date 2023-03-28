@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol RegisterRootCoordinatorProtocol{
+protocol RegisterRootCoordinatorProtocol {
     func registerFinished(_ coordinator: Coordinator)
 }

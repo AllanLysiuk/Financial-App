@@ -18,9 +18,9 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-        let isRegistered = false
+        let isRegistered = true
         //let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
-       let shouldShowOnboarding = true
+       let shouldShowOnboarding = false
         //let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
         
         if !isRegistered {

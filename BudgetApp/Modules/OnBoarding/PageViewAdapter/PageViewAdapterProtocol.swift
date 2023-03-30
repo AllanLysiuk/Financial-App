@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 protocol PageViewAdapterProtocol {
-    func setupPageView(_ pageView: UIPageViewController, _ pageControl: UIPageControl, _ pages: [UIViewController])
+    func setupPageView(_ pageView: UIPageViewController, _ pages: [OnBoardingPage])
     func setupActionDelegate(_ delegate: AdapterActionDelegate)
     func skipTapped()
     func nextTapped()
+    func pageControllerTapped(_ currentPage: Int)
 }

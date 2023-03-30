@@ -10,12 +10,13 @@ import UIKit
 
 protocol AdapterActionDelegate: AnyObject {
     func finishOnBoarding()
+    func pageControlGetCurrentPage() -> Int
+    func pageControlSetCurrentPage(_ currentPage: Int)
 }
 
 final class PageViewAdapter: NSObject, PageViewAdapterProtocol {
 
     private weak var pageView: UIPageViewController?
-    private weak var pageControl: UIPageControl?
     private weak var delegate: AdapterActionDelegate?
     
     private var pages: [UIViewController] = []
@@ -23,71 +24,49 @@ final class PageViewAdapter: NSObject, PageViewAdapterProtocol {
     
    
     //MARK: PageViewAdapterProtocol Functions
-    func setupPageView(_ pageView: UIPageViewController, _ pageControl: UIPageControl, _ pages: [UIViewController]) {
+    func setupPageView(_ pageView: UIPageViewController, _ pages: [OnBoardingPage]) {
         self.pageView = pageView
-        self.pageControl = pageControl
-        self.pages = pages
+        self.pages =  pages.map { elem in
+            return elem.getViewController()
+        }
         setupPageView()
     }
     
     func skipTapped() {
         let lastPage = pages.count - 1
-        pageControl?.currentPage = lastPage
-                
+        delegate?.pageControlSetCurrentPage(lastPage)
         goToSpecificPage(index: lastPage, ofViewControllers: pages)
     }
     
     func nextTapped() {
-        if pageControl?.currentPage == pages.count - 1{
+        if delegate?.pageControlGetCurrentPage() == pages.count - 1{
             delegate?.finishOnBoarding()
         }else{
-        pageControl?.currentPage += 1
-        goToNextPage()
+            if let currentPage = delegate?.pageControlGetCurrentPage() {
+            delegate?.pageControlSetCurrentPage(currentPage + 1)
+            goToNextPage()
+            }
         }
     }
     
     func setupActionDelegate(_ delegate: AdapterActionDelegate) {
         self.delegate = delegate
     }
+    
+    func pageControllerTapped(_ currentPage: Int) {
+        pageView?.setViewControllers([pages[currentPage]], direction: .forward, animated: true, completion: nil)
+   }
+    
     //MARK: Private functions
     private func setupPageView() {
         pageView?.dataSource = self
         pageView?.delegate = self
         
         setUp()
-        //style()
-        //layout()
     }
     
     private func setUp() {
-        pageControl?.addTarget(self, action: #selector(pageControllerTapped(_:)), for: .valueChanged)
         pageView?.setViewControllers([pages[initialPage]], direction: .forward, animated: true, completion: nil)
-     }
-     
-//    private func style() {
-//        pageControl?.translatesAutoresizingMaskIntoConstraints = false
-//        pageControl?.currentPageIndicatorTintColor = .black
-//        pageControl?.pageIndicatorTintColor = .systemGray2
-//        pageControl?.numberOfPages = pages.count
-//        pageControl?.currentPage = initialPage
-//    }
-     
-//     private func layout() {
-//         pageView?.view.addSubview(pageControl ?? UIPageControl())
-//         guard let pageControl = pageControl, let pageView = pageView else {
-//             return
-//         }
-//         
-//         NSLayoutConstraint.activate([
-//            pageControl.widthAnchor.constraint(equalTo: pageView.view.widthAnchor ),
-//            pageControl.heightAnchor.constraint(equalToConstant: 20.0),
-//            pageControl.bottomAnchor.constraint(equalTo: pageView.view.bottomAnchor, constant: -20.0)
-//         ])
-//     }
-    
-     //MARK: Actions
-     @objc func pageControllerTapped(_ sender: UIPageControl) {
-         pageView?.setViewControllers([pages[sender.currentPage]], direction: .forward, animated: true, completion: nil)
      }
     
 }
@@ -95,18 +74,16 @@ final class PageViewAdapter: NSObject, PageViewAdapterProtocol {
 //MARK: Delegate extension
 extension PageViewAdapter: UIPageViewControllerDelegate {
     func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
-        
         guard let viewControllers = pageViewController.viewControllers else { return }
         guard let currentIndex = pages.firstIndex(of: viewControllers[0]) else { return }
-        
-        pageControl?.currentPage = currentIndex
+        delegate?.pageControlSetCurrentPage(currentIndex)
     }
 }
 
 //MARK: Data Source extension
 extension PageViewAdapter: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController) else { return nil}
+        guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
         if currentIndex == 0 {
             return pages.last
         } else{
@@ -115,7 +92,7 @@ extension PageViewAdapter: UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let currentIndex = pages.firstIndex(of: viewController) else { return nil}
+        guard let currentIndex = pages.firstIndex(of: viewController) else { return nil }
         if currentIndex < pages.count - 1 {
             return pages[currentIndex + 1]
         } else{

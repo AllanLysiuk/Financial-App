@@ -12,4 +12,5 @@ protocol OnBoardingViewModelProtocol: AnyObject {
     func getPagesNumber() -> Int
     func skipButtonTapped()
     func nextButtonTapped()
+    func setPageControl(_ pageControl: UIPageControl)
 }

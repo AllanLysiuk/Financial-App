@@ -10,14 +10,11 @@ import UIKit
 
 final class OnBoardingVM: OnBoardingViewModelProtocol {
 
-    var pages: [UIViewController] = [
-        OnBoardingPageList(image: UIImage(named: "OnBoardingImage")!, title: "First Screen", subtitle: "Start your career in iOS development"),
-        OnBoardingPageList(image: UIImage(named: "OnBoardingImage")!, title: "Second Screen", subtitle: "Start your career in iOS development Start your career in iOS development Start your career in iOS development"),
-        OnBoardingPageList(image: UIImage(named: "OnBoardingImage")!, title: "Third Screen", subtitle: "Start your career in iOS development Start your career in iOS development Start your career in iOS development Start your career in iOS development")]
+    var pages: [OnBoardingPage] = [.first, .second, .third]
     
-    var pageControl = UIPageControl()
+    
     private var adapter: PageViewAdapterProtocol
-    
+    private var pageControl: UIPageControl?
     private weak var coordinator: OnBoardingCoordinatorProtocol?
     
     init(coordinator: OnBoardingCoordinatorProtocol, adapter: PageViewAdapterProtocol) {
@@ -27,7 +24,7 @@ final class OnBoardingVM: OnBoardingViewModelProtocol {
     }
     
     func setUp(with pageView: UIPageViewController, with pageControl: UIPageControl) {
-        adapter.setupPageView(pageView, pageControl, pages)
+        adapter.setupPageView(pageView, pages)
     }
     
     func getPagesNumber() -> Int {
@@ -41,10 +38,28 @@ final class OnBoardingVM: OnBoardingViewModelProtocol {
     func nextButtonTapped() {
         adapter.nextTapped()
     }
+    
+    func setPageControl(_ pageControl: UIPageControl) {
+        self.pageControl = pageControl
+        pageControl.addTarget(self, action: #selector(pageControllerTapped(_:)), for: .valueChanged)
+    }
+    
+    
+    @objc func pageControllerTapped(_ sender: UIPageControl) {
+        adapter.pageControllerTapped(pageControl?.currentPage ?? 0)
+    }
 }
 
 
 extension OnBoardingVM: AdapterActionDelegate {
+    func pageControlGetCurrentPage() -> Int {
+        return pageControl?.currentPage ?? 0
+    }
+    
+    func pageControlSetCurrentPage(_ currentPage: Int) {
+        pageControl?.currentPage = currentPage
+    }
+    
     func finishOnBoarding() {
         let ud = UserDefaults()
         ud.set(true, forKey: "shouldShowOnboarding")

@@ -26,6 +26,7 @@ final class OnBoardingVC: UIPageViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel.setUp(with: self, with: pageControl)
+        viewModel.setPageControl(pageControl)
         style()
         layout()
         styleButtons()
@@ -47,17 +48,6 @@ final class OnBoardingVC: UIPageViewController {
            pageControl.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: -20.0)
         ])
     }
-//    private func setUpButtons(){
-//        skipButton.translatesAutoresizingMaskIntoConstraints = false
-//                skipButton.setTitleColor(.systemBlue, for: .normal)
-//                skipButton.setTitle("Skip", for: .normal)
-//                skipButton.addTarget(self, action: #selector(skipTapped(_:)), for: .primaryActionTriggered)
-//
-//                nextButton.translatesAutoresizingMaskIntoConstraints = false
-//                nextButton.setTitleColor(.systemBlue, for: .normal)
-//                nextButton.setTitle("Next", for: .normal)
-//                nextButton.addTarget(self, action: #selector(nextTapped(_:)), for: .primaryActionTriggered)
-//    }
     
     private func styleButtons() {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Skip", style: .plain, target: self, action: #selector(skipTapped(_:)))

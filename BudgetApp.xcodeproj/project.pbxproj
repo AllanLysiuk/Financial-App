@@ -95,6 +95,7 @@
 		9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70C29AE25A10087E8F1 /* RegisterAssembler.swift */; };
 		9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */; };
 		9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */; };
+		9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -186,6 +187,7 @@
 		9DD7D70C29AE25A10087E8F1 /* RegisterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembler.swift; sourceTree = "<group>"; };
 		9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -346,6 +348,7 @@
 		9DA81A2029C5BC060020E637 /* OnBoarding */ = {
 			isa = PBXGroup;
 			children = (
+				9DE574ED29D4B90000ADA0D2 /* Enums */,
 				9DA81A3329C725C90020E637 /* PageViewAdapter */,
 				9DA81A2129C5BC200020E637 /* Protocols */,
 				9DCB044629CC6860006D4425 /* PageViewController */,
@@ -551,6 +554,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		9DE574ED29D4B90000ADA0D2 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -696,6 +707,7 @@
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
 				9D86462229D2E65F00E216A0 /* HistoryVCAssembler.swift in Sources */,
 				9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */,
+				9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */,
 				9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */,
 				9D86463929D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift in Sources */,
 				9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */,

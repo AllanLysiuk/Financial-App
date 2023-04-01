@@ -10,6 +10,8 @@ import UIKit
 
 final class HomePageVC: UIViewController{
     
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     private var viewModel: HomePageViewModelProtocol
     
     init(viewModel: HomePageViewModelProtocol){
@@ -30,6 +32,7 @@ final class HomePageVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .blue
-        
+        viewModel.setUpCollectionView(with: collectionView)
+        viewModel.loadData()
     }
 }

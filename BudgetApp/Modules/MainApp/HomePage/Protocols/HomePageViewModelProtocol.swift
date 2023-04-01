@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol HomePageViewModelProtocol {
-    
+    func setUpCollectionView(with collectionView: UICollectionView)
+    func loadData()
 }

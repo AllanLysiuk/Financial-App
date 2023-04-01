@@ -96,6 +96,13 @@
 		9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */; };
 		9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */; };
 		9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */; };
+		9DE574F229D82E0B00ADA0D2 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F129D82E0B00ADA0D2 /* CollectionViewAdapter.swift */; };
+		9DE574F429D82E2300ADA0D2 /* CollectionViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F329D82E2300ADA0D2 /* CollectionViewAdapterProtocol.swift */; };
+		9DE574F629D8301C00ADA0D2 /* EnumSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F529D8301C00ADA0D2 /* EnumSections.swift */; };
+		9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */; };
+		9DE574FB29D8385C00ADA0D2 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FA29D8385C00ADA0D2 /* MainCell.swift */; };
+		9DE574FD29D8386B00ADA0D2 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE574FC29D8386B00ADA0D2 /* MainCell.xib */; };
+		9DE574FF29D839D900ADA0D2 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -188,6 +195,13 @@
 		9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
+		9DE574F129D82E0B00ADA0D2 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
+		9DE574F329D82E2300ADA0D2 /* CollectionViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterProtocol.swift; sourceTree = "<group>"; };
+		9DE574F529D8301C00ADA0D2 /* EnumSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumSections.swift; sourceTree = "<group>"; };
+		9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageVC.xib; sourceTree = "<group>"; };
+		9DE574FA29D8385C00ADA0D2 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		9DE574FC29D8386B00ADA0D2 /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
+		9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,11 +340,15 @@
 		9DA81A1029C230500020E637 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
+				9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */,
+				9DE574F929D837D800ADA0D2 /* CollectionViewCells */,
+				9DE574F029D82DF200ADA0D2 /* Adapter */,
 				9DA81A1129C231270020E637 /* Protocols */,
 				9DA81A1229C2313D0020E637 /* HomePageVC.swift */,
 				9DA81A1629C232500020E637 /* HomePageVM.swift */,
 				9DA81A1A29C232C90020E637 /* HomePageCoordinator.swift */,
 				9DA81A1C29C2334F0020E637 /* HomePageAssembler.swift */,
+				9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */,
 			);
 			path = HomePage;
 			sourceTree = "<group>";
@@ -562,6 +580,25 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
+		9DE574F029D82DF200ADA0D2 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				9DE574F129D82E0B00ADA0D2 /* CollectionViewAdapter.swift */,
+				9DE574F329D82E2300ADA0D2 /* CollectionViewAdapterProtocol.swift */,
+				9DE574F529D8301C00ADA0D2 /* EnumSections.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
+		9DE574F929D837D800ADA0D2 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				9DE574FA29D8385C00ADA0D2 /* MainCell.swift */,
+				9DE574FC29D8386B00ADA0D2 /* MainCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -629,10 +666,12 @@
 			files = (
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
 				9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */,
+				9DE574FD29D8386B00ADA0D2 /* MainCell.xib in Resources */,
 				9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */,
 				9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */,
 				9DD7D6D329ADE3B30087E8F1 /* LaunchScreen.storyboard in Resources */,
 				9DD7D6D029ADE3B30087E8F1 /* Assets.xcassets in Resources */,
+				9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */,
 				9DB802EC29BFACCA00D57CB4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,6 +698,7 @@
 				9D86462E29D2EBE700E216A0 /* ReportVM.swift in Sources */,
 				9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */,
 				9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */,
+				9DE574F629D8301C00ADA0D2 /* EnumSections.swift in Sources */,
 				9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */,
 				9DD7D6E529ADEB1F0087E8F1 /* LoginAssembler.swift in Sources */,
 				9D86463229D2EC0D00E216A0 /* ReportVCAssembler.swift in Sources */,
@@ -693,6 +733,7 @@
 				9D86463529D2ECA800E216A0 /* ReportViewModelProtocol.swift in Sources */,
 				9DD7D6E329ADEA510087E8F1 /* LoginCoordinator.swift in Sources */,
 				9DA81A1B29C232C90020E637 /* HomePageCoordinator.swift in Sources */,
+				9DE574FB29D8385C00ADA0D2 /* MainCell.swift in Sources */,
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,
 				9DD7D70729AE22290087E8F1 /* AuthService+Register.swift in Sources */,
@@ -702,6 +743,7 @@
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
 				9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */,
+				9DE574F429D82E2300ADA0D2 /* CollectionViewAdapterProtocol.swift in Sources */,
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
@@ -711,6 +753,7 @@
 				9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */,
 				9D86463929D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift in Sources */,
 				9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */,
+				9DE574FF29D839D900ADA0D2 /* CategoryItem.swift in Sources */,
 				9DB802DF29B7A8BE00D57CB4 /* AlertControllerFactory.swift in Sources */,
 				9D86462029D2E64E00E216A0 /* HistoryVCCoordinator.swift in Sources */,
 				9D86462929D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift in Sources */,
@@ -719,6 +762,7 @@
 				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
 				9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */,
+				9DE574F229D82E0B00ADA0D2 /* CollectionViewAdapter.swift in Sources */,
 				9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,
 				9D86464029D313EC00E216A0 /* SettingsVCCoordinator.swift in Sources */,

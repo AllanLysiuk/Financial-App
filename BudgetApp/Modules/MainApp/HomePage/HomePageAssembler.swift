@@ -17,7 +17,11 @@ final class HomePageAssembler{
     }
     
     private static func makeViewModel( coordinator: HomePageCoordinatorProtocol) -> HomePageViewModelProtocol{
-        return HomePageVM(coordinator: coordinator)
+        return HomePageVM(coordinator: coordinator, adapter: makeAdapter())
+    }
+    
+    private static func makeAdapter() -> CollectionViewAdapterProtocol {
+        return CollectionViewAdapter()
     }
     
 }

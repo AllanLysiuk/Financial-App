@@ -45,6 +45,7 @@
 		9D86464529D3144800E216A0 /* SettingsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */; };
 		9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */; };
 		9D86464929D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */; };
+		9D8DED6E29DB6E5B004FD4CE /* BacrgroundSupplementaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8DED6D29DB6E5A004FD4CE /* BacrgroundSupplementaryView.swift */; };
 		9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1229C2313D0020E637 /* HomePageVC.swift */; };
 		9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */; };
 		9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1629C232500020E637 /* HomePageVM.swift */; };
@@ -103,6 +104,8 @@
 		9DE574FB29D8385C00ADA0D2 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FA29D8385C00ADA0D2 /* MainCell.swift */; };
 		9DE574FD29D8386B00ADA0D2 /* MainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE574FC29D8386B00ADA0D2 /* MainCell.xib */; };
 		9DE574FF29D839D900ADA0D2 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */; };
+		9DE5750129D87A8D00ADA0D2 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE5750029D87A8D00ADA0D2 /* SectionHeader.swift */; };
+		9DE5750329D9644E00ADA0D2 /* SectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE5750229D9644D00ADA0D2 /* SectionHeader.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -144,6 +147,7 @@
 		9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelProtocol.swift; sourceTree = "<group>"; };
 		9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D8DED6D29DB6E5A004FD4CE /* BacrgroundSupplementaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BacrgroundSupplementaryView.swift; sourceTree = "<group>"; };
 		9DA81A1229C2313D0020E637 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1629C232500020E637 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		9DE574FA29D8385C00ADA0D2 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		9DE574FC29D8386B00ADA0D2 /* MainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainCell.xib; sourceTree = "<group>"; };
 		9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		9DE5750029D87A8D00ADA0D2 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
+		9DE5750229D9644D00ADA0D2 /* SectionHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SectionHeader.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -341,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */,
+				9DE5750429D964B900ADA0D2 /* CollectionViewHeader */,
 				9DE574F929D837D800ADA0D2 /* CollectionViewCells */,
 				9DE574F029D82DF200ADA0D2 /* Adapter */,
 				9DA81A1129C231270020E637 /* Protocols */,
@@ -599,6 +606,16 @@
 			path = CollectionViewCells;
 			sourceTree = "<group>";
 		};
+		9DE5750429D964B900ADA0D2 /* CollectionViewHeader */ = {
+			isa = PBXGroup;
+			children = (
+				9D8DED6D29DB6E5A004FD4CE /* BacrgroundSupplementaryView.swift */,
+				9DE5750029D87A8D00ADA0D2 /* SectionHeader.swift */,
+				9DE5750229D9644D00ADA0D2 /* SectionHeader.xib */,
+			);
+			path = CollectionViewHeader;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -669,6 +686,7 @@
 				9DE574FD29D8386B00ADA0D2 /* MainCell.xib in Resources */,
 				9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */,
 				9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */,
+				9DE5750329D9644E00ADA0D2 /* SectionHeader.xib in Resources */,
 				9DD7D6D329ADE3B30087E8F1 /* LaunchScreen.storyboard in Resources */,
 				9DD7D6D029ADE3B30087E8F1 /* Assets.xcassets in Resources */,
 				9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */,
@@ -685,6 +703,8 @@
 			files = (
 				9DD7D6DB29ADE5FC0087E8F1 /* Coordinator.swift in Sources */,
 				9DD7D6DD29ADE6660087E8F1 /* AppCoordinator.swift in Sources */,
+				9DE5750129D87A8D00ADA0D2 /* SectionHeader.swift in Sources */,
+				9D8DED6E29DB6E5B004FD4CE /* BacrgroundSupplementaryView.swift in Sources */,
 				9DA81A2D29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift in Sources */,
 				9D86464929D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift in Sources */,
 				9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */,

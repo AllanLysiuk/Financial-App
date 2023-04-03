@@ -16,13 +16,16 @@ final class CollectionViewAdapter: NSObject {
     private func setUpCollectionView() {
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        
         registerCells()
+        
     }
     
     private func registerCells() {
-        let nib = UINib(nibName: "\(MainCell.self)", bundle: nil)
-        collectionView?.register(nib, forCellWithReuseIdentifier: "\(MainCell.self)")
+        let nib = UINib(nibName: "\(SectionHeader.self)", bundle: nil)
+        collectionView?.register(nib, forSupplementaryViewOfKind: "header", withReuseIdentifier: "\(SectionHeader.self)")
+//        UICollectionView.elementKindSectionHeader
+        let nib1 = UINib(nibName: "\(MainCell.self)", bundle: nil)
+        collectionView?.register(nib1, forCellWithReuseIdentifier: "\(MainCell.self)")
     }
 }
 
@@ -45,6 +48,14 @@ extension CollectionViewAdapter: CollectionViewAdapterProtocol {
 
 //MARK: CollectionView Delegate
 extension CollectionViewAdapter: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "\(SectionHeader.self)", for: indexPath) as? SectionHeader
+        let section = indexPath.section
+        
+        sectionHeader?.sectionHeaderLabel.text = sections[section].headerTitles()
+        return sectionHeader ?? UICollectionReusableView()
+    }
+    
     
 }
 
@@ -60,6 +71,7 @@ extension CollectionViewAdapter: UICollectionViewDataSource {
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(MainCell.self)", for: indexPath) as! MainCell
+        
         let section = sections[indexPath.section]
         let sectionItems = section.getArray
         cell.setUp(item: sectionItems[indexPath.row])
@@ -67,4 +79,8 @@ extension CollectionViewAdapter: UICollectionViewDataSource {
     }
     
     
+}
+
+extension CollectionViewAdapter: UICollectionViewDelegateFlowLayout {
+
 }

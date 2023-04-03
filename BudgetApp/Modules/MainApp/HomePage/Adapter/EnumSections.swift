@@ -27,4 +27,15 @@ enum Sections {
         case .costs(let items):     return items
         }
     }
+    
+    func headerTitles() -> String {
+        switch self {
+        case .income(_):
+            return  "Incomes"
+        case .wallets(_):
+            return  "Wallets"
+        case .costs(_):
+            return "Costs"
+        }
+    }
 }

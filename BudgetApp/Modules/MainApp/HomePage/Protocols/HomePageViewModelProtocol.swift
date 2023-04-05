@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 protocol HomePageViewModelProtocol {
-    func setUpCollectionView(with collectionView: UICollectionView)
+    func setUpCollectionView(with tableView: UITableView)
     func loadData()
+    func setUpDelegate(_ delegate: HomePageDelegate)
 }

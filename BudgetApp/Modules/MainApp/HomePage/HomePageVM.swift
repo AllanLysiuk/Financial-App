@@ -7,9 +7,15 @@
 
 import UIKit
 
+protocol HomePageDelegate: AnyObject {
+    func getViewHeight() -> Double
+}
+
 final class HomePageVM: HomePageViewModelProtocol{
     private weak var coordinator: HomePageCoordinatorProtocol?
-    private var adapter: CollectionViewAdapterProtocol
+    private var adapter: TableViewAdapterProtocol
+    
+    private weak var delegate: HomePageDelegate?
     
 #warning("remove force unwrap")
     var items: [Sections] = [
@@ -24,18 +30,34 @@ final class HomePageVM: HomePageViewModelProtocol{
         .costs([
             CategoryItem(nameOfCell: "Cigars", image: UIImage(systemName: "smoke")!, money: 0),
             CategoryItem(nameOfCell: "Rent", image: UIImage(systemName: "house")!, money: 0),
+            CategoryItem(nameOfCell: "Cigars", image: UIImage(systemName: "smoke")!, money: 0),
+            CategoryItem(nameOfCell: "Rent", image: UIImage(systemName: "house")!, money: 0),
+            CategoryItem(nameOfCell: "Cigars", image: UIImage(systemName: "smoke")!, money: 0),
+            CategoryItem(nameOfCell: "Rent", image: UIImage(systemName: "house")!, money: 0),
+            
         ])]
     
-    init(coordinator: HomePageCoordinatorProtocol, adapter: CollectionViewAdapterProtocol){
+    init(coordinator: HomePageCoordinatorProtocol, adapter: TableViewAdapterProtocol){
         self.coordinator = coordinator
         self.adapter = adapter
+        self.adapter.setUpDelegate(self)
     }
     
-    func setUpCollectionView(with collectionView: UICollectionView) {
-        adapter.setUpCollectionView(collectionView)
+    func setUpDelegate(_ delegate: HomePageDelegate) {
+        self.delegate = delegate
+    }
+    
+    func setUpCollectionView(with tableView: UITableView) {
+        adapter.setUpTableView(tableView)
     }
     
     func loadData() {
         adapter.setUpItems(items)
+    }
+}
+
+extension HomePageVM: TableViewAdapterDelegate {
+    func getViewHeight() -> Double {
+        return delegate?.getViewHeight() ?? 896
     }
 }

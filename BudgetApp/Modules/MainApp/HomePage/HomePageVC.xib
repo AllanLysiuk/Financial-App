@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomePageVC" customModule="BudgetApp" customModuleProvider="target">
             <connections>
-                <outlet property="collectionView" destination="CPg-Rd-Vy1" id="Jct-y2-84Z"/>
+                <outlet property="tableView" destination="Hr3-LC-pEw" id="ynT-04-LLt"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Vrj-d1-Vn3"/>
             </connections>
         </placeholder>
@@ -19,24 +19,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CPg-Rd-Vy1">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Hr3-LC-pEw">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jqJ-SH-dtN">
-                        <size key="itemSize" width="128" height="128"/>
-                        <size key="headerReferenceSize" width="50" height="50"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CPg-Rd-Vy1" secondAttribute="bottom" id="Cmn-Sn-860"/>
-                <constraint firstItem="CPg-Rd-Vy1" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="O6N-gd-5lc"/>
-                <constraint firstItem="CPg-Rd-Vy1" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="k8Y-iz-qFI"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CPg-Rd-Vy1" secondAttribute="trailing" id="zLM-e7-FUo"/>
+                <constraint firstItem="Hr3-LC-pEw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="36C-Z9-y7O"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Hr3-LC-pEw" secondAttribute="trailing" id="iPL-CN-wdN"/>
+                <constraint firstItem="Hr3-LC-pEw" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="qdr-97-No4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Hr3-LC-pEw" secondAttribute="bottom" id="uJv-zV-KFs"/>
             </constraints>
             <point key="canvasLocation" x="139" y="64"/>
         </view>

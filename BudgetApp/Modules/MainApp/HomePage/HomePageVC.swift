@@ -11,7 +11,7 @@ import UIKit
 
 final class HomePageVC: UIViewController{
     
-    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var tableView: UITableView!
     
     private var viewModel: HomePageViewModelProtocol
     
@@ -24,6 +24,7 @@ final class HomePageVC: UIViewController{
     private func requiredInit() {
         tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "circle.grid.3x3"), tag: 0)
         navigationController?.tabBarItem = tabBarItem
+        self.viewModel.setUpDelegate(self)
     }
     
     required init?(coder: NSCoder) {
@@ -32,37 +33,15 @@ final class HomePageVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .systemGray4
-        setStyleForSectionsAndHeaders()
-        viewModel.setUpCollectionView(with: collectionView)
+       
+        viewModel.setUpCollectionView(with: tableView)
         viewModel.loadData()
     }
     
-    private func setStyleForSectionsAndHeaders() {
-        let sectionInset: CGFloat = 16
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/3), heightDimension: .fractionalHeight(1))
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalWidth(1/3))
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+}
 
-        let section = NSCollectionLayoutSection(group: group)
-        
-        
-       section.contentInsets = NSDirectionalEdgeInsets(top: sectionInset, leading: sectionInset, bottom: sectionInset, trailing: sectionInset)
-        
-        let backgroundItem = NSCollectionLayoutDecorationItem.background(elementKind: "background")
-        let backgroundInset: CGFloat = 50
-        backgroundItem.contentInsets = NSDirectionalEdgeInsets(top: backgroundInset, leading: 0, bottom: 0, trailing: 0)
-    
-  
-        let headerItemSize = NSCollectionLayoutSize(widthDimension: .absolute(collectionView?.frame.size.width ?? 440) , heightDimension: .estimated(50))
-        let headerItem = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: headerItemSize, elementKind: "header", alignment: .top)
-        
-        section.decorationItems = [backgroundItem]
-        section.boundarySupplementaryItems = [headerItem]
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        layout.register(BackgroundSupplementaryView.self, forDecorationViewOfKind: "background")
-        collectionView?.collectionViewLayout = layout
+extension HomePageVC: HomePageDelegate {
+    func getViewHeight() -> Double {
+        return self.view.frame.height
     }
 }

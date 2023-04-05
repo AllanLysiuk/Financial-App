@@ -20,8 +20,8 @@ final class HomePageAssembler{
         return HomePageVM(coordinator: coordinator, adapter: makeAdapter())
     }
     
-    private static func makeAdapter() -> CollectionViewAdapterProtocol {
-        return CollectionViewAdapter()
+    private static func makeAdapter() -> TableViewAdapterProtocol {
+        return TableViewAdapter()
     }
     
 }

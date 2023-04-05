@@ -8,10 +8,10 @@
 import Foundation
 import UIKit
 
-final class MainCell: UICollectionViewCell {
-    @IBOutlet private weak var nameOfCell: UILabel?
-    @IBOutlet private weak var image: UIImageView?
-    @IBOutlet private weak var money: UILabel?
+final class CollectionViewMainCell: UICollectionViewCell {
+    @IBOutlet  weak var nameOfCell: UILabel?
+    @IBOutlet  weak var image: UIImageView?
+    @IBOutlet  weak var money: UILabel?
     
     func setUp(item: CategoryItem) {
         self.nameOfCell?.text = item.nameOfCell

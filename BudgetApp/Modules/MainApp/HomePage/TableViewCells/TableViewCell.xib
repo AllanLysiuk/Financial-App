@@ -19,14 +19,18 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jen-Mt-Irg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewU-cV-d6Y">
-                                <rect key="frame" x="20" y="19.5" width="44.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qht-8L-qHH">
+                                <rect key="frame" x="349.5" y="19.5" width="44.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qht-8L-qHH">
-                                <rect key="frame" x="349.5" y="19.5" width="44.5" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="znG-Ec-Itn">
+                                <rect key="frame" x="20" y="21" width="17" height="18"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2N-w9-VKe">
+                                <rect key="frame" x="37" y="19.5" width="44.5" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -35,10 +39,12 @@
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
                             <constraint firstItem="Qht-8L-qHH" firstAttribute="centerY" secondItem="Jen-Mt-Irg" secondAttribute="centerY" id="0Jk-vF-O6j"/>
+                            <constraint firstItem="znG-Ec-Itn" firstAttribute="centerY" secondItem="Jen-Mt-Irg" secondAttribute="centerY" id="0la-F4-SCj"/>
+                            <constraint firstItem="a2N-w9-VKe" firstAttribute="centerY" secondItem="Jen-Mt-Irg" secondAttribute="centerY" id="1We-ne-aqU"/>
+                            <constraint firstItem="a2N-w9-VKe" firstAttribute="leading" secondItem="znG-Ec-Itn" secondAttribute="trailing" id="JBP-iv-1MX"/>
                             <constraint firstAttribute="trailing" secondItem="Qht-8L-qHH" secondAttribute="trailing" constant="20" id="JnK-MD-krS"/>
                             <constraint firstAttribute="height" constant="60" id="Nfd-BX-LPR"/>
-                            <constraint firstItem="ewU-cV-d6Y" firstAttribute="centerY" secondItem="Jen-Mt-Irg" secondAttribute="centerY" id="QmC-1J-L02"/>
-                            <constraint firstItem="ewU-cV-d6Y" firstAttribute="leading" secondItem="Jen-Mt-Irg" secondAttribute="leading" constant="20" id="jrf-jm-LXX"/>
+                            <constraint firstItem="znG-Ec-Itn" firstAttribute="leading" secondItem="Jen-Mt-Irg" secondAttribute="leading" constant="20" id="hMA-nq-Ax6"/>
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XUl-Jx-cfN">
@@ -64,13 +70,15 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="amountLabel" destination="Qht-8L-qHH" id="aBk-fY-CN1"/>
+                <outlet property="buttonImage" destination="znG-Ec-Itn" id="aNU-TD-o5e"/>
                 <outlet property="collectionView" destination="XUl-Jx-cfN" id="r0J-qb-L58"/>
-                <outlet property="headerLabel" destination="ewU-cV-d6Y" id="dPh-fy-Cvs"/>
+                <outlet property="headerLabel" destination="a2N-w9-VKe" id="oRX-Ft-d0E"/>
             </connections>
             <point key="canvasLocation" x="514.49275362318849" y="179.79910714285714"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="arrow.down" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

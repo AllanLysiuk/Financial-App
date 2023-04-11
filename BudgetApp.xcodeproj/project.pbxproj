@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */; };
+		9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */; };
 		9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */; };
 		9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */; };
 		9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F278929AE51C000075C8B /* RegisterVC.xib */; };
@@ -26,7 +28,7 @@
 		9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */; };
 		9D83835C29DC6EE9008BCE3D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83835B29DC6EE9008BCE3D /* TableViewCell.swift */; };
 		9D83835E29DC6F10008BCE3D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D83835D29DC6F10008BCE3D /* TableViewCell.xib */; };
-		9D83836429DC7283008BCE3D /* CollectionViewMainCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D83836329DC7283008BCE3D /* CollectionViewMainCell.xib */; };
+		9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D83836329DC7283008BCE3D /* CollectionViewCategoryCell.xib */; };
 		9D86461C29D2E62700E216A0 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461B29D2E62700E216A0 /* HistoryVC.swift */; };
 		9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461D29D2E63400E216A0 /* HistoryVM.swift */; };
 		9D86462029D2E64E00E216A0 /* HistoryVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461F29D2E64E00E216A0 /* HistoryVCCoordinator.swift */; };
@@ -103,11 +105,13 @@
 		9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */; };
 		9DE574F629D8301C00ADA0D2 /* EnumSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F529D8301C00ADA0D2 /* EnumSections.swift */; };
 		9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */; };
-		9DE574FB29D8385C00ADA0D2 /* CollectionViewMainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FA29D8385C00ADA0D2 /* CollectionViewMainCell.swift */; };
+		9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */; };
 		9DE574FF29D839D900ADA0D2 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAddingCell.swift; sourceTree = "<group>"; };
+		9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewAddingCell.xib; sourceTree = "<group>"; };
 		9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		9D7F278929AE51C000075C8B /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
@@ -127,7 +131,7 @@
 		9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageList.xib; sourceTree = "<group>"; };
 		9D83835B29DC6EE9008BCE3D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		9D83835D29DC6F10008BCE3D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
-		9D83836329DC7283008BCE3D /* CollectionViewMainCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewMainCell.xib; sourceTree = "<group>"; };
+		9D83836329DC7283008BCE3D /* CollectionViewCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCategoryCell.xib; sourceTree = "<group>"; };
 		9D86461B29D2E62700E216A0 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		9D86461D29D2E63400E216A0 /* HistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVM.swift; sourceTree = "<group>"; };
 		9D86461F29D2E64E00E216A0 /* HistoryVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVCCoordinator.swift; sourceTree = "<group>"; };
@@ -204,7 +208,7 @@
 		9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterProtocol.swift; sourceTree = "<group>"; };
 		9DE574F529D8301C00ADA0D2 /* EnumSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumSections.swift; sourceTree = "<group>"; };
 		9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageVC.xib; sourceTree = "<group>"; };
-		9DE574FA29D8385C00ADA0D2 /* CollectionViewMainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewMainCell.swift; sourceTree = "<group>"; };
+		9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCategoryCell.swift; sourceTree = "<group>"; };
 		9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -597,10 +601,12 @@
 		9DE574F929D837D800ADA0D2 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				9DE574FA29D8385C00ADA0D2 /* CollectionViewMainCell.swift */,
-				9D83836329DC7283008BCE3D /* CollectionViewMainCell.xib */,
+				9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */,
+				9D83836329DC7283008BCE3D /* CollectionViewCategoryCell.xib */,
 				9D83835B29DC6EE9008BCE3D /* TableViewCell.swift */,
 				9D83835D29DC6F10008BCE3D /* TableViewCell.xib */,
+				9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */,
+				9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -670,8 +676,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D83836429DC7283008BCE3D /* CollectionViewMainCell.xib in Resources */,
+				9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */,
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
+				9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */,
 				9D83835E29DC6F10008BCE3D /* TableViewCell.xib in Resources */,
 				9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */,
 				9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */,
@@ -741,7 +748,7 @@
 				9D86463529D2ECA800E216A0 /* ReportViewModelProtocol.swift in Sources */,
 				9DD7D6E329ADEA510087E8F1 /* LoginCoordinator.swift in Sources */,
 				9DA81A1B29C232C90020E637 /* HomePageCoordinator.swift in Sources */,
-				9DE574FB29D8385C00ADA0D2 /* CollectionViewMainCell.swift in Sources */,
+				9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */,
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,
 				9DD7D70729AE22290087E8F1 /* AuthService+Register.swift in Sources */,
@@ -751,6 +758,7 @@
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
 				9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */,
+				9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */,
 				9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */,
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 final class TableViewCell: UITableViewCell {
+    @IBOutlet weak var backgroundHeaderView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
     @IBOutlet weak var buttonImage: UIImageView!
     @IBOutlet weak var amountLabel: UILabel!
@@ -22,8 +23,13 @@ final class TableViewCell: UITableViewCell {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        let cellNib = UINib(nibName: "\(CollectionViewMainCell.self)", bundle: nil)
-        self.collectionView.register(cellNib, forCellWithReuseIdentifier: "\(CollectionViewMainCell.self)")
+        let categoryCellNib = UINib(nibName: "\(CollectionViewCategoryCell.self)", bundle: nil)
+        self.collectionView.register(categoryCellNib, forCellWithReuseIdentifier: "\(CollectionViewCategoryCell.self)")
+        
+        let addingCellNib = UINib(nibName: "\(CollectionViewAddingCell.self)", bundle: nil)
+        self.collectionView.register(addingCellNib, forCellWithReuseIdentifier: "\(CollectionViewAddingCell.self)")
+        
+        backgroundHeaderView.layer.cornerRadius = 12
     }
     
     func setStatus(isExpanded: Bool)
@@ -39,15 +45,16 @@ final class TableViewCell: UITableViewCell {
         var endAngle: CGFloat
         var startAngle: CGFloat
         if shouldOpen {
-            endAngle = .pi
-            startAngle = CGFloat.zero
+            endAngle = CGFloat.pi
+            startAngle = .zero
         } else {
             endAngle = .zero
             startAngle = CGFloat.pi
 
         }
-           buttonImage.transform = CGAffineTransform(rotationAngle: startAngle)
-           
+        
+        buttonImage.transform = CGAffineTransform(rotationAngle: startAngle)
+        
            UIView.animate(withDuration: 0.5) { [weak self] in
                self?.buttonImage.transform = CGAffineTransform(rotationAngle: endAngle)
            }
@@ -69,17 +76,20 @@ extension TableViewCell: UICollectionViewDelegate {
 extension TableViewCell: UICollectionViewDataSource {
     
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            return self.elements?.count ?? 0
+            return (self.elements?.count ?? 0) + 1
         }
         
         // Set the data for each cell (color and color name)
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionViewMainCell.self)", for: indexPath) as? CollectionViewMainCell
-            cell?.nameOfCell?.text = elements?[indexPath.item].nameOfCell
-            cell?.image?.image = elements?[indexPath.item].image
-            cell?.money?.text = "\(elements?[indexPath.item].money ?? 0)"
-            
-            return cell ?? UICollectionViewCell()
+            if (elements?.count ?? 0) != indexPath.last {
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionViewCategoryCell.self)", for: indexPath) as? CollectionViewCategoryCell
+                cell?.setUp(item: elements?[indexPath.item])
+                return cell ?? UICollectionViewCell()
+            } else{
+                let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionViewAddingCell.self)", for: indexPath) as? CollectionViewAddingCell
+                cell?.layer.cornerRadius = 10
+                return cell ?? UICollectionViewCell()
+            }
         }
         
         // Add spaces at the beginning and the end of the collection view

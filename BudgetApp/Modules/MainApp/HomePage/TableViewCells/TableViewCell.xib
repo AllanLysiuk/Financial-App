@@ -70,6 +70,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="amountLabel" destination="Qht-8L-qHH" id="aBk-fY-CN1"/>
+                <outlet property="backgroundHeaderView" destination="Jen-Mt-Irg" id="4Re-X9-zKe"/>
                 <outlet property="buttonImage" destination="znG-Ec-Itn" id="aNU-TD-o5e"/>
                 <outlet property="collectionView" destination="XUl-Jx-cfN" id="r0J-qb-L58"/>
                 <outlet property="headerLabel" destination="a2N-w9-VKe" id="oRX-Ft-d0E"/>

@@ -11,7 +11,7 @@ import FirebaseAuth
 final class AuthService{
     
     func login(email: String, password: String, completion: @escaping (_ error: Error?) -> Void) {
-        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+        Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
             completion(error)
         }
     }

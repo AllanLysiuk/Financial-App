@@ -11,6 +11,4 @@ import UIKit
 final class CollectionViewAddingCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet private weak var backgroundCellView: UIView!
-    
-
 }

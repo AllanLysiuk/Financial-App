@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */; };
 		9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */; };
+		9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */; };
+		9D75144329E8577E00A93406 /* AddNewCategoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144229E8577E00A93406 /* AddNewCategoryVM.swift */; };
+		9D75144629E8579C00A93406 /* AddNewCategoryVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144529E8579C00A93406 /* AddNewCategoryVMProtocol.swift */; };
+		9D75144829E8587C00A93406 /* AddNewCategoryCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144729E8587C00A93406 /* AddNewCategoryCoordinator.swift */; };
+		9D75144A29E8598800A93406 /* AddNewCategoryRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144929E8598800A93406 /* AddNewCategoryRootCoordinatorProtocol.swift */; };
+		9D75144C29E85AFE00A93406 /* AddNewCategoryAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144B29E85AFE00A93406 /* AddNewCategoryAssembler.swift */; };
+		9D75144E29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144D29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift */; };
+		9D75145029E85E9800A93406 /* AddNewCategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75144F29E85E9800A93406 /* AddNewCategoryVC.xib */; };
 		9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */; };
 		9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */; };
 		9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F278929AE51C000075C8B /* RegisterVC.xib */; };
@@ -112,6 +120,14 @@
 /* Begin PBXFileReference section */
 		9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAddingCell.swift; sourceTree = "<group>"; };
 		9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewAddingCell.xib; sourceTree = "<group>"; };
+		9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVC.swift; sourceTree = "<group>"; };
+		9D75144229E8577E00A93406 /* AddNewCategoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVM.swift; sourceTree = "<group>"; };
+		9D75144529E8579C00A93406 /* AddNewCategoryVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVMProtocol.swift; sourceTree = "<group>"; };
+		9D75144729E8587C00A93406 /* AddNewCategoryCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryCoordinator.swift; sourceTree = "<group>"; };
+		9D75144929E8598800A93406 /* AddNewCategoryRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D75144B29E85AFE00A93406 /* AddNewCategoryAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryAssembler.swift; sourceTree = "<group>"; };
+		9D75144D29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D75144F29E85E9800A93406 /* AddNewCategoryVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewCategoryVC.xib; sourceTree = "<group>"; };
 		9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		9D7F278929AE51C000075C8B /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
@@ -225,6 +241,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D75143F29E8570500A93406 /* AddNewCategoryPage */ = {
+			isa = PBXGroup;
+			children = (
+				9D75144429E8578300A93406 /* Protocols */,
+				9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */,
+				9D75144229E8577E00A93406 /* AddNewCategoryVM.swift */,
+				9D75144729E8587C00A93406 /* AddNewCategoryCoordinator.swift */,
+				9D75144B29E85AFE00A93406 /* AddNewCategoryAssembler.swift */,
+				9D75144F29E85E9800A93406 /* AddNewCategoryVC.xib */,
+			);
+			path = AddNewCategoryPage;
+			sourceTree = "<group>";
+		};
+		9D75144429E8578300A93406 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D75144529E8579C00A93406 /* AddNewCategoryVMProtocol.swift */,
+				9D75144929E8598800A93406 /* AddNewCategoryRootCoordinatorProtocol.swift */,
+				9D75144D29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9D75CD3329C0EE5C00186E75 /* GlobalExtensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +380,7 @@
 				9D86462A29D2EBB700E216A0 /* ReportPage */,
 				9D86461A29D2E60200E216A0 /* HistoryPage */,
 				9DA81A1029C230500020E637 /* HomePage */,
+				9D75143F29E8570500A93406 /* AddNewCategoryPage */,
 			);
 			path = MainApp;
 			sourceTree = "<group>";
@@ -676,6 +716,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D75145029E85E9800A93406 /* AddNewCategoryVC.xib in Resources */,
 				9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */,
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
 				9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */,
@@ -726,6 +767,7 @@
 				9DB802E129B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift in Sources */,
 				9DD7D6EB29ADEEE30087E8F1 /* LoginVM.swift in Sources */,
 				9D7F27F029B25DCF00075C8B /* ForgotPasswordAssembler.swift in Sources */,
+				9D75144A29E8598800A93406 /* AddNewCategoryRootCoordinatorProtocol.swift in Sources */,
 				9D7F27EC29B25D7B00075C8B /* ForgotPasswordCoordinatorProtocol.swift in Sources */,
 				9D80152129C7306A00C22EE1 /* PageViewAdapter.swift in Sources */,
 				9DA81A2729C5BC8D0020E637 /* OnBoardingCoordinator.swift in Sources */,
@@ -744,10 +786,12 @@
 				9D86461C29D2E62700E216A0 /* HistoryVC.swift in Sources */,
 				9DD7D70B29AE251A0087E8F1 /* RegisterCoordinator.swift in Sources */,
 				9DA81A1929C232970020E637 /* HomePageCoordinatorProtocol.swift in Sources */,
+				9D75144C29E85AFE00A93406 /* AddNewCategoryAssembler.swift in Sources */,
 				9DD7D6F329ADEFF50087E8F1 /* LoginAuthServiceProtocol.swift in Sources */,
 				9D86463529D2ECA800E216A0 /* ReportViewModelProtocol.swift in Sources */,
 				9DD7D6E329ADEA510087E8F1 /* LoginCoordinator.swift in Sources */,
 				9DA81A1B29C232C90020E637 /* HomePageCoordinator.swift in Sources */,
+				9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */,
 				9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */,
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,
@@ -757,12 +801,15 @@
 				9D7F27EE29B25D9700075C8B /* ForgotPasswordCoordinator.swift in Sources */,
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
+				9D75144E29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift in Sources */,
 				9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */,
 				9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */,
+				9D75144829E8587C00A93406 /* AddNewCategoryCoordinator.swift in Sources */,
 				9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */,
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
+				9D75144329E8577E00A93406 /* AddNewCategoryVM.swift in Sources */,
 				9D86462229D2E65F00E216A0 /* HistoryVCAssembler.swift in Sources */,
 				9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */,
 				9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */,
@@ -778,6 +825,7 @@
 				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
 				9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */,
+				9D75144629E8579C00A93406 /* AddNewCategoryVMProtocol.swift in Sources */,
 				9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */,
 				9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,

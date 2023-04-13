@@ -11,6 +11,9 @@ import UIKit
 final class HomePageCoordinator: Coordinator {
     private var tabBarController: UITabBarController
     private var rootCoordinator: HomePageRootCoordinatorProtocol
+    
+    private var navigationController = UINavigationController()
+    
     var childCoordinators: [Coordinator] = []
     
     init(tabBarController: UITabBarController, rootCoordinator: HomePageRootCoordinatorProtocol) {
@@ -20,7 +23,8 @@ final class HomePageCoordinator: Coordinator {
     
     func start() {
         let vc = HomePageAssembler.makeHomePageVC(coordinator: self)
-        tabBarController.addChild(vc)
+        navigationController.addChild(vc)
+        tabBarController.addChild(navigationController)
     }
     
     func finish() {
@@ -32,4 +36,12 @@ final class HomePageCoordinator: Coordinator {
 
 extension HomePageCoordinator: HomePageCoordinatorProtocol {
     
+}
+
+extension HomePageCoordinator: AddNewCategoryRootCoordinatorProtocol {
+    func addingFinished(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
+    }
 }

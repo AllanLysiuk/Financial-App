@@ -79,7 +79,6 @@ extension TableViewCell: UICollectionViewDataSource {
             return (self.elements?.count ?? 0) + 1
         }
         
-        // Set the data for each cell (color and color name)
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if (elements?.count ?? 0) != indexPath.last {
                 let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionViewCategoryCell.self)", for: indexPath) as? CollectionViewCategoryCell
@@ -96,4 +95,8 @@ extension TableViewCell: UICollectionViewDataSource {
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
             return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }

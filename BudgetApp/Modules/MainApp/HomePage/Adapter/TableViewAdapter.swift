@@ -17,6 +17,7 @@ enum SizeOfCell: Double {
 
 protocol TableViewAdapterDelegate: AnyObject {
     func getViewHeight() -> Double
+    func openAddNewCategoryVC()
 }
 
 final class TableViewAdapter: NSObject {
@@ -126,9 +127,16 @@ extension TableViewAdapter: UITableViewDataSource {
         cell?.amountLabel.text = "\(indexPath.row)"
         cell?.headerLabel.text = sections[indexPath.row].headerTitles()
         let section = sections[indexPath.row]
+        cell?.setUpDelegate(self)
         cell?.updateCellWith(elements: section.getArray)
         return cell ?? UITableViewCell()
     }
     
 }
 
+
+extension TableViewAdapter: AddNewCategoryDelegate {
+    func openAddNewCategoryVC() {
+        self.delegate?.openAddNewCategoryVC()
+    }
+}

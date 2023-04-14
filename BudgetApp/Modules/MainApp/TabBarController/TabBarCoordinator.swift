@@ -25,8 +25,8 @@ final class TabBarCoordinator: Coordinator{
         generateHistoryItem(tabBar: vc)
         generateReportItem(tabBar: vc)
         generateSettingsItem(tabBar: vc)
-        
-       rootNavigationController.pushViewController(vc, animated: false)
+        rootNavigationController.navigationBar.isHidden = true
+        rootNavigationController.pushViewController(vc, animated: false)
     }
     
     func finish() {

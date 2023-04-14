@@ -19,16 +19,18 @@ final class AddNewCategoryCoordinator: Coordinator {
         self.parentNavigationController = parentNavigationController
     }
     
-    
     func start() {
-        let vc = AddNewCategoryAssembler.makeAddNewCategoryVC(coordinator: self)
-        parentNavigationController.present(vc, animated: true)
+        assert(false, "Should be open with delegate, please use start(delegate:)")
     }
     
     func finish() {
         rootCoordinator.addingFinished(self)
     }
     
+    func start(delegate: AddNewCategoryViewModelDelegate) {
+        let vc = AddNewCategoryAssembler.makeAddNewCategoryVC(coordinator: self, delegate: delegate)
+        parentNavigationController.present(vc, animated: true)
+    }
     
 }
 #warning("Если я презенчу экран нужна ли мне функция шуд мув ту пэрент")
@@ -36,7 +38,7 @@ extension AddNewCategoryCoordinator: AddNewCategoryCoordinatorProtocol {
     func finish(shouldMoveToParent: Bool) {
         if shouldMoveToParent {
             parentNavigationController.dismiss(animated: true)
-              }
+        }
         finish()
     }
 }

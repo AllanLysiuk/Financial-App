@@ -28,4 +28,15 @@ final class AddNewCategoryVC: UIViewController {
         super.viewDidLoad()
         imageView.layer.cornerRadius = 50
     }
+    #warning("remove force unwrap")
+    @IBAction func buttonSaveDidTap() {
+        viewModel.buttonSaveDidTap(name: textField.text ?? "", image: imageView.image!)
+    }
+}
+
+extension AddNewCategoryVC: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

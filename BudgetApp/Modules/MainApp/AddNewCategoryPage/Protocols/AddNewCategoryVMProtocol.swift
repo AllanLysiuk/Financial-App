@@ -6,7 +6,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol AddNewCategoryVMProtocol {
     func finish()
+    
+    func buttonSaveDidTap(name: String, image: UIImage)
 }

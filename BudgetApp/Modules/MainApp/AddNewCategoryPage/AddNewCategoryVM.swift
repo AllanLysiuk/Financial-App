@@ -6,16 +6,28 @@
 //
 
 import Foundation
+import UIKit
+
+protocol AddNewCategoryViewModelDelegate: AnyObject {
+    func newCategoryCreated(name: String, image: UIImage)
+}
 
 final class AddNewCategoryVM: AddNewCategoryVMProtocol {
 
     private weak var coordinator: AddNewCategoryCoordinatorProtocol?
-   
-    init (coordinator: AddNewCategoryCoordinatorProtocol) {
+    private weak var delegate: AddNewCategoryViewModelDelegate?
+    
+    init (coordinator: AddNewCategoryCoordinatorProtocol, delegate: AddNewCategoryViewModelDelegate) {
         self.coordinator = coordinator
+        self.delegate = delegate
     }
     
     func finish() {
         coordinator?.finish(shouldMoveToParent: true)
+    }
+    
+    func buttonSaveDidTap(name: String, image: UIImage) {
+        delegate?.newCategoryCreated(name: name, image: image)
+        finish()
     }
 }

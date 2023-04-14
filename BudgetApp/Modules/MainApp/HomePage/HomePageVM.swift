@@ -55,9 +55,20 @@ final class HomePageVM: HomePageViewModelProtocol{
         adapter.setUpItems(items)
     }
 }
-
+#warning("remove magic number")
 extension HomePageVM: TableViewAdapterDelegate {
     func getViewHeight() -> Double {
         return delegate?.getViewHeight() ?? 896
+    }
+    
+    func openAddNewCategoryVC() {
+        coordinator?.openAddNewCategoryScene(self)
+    }
+}
+
+
+extension HomePageVM: AddNewCategoryViewModelDelegate {
+    func newCategoryCreated(name: String, image: UIImage) {
+        
     }
 }

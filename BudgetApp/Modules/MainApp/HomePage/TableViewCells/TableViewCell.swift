@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol AddNewCategoryDelegate: AnyObject {
+    func openAddNewCategoryVC()
+}
+
 final class TableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundHeaderView: UIView!
     @IBOutlet weak var headerLabel: UILabel!
@@ -16,6 +20,7 @@ final class TableViewCell: UITableViewCell {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var elements: [CategoryItem]?
+    private weak var delegate: AddNewCategoryDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,13 +37,11 @@ final class TableViewCell: UITableViewCell {
         backgroundHeaderView.layer.cornerRadius = 12
     }
     
-    func setStatus(isExpanded: Bool)
-       {
-           if isExpanded
-           {
+    func setStatus(isExpanded: Bool) {
+        if isExpanded {
                buttonImage.transform = CGAffineTransform(rotationAngle: .pi)
-           }
-       }
+        }
+    }
     
     
     func animateIndicator(_ shouldOpen: Bool) {
@@ -63,6 +66,9 @@ final class TableViewCell: UITableViewCell {
            }
        }
 
+    func setUpDelegate(_ delegate: AddNewCategoryDelegate) {
+        self.delegate = delegate
+    }
 }
 
 
@@ -97,6 +103,8 @@ extension TableViewCell: UICollectionViewDataSource {
         }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        if (elements?.count ?? 0) == indexPath.last {
+            delegate?.openAddNewCategoryVC()
+        }
     }
 }

@@ -9,4 +9,6 @@ import Foundation
 
 protocol HomePageCoordinatorProtocol: AnyObject {
     func finish()
+    
+    func openAddNewCategoryScene(_ delegate: AddNewCategoryViewModelDelegate)
 }

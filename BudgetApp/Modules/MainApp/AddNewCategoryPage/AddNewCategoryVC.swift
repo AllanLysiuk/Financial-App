@@ -26,6 +26,7 @@ final class AddNewCategoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textField.delegate = self
         imageView.layer.cornerRadius = 50
     }
     #warning("remove force unwrap")
@@ -34,7 +35,7 @@ final class AddNewCategoryVC: UIViewController {
     }
 }
 
-extension AddNewCategoryVC: UITextFieldDelegate{
+extension AddNewCategoryVC: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true

@@ -12,10 +12,11 @@ protocol HomePageDelegate: AnyObject {
 }
 
 final class HomePageVM: HomePageViewModelProtocol{
-    private weak var coordinator: HomePageCoordinatorProtocol?
+    private var coordinator: HomePageCoordinatorProtocol
     private var adapter: TableViewAdapterProtocol
     
     private weak var delegate: HomePageDelegate?
+    private var numberOfSection: Int?
     
 #warning("remove force unwrap")
     var items: [Sections] = [
@@ -61,14 +62,21 @@ extension HomePageVM: TableViewAdapterDelegate {
         return delegate?.getViewHeight() ?? 896
     }
     
-    func openAddNewCategoryVC() {
-        coordinator?.openAddNewCategoryScene(self)
+    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int) {
+        self.numberOfSection = numberOfSectionInTableView
+        coordinator.openAddNewCategoryScene(self)
     }
 }
 
 
 extension HomePageVM: AddNewCategoryViewModelDelegate {
     func newCategoryCreated(name: String, image: UIImage) {
-        
+        if let numberOfSection = numberOfSection {
+            var arr = items[numberOfSection].getArray
+            arr.append(CategoryItem(nameOfCell: name, image: image, money: 0))
+            let tmp = Sections.income(arr)
+            items[numberOfSection] = tmp
+            loadData()
+        }
     }
 }

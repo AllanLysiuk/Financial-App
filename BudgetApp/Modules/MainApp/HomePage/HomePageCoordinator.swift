@@ -38,7 +38,7 @@ extension HomePageCoordinator: HomePageCoordinatorProtocol {
     func openAddNewCategoryScene(_ delegate: AddNewCategoryViewModelDelegate) {
         let coordinator = AddNewCategoryCoordinator(parentNavigationController: navigationController, rootCoordinator: self)
         childCoordinators.append(coordinator)
-        coordinator.start()
+        coordinator.start(delegate: delegate)
     }
 }
 

@@ -32,8 +32,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H0q-br-Bns">
-                    <rect key="frame" x="162" y="129.5" width="90" height="90"/>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="creditcard.and.123" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H0q-br-Bns">
+                    <rect key="frame" x="162" y="131.5" width="90" height="87"/>
+                    <color key="backgroundColor" red="0.86666666670000003" green="0.1647058824" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="90" id="eN4-Lx-DoU"/>
                         <constraint firstAttribute="height" constant="90" id="rBA-9t-3E7"/>
@@ -45,7 +47,7 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVd-3B-c0O">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HVd-3B-c0O">
                     <rect key="frame" x="20" y="831" width="374" height="31"/>
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="filled" title="Save"/>
@@ -74,6 +76,7 @@
                 <constraint firstItem="ySW-6y-YnG" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="SNI-Tv-6q2"/>
                 <constraint firstItem="jcj-3J-Gzf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="Sji-YA-h8C"/>
                 <constraint firstItem="HVd-3B-c0O" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ZE2-nV-yhl"/>
+                <constraint firstItem="HVd-3B-c0O" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="kdJ-bk-pWX"/>
                 <constraint firstItem="H0q-br-Bns" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="m2q-HM-80p"/>
                 <constraint firstItem="ndY-ja-MCa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="rws-SS-HHl"/>
             </constraints>
@@ -81,6 +84,7 @@
         </view>
     </objects>
     <resources>
+        <image name="creditcard.and.123" catalog="system" width="128" height="90"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

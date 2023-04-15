@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol AddNewCategoryDelegate: AnyObject {
-    func openAddNewCategoryVC()
+    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int)
 }
 
 final class TableViewCell: UITableViewCell {
@@ -21,6 +21,7 @@ final class TableViewCell: UITableViewCell {
     
     var elements: [CategoryItem]?
     private weak var delegate: AddNewCategoryDelegate?
+    var numberOfSectionInTableView: Int?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -104,7 +105,9 @@ extension TableViewCell: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if (elements?.count ?? 0) == indexPath.last {
-            delegate?.openAddNewCategoryVC()
+            if let number = numberOfSectionInTableView {
+                delegate?.openAddNewCategoryVC(number)
+            }
         }
     }
 }

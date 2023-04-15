@@ -17,7 +17,7 @@ enum SizeOfCell: Double {
 
 protocol TableViewAdapterDelegate: AnyObject {
     func getViewHeight() -> Double
-    func openAddNewCategoryVC()
+    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int)
 }
 
 final class TableViewAdapter: NSObject {
@@ -42,7 +42,7 @@ final class TableViewAdapter: NSObject {
     
     private func calculateHeightOfCell(_ indexPath: IndexPath) -> CGFloat {
         let viewHeight = delegate?.getViewHeight()
-        let amountOfElements: Double = Double(sections[indexPath.row].rowCount)
+        let amountOfElements: Double = Double(sections[indexPath.row].rowCount + 1)
         
         let collectionViewHeight = (ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue ) * SizeOfCell.heightOfCell.rawValue)
         let insetsBetweenElements = (ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue) * SizeOfCell.lineInset.rawValue)
@@ -128,6 +128,7 @@ extension TableViewAdapter: UITableViewDataSource {
         cell?.headerLabel.text = sections[indexPath.row].headerTitles()
         let section = sections[indexPath.row]
         cell?.setUpDelegate(self)
+        cell?.numberOfSectionInTableView = indexPath.row
         cell?.updateCellWith(elements: section.getArray)
         return cell ?? UITableViewCell()
     }
@@ -136,7 +137,7 @@ extension TableViewAdapter: UITableViewDataSource {
 
 
 extension TableViewAdapter: AddNewCategoryDelegate {
-    func openAddNewCategoryVC() {
-        self.delegate?.openAddNewCategoryVC()
+    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int) {
+        self.delegate?.openAddNewCategoryVC(numberOfSectionInTableView)
     }
 }

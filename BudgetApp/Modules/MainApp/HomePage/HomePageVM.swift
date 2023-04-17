@@ -68,13 +68,19 @@ extension HomePageVM: TableViewAdapterDelegate {
     }
 }
 
-
+#warning("какой здесь будет правильный дефолтный кейс")
 extension HomePageVM: AddNewCategoryViewModelDelegate {
     func newCategoryCreated(name: String, image: UIImage) {
         if let numberOfSection = numberOfSection {
             var arr = items[numberOfSection].getArray
             arr.append(CategoryItem(nameOfCell: name, image: image, money: 0))
-            let tmp = Sections.income(arr)
+            let tmp: Sections
+            switch numberOfSection {
+            case 0: tmp = Sections.income(arr)
+            case 1: tmp = Sections.wallets(arr)
+            case 2: tmp = Sections.costs(arr)
+            default: tmp = Sections.income(arr)
+            }
             items[numberOfSection] = tmp
             loadData()
         }

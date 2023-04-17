@@ -27,7 +27,7 @@ final class AddNewCategoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        imageView.layer.cornerRadius = 50
+        imageView.layer.cornerRadius = 45
     }
     #warning("remove force unwrap")
     @IBAction func buttonSaveDidTap() {

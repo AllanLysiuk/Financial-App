@@ -14,6 +14,8 @@ final class HomePageVC: UIViewController{
     @IBOutlet private weak var tableView: UITableView!
     
     private var viewModel: HomePageViewModelProtocol
+    //MARK: delete
+    private  let nt = NetworkService()
     
     init(viewModel: HomePageViewModelProtocol){
         self.viewModel = viewModel
@@ -24,7 +26,6 @@ final class HomePageVC: UIViewController{
     private func requiredInit() {
         tabBarItem = UITabBarItem(title: nil, image: UIImage(systemName: "circle.grid.3x3"), tag: 0)
         navigationController?.tabBarItem = tabBarItem
-        self.viewModel.setUpDelegate(self)
     }
     
     required init?(coder: NSCoder) {
@@ -33,15 +34,12 @@ final class HomePageVC: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        viewModel.setUpCollectionView(with: tableView)
+        tableView.separatorColor = UIColor.clear
+        nt.loadListOfCurrencies { arr in
+            print(arr)
+        }
+        viewModel.setUpTableView(with: tableView)
         viewModel.loadData()
     }
     
-}
-
-extension HomePageVC: HomePageDelegate {
-    func getViewHeight() -> Double {
-        return self.view.frame.height
-    }
 }

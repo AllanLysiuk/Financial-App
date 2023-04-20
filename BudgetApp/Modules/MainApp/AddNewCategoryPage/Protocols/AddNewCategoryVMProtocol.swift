@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol AddNewCategoryVMProtocol {
-    func finish()
+    func finish(shouldMoveToParent: Bool)
     
     func buttonSaveDidTap(name: String, image: UIImage)
 }

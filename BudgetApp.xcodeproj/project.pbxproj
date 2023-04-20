@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D71FCDD29EE975B0009408C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71FCDC29EE975B0009408C /* NetworkService.swift */; };
+		9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71FCDF29EE99D70009408C /* CurrencyElement.swift */; };
 		9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */; };
 		9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */; };
 		9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */; };
@@ -34,8 +36,8 @@
 		9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */; };
 		9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D80152329C8A56600C22EE1 /* OnBoardingPageList.swift */; };
 		9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */; };
-		9D83835C29DC6EE9008BCE3D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83835B29DC6EE9008BCE3D /* TableViewCell.swift */; };
-		9D83835E29DC6F10008BCE3D /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D83835D29DC6F10008BCE3D /* TableViewCell.xib */; };
+		9D83835C29DC6EE9008BCE3D /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D83835B29DC6EE9008BCE3D /* CategoryTableViewCell.swift */; };
+		9D83835E29DC6F10008BCE3D /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D83835D29DC6F10008BCE3D /* CategoryTableViewCell.xib */; };
 		9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D83836329DC7283008BCE3D /* CollectionViewCategoryCell.xib */; };
 		9D86461C29D2E62700E216A0 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461B29D2E62700E216A0 /* HistoryVC.swift */; };
 		9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86461D29D2E63400E216A0 /* HistoryVM.swift */; };
@@ -115,9 +117,16 @@
 		9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */; };
 		9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */; };
 		9DE574FF29D839D900ADA0D2 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */; };
+		9DEA445E29F1718A0091FB31 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA445D29F1718A0091FB31 /* CategoryCellViewModel.swift */; };
+		9DEA446129F171B60091FB31 /* CategoryCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446029F171B60091FB31 /* CategoryCellViewModelProtocol.swift */; };
+		9DEA446429F173140091FB31 /* CategoryCellAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446329F173140091FB31 /* CategoryCellAssembler.swift */; };
+		9DEA446629F174A10091FB31 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446529F174A10091FB31 /* CollectionViewAdapter.swift */; };
+		9DEA446929F174BE0091FB31 /* CollectionViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446829F174BE0091FB31 /* CollectionViewAdapterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9D71FCDC29EE975B0009408C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9D71FCDF29EE99D70009408C /* CurrencyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyElement.swift; sourceTree = "<group>"; };
 		9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAddingCell.swift; sourceTree = "<group>"; };
 		9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewAddingCell.xib; sourceTree = "<group>"; };
 		9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVC.swift; sourceTree = "<group>"; };
@@ -145,8 +154,8 @@
 		9D80152029C7306A00C22EE1 /* PageViewAdapterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewAdapterProtocol.swift; sourceTree = "<group>"; };
 		9D80152329C8A56600C22EE1 /* OnBoardingPageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPageList.swift; sourceTree = "<group>"; };
 		9D80152529C8A6C100C22EE1 /* OnBoardingPageList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OnBoardingPageList.xib; sourceTree = "<group>"; };
-		9D83835B29DC6EE9008BCE3D /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		9D83835D29DC6F10008BCE3D /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		9D83835B29DC6EE9008BCE3D /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
+		9D83835D29DC6F10008BCE3D /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		9D83836329DC7283008BCE3D /* CollectionViewCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCategoryCell.xib; sourceTree = "<group>"; };
 		9D86461B29D2E62700E216A0 /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		9D86461D29D2E63400E216A0 /* HistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVM.swift; sourceTree = "<group>"; };
@@ -226,6 +235,11 @@
 		9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageVC.xib; sourceTree = "<group>"; };
 		9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCategoryCell.swift; sourceTree = "<group>"; };
 		9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
+		9DEA445D29F1718A0091FB31 /* CategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModel.swift; sourceTree = "<group>"; };
+		9DEA446029F171B60091FB31 /* CategoryCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModelProtocol.swift; sourceTree = "<group>"; };
+		9DEA446329F173140091FB31 /* CategoryCellAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellAssembler.swift; sourceTree = "<group>"; };
+		9DEA446529F174A10091FB31 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
+		9DEA446829F174BE0091FB31 /* CollectionViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -503,6 +517,7 @@
 			isa = PBXGroup;
 			children = (
 				9DD7D6DA29ADE5FC0087E8F1 /* Coordinator.swift */,
+				9D71FCDF29EE99D70009408C /* CurrencyElement.swift */,
 				9DD7D6DE29ADE66D0087E8F1 /* App */,
 				9DD7D6DF29ADE9E20087E8F1 /* Modules */,
 				9DB802DD29B7A89600D57CB4 /* Factories */,
@@ -575,6 +590,7 @@
 			isa = PBXGroup;
 			children = (
 				9DD7D6F029ADEFB00087E8F1 /* AuthService.swift */,
+				9D71FCDC29EE975B0009408C /* NetworkService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -641,14 +657,51 @@
 		9DE574F929D837D800ADA0D2 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				9DEA446229F1721F0091FB31 /* CollectionViewCells */,
+				9DEA445C29F171540091FB31 /* CategoryTableViewCell */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		9DEA445C29F171540091FB31 /* CategoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA446729F174A90091FB31 /* Adapter */,
+				9DEA445F29F171A30091FB31 /* Protocols */,
+				9DEA445D29F1718A0091FB31 /* CategoryCellViewModel.swift */,
+				9D83835B29DC6EE9008BCE3D /* CategoryTableViewCell.swift */,
+				9D83835D29DC6F10008BCE3D /* CategoryTableViewCell.xib */,
+				9DEA446329F173140091FB31 /* CategoryCellAssembler.swift */,
+			);
+			path = CategoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		9DEA445F29F171A30091FB31 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA446029F171B60091FB31 /* CategoryCellViewModelProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9DEA446229F1721F0091FB31 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
 				9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */,
 				9D83836329DC7283008BCE3D /* CollectionViewCategoryCell.xib */,
-				9D83835B29DC6EE9008BCE3D /* TableViewCell.swift */,
-				9D83835D29DC6F10008BCE3D /* TableViewCell.xib */,
 				9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */,
 				9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */,
 			);
-			path = TableViewCells;
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		9DEA446729F174A90091FB31 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA446529F174A10091FB31 /* CollectionViewAdapter.swift */,
+				9DEA446829F174BE0091FB31 /* CollectionViewAdapterProtocol.swift */,
+			);
+			path = Adapter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -720,7 +773,7 @@
 				9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */,
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
 				9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */,
-				9D83835E29DC6F10008BCE3D /* TableViewCell.xib in Resources */,
+				9D83835E29DC6F10008BCE3D /* CategoryTableViewCell.xib in Resources */,
 				9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */,
 				9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */,
 				9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */,
@@ -744,6 +797,7 @@
 				9D86464929D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift in Sources */,
 				9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */,
 				9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */,
+				9DEA445E29F1718A0091FB31 /* CategoryCellViewModel.swift in Sources */,
 				9DD7D6E729ADEECF0087E8F1 /* LoginVC.swift in Sources */,
 				9D86462729D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
@@ -751,9 +805,11 @@
 				9D86464529D3144800E216A0 /* SettingsViewModelProtocol.swift in Sources */,
 				9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */,
 				9D86462E29D2EBE700E216A0 /* ReportVM.swift in Sources */,
+				9DEA446429F173140091FB31 /* CategoryCellAssembler.swift in Sources */,
 				9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */,
 				9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */,
-				9D83835C29DC6EE9008BCE3D /* TableViewCell.swift in Sources */,
+				9D71FCDD29EE975B0009408C /* NetworkService.swift in Sources */,
+				9D83835C29DC6EE9008BCE3D /* CategoryTableViewCell.swift in Sources */,
 				9DE574F629D8301C00ADA0D2 /* EnumSections.swift in Sources */,
 				9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */,
 				9DD7D6E529ADEB1F0087E8F1 /* LoginAssembler.swift in Sources */,
@@ -774,6 +830,7 @@
 				9DA81A2F29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift in Sources */,
 				9DD7D6F629ADF03C0087E8F1 /* AuthService+Login.swift in Sources */,
 				9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */,
+				9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */,
 				9D86463E29D313D600E216A0 /* SettingsVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
 				9D86462529D2E6B500E216A0 /* HistoryViewModelProtocol.swift in Sources */,
@@ -799,6 +856,7 @@
 				9DCB045729CE11C5006D4425 /* TabBarCoordinatorProtocol.swift in Sources */,
 				9DA81A1D29C2334F0020E637 /* HomePageAssembler.swift in Sources */,
 				9D7F27EE29B25D9700075C8B /* ForgotPasswordCoordinator.swift in Sources */,
+				9DEA446129F171B60091FB31 /* CategoryCellViewModelProtocol.swift in Sources */,
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
 				9D75144E29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift in Sources */,
@@ -807,8 +865,10 @@
 				9D75144829E8587C00A93406 /* AddNewCategoryCoordinator.swift in Sources */,
 				9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */,
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
+				9DEA446629F174A10091FB31 /* CollectionViewAdapter.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
+				9DEA446929F174BE0091FB31 /* CollectionViewAdapterProtocol.swift in Sources */,
 				9D75144329E8577E00A93406 /* AddNewCategoryVM.swift in Sources */,
 				9D86462229D2E65F00E216A0 /* HistoryVCAssembler.swift in Sources */,
 				9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */,

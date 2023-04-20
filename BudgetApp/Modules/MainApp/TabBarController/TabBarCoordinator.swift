@@ -36,6 +36,7 @@ final class TabBarCoordinator: Coordinator{
     
     private func generateHomeItem(tabBar: UITabBarController) {
         let coordinator = HomePageCoordinator(tabBarController: tabBar, rootCoordinator: self)
+        childCoordinators.append(coordinator)
         coordinator.start()
     }
     

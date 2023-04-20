@@ -22,12 +22,12 @@ final class AddNewCategoryVM: AddNewCategoryVMProtocol {
         self.delegate = delegate
     }
     
-    func finish() {
-        coordinator?.finish(shouldMoveToParent: true)
+    func finish(shouldMoveToParent: Bool) {
+        coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
     }
     
     func buttonSaveDidTap(name: String, image: UIImage) {
         delegate?.newCategoryCreated(name: name, image: image)
-        finish()
+        finish(shouldMoveToParent: true)
     }
 }

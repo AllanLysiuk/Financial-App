@@ -29,6 +29,14 @@ final class AddNewCategoryVC: UIViewController {
         textField.delegate = self
         imageView.layer.cornerRadius = 45
     }
+    
+    override func willMove(toParent parent: UIViewController?) {
+            super.willMove(toParent: parent)
+            if parent == nil {
+                viewModel.finish(shouldMoveToParent: false)
+            }
+    }
+    
     #warning("remove force unwrap")
     @IBAction func buttonSaveDidTap() {
         viewModel.buttonSaveDidTap(name: textField.text ?? "", image: imageView.image!)

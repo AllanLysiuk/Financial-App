@@ -7,21 +7,20 @@
 
 import Foundation
 import UIKit
-
+#warning("Можно ли использовать такой енам")
 enum SizeOfCell: Double {
-    case elementsInRow = 3
+    case elementsInRow = 5
     case lineInset = 10
-    case heightOfCell = 100
+    case heightOfCell = 90
     case heightOfHeader = 60
 }
 
 protocol TableViewAdapterDelegate: AnyObject {
-    func getViewHeight() -> Double
     func openAddNewCategoryVC(_ numberOfSectionInTableView: Int)
 }
 
 final class TableViewAdapter: NSObject {
-    private var heightOfCells: [CGFloat] = [0, 0, 0]
+//    private var heightOfCells: [CGFloat] = [0, 0, 0]
     private weak var tableView: UITableView?
     private var sections: [Sections] = []
     
@@ -36,33 +35,15 @@ final class TableViewAdapter: NSObject {
     }
     
     private func registerCells() {
-        let nib1 = UINib(nibName: "\(TableViewCell.self)", bundle: nil)
-        tableView?.register(nib1, forCellReuseIdentifier: "\(TableViewCell.self)")
+        let nib1 = UINib(nibName: "\(CategoryTableViewCell.self)", bundle: nil)
+        tableView?.register(nib1, forCellReuseIdentifier: "\(CategoryTableViewCell.self)")
     }
     
     private func calculateHeightOfCell(_ indexPath: IndexPath) -> CGFloat {
-        let viewHeight = delegate?.getViewHeight()
         let amountOfElements: Double = Double(sections[indexPath.row].rowCount + 1)
-        
         let collectionViewHeight = (ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue ) * SizeOfCell.heightOfCell.rawValue)
-        let insetsBetweenElements = (ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue) * SizeOfCell.lineInset.rawValue)
-        
-        if indexPath.row != 2 {
-            if  amountOfElements < SizeOfCell.elementsInRow.rawValue {
-                heightOfCells[indexPath.row] = SizeOfCell.heightOfCell.rawValue + SizeOfCell.heightOfHeader.rawValue
-                return heightOfCells[indexPath.row]
-            }
-            heightOfCells[indexPath.row] = CGFloat(collectionViewHeight + SizeOfCell.heightOfHeader.rawValue + insetsBetweenElements)
-            return heightOfCells[indexPath.row]
-        } else {
-            var collectionHeight = CGFloat(collectionViewHeight + SizeOfCell.heightOfHeader.rawValue + insetsBetweenElements)
-            let heightOfTable = 2 * SizeOfCell.heightOfHeader.rawValue + heightOfCells[0] + heightOfCells[1] + collectionHeight
-            if let viewHeight = viewHeight, heightOfTable < viewHeight {
-                collectionHeight += viewHeight - heightOfTable
-                return collectionHeight
-            }
-            return collectionHeight
-        }
+        let insetsBetweenElements = ((ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue) - 1) * SizeOfCell.lineInset.rawValue)
+        return CGFloat(collectionViewHeight + SizeOfCell.heightOfHeader.rawValue + insetsBetweenElements)
     }
 }
 
@@ -105,7 +86,7 @@ extension TableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView,
                        willDisplay cell: UITableViewCell,
                        forRowAt indexPath: IndexPath) {
-            if let cell = cell as? TableViewCell, shouldAnimate.firstIndex(of: indexPath) != nil {
+            if let cell = cell as? CategoryTableViewCell, shouldAnimate.firstIndex(of: indexPath) != nil {
                 cell.animateIndicator(shouldHide[indexPath.row])
             }
         }
@@ -123,13 +104,13 @@ extension TableViewAdapter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(TableViewCell.self)") as? TableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "\(CategoryTableViewCell.self)") as? CategoryTableViewCell
         cell?.amountLabel.text = "\(indexPath.row)"
         cell?.headerLabel.text = sections[indexPath.row].headerTitles()
         let section = sections[indexPath.row]
-        cell?.setUpDelegate(self)
-        cell?.numberOfSectionInTableView = indexPath.row
-        cell?.updateCellWith(elements: section.getArray)
+        let vm = CategoryCellAssembler.makeVM(delegate: self, elements: section.getArray, numberOfSection: indexPath.row)
+        cell?.viewModel = vm
+        cell?.setUpCollection()
         return cell ?? UITableViewCell()
     }
     

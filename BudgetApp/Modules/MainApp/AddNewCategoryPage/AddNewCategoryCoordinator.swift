@@ -33,7 +33,7 @@ final class AddNewCategoryCoordinator: Coordinator {
     }
     
 }
-#warning("Если я презенчу экран нужна ли мне функция шуд мув ту пэрент")
+
 extension AddNewCategoryCoordinator: AddNewCategoryCoordinatorProtocol {
     func finish(shouldMoveToParent: Bool) {
         if shouldMoveToParent {

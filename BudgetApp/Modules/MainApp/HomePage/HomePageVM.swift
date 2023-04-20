@@ -7,15 +7,10 @@
 
 import UIKit
 
-protocol HomePageDelegate: AnyObject {
-    func getViewHeight() -> Double
-}
-
 final class HomePageVM: HomePageViewModelProtocol{
-    private var coordinator: HomePageCoordinatorProtocol
+    private weak var coordinator: HomePageCoordinatorProtocol?
     private var adapter: TableViewAdapterProtocol
     
-    private weak var delegate: HomePageDelegate?
     private var numberOfSection: Int?
     
 #warning("remove force unwrap")
@@ -44,11 +39,7 @@ final class HomePageVM: HomePageViewModelProtocol{
         self.adapter.setUpDelegate(self)
     }
     
-    func setUpDelegate(_ delegate: HomePageDelegate) {
-        self.delegate = delegate
-    }
-    
-    func setUpCollectionView(with tableView: UITableView) {
+    func setUpTableView(with tableView: UITableView) {
         adapter.setUpTableView(tableView)
     }
     
@@ -56,31 +47,28 @@ final class HomePageVM: HomePageViewModelProtocol{
         adapter.setUpItems(items)
     }
 }
-#warning("remove magic number")
+
 extension HomePageVM: TableViewAdapterDelegate {
-    func getViewHeight() -> Double {
-        return delegate?.getViewHeight() ?? 896
-    }
-    
     func openAddNewCategoryVC(_ numberOfSectionInTableView: Int) {
         self.numberOfSection = numberOfSectionInTableView
-        coordinator.openAddNewCategoryScene(self)
+        coordinator?.openAddNewCategoryScene(self)
     }
 }
 
-#warning("какой здесь будет правильный дефолтный кейс")
 extension HomePageVM: AddNewCategoryViewModelDelegate {
     func newCategoryCreated(name: String, image: UIImage) {
         if let numberOfSection = numberOfSection {
             var arr = items[numberOfSection].getArray
             arr.append(CategoryItem(nameOfCell: name, image: image, money: 0))
-            let tmp: Sections
+            var tmp: Sections?
             switch numberOfSection {
             case 0: tmp = Sections.income(arr)
             case 1: tmp = Sections.wallets(arr)
             case 2: tmp = Sections.costs(arr)
-            default: tmp = Sections.income(arr)
+            default: break
             }
+            
+            guard let tmp = tmp else { return }
             items[numberOfSection] = tmp
             loadData()
         }

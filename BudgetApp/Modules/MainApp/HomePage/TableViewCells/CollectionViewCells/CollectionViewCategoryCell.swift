@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-#warning("Правильно ли у меня работает автоматическое уменьшение текста")
+
 final class CollectionViewCategoryCell: UICollectionViewCell {
     @IBOutlet  weak var nameOfCell: UILabel?
     @IBOutlet  weak var image: UIImageView?

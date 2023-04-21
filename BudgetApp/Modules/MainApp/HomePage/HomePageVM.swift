@@ -36,7 +36,7 @@ final class HomePageVM: HomePageViewModelProtocol{
     init(coordinator: HomePageCoordinatorProtocol, adapter: TableViewAdapterProtocol){
         self.coordinator = coordinator
         self.adapter = adapter
-        self.adapter.setUpDelegate(self)
+        self.adapter.setUpCollectionViewDelegate(self)
     }
     
     func setUpTableView(with tableView: UITableView) {
@@ -48,7 +48,7 @@ final class HomePageVM: HomePageViewModelProtocol{
     }
 }
 
-extension HomePageVM: TableViewAdapterDelegate {
+extension HomePageVM: AddNewCategoryDelegate {
     func openAddNewCategoryVC(_ numberOfSectionInTableView: Int) {
         self.numberOfSection = numberOfSectionInTableView
         coordinator?.openAddNewCategoryScene(self)

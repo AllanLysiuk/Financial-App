@@ -15,16 +15,16 @@ enum SizeOfCell: Double {
     case heightOfHeader = 60
 }
 
-protocol TableViewAdapterDelegate: AnyObject {
-    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int)
-}
+//protocol TableViewAdapterDelegate: AnyObject {
+//
+//}
 
-final class TableViewAdapter: NSObject {
+final class TableViewAdapter: NSObject {    
 //    private var heightOfCells: [CGFloat] = [0, 0, 0]
     private weak var tableView: UITableView?
     private var sections: [Sections] = []
     
-    private weak var delegate: TableViewAdapterDelegate?
+    private weak var delegate: AddNewCategoryDelegate?
     private var shouldHide: [Bool] = [Bool].init(repeating: false, count: 3)
     var shouldAnimate: [IndexPath] = []
     
@@ -49,7 +49,7 @@ final class TableViewAdapter: NSObject {
 
 //MARK: Adapter Protocol
 extension TableViewAdapter: TableViewAdapterProtocol {
-    func setUpDelegate(_ delegate: TableViewAdapterDelegate) {
+    func setUpCollectionViewDelegate(_ delegate: AddNewCategoryDelegate) {
         self.delegate = delegate
     }
     
@@ -108,17 +108,19 @@ extension TableViewAdapter: UITableViewDataSource {
         cell?.amountLabel.text = "\(indexPath.row)"
         cell?.headerLabel.text = sections[indexPath.row].headerTitles()
         let section = sections[indexPath.row]
-        let vm = CategoryCellAssembler.makeVM(delegate: self, elements: section.getArray, numberOfSection: indexPath.row)
-        cell?.viewModel = vm
-        cell?.setUpCollection()
+        #warning("так норм писать или нет")
+        if let delegate = delegate {
+            let vm = CategoryCellAssembler.makeVM(delegate: delegate, elements: section.getArray, numberOfSection: indexPath.row)
+            cell?.viewModel = vm
+            cell?.setUpCollection()
+        }
+  
         return cell ?? UITableViewCell()
     }
     
 }
 
 
-extension TableViewAdapter: AddNewCategoryDelegate {
-    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int) {
-        self.delegate?.openAddNewCategoryVC(numberOfSectionInTableView)
-    }
-}
+//extension TableViewAdapter: AddNewCategoryDelegate {
+// 
+//}

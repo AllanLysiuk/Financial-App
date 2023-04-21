@@ -8,9 +8,7 @@
 import Foundation
 import UIKit
 
-protocol AddNewCategoryDelegate: AnyObject {
-    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int)
-}
+
 
 final class CategoryTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundHeaderView: UIView!

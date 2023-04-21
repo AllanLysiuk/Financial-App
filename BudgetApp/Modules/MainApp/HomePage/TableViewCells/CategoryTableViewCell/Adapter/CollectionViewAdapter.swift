@@ -7,6 +7,11 @@
 
 import Foundation
 import UIKit
+
+protocol AddNewCategoryDelegate: AnyObject {
+    func openAddNewCategoryVC(_ numberOfSectionInTableView: Int)
+}
+
 final class CollectionViewAdapter: NSObject {
     private weak var collectionView: UICollectionView?
     private var elements: [CategoryItem]?

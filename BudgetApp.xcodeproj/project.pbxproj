@@ -122,6 +122,8 @@
 		9DEA446429F173140091FB31 /* CategoryCellAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446329F173140091FB31 /* CategoryCellAssembler.swift */; };
 		9DEA446629F174A10091FB31 /* CollectionViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446529F174A10091FB31 /* CollectionViewAdapter.swift */; };
 		9DEA446929F174BE0091FB31 /* CollectionViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446829F174BE0091FB31 /* CollectionViewAdapterProtocol.swift */; };
+		9DEA446F29F3F24F0091FB31 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */; };
+		9DEA447D29F3FE800091FB31 /* Categories.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA447B29F3FE800091FB31 /* Categories.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -240,6 +242,8 @@
 		9DEA446329F173140091FB31 /* CategoryCellAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellAssembler.swift; sourceTree = "<group>"; };
 		9DEA446529F174A10091FB31 /* CollectionViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapter.swift; sourceTree = "<group>"; };
 		9DEA446829F174BE0091FB31 /* CollectionViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterProtocol.swift; sourceTree = "<group>"; };
+		9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		9DEA447C29F3FE800091FB31 /* Categories.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Categories.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -522,11 +526,13 @@
 				9DD7D6DF29ADE9E20087E8F1 /* Modules */,
 				9DB802DD29B7A89600D57CB4 /* Factories */,
 				9DD7D6EF29ADEF900087E8F1 /* Services */,
+				9DEA446D29F3F2330091FB31 /* CoreData */,
 				9D75CD3329C0EE5C00186E75 /* GlobalExtensions */,
 				9DD7D6CF29ADE3B30087E8F1 /* Assets.xcassets */,
 				9DD7D6D129ADE3B30087E8F1 /* LaunchScreen.storyboard */,
 				9DD7D6D429ADE3B30087E8F1 /* Info.plist */,
 				9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */,
+				9DEA447B29F3FE800091FB31 /* Categories.xcdatamodeld */,
 			);
 			path = BudgetApp;
 			sourceTree = "<group>";
@@ -704,6 +710,14 @@
 			path = Adapter;
 			sourceTree = "<group>";
 		};
+		9DEA446D29F3F2330091FB31 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -798,6 +812,7 @@
 				9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */,
 				9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */,
 				9DEA445E29F1718A0091FB31 /* CategoryCellViewModel.swift in Sources */,
+				9DEA447D29F3FE800091FB31 /* Categories.xcdatamodeld in Sources */,
 				9DD7D6E729ADEECF0087E8F1 /* LoginVC.swift in Sources */,
 				9D86462729D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
@@ -886,6 +901,7 @@
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
 				9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */,
 				9D75144629E8579C00A93406 /* AddNewCategoryVMProtocol.swift in Sources */,
+				9DEA446F29F3F24F0091FB31 /* CoreDataStack.swift in Sources */,
 				9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */,
 				9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,
@@ -1125,6 +1141,19 @@
 			productName = "FirebaseAuthCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		9DEA447B29F3FE800091FB31 /* Categories.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9DEA447C29F3FE800091FB31 /* Categories.xcdatamodel */,
+			);
+			currentVersion = 9DEA447C29F3FE800091FB31 /* Categories.xcdatamodel */;
+			path = Categories.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9DD7D6BB29ADE3AF0087E8F1 /* Project object */;
 }

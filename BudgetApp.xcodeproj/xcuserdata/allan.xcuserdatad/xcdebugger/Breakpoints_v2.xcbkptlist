@@ -391,8 +391,8 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D768278E-E931-499E-9CBE-602E63AFCB78"
-            shouldBeEnabled = "Yes"
+            uuid = "48D702A5-907E-4368-B83C-559538727273"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetApp/Modules/MainApp/AddNewCategoryPage/AddNewCategoryVC.swift"
@@ -400,7 +400,23 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "willMove(toParent:)"
+            landmarkName = "viewDidDisappear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F35F71E5-925F-429F-8247-BF59774A0B84"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetApp/Services/NetworkService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "loadListOfCurrencies(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

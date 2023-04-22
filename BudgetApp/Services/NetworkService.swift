@@ -8,32 +8,27 @@
 import Foundation
 
 final class NetworkService {
-    private let domain: URL = URL(string: "https://currency-conversion-and-exchange-rates.p.rapidapi.com/")!
-    
-    private enum Path {
-        static let symbols = "symbols"
-    }
-    
-    private let headers = [
-        "X-RapidAPI-Key": "ea5a848c05msh77b862077380330p133108jsn97910c61b72c",
-        "X-RapidAPI-Host": "currency-conversion-and-exchange-rates.p.rapidapi.com"
-    ]
+    private let domain: URL = URL(string: "https://openexchangerates.org/api/currencies.json")!
 
     func loadListOfCurrencies(completion: @escaping (([CurrencyElement]) -> Void)) {
-        let url = domain.appendingPathComponent(Path.symbols)
-        var request = URLRequest(url: url)
+        
+        var request = URLRequest(url: domain)
         request.httpMethod = "GET"
-        request.allHTTPHeaderFields = headers
+
 
         URLSession.shared.dataTask(with: request) { (data, response, error) -> Void in
             if let error = error {
                 print(error.localizedDescription)
             } else if let currencyData = data {
-                let model = try? JSONDecoder().decode([CurrencyElement].self, from: currencyData)
-                print(model)
+                let dictionary = try? JSONDecoder().decode([String: String].self, from: currencyData)
+                
+                var model: [CurrencyElement] = []
+                dictionary?.map({ key, value in
+                    model.append(CurrencyElement(key: key, value: value))
+                })
                 
                 DispatchQueue.main.async {
-                    completion(model ?? [])
+                    completion(model)
                 }
             }
         }.resume()

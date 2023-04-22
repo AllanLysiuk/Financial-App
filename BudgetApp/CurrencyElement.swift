@@ -8,12 +8,8 @@
 import Foundation
 
 struct CurrencyElement: Codable {
-    let success: Bool
-    let symbols: [Symbols]
+    var key: String
+    var value: String
 }
 
-struct Symbols: Codable {
-    let key: String
-    let value: String
-}
 

@@ -14,8 +14,6 @@ final class HomePageVC: UIViewController{
     @IBOutlet private weak var tableView: UITableView!
     
     private var viewModel: HomePageViewModelProtocol
-    //MARK: delete
-    private  let nt = NetworkService()
     
     init(viewModel: HomePageViewModelProtocol){
         self.viewModel = viewModel
@@ -35,9 +33,6 @@ final class HomePageVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorColor = UIColor.clear
-        nt.loadListOfCurrencies { arr in
-            print(arr)
-        }
         viewModel.setUpTableView(with: tableView)
         viewModel.loadData()
     }

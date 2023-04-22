@@ -30,11 +30,11 @@ final class AddNewCategoryVC: UIViewController {
         imageView.layer.cornerRadius = 45
     }
     
-    override func willMove(toParent parent: UIViewController?) {
-            super.willMove(toParent: parent)
-            if parent == nil {
-                viewModel.finish(shouldMoveToParent: false)
-            }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        if parent == nil {
+            viewModel.finish(shouldMoveToParent: false)
+        }
     }
     
     #warning("remove force unwrap")

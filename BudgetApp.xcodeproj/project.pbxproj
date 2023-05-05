@@ -60,6 +60,10 @@
 		9D86464529D3144800E216A0 /* SettingsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */; };
 		9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */; };
 		9D86464929D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */; };
+		9D8D43572A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */; };
+		9D8D43582A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */; };
+		9D8D43592A04FF7C00897829 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */; };
+		9D8D435A2A04FF7C00897829 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43562A04FF7C00897829 /* Account+CoreDataProperties.swift */; };
 		9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1229C2313D0020E637 /* HomePageVC.swift */; };
 		9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */; };
 		9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1629C232500020E637 /* HomePageVM.swift */; };
@@ -180,6 +184,10 @@
 		9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModelProtocol.swift; sourceTree = "<group>"; };
 		9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementOfAccount+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementOfAccount+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9D8D43562A04FF7C00897829 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9DA81A1229C2313D0020E637 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1629C232500020E637 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
@@ -713,6 +721,10 @@
 		9DEA446D29F3F2330091FB31 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */,
+				9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */,
+				9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */,
+				9D8D43562A04FF7C00897829 /* Account+CoreDataProperties.swift */,
 				9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -831,6 +843,7 @@
 				9D86463229D2EC0D00E216A0 /* ReportVCAssembler.swift in Sources */,
 				9DD7D70429AE20900087E8F1 /* RegisterViewModelProtocol.swift in Sources */,
 				9DA81A2329C5BC670020E637 /* OnBoardingVC.swift in Sources */,
+				9D8D435A2A04FF7C00897829 /* Account+CoreDataProperties.swift in Sources */,
 				9D86462C29D2EBDB00E216A0 /* ReportVC.swift in Sources */,
 				9D7F27E629B247D400075C8B /* AuthService+ForgotPassword.swift in Sources */,
 				9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */,
@@ -846,6 +859,7 @@
 				9DD7D6F629ADF03C0087E8F1 /* AuthService+Login.swift in Sources */,
 				9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */,
 				9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */,
+				9D8D43572A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift in Sources */,
 				9D86463E29D313D600E216A0 /* SettingsVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
 				9D86462529D2E6B500E216A0 /* HistoryViewModelProtocol.swift in Sources */,
@@ -856,6 +870,7 @@
 				9D86463C29D313C800E216A0 /* SettingsVC.swift in Sources */,
 				9DA81A2B29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift in Sources */,
 				9D86461C29D2E62700E216A0 /* HistoryVC.swift in Sources */,
+				9D8D43582A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift in Sources */,
 				9DD7D70B29AE251A0087E8F1 /* RegisterCoordinator.swift in Sources */,
 				9DA81A1929C232970020E637 /* HomePageCoordinatorProtocol.swift in Sources */,
 				9D75144C29E85AFE00A93406 /* AddNewCategoryAssembler.swift in Sources */,
@@ -864,6 +879,7 @@
 				9DD7D6E329ADEA510087E8F1 /* LoginCoordinator.swift in Sources */,
 				9DA81A1B29C232C90020E637 /* HomePageCoordinator.swift in Sources */,
 				9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */,
+				9D8D43592A04FF7C00897829 /* Account+CoreDataClass.swift in Sources */,
 				9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */,
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,

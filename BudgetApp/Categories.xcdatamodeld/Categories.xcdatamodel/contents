@@ -1,4 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G817" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+    <entity name="Account" representedClassName="Account" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="sum" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="type" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="MovementOfAccount" representedClassName="MovementOfAccount" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="fromWhereDestination" optional="YES" attributeType="String"/>
+        <attribute name="sum" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="whereDestination" optional="YES" attributeType="String"/>
+        <relationship name="fromWhereRelation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account"/>
+        <relationship name="whereRelation" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Account"/>
+    </entity>
+    <elements>
+        <element name="Account" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="MovementOfAccount" positionX="-54" positionY="-9" width="128" height="119"/>
+    </elements>
 </model>

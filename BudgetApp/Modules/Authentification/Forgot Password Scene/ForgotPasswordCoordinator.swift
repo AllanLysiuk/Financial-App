@@ -12,11 +12,17 @@ final class ForgotPasswordCoordinator: Coordinator{
     
     private var parentNavigationController: UINavigationController
     private var parentCoordinator: ForgotPasswordRootCoordinatorProtocol
+    private var container: Container
     var childCoordinators: [Coordinator] = []
     
-    init(parentNavigationController: UINavigationController, parentCoordinator: ForgotPasswordRootCoordinatorProtocol){
+    init(
+        parentNavigationController: UINavigationController,
+        parentCoordinator: ForgotPasswordRootCoordinatorProtocol,
+        container: Container
+    ){
         self.parentCoordinator = parentCoordinator
         self.parentNavigationController = parentNavigationController
+        self.container = container
     }
     
     func start() {
@@ -24,7 +30,12 @@ final class ForgotPasswordCoordinator: Coordinator{
     }
     
     func start(delegate: ForgotPasswordViewModelDelegate?, email: String?) {
-        let vc = ForgotPasswordAssembler.makeForgotPasswordVC(delegate: delegate, coordinator: self, email: email ?? "")
+        let vc = ForgotPasswordAssembler.makeForgotPasswordVC(
+            delegate: delegate,
+            coordinator: self,
+            email: email ?? "",
+            container: container
+        )
         parentNavigationController.pushViewController(vc, animated: true)
     }
     

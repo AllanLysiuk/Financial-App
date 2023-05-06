@@ -13,12 +13,18 @@ final class AppCoordinator: Coordinator {
     private var window: UIWindow?
     var childCoordinators: [Coordinator] = []
     
+    private var container: Container = {
+        let container = Container()
+        ServiceConfigurations.configure(container: container)
+        return container
+    }()
+    
     init (windowScene: UIWindowScene) {
         self.windowScene = windowScene
     }
     
     func start() {
-       let isRegistered = true
+       let isRegistered = false
         //let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
 //       let shouldShowOnboarding = false
         let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
@@ -42,7 +48,7 @@ final class AppCoordinator: Coordinator {
         let nc = UINavigationController()
         loginWindow.rootViewController = nc
         
-        let loginCoordinator = LoginCoordinator(rootNavigationController: nc, rootCoordinator: self)
+        let loginCoordinator = LoginCoordinator(rootNavigationController: nc, rootCoordinator: self, container: container)
         childCoordinators.append(loginCoordinator)
         loginCoordinator.start()
         

@@ -11,20 +11,20 @@ import UIKit
 final class LoginAssembler{
     private init(){ }
     
-    static func makeLoginVC(coordinator: LoginCoordinatorProtocol) -> UIViewController{
-        let vc = LoginVC(viewModel: makeViewModel(coordinator: coordinator))
+    static func makeLoginVC(container: Container, coordinator: LoginCoordinatorProtocol) -> UIViewController{
+        let vc = LoginVC(viewModel: makeViewModel(container: container, coordinator: coordinator))
         return vc
     }
     
-    private static func makeViewModel(coordinator: LoginCoordinatorProtocol) -> LoginViewModelProtocol{
-        return LoginVM(authService: makeAuthService(), coordinator: coordinator, alertFactory: makeAlertFactory())
+    private static func makeViewModel(container: Container, coordinator: LoginCoordinatorProtocol) -> LoginViewModelProtocol{
+        return LoginVM(authService: makeAuthService(container: container), coordinator: coordinator, alertFactory: makeAlertFactory(container: container))
     }
     
-    private static func makeAuthService() -> LoginAuthServiceProtocol{
-        return AuthService()
+    private static func makeAuthService(container: Container) ->AuthServiceProtocol{
+        return container.resolve()
     }
     
-    private static func makeAlertFactory() -> AlertControllerFactoryProtocol {
-        return AlertControllerFactory()
+    private static func makeAlertFactory(container: Container) -> AlertFactoryProtocol {
+        return container.resolve()
     }
 }

@@ -13,10 +13,16 @@ final class RegisterCoordinator: Coordinator{
     
     private var rootCoordinator: RegisterRootCoordinatorProtocol
     private var parentNavigationController: UINavigationController
+    private var container: Container
     
-    init(rootCoordinator: RegisterRootCoordinatorProtocol, parentNavigationController: UINavigationController){
+    init(
+        rootCoordinator: RegisterRootCoordinatorProtocol,
+        parentNavigationController: UINavigationController,
+        container: Container
+    ){
         self.rootCoordinator = rootCoordinator
         self.parentNavigationController = parentNavigationController
+        self.container = container
     }
     
     func start() {
@@ -24,7 +30,7 @@ final class RegisterCoordinator: Coordinator{
     }
     
     func start(delegate: RegisterViewModelDelegate, email: String?) {
-        let registerVC = RegisterAssembler.makeRegisterVC(delegate: delegate, coordinator: self, email: email)
+        let registerVC = RegisterAssembler.makeRegisterVC(delegate: delegate, coordinator: self, email: email, container: container)
         parentNavigationController.pushViewController(registerVC, animated: true)
     }
     

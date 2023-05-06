@@ -8,7 +8,7 @@
 import Foundation
 import FirebaseAuth
 
-final class AuthService{
+final class AuthService: AuthServiceProtocol{
     
     func login(email: String, password: String, completion: @escaping (_ error: Error?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { authResult, error in

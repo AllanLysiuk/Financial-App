@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class AlertControllerFactory: AlertControllerFactoryProtocol{
+final class AlertControllerFactory: AlertFactoryProtocol{
     
     private enum Const{
         static let cancel: String = "Cancel"

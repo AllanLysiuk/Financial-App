@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class NetworkService {
+final class NetworkService: NetworkServiceProtocol {
     private let domain: URL = URL(string: "https://openexchangerates.org/api/currencies.json")!
 
     func loadListOfCurrencies(completion: @escaping (([CurrencyElement]) -> Void)) {

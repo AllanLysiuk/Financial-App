@@ -83,6 +83,9 @@
 		9DB802E629BDCBB200D57CB4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DB802E529BDCBB200D57CB4 /* FirebaseAuth */; };
 		9DB802E829BDCBB200D57CB4 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9DB802E729BDCBB200D57CB4 /* FirebaseAuthCombine-Community */; };
 		9DB802EC29BFACCA00D57CB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */; };
+		9DC5CD032A06512B00413531 /* CategoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD022A06512B00413531 /* CategoryEnum.swift */; };
+		9DC5CD062A06551000413531 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD052A06551000413531 /* Container.swift */; };
+		9DC5CD082A06552B00413531 /* ServiceConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD072A06552B00413531 /* ServiceConfigurations.swift */; };
 		9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044D29CE0393006D4425 /* TabBarController.swift */; };
 		9DCB045029CE0D0D006D4425 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */; };
 		9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */; };
@@ -205,6 +208,9 @@
 		9DB802DE29B7A8BE00D57CB4 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		9DB802E029B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactoryProtocol.swift; sourceTree = "<group>"; };
 		9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9DC5CD022A06512B00413531 /* CategoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEnum.swift; sourceTree = "<group>"; };
+		9DC5CD052A06551000413531 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
+		9DC5CD072A06552B00413531 /* ServiceConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfigurations.swift; sourceTree = "<group>"; };
 		9DCB044D29CE0393006D4425 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
 		9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -480,6 +486,23 @@
 			path = Factories;
 			sourceTree = "<group>";
 		};
+		9DC5CD012A06510D00413531 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9DC5CD022A06512B00413531 /* CategoryEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9DC5CD042A0654E000413531 /* DependenciesInjection */ = {
+			isa = PBXGroup;
+			children = (
+				9DC5CD052A06551000413531 /* Container.swift */,
+				9DC5CD072A06552B00413531 /* ServiceConfigurations.swift */,
+			);
+			path = DependenciesInjection;
+			sourceTree = "<group>";
+		};
 		9DCB044629CC6860006D4425 /* PageViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -512,6 +535,7 @@
 		9DD7D6BA29ADE3AF0087E8F1 = {
 			isa = PBXGroup;
 			children = (
+				9DC5CD012A06510D00413531 /* Enums */,
 				9DD7D6C529ADE3AF0087E8F1 /* BudgetApp */,
 				9DD7D6C429ADE3AF0087E8F1 /* Products */,
 			);
@@ -603,6 +627,7 @@
 		9DD7D6EF29ADEF900087E8F1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				9DC5CD042A0654E000413531 /* DependenciesInjection */,
 				9DD7D6F029ADEFB00087E8F1 /* AuthService.swift */,
 				9D71FCDC29EE975B0009408C /* NetworkService.swift */,
 			);
@@ -825,6 +850,7 @@
 				9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */,
 				9DEA445E29F1718A0091FB31 /* CategoryCellViewModel.swift in Sources */,
 				9DEA447D29F3FE800091FB31 /* Categories.xcdatamodeld in Sources */,
+				9DC5CD032A06512B00413531 /* CategoryEnum.swift in Sources */,
 				9DD7D6E729ADEECF0087E8F1 /* LoginVC.swift in Sources */,
 				9D86462729D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
@@ -883,6 +909,7 @@
 				9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */,
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,
+				9DC5CD062A06551000413531 /* Container.swift in Sources */,
 				9DD7D70729AE22290087E8F1 /* AuthService+Register.swift in Sources */,
 				9DCB045729CE11C5006D4425 /* TabBarCoordinatorProtocol.swift in Sources */,
 				9DA81A1D29C2334F0020E637 /* HomePageAssembler.swift in Sources */,
@@ -919,6 +946,7 @@
 				9D75144629E8579C00A93406 /* AddNewCategoryVMProtocol.swift in Sources */,
 				9DEA446F29F3F24F0091FB31 /* CoreDataStack.swift in Sources */,
 				9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */,
+				9DC5CD082A06552B00413531 /* ServiceConfigurations.swift in Sources */,
 				9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,
 				9D86464029D313EC00E216A0 /* SettingsVCCoordinator.swift in Sources */,

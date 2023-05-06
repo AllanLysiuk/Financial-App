@@ -7,12 +7,12 @@
 
 import Foundation
 import UIKit
-protocol AlertControllerFactoryProtocol{
+protocol AlertControllerFactoryProtocol {
     func makeAlert(title: String?, message: String?, actions: [AlertControllerFactory.AlertAction]) -> UIAlertController
     func makeActionSheet(title: String?, message: String?, actions: [AlertControllerFactory.AlertAction]) -> UIAlertController
 }
 
-extension AlertControllerFactoryProtocol{
+extension AlertControllerFactoryProtocol {
     func makeAlert(title: String? = nil, message: String? = nil, actions: [AlertControllerFactory.AlertAction]) -> UIAlertController {
         self.makeAlert(title: title, message: message, actions: actions)
     }

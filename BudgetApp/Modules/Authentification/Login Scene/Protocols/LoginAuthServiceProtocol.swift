@@ -6,6 +6,6 @@
 //
 
 import Foundation
-protocol LoginAuthServiceProtocol{
+protocol LoginAuthServiceProtocol {
     func login(email: String, password: String, completion: @escaping (_ error: Error?) -> Void)
 }

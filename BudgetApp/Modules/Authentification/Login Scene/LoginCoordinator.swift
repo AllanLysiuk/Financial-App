@@ -11,15 +11,22 @@ import UIKit
 final class LoginCoordinator: Coordinator{
     private var rootNavigationController: UINavigationController
     private var rootCoordinator: LoginRootCoordinatorController
+    private var container: Container
     var childCoordinators: [Coordinator] = []
     
-    init(rootNavigationController: UINavigationController, rootCoordinator: LoginRootCoordinatorController){
+    
+    init(
+        rootNavigationController: UINavigationController,
+         rootCoordinator: LoginRootCoordinatorController,
+        container: Container
+    ){
         self.rootNavigationController = rootNavigationController
         self.rootCoordinator = rootCoordinator
+        self.container = container
     }
     
     func start() {
-        let vc = LoginAssembler.makeLoginVC(coordinator: self)
+        let vc = LoginAssembler.makeLoginVC(container: container, coordinator: self)
         rootNavigationController.pushViewController(vc, animated: false)
     }
     
@@ -36,13 +43,21 @@ extension LoginCoordinator: LoginCoordinatorProtocol{
     }
     
     func openRegisterScene(delegate: RegisterViewModelDelegate, email: String?) {
-        let registerCoordinator = RegisterCoordinator(rootCoordinator: self, parentNavigationController: rootNavigationController)
+        let registerCoordinator = RegisterCoordinator(
+            rootCoordinator: self,
+            parentNavigationController: rootNavigationController,
+            container: container
+        )
         childCoordinators.append(registerCoordinator)
         registerCoordinator.start(delegate: delegate, email: email)
     }
     
     func openForgotPasswordScene(delegate: ForgotPasswordViewModelDelegate, email: String?) {
-        let coordinator = ForgotPasswordCoordinator(parentNavigationController: rootNavigationController, parentCoordinator: self)
+        let coordinator = ForgotPasswordCoordinator(
+            parentNavigationController: rootNavigationController,
+            parentCoordinator: self,
+            container: container
+        )
         childCoordinators.append(coordinator)
         coordinator.start(delegate: delegate, email: email)
     }

@@ -21,7 +21,6 @@ final class CoreDataStack {
     
      lazy var backgroundContext: NSManagedObjectContext = {
          let context = persistentContainer.newBackgroundContext()
-        context.parent = mainContext
         return context
     }()
 

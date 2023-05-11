@@ -15,6 +15,7 @@ final class ServiceConfigurations {
         container.register({ Self.authService })
         container.register({ Self.networkService })
         container.register({ Self.alertFactory })
+        container.register({ Self.repoService })
     }
     
 }
@@ -24,6 +25,8 @@ protocol AuthServiceProtocol: AnyObject, LoginAuthServiceProtocol & ForgotPasswo
 protocol AlertFactoryProtocol: AnyObject, AlertControllerFactoryProtocol { }
 
 protocol NetworkServiceProtocol: AnyObject { }
+
+protocol RepositoryServiceProtocol: AnyObject, HomePageRepoServiceProtocol { }
 
 private extension ServiceConfigurations {
     
@@ -37,5 +40,9 @@ private extension ServiceConfigurations {
     
     static var alertFactory: AlertFactoryProtocol {
         return AlertControllerFactory()
+    }
+    
+    static var repoService: RepositoryServiceProtocol {
+        return RepositoryService()
     }
 }

@@ -13,10 +13,10 @@ final class CollectionViewCategoryCell: UICollectionViewCell {
     @IBOutlet  weak var image: UIImageView?
     @IBOutlet  weak var money: UILabel?
     
-    func setUp(item: CategoryItem?) {
-        self.nameOfCell?.text = item?.nameOfCell ?? ""
-        self.image?.image = item?.image
-        self.money?.text = "\(item?.money ?? 0)"
+    func setUp(item: Account?) {
+        self.nameOfCell?.text = item?.name ?? ""
+        self.image?.image = UIImage(named: item?.image ?? "creditcard")
+        self.money?.text = "\(item?.sum)"
 
     }
 }

@@ -62,7 +62,7 @@ extension OnBoardingVM: AdapterActionDelegate {
     
     func finishOnBoarding() {
         let ud = UserDefaults()
-        ud.set(true, forKey: "shouldShowOnboarding")
+        ud.set(true, forKey: UserDefaultsEnum.shouldShowOnboarding.rawValue)
         coordinator?.finish()
     }
 }

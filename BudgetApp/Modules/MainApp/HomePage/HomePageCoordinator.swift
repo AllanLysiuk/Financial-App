@@ -11,18 +11,23 @@ import UIKit
 final class HomePageCoordinator: Coordinator {
     private var tabBarController: UITabBarController
     private var rootCoordinator: HomePageRootCoordinatorProtocol
-    
+    private var container: Container
     private var navigationController = UINavigationController()
     
     var childCoordinators: [Coordinator] = []
     
-    init(tabBarController: UITabBarController, rootCoordinator: HomePageRootCoordinatorProtocol) {
+    init(
+        tabBarController: UITabBarController,
+        rootCoordinator: HomePageRootCoordinatorProtocol,
+        container: Container
+    ) {
         self.tabBarController = tabBarController
         self.rootCoordinator = rootCoordinator
+        self.container = container
     }
     
     func start() {
-        let vc = HomePageAssembler.makeHomePageVC(coordinator: self)
+        let vc = HomePageAssembler.makeHomePageVC(coordinator: self, container: container)
         navigationController.addChild(vc)
         tabBarController.addChild(navigationController)
     }

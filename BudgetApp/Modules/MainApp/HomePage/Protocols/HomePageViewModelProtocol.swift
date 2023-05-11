@@ -10,5 +10,5 @@ import UIKit
 
 protocol HomePageViewModelProtocol {
     func setUpTableView(with tableView: UITableView)
-    func loadData()
+    func loadData(dataNeedsToBeLoaded: Bool)
 }

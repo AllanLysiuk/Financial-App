@@ -33,7 +33,7 @@ final class LoginVM: LoginViewModelProtocol {
                     self.openAlertDefault(title: "Error", message: error.localizedDescription, shouldCloseScreen: false)
                 } else {
                     let ud = UserDefaults()
-                    ud.set(true, forKey: "isRegistered")
+                    ud.set(true, forKey: UserDefaultsEnum.isRegistered.rawValue)
                     self.openAlertDefault(title: "Login operation", message: "You've succsesfully signed in", shouldCloseScreen: true)
                 }
             }

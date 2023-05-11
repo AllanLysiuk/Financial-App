@@ -11,17 +11,21 @@ import UIKit
 final class HomePageAssembler{
     private init(){ }
     
-    static func makeHomePageVC(coordinator: HomePageCoordinatorProtocol) -> UIViewController{
-        let vc = HomePageVC(viewModel: makeViewModel(coordinator: coordinator))
+    static func makeHomePageVC(coordinator: HomePageCoordinatorProtocol, container: Container) -> UIViewController{
+        let vc = HomePageVC(viewModel: makeViewModel(coordinator: coordinator, container: container))
         return vc
     }
     
-    private static func makeViewModel( coordinator: HomePageCoordinatorProtocol) -> HomePageViewModelProtocol{
-        return HomePageVM(coordinator: coordinator, adapter: makeAdapter())
+    private static func makeViewModel( coordinator: HomePageCoordinatorProtocol, container: Container) -> HomePageViewModelProtocol{
+        return HomePageVM(coordinator: coordinator, adapter: makeAdapter(), repoService: makeRepoService(container: container))
     }
     
     private static func makeAdapter() -> TableViewAdapterProtocol {
         return TableViewAdapter()
+    }
+    
+    private static func makeRepoService(container: Container) -> RepositoryServiceProtocol {
+        return container.resolve()
     }
     
 }

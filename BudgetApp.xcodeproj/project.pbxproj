@@ -24,7 +24,6 @@
 		9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7F278929AE51C000075C8B /* RegisterVC.xib */; };
 		9D7F27E029B2478200075C8B /* ForgotPassswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27DF29B2478200075C8B /* ForgotPassswordVC.swift */; };
 		9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27E129B2479900075C8B /* ForgotPasswordVM.swift */; };
-		9D7F27E629B247D400075C8B /* AuthService+ForgotPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27E529B247D400075C8B /* AuthService+ForgotPassword.swift */; };
 		9D7F27E829B2480000075C8B /* ForgotPasswordAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27E729B2480000075C8B /* ForgotPasswordAuthServiceProtocol.swift */; };
 		9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27E929B2487400075C8B /* ForgotPasswordViewModelProtocol.swift */; };
 		9D7F27EC29B25D7B00075C8B /* ForgotPasswordCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7F27EB29B25D7B00075C8B /* ForgotPasswordCoordinatorProtocol.swift */; };
@@ -63,7 +62,6 @@
 		9D8D43572A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */; };
 		9D8D43582A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */; };
 		9D8D43592A04FF7C00897829 /* Account+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */; };
-		9D8D435A2A04FF7C00897829 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8D43562A04FF7C00897829 /* Account+CoreDataProperties.swift */; };
 		9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1229C2313D0020E637 /* HomePageVC.swift */; };
 		9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */; };
 		9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA81A1629C232500020E637 /* HomePageVM.swift */; };
@@ -83,9 +81,12 @@
 		9DB802E629BDCBB200D57CB4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9DB802E529BDCBB200D57CB4 /* FirebaseAuth */; };
 		9DB802E829BDCBB200D57CB4 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 9DB802E729BDCBB200D57CB4 /* FirebaseAuthCombine-Community */; };
 		9DB802EC29BFACCA00D57CB4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */; };
-		9DC5CD032A06512B00413531 /* CategoryEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD022A06512B00413531 /* CategoryEnum.swift */; };
 		9DC5CD062A06551000413531 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD052A06551000413531 /* Container.swift */; };
 		9DC5CD082A06552B00413531 /* ServiceConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD072A06552B00413531 /* ServiceConfigurations.swift */; };
+		9DC5CD0A2A0A4C5900413531 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD092A0A4C5900413531 /* RepositoryService.swift */; };
+		9DC5CD122A0C239000413531 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */; };
+		9DC5CD142A0C285200413531 /* HomePageRepoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */; };
+		9DC5CD162A0D579D00413531 /* UserDefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD152A0D579D00413531 /* UserDefaultsEnum.swift */; };
 		9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044D29CE0393006D4425 /* TabBarController.swift */; };
 		9DCB045029CE0D0D006D4425 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */; };
 		9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */; };
@@ -104,14 +105,12 @@
 		9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6ED29ADEF130087E8F1 /* LoginViewModelProtocol.swift */; };
 		9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6F029ADEFB00087E8F1 /* AuthService.swift */; };
 		9DD7D6F329ADEFF50087E8F1 /* LoginAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6F229ADEFF50087E8F1 /* LoginAuthServiceProtocol.swift */; };
-		9DD7D6F629ADF03C0087E8F1 /* AuthService+Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6F529ADF03C0087E8F1 /* AuthService+Login.swift */; };
 		9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6F729ADF1790087E8F1 /* LoginCoordinatorProtocol.swift */; };
 		9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6F929AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift */; };
 		9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DD7D6FB29AE101E0087E8F1 /* LoginVC.xib */; };
 		9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D6FE29AE1F970087E8F1 /* RegisterVC.swift */; };
 		9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70029AE206F0087E8F1 /* RegisterVM.swift */; };
 		9DD7D70429AE20900087E8F1 /* RegisterViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70329AE20900087E8F1 /* RegisterViewModelProtocol.swift */; };
-		9DD7D70729AE22290087E8F1 /* AuthService+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70629AE22290087E8F1 /* AuthService+Register.swift */; };
 		9DD7D70929AE22420087E8F1 /* RegisterAuthServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70829AE22420087E8F1 /* RegisterAuthServiceProtocol.swift */; };
 		9DD7D70B29AE251A0087E8F1 /* RegisterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70A29AE251A0087E8F1 /* RegisterCoordinator.swift */; };
 		9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70C29AE25A10087E8F1 /* RegisterAssembler.swift */; };
@@ -123,7 +122,6 @@
 		9DE574F629D8301C00ADA0D2 /* EnumSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F529D8301C00ADA0D2 /* EnumSections.swift */; };
 		9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */; };
 		9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */; };
-		9DE574FF29D839D900ADA0D2 /* CategoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */; };
 		9DEA445E29F1718A0091FB31 /* CategoryCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA445D29F1718A0091FB31 /* CategoryCellViewModel.swift */; };
 		9DEA446129F171B60091FB31 /* CategoryCellViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446029F171B60091FB31 /* CategoryCellViewModelProtocol.swift */; };
 		9DEA446429F173140091FB31 /* CategoryCellAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446329F173140091FB31 /* CategoryCellAssembler.swift */; };
@@ -151,7 +149,6 @@
 		9D7F278929AE51C000075C8B /* RegisterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterVC.xib; sourceTree = "<group>"; };
 		9D7F27DF29B2478200075C8B /* ForgotPassswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassswordVC.swift; sourceTree = "<group>"; };
 		9D7F27E129B2479900075C8B /* ForgotPasswordVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordVM.swift; sourceTree = "<group>"; };
-		9D7F27E529B247D400075C8B /* AuthService+ForgotPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthService+ForgotPassword.swift"; sourceTree = "<group>"; };
 		9D7F27E729B2480000075C8B /* ForgotPasswordAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordAuthServiceProtocol.swift; sourceTree = "<group>"; };
 		9D7F27E929B2487400075C8B /* ForgotPasswordViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewModelProtocol.swift; sourceTree = "<group>"; };
 		9D7F27EB29B25D7B00075C8B /* ForgotPasswordCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordCoordinatorProtocol.swift; sourceTree = "<group>"; };
@@ -190,7 +187,6 @@
 		9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementOfAccount+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MovementOfAccount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9D8D43562A04FF7C00897829 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9DA81A1229C2313D0020E637 /* HomePageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVC.swift; sourceTree = "<group>"; };
 		9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DA81A1629C232500020E637 /* HomePageVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageVM.swift; sourceTree = "<group>"; };
@@ -208,9 +204,12 @@
 		9DB802DE29B7A8BE00D57CB4 /* AlertControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactory.swift; sourceTree = "<group>"; };
 		9DB802E029B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControllerFactoryProtocol.swift; sourceTree = "<group>"; };
 		9DB802EB29BFACCA00D57CB4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		9DC5CD022A06512B00413531 /* CategoryEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryEnum.swift; sourceTree = "<group>"; };
 		9DC5CD052A06551000413531 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		9DC5CD072A06552B00413531 /* ServiceConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfigurations.swift; sourceTree = "<group>"; };
+		9DC5CD092A0A4C5900413531 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
+		9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRepoServiceProtocol.swift; sourceTree = "<group>"; };
+		9DC5CD152A0D579D00413531 /* UserDefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEnum.swift; sourceTree = "<group>"; };
 		9DCB044D29CE0393006D4425 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
 		9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -231,14 +230,12 @@
 		9DD7D6ED29ADEF130087E8F1 /* LoginViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DD7D6F029ADEFB00087E8F1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		9DD7D6F229ADEFF50087E8F1 /* LoginAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAuthServiceProtocol.swift; sourceTree = "<group>"; };
-		9DD7D6F529ADF03C0087E8F1 /* AuthService+Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthService+Login.swift"; sourceTree = "<group>"; };
 		9DD7D6F729ADF1790087E8F1 /* LoginCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DD7D6F929AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DD7D6FB29AE101E0087E8F1 /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
 		9DD7D6FE29AE1F970087E8F1 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		9DD7D70029AE206F0087E8F1 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		9DD7D70329AE20900087E8F1 /* RegisterViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModelProtocol.swift; sourceTree = "<group>"; };
-		9DD7D70629AE22290087E8F1 /* AuthService+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthService+Register.swift"; sourceTree = "<group>"; };
 		9DD7D70829AE22420087E8F1 /* RegisterAuthServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAuthServiceProtocol.swift; sourceTree = "<group>"; };
 		9DD7D70A29AE251A0087E8F1 /* RegisterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinator.swift; sourceTree = "<group>"; };
 		9DD7D70C29AE25A10087E8F1 /* RegisterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembler.swift; sourceTree = "<group>"; };
@@ -250,7 +247,6 @@
 		9DE574F529D8301C00ADA0D2 /* EnumSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumSections.swift; sourceTree = "<group>"; };
 		9DE574F729D8374D00ADA0D2 /* HomePageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageVC.xib; sourceTree = "<group>"; };
 		9DE574FA29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCategoryCell.swift; sourceTree = "<group>"; };
-		9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItem.swift; sourceTree = "<group>"; };
 		9DEA445D29F1718A0091FB31 /* CategoryCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModel.swift; sourceTree = "<group>"; };
 		9DEA446029F171B60091FB31 /* CategoryCellViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellViewModelProtocol.swift; sourceTree = "<group>"; };
 		9DEA446329F173140091FB31 /* CategoryCellAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCellAssembler.swift; sourceTree = "<group>"; };
@@ -308,7 +304,6 @@
 		9D7F27DE29B2476200075C8B /* Forgot Password Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9D7F27E429B247BC00075C8B /* Extensions */,
 				9D7F27E329B247A100075C8B /* Protocols */,
 				9D7F27DF29B2478200075C8B /* ForgotPassswordVC.swift */,
 				9D7F27E129B2479900075C8B /* ForgotPasswordVM.swift */,
@@ -328,14 +323,6 @@
 				9D7F27F129B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		9D7F27E429B247BC00075C8B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9D7F27E529B247D400075C8B /* AuthService+ForgotPassword.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9D86461A29D2E60200E216A0 /* HistoryPage */ = {
@@ -420,7 +407,6 @@
 		9DA81A1029C230500020E637 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
-				9DE574FE29D839D900ADA0D2 /* CategoryItem.swift */,
 				9DE574F929D837D800ADA0D2 /* TableViewCells */,
 				9DE574F029D82DF200ADA0D2 /* Adapter */,
 				9DA81A1129C231270020E637 /* Protocols */,
@@ -439,6 +425,7 @@
 				9DA81A1429C2319A0020E637 /* HomePageViewModelProtocol.swift */,
 				9DA81A1829C232970020E637 /* HomePageCoordinatorProtocol.swift */,
 				9DA81A1E29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift */,
+				9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -489,7 +476,7 @@
 		9DC5CD012A06510D00413531 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
-				9DC5CD022A06512B00413531 /* CategoryEnum.swift */,
+				9DC5CD152A0D579D00413531 /* UserDefaultsEnum.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -602,7 +589,6 @@
 		9DD7D6E129ADEA310087E8F1 /* Login Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9DD7D6F429ADF0290087E8F1 /* Extensions */,
 				9DD7D6EC29ADEF010087E8F1 /* Protocols */,
 				9DD7D6E229ADEA510087E8F1 /* LoginCoordinator.swift */,
 				9DD7D6E429ADEB1F0087E8F1 /* LoginAssembler.swift */,
@@ -630,22 +616,14 @@
 				9DC5CD042A0654E000413531 /* DependenciesInjection */,
 				9DD7D6F029ADEFB00087E8F1 /* AuthService.swift */,
 				9D71FCDC29EE975B0009408C /* NetworkService.swift */,
+				9DC5CD092A0A4C5900413531 /* RepositoryService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		9DD7D6F429ADF0290087E8F1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9DD7D6F529ADF03C0087E8F1 /* AuthService+Login.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9DD7D6FD29AE1F690087E8F1 /* Register Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9DD7D70529AE22130087E8F1 /* Extensions */,
 				9DD7D70229AE20760087E8F1 /* Protocols */,
 				9DD7D6FE29AE1F970087E8F1 /* RegisterVC.swift */,
 				9DD7D70029AE206F0087E8F1 /* RegisterVM.swift */,
@@ -665,14 +643,6 @@
 				9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */,
 			);
 			path = Protocols;
-			sourceTree = "<group>";
-		};
-		9DD7D70529AE22130087E8F1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				9DD7D70629AE22290087E8F1 /* AuthService+Register.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 		9DE574ED29D4B90000ADA0D2 /* Enums */ = {
@@ -749,7 +719,7 @@
 				9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */,
 				9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */,
 				9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */,
-				9D8D43562A04FF7C00897829 /* Account+CoreDataProperties.swift */,
+				9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */,
 				9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -850,7 +820,6 @@
 				9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */,
 				9DEA445E29F1718A0091FB31 /* CategoryCellViewModel.swift in Sources */,
 				9DEA447D29F3FE800091FB31 /* Categories.xcdatamodeld in Sources */,
-				9DC5CD032A06512B00413531 /* CategoryEnum.swift in Sources */,
 				9DD7D6E729ADEECF0087E8F1 /* LoginVC.swift in Sources */,
 				9D86462729D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
@@ -869,9 +838,7 @@
 				9D86463229D2EC0D00E216A0 /* ReportVCAssembler.swift in Sources */,
 				9DD7D70429AE20900087E8F1 /* RegisterViewModelProtocol.swift in Sources */,
 				9DA81A2329C5BC670020E637 /* OnBoardingVC.swift in Sources */,
-				9D8D435A2A04FF7C00897829 /* Account+CoreDataProperties.swift in Sources */,
 				9D86462C29D2EBDB00E216A0 /* ReportVC.swift in Sources */,
-				9D7F27E629B247D400075C8B /* AuthService+ForgotPassword.swift in Sources */,
 				9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */,
 				9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */,
 				9DB802E129B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift in Sources */,
@@ -882,7 +849,6 @@
 				9D80152129C7306A00C22EE1 /* PageViewAdapter.swift in Sources */,
 				9DA81A2729C5BC8D0020E637 /* OnBoardingCoordinator.swift in Sources */,
 				9DA81A2F29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift in Sources */,
-				9DD7D6F629ADF03C0087E8F1 /* AuthService+Login.swift in Sources */,
 				9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */,
 				9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */,
 				9D8D43572A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift in Sources */,
@@ -902,6 +868,7 @@
 				9D75144C29E85AFE00A93406 /* AddNewCategoryAssembler.swift in Sources */,
 				9DD7D6F329ADEFF50087E8F1 /* LoginAuthServiceProtocol.swift in Sources */,
 				9D86463529D2ECA800E216A0 /* ReportViewModelProtocol.swift in Sources */,
+				9DC5CD0A2A0A4C5900413531 /* RepositoryService.swift in Sources */,
 				9DD7D6E329ADEA510087E8F1 /* LoginCoordinator.swift in Sources */,
 				9DA81A1B29C232C90020E637 /* HomePageCoordinator.swift in Sources */,
 				9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */,
@@ -910,7 +877,6 @@
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,
 				9DC5CD062A06551000413531 /* Container.swift in Sources */,
-				9DD7D70729AE22290087E8F1 /* AuthService+Register.swift in Sources */,
 				9DCB045729CE11C5006D4425 /* TabBarCoordinatorProtocol.swift in Sources */,
 				9DA81A1D29C2334F0020E637 /* HomePageAssembler.swift in Sources */,
 				9D7F27EE29B25D9700075C8B /* ForgotPasswordCoordinator.swift in Sources */,
@@ -919,10 +885,12 @@
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
 				9D75144E29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift in Sources */,
 				9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */,
+				9DC5CD162A0D579D00413531 /* UserDefaultsEnum.swift in Sources */,
 				9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */,
 				9D75144829E8587C00A93406 /* AddNewCategoryCoordinator.swift in Sources */,
 				9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */,
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
+				9DC5CD122A0C239000413531 /* Account+CoreDataProperties.swift in Sources */,
 				9DEA446629F174A10091FB31 /* CollectionViewAdapter.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
@@ -934,7 +902,6 @@
 				9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */,
 				9D86463929D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift in Sources */,
 				9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */,
-				9DE574FF29D839D900ADA0D2 /* CategoryItem.swift in Sources */,
 				9DB802DF29B7A8BE00D57CB4 /* AlertControllerFactory.swift in Sources */,
 				9D86462029D2E64E00E216A0 /* HistoryVCCoordinator.swift in Sources */,
 				9D86462929D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift in Sources */,
@@ -942,6 +909,7 @@
 				9D86464229D313FC00E216A0 /* SettingsVCAssembler.swift in Sources */,
 				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
+				9DC5CD142A0C285200413531 /* HomePageRepoServiceProtocol.swift in Sources */,
 				9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */,
 				9D75144629E8579C00A93406 /* AddNewCategoryVMProtocol.swift in Sources */,
 				9DEA446F29F3F24F0091FB31 /* CoreDataStack.swift in Sources */,

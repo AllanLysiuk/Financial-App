@@ -24,10 +24,10 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-       let isRegistered = false
-        //let isRegistered = UserDefaults.standard.bool(forKey: "isRegistered")
+       let isRegistered = true
+//        let isRegistered = UserDefaults.standard.bool(forKey: UserDefaultsEnum.isRegistered.rawValue)
 //       let shouldShowOnboarding = false
-        let shouldShowOnboarding = UserDefaults.standard.bool(forKey: "shouldShowOnboarding")
+        let shouldShowOnboarding = UserDefaults.standard.bool(forKey: UserDefaultsEnum.shouldShowOnboarding.rawValue)
         
         if !isRegistered {
             openLoginScene()
@@ -57,13 +57,17 @@ final class AppCoordinator: Coordinator {
     
     private func openMainScene() {
         let ud = UserDefaults()
-        ud.set(false, forKey: "isRegistered")
+        ud.set(false, forKey: UserDefaultsEnum.isRegistered.rawValue)
         
         let mainWindow = UIWindow(windowScene: windowScene)
         let nc = UINavigationController()
         mainWindow.rootViewController = nc
         
-       let tabBarCoordinator = TabBarCoordinator(rootNavigationController: nc, rootCoordinator: self)
+        let tabBarCoordinator = TabBarCoordinator(
+            rootNavigationController: nc,
+            rootCoordinator: self,
+            container: container
+        )
         childCoordinators.append(tabBarCoordinator)
         tabBarCoordinator.start()
         window = mainWindow

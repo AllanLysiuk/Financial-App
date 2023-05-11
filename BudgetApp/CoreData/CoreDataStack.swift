@@ -21,10 +21,10 @@ final class CoreDataStack {
     
      lazy var backgroundContext: NSManagedObjectContext = {
          let context = persistentContainer.newBackgroundContext()
-//        context.parent = mainContext
+        context.parent = mainContext
         return context
     }()
-    #warning("Add Name of Model")
+
      private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Categories")
         container.loadPersistentStores { _, error in

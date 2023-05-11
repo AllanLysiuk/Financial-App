@@ -14,7 +14,7 @@ protocol AddNewCategoryDelegate: AnyObject {
 
 final class CollectionViewAdapter: NSObject {
     private weak var collectionView: UICollectionView?
-    private var elements: [CategoryItem]?
+    private var elements: [Account]?
     private var numberOfSectionInTableView: Int?
     private weak var delegate: AddNewCategoryDelegate?
     
@@ -44,7 +44,7 @@ extension CollectionViewAdapter: CollectionViewAdapterProtocol {
         setUpCollectionView()
     }
     
-    func setUpItems(_ items: [CategoryItem]?) {
+    func setUpItems(_ items: [Account]?) {
         self.elements = items ?? []
         reloadData()
     }

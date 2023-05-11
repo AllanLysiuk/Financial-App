@@ -34,7 +34,7 @@ final class HomePageVC: UIViewController{
         super.viewDidLoad()
         tableView.separatorColor = UIColor.clear
         viewModel.setUpTableView(with: tableView)
-        viewModel.loadData()
+        viewModel.loadData(dataNeedsToBeLoaded: true)
     }
     
 }

@@ -11,11 +11,17 @@ import UIKit
 final class TabBarCoordinator: Coordinator{
     private var rootNavigationController: UINavigationController
     private var rootCoordinator: TabBarRootCoordinatorProtocol
+    private var container: Container
     var childCoordinators: [Coordinator] = []
     
-    init(rootNavigationController: UINavigationController, rootCoordinator: TabBarRootCoordinatorProtocol){
+    init(
+        rootNavigationController: UINavigationController,
+        rootCoordinator: TabBarRootCoordinatorProtocol,
+        container: Container
+    ) {
         self.rootNavigationController = rootNavigationController
         self.rootCoordinator = rootCoordinator
+        self.container = container
     }
     
     func start() {
@@ -35,7 +41,7 @@ final class TabBarCoordinator: Coordinator{
     }
     
     private func generateHomeItem(tabBar: UITabBarController) {
-        let coordinator = HomePageCoordinator(tabBarController: tabBar, rootCoordinator: self)
+        let coordinator = HomePageCoordinator(tabBarController: tabBar, rootCoordinator: self, container: container)
         childCoordinators.append(coordinator)
         coordinator.start()
     }

@@ -8,9 +8,9 @@
 import Foundation
 
 enum Sections {
-    case income([CategoryItem])
-    case wallets([CategoryItem])
-    case costs([CategoryItem])
+    case income([Account])
+    case wallets([Account])
+    case costs([Account])
     
     var rowCount: Int {
         switch self {
@@ -20,7 +20,7 @@ enum Sections {
         }
     }
     
-    var getArray: [CategoryItem] {
+    var getArray: [Account] {
         switch self {
         case .income(let items):    return items
         case .wallets(let items):   return items

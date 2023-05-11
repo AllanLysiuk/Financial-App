@@ -10,7 +10,7 @@ import Foundation
 final class CategoryCellAssembler {
     private init() { }
     
-    static func makeVM(delegate: AddNewCategoryDelegate, elements: [CategoryItem]?, numberOfSection: Int ) -> CategoryCellViewModelProtocol {
+    static func makeVM(delegate: AddNewCategoryDelegate, elements: [Account]?, numberOfSection: Int ) -> CategoryCellViewModelProtocol {
         return CategoryCellViewModel(delegate: delegate, elements: elements, adapter: makeAdapter(), numberOfSectionInTableView: numberOfSection)
     }
     

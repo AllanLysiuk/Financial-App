@@ -16,6 +16,7 @@ final class ServiceConfigurations {
         container.register({ Self.networkService })
         container.register({ Self.alertFactory })
         container.register({ Self.repoService })
+        container.register({ Self.resultControllerService })
     }
     
 }
@@ -27,6 +28,8 @@ protocol AlertFactoryProtocol: AnyObject, AlertControllerFactoryProtocol { }
 protocol NetworkServiceProtocol: AnyObject { }
 
 protocol RepositoryServiceProtocol: AnyObject, HomePageRepoServiceProtocol { }
+
+protocol ResultControllerServiceProtocol: AnyObject, HomePageResControllerServiceProtocol { }
 
 private extension ServiceConfigurations {
     
@@ -44,5 +47,9 @@ private extension ServiceConfigurations {
     
     static var repoService: RepositoryServiceProtocol {
         return RepositoryService()
+    }
+    
+    static var resultControllerService: ResultControllerServiceProtocol {
+        return ResultControllerService()
     }
 }

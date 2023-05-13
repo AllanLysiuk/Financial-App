@@ -32,6 +32,7 @@ final class TableViewAdapter: NSObject {
         tableView?.delegate = self
         tableView?.dataSource = self
         registerCells()
+        
     }
     
     private func registerCells() {

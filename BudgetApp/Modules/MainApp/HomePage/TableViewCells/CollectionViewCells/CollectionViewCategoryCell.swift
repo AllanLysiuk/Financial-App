@@ -15,8 +15,8 @@ final class CollectionViewCategoryCell: UICollectionViewCell {
     
     func setUp(item: Account?) {
         self.nameOfCell?.text = item?.name ?? ""
-        self.image?.image = UIImage(named: item?.image ?? "creditcard")
-        self.money?.text = "\(item?.sum)"
+        self.image?.image = UIImage(systemName: item?.image ?? "creditcard")
+        self.money?.text = "\(item?.sum ?? 0) "
 
     }
 }

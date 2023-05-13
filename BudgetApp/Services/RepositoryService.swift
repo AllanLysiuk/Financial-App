@@ -37,8 +37,9 @@ final class RepositoryService: RepositoryServiceProtocol {
         let request = Account.fetchRequest()
         request.returnsObjectsAsFaults = false
         let accounts = try? CoreDataStack.shared.mainContext.fetch(request)
-        if accounts == nil || ((accounts?.isEmpty) != nil) {
+        if  let accounts = accounts, accounts.isEmpty {
             createDefaultAccounts()
+            
         }
         return parseAccountsByTypes(accounts: accounts ?? [])
     }
@@ -90,9 +91,9 @@ final class RepositoryService: RepositoryServiceProtocol {
         addNewAccount(name: "Transport", type: AccountType.cost.rawValue, imageName: "creditcard")
     }
     
-    #warning("Нужен ли мне отдельный парсер")
+    #warning("Нужен ли мне отдельный парсер сервис потому что такая же функция есть в резалт контроллер сервисе")
     private func parseAccountsByTypes(accounts: [Account]) -> [AccountType.RawValue : [Account]] {
-        var dict: [AccountType.RawValue : [Account]] = [:]
+        var dict: [AccountType.RawValue : [Account]] = [AccountType.income.rawValue:[], AccountType.wallet.rawValue:[], AccountType.cost.rawValue:[]]
         accounts.forEach { acc in
             #warning("Форс анврап норм ли он здесь?")
             dict[acc.type!]?.append(acc)

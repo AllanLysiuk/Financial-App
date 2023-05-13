@@ -87,6 +87,8 @@
 		9DC5CD122A0C239000413531 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */; };
 		9DC5CD142A0C285200413531 /* HomePageRepoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */; };
 		9DC5CD162A0D579D00413531 /* UserDefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD152A0D579D00413531 /* UserDefaultsEnum.swift */; };
+		9DC5CD182A0F864800413531 /* ResultControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD172A0F864700413531 /* ResultControllerService.swift */; };
+		9DC5CD1A2A0F9A6000413531 /* HomePageResControllerServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD192A0F9A6000413531 /* HomePageResControllerServiceProtocol.swift */; };
 		9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044D29CE0393006D4425 /* TabBarController.swift */; };
 		9DCB045029CE0D0D006D4425 /* TabBarAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */; };
 		9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */; };
@@ -210,6 +212,8 @@
 		9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRepoServiceProtocol.swift; sourceTree = "<group>"; };
 		9DC5CD152A0D579D00413531 /* UserDefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEnum.swift; sourceTree = "<group>"; };
+		9DC5CD172A0F864700413531 /* ResultControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultControllerService.swift; sourceTree = "<group>"; };
+		9DC5CD192A0F9A6000413531 /* HomePageResControllerServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageResControllerServiceProtocol.swift; sourceTree = "<group>"; };
 		9DCB044D29CE0393006D4425 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9DCB044F29CE0D0D006D4425 /* TabBarAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembler.swift; sourceTree = "<group>"; };
 		9DCB045129CE104E006D4425 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
@@ -426,6 +430,7 @@
 				9DA81A1829C232970020E637 /* HomePageCoordinatorProtocol.swift */,
 				9DA81A1E29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift */,
 				9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */,
+				9DC5CD192A0F9A6000413531 /* HomePageResControllerServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -617,6 +622,7 @@
 				9DD7D6F029ADEFB00087E8F1 /* AuthService.swift */,
 				9D71FCDC29EE975B0009408C /* NetworkService.swift */,
 				9DC5CD092A0A4C5900413531 /* RepositoryService.swift */,
+				9DC5CD172A0F864700413531 /* ResultControllerService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -902,6 +908,7 @@
 				9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */,
 				9D86463929D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift in Sources */,
 				9DD7D6F829ADF1790087E8F1 /* LoginCoordinatorProtocol.swift in Sources */,
+				9DC5CD1A2A0F9A6000413531 /* HomePageResControllerServiceProtocol.swift in Sources */,
 				9DB802DF29B7A8BE00D57CB4 /* AlertControllerFactory.swift in Sources */,
 				9D86462029D2E64E00E216A0 /* HistoryVCCoordinator.swift in Sources */,
 				9D86462929D2E81900E216A0 /* HistoryRootCoordinatorProtocol.swift in Sources */,
@@ -909,6 +916,7 @@
 				9D86464229D313FC00E216A0 /* SettingsVCAssembler.swift in Sources */,
 				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
+				9DC5CD182A0F864800413531 /* ResultControllerService.swift in Sources */,
 				9DC5CD142A0C285200413531 /* HomePageRepoServiceProtocol.swift in Sources */,
 				9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */,
 				9D75144629E8579C00A93406 /* AddNewCategoryVMProtocol.swift in Sources */,

@@ -106,9 +106,15 @@ extension TableViewAdapter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "\(CategoryTableViewCell.self)") as? CategoryTableViewCell
-        cell?.amountLabel.text = "\(indexPath.row)"
+        
         cell?.headerLabel.text = sections[indexPath.row].headerTitles()
         let section = sections[indexPath.row]
+        let items = section.getArray
+        let sum = items.reduce(0) { partialResult, acc in
+            return partialResult + acc.sum
+        }
+        cell?.amountLabel.text = "\(sum)"
+        
         #warning("так норм писать или нет")
         if let delegate = delegate {
             let vm = CategoryCellAssembler.makeVM(delegate: delegate, elements: section.getArray, numberOfSection: indexPath.row)

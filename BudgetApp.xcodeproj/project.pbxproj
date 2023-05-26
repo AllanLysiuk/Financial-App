@@ -118,6 +118,7 @@
 		9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70C29AE25A10087E8F1 /* RegisterAssembler.swift */; };
 		9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */; };
 		9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */; };
+		9DDE575D2A20B64100F2CB1A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */; };
 		9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */; };
 		9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F129D82E0B00ADA0D2 /* TableViewAdapter.swift */; };
 		9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */; };
@@ -245,6 +246,7 @@
 		9DD7D70C29AE25A10087E8F1 /* RegisterAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterAssembler.swift; sourceTree = "<group>"; };
 		9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		9DE574F129D82E0B00ADA0D2 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterProtocol.swift; sourceTree = "<group>"; };
@@ -527,6 +529,7 @@
 		9DD7D6BA29ADE3AF0087E8F1 = {
 			isa = PBXGroup;
 			children = (
+				9DDE575E2A20B66000F2CB1A /* Fonts */,
 				9DC5CD012A06510D00413531 /* Enums */,
 				9DD7D6C529ADE3AF0087E8F1 /* BudgetApp */,
 				9DD7D6C429ADE3AF0087E8F1 /* Products */,
@@ -649,6 +652,14 @@
 				9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9DDE575E2A20B66000F2CB1A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9DE574ED29D4B90000ADA0D2 /* Enums */ = {
@@ -800,6 +811,7 @@
 				9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */,
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
 				9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */,
+				9DDE575D2A20B64100F2CB1A /* Montserrat-SemiBold.ttf in Resources */,
 				9D83835E29DC6F10008BCE3D /* CategoryTableViewCell.xib in Resources */,
 				9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */,
 				9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */,

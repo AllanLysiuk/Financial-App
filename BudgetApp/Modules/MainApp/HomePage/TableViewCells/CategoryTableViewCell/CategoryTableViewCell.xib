@@ -36,7 +36,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Qht-8L-qHH" firstAttribute="centerY" secondItem="Jen-Mt-Irg" secondAttribute="centerY" id="0Jk-vF-O6j"/>
                             <constraint firstItem="znG-Ec-Itn" firstAttribute="centerY" secondItem="Jen-Mt-Irg" secondAttribute="centerY" id="0la-F4-SCj"/>
@@ -48,24 +48,27 @@
                         </constraints>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="XUl-Jx-cfN">
-                        <rect key="frame" x="0.0" y="60" width="414" height="191"/>
+                        <rect key="frame" x="16" y="60" width="382" height="191"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vv9-sb-HFG">
-                            <size key="itemSize" width="70" height="90"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="382" id="Jlk-JY-Sqw"/>
+                        </constraints>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="22" minimumInteritemSpacing="23.5" id="Vv9-sb-HFG">
+                            <size key="itemSize" width="101" height="110"/>
+                            <size key="headerReferenceSize" width="0.0" height="12"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                     </collectionView>
                 </subviews>
+                <color key="backgroundColor" red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="XUl-Jx-cfN" secondAttribute="trailing" id="2Wq-9T-YF9"/>
                     <constraint firstItem="Jen-Mt-Irg" firstAttribute="leading" secondItem="deF-u0-PbQ" secondAttribute="leading" id="BmB-lP-Ec1"/>
                     <constraint firstAttribute="bottom" secondItem="XUl-Jx-cfN" secondAttribute="bottom" id="Wbg-TD-M7g"/>
                     <constraint firstItem="XUl-Jx-cfN" firstAttribute="top" secondItem="Jen-Mt-Irg" secondAttribute="bottom" id="Z65-8g-znM"/>
-                    <constraint firstItem="XUl-Jx-cfN" firstAttribute="leading" secondItem="deF-u0-PbQ" secondAttribute="leading" id="euh-y1-Fdh"/>
                     <constraint firstItem="Jen-Mt-Irg" firstAttribute="top" secondItem="deF-u0-PbQ" secondAttribute="top" id="mne-Sh-qA0"/>
                     <constraint firstAttribute="trailing" secondItem="Jen-Mt-Irg" secondAttribute="trailing" id="t6r-5y-V0x"/>
+                    <constraint firstItem="XUl-Jx-cfN" firstAttribute="centerX" secondItem="deF-u0-PbQ" secondAttribute="centerX" id="whv-oY-bZO"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -82,9 +85,6 @@
         <image name="arrow.down" catalog="system" width="120" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

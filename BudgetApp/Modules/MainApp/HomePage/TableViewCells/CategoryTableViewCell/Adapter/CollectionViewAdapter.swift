@@ -76,15 +76,15 @@ extension CollectionViewAdapter: UICollectionViewDataSource {
             return cell ?? UICollectionViewCell()
         } else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionViewAddingCell.self)", for: indexPath) as? CollectionViewAddingCell
-            cell?.layer.cornerRadius = 10
+//            cell?.layer.cornerRadius = 10
             return cell ?? UICollectionViewCell()
         }
     }
     
     // Add spaces at the beginning and the end of the collection view
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+//        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+//    }
     #warning("правильно ли я предаю делегаты или нужно сначала передавть во вью модель")
 func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     if (elements?.count ?? 0) == indexPath.last {

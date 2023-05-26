@@ -9,9 +9,9 @@ import Foundation
 import UIKit
 #warning("Можно ли использовать такой енам")
 enum SizeOfCell: Double {
-    case elementsInRow = 5
-    case lineInset = 10
-    case heightOfCell = 90
+    case elementsInRow = 3
+    case lineInset = 22
+    case heightOfCell = 110
     case heightOfHeader = 60
 }
 
@@ -44,7 +44,7 @@ final class TableViewAdapter: NSObject {
         let amountOfElements: Double = Double(sections[indexPath.row].rowCount + 1)
         let collectionViewHeight = (ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue ) * SizeOfCell.heightOfCell.rawValue)
         let insetsBetweenElements = ((ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue) - 1) * SizeOfCell.lineInset.rawValue)
-        return CGFloat(collectionViewHeight + SizeOfCell.heightOfHeader.rawValue + insetsBetweenElements)
+        return CGFloat(collectionViewHeight + SizeOfCell.heightOfHeader.rawValue + insetsBetweenElements + 12)
     }
 }
 
@@ -69,7 +69,7 @@ extension TableViewAdapter: TableViewAdapterProtocol {
     }
 }
 
-//MARK: CollectionView Delegate
+//MARK: TableView Delegate
 extension TableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if shouldHide[indexPath.row] {
@@ -93,7 +93,7 @@ extension TableViewAdapter: UITableViewDelegate {
         }
 }
 
-//MARK: CollectionView DataSource
+//MARK: TableView DataSource
 extension TableViewAdapter: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {

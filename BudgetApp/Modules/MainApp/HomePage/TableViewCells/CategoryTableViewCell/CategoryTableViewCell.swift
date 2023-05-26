@@ -21,8 +21,19 @@ final class CategoryTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        backgroundHeaderView.layer.cornerRadius = 12
+        collectionView.layer.cornerRadius = 20
         selectionStyle = .none
+        setUpLabelsFont()
+    }
+    
+    private func setUpLabelsFont() {
+        headerLabel?.backgroundColor = UIColor(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
+        headerLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        headerLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 20)
+        
+        amountLabel?.backgroundColor = UIColor(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
+        amountLabel?.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        amountLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 20)
     }
     
     func setUpCollection() {

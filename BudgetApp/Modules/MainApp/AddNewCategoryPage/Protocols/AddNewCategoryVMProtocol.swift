@@ -12,4 +12,5 @@ protocol AddNewCategoryVMProtocol {
     func finish(shouldMoveToParent: Bool)
     
     func buttonSaveDidTap(name: String, image: UIImage)
+    func buttonCloseDidTap()
 }

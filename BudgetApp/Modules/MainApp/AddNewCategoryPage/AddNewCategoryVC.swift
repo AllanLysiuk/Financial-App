@@ -12,6 +12,11 @@ final class AddNewCategoryVC: UIViewController {
     
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var buttonSave: UIButton!
+    @IBOutlet private weak var newCategoryLabel: UILabel!
+    @IBOutlet private weak var iconLabel: UILabel!
+    @IBOutlet private weak var nameLabel: UILabel!
+    
     
     private var viewModel: AddNewCategoryVMProtocol
     
@@ -27,7 +32,7 @@ final class AddNewCategoryVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.delegate = self
-        imageView.layer.cornerRadius = 45
+        setUpUI()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -37,9 +42,37 @@ final class AddNewCategoryVC: UIViewController {
         }
     }
     
+    #warning("set normal image not system")
+    private func setUpUI () {
+        newCategoryLabel.font = UIFont(name: "Montserrat-SemiBold", size: 16)
+        newCategoryLabel.textColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        
+        iconLabel.font = UIFont(name: "Montserrat-SemiBold", size: 14)
+        iconLabel.textColor = UIColor(red: 0.118, green: 0.11, blue: 0.11, alpha: 0.5)
+        
+        nameLabel.font = UIFont(name: "Montserrat-SemiBold", size: 14)
+        nameLabel.textColor = UIColor(red: 0.118, green: 0.11, blue: 0.11, alpha: 0.5)
+        
+        imageView.image = UIImage(systemName: "creditcard")
+        imageView.layer.cornerRadius = 20
+        
+        textField.layer.cornerRadius = 12
+        
+        buttonSave.backgroundColor = UIColor(red: 0.204, green: 0.412, blue: 0.945, alpha: 1)
+        buttonSave.layer.cornerRadius = 24
+        buttonSave.titleLabel?.text = "Save"
+        buttonSave.titleLabel?.font = UIFont(name: "Montserrat-SemiBold", size: 18)
+        buttonSave.titleLabel?.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        
+    }
+    
     #warning("remove force unwrap")
     @IBAction func buttonSaveDidTap() {
         viewModel.buttonSaveDidTap(name: textField.text ?? "", image: imageView.image!)
+    }
+    
+    @IBAction func buttonCloseDidTap() {
+        viewModel.buttonCloseDidTap()
     }
 }
 

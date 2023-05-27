@@ -30,4 +30,8 @@ final class AddNewCategoryVM: AddNewCategoryVMProtocol {
         delegate?.newCategoryCreated(name: name, image: image)
         finish(shouldMoveToParent: true)
     }
+    
+    func buttonCloseDidTap() {
+        finish(shouldMoveToParent: true)
+    }
 }

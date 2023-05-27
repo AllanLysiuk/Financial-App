@@ -29,6 +29,9 @@ final class AddNewCategoryCoordinator: Coordinator {
     
     func start(delegate: AddNewCategoryViewModelDelegate) {
         let vc = AddNewCategoryAssembler.makeAddNewCategoryVC(coordinator: self, delegate: delegate)
+        if let sheet = vc.sheetPresentationController {
+            sheet.detents = [.medium()]
+        }
         parentNavigationController.present(vc, animated: true)
     }
     

@@ -84,7 +84,6 @@
 		9DC5CD062A06551000413531 /* Container.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD052A06551000413531 /* Container.swift */; };
 		9DC5CD082A06552B00413531 /* ServiceConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD072A06552B00413531 /* ServiceConfigurations.swift */; };
 		9DC5CD0A2A0A4C5900413531 /* RepositoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD092A0A4C5900413531 /* RepositoryService.swift */; };
-		9DC5CD122A0C239000413531 /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */; };
 		9DC5CD142A0C285200413531 /* HomePageRepoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */; };
 		9DC5CD162A0D579D00413531 /* UserDefaultsEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD152A0D579D00413531 /* UserDefaultsEnum.swift */; };
 		9DC5CD182A0F864800413531 /* ResultControllerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DC5CD172A0F864700413531 /* ResultControllerService.swift */; };
@@ -119,6 +118,7 @@
 		9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */; };
 		9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */; };
 		9DDE575D2A20B64100F2CB1A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */; };
+		9DDE57742A237ACA00F2CB1A /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57732A237ACA00F2CB1A /* Account+CoreDataProperties.swift */; };
 		9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */; };
 		9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F129D82E0B00ADA0D2 /* TableViewAdapter.swift */; };
 		9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */; };
@@ -210,7 +210,6 @@
 		9DC5CD052A06551000413531 /* Container.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Container.swift; sourceTree = "<group>"; };
 		9DC5CD072A06552B00413531 /* ServiceConfigurations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceConfigurations.swift; sourceTree = "<group>"; };
 		9DC5CD092A0A4C5900413531 /* RepositoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryService.swift; sourceTree = "<group>"; };
-		9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9DC5CD132A0C285200413531 /* HomePageRepoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRepoServiceProtocol.swift; sourceTree = "<group>"; };
 		9DC5CD152A0D579D00413531 /* UserDefaultsEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsEnum.swift; sourceTree = "<group>"; };
 		9DC5CD172A0F864700413531 /* ResultControllerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultControllerService.swift; sourceTree = "<group>"; };
@@ -247,6 +246,7 @@
 		9DD7D70E29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		9DDE57732A237ACA00F2CB1A /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		9DE574F129D82E0B00ADA0D2 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterProtocol.swift; sourceTree = "<group>"; };
@@ -736,7 +736,7 @@
 				9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */,
 				9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */,
 				9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */,
-				9DC5CD112A0C239000413531 /* Account+CoreDataProperties.swift */,
+				9DDE57732A237ACA00F2CB1A /* Account+CoreDataProperties.swift */,
 				9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */,
 			);
 			path = CoreData;
@@ -842,6 +842,7 @@
 				9D86462729D2E7DA00E216A0 /* HistoryCoordinatorProtocol.swift in Sources */,
 				9DD7D70129AE206F0087E8F1 /* RegisterVM.swift in Sources */,
 				9D7F27F229B25F9100075C8B /* ForgotPasswordRootCoordinatorProtocol.swift in Sources */,
+				9DDE57742A237ACA00F2CB1A /* Account+CoreDataProperties.swift in Sources */,
 				9D86464529D3144800E216A0 /* SettingsViewModelProtocol.swift in Sources */,
 				9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */,
 				9D86462E29D2EBE700E216A0 /* ReportVM.swift in Sources */,
@@ -908,7 +909,6 @@
 				9D75144829E8587C00A93406 /* AddNewCategoryCoordinator.swift in Sources */,
 				9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */,
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
-				9DC5CD122A0C239000413531 /* Account+CoreDataProperties.swift in Sources */,
 				9DEA446629F174A10091FB31 /* CollectionViewAdapter.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,

@@ -53,18 +53,22 @@ final class HomePageVM: HomePageViewModelProtocol{
 extension HomePageVM: AddNewCategoryDelegate {
     func openAddNewCategoryVC(_ numberOfSectionInTableView: Int) {
         self.numberOfSection = numberOfSectionInTableView
-        coordinator?.openAddNewCategoryScene(self)
+        var isWalletAdding = false
+        if numberOfSectionInTableView == 1 {
+            isWalletAdding = true
+        }
+        coordinator?.openAddNewCategoryScene(self, isWalletAdding: isWalletAdding)
     }
 }
 //instead of UIimage use string
 extension HomePageVM: AddNewCategoryViewModelDelegate {
-    func newCategoryCreated(name: String, image: UIImage) {
+    func newCategoryCreated(name: String, image: UIImage, sum: Double, considerInBalanceFlag: Bool) {
         if let numberOfSection = numberOfSection {
 //            var arr = items[numberOfSection].getArray
             let type = AccountType.getTypeByIndex(index: numberOfSection)
             #warning("replace default image to name of image of type string")
             #warning("правильная ли у меня логика здесь")
-            repoService.addNewAccount(name: name, type: type.rawValue, imageName: "creditcard")
+            repoService.addNewAccount(name: name, type: type.rawValue, imageName: "creditcard", sum: sum, considerInBalanceFlag: considerInBalanceFlag)
 //            let arr = repoService.loadInfoByType(type: type)
 //          arr.append(newAccount)
 //            var tmp: Sections?

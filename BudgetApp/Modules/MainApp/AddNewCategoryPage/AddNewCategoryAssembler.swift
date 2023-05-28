@@ -11,12 +11,19 @@ import UIKit
 final class AddNewCategoryAssembler {
     private init() { }
     
-    static func makeAddNewCategoryVC(coordinator: AddNewCategoryCoordinatorProtocol, delegate: AddNewCategoryViewModelDelegate) -> UIViewController {
+    static func makeAddNewCategoryVC(
+        coordinator: AddNewCategoryCoordinatorProtocol,
+        delegate: AddNewCategoryViewModelDelegate,
+        isWalletAdding: Bool
+    ) -> UIViewController {
         let vm = makeVM(coordinator, delegate)
-        return AddNewCategoryVC(viewModel: vm)
+        return AddNewCategoryVC(viewModel: vm, isWalletAdding: isWalletAdding)
     }
     
-    private static func makeVM(_ coordinator: AddNewCategoryCoordinatorProtocol, _ delegate: AddNewCategoryViewModelDelegate) -> AddNewCategoryVMProtocol {
+    private static func makeVM(
+        _ coordinator: AddNewCategoryCoordinatorProtocol,
+        _ delegate: AddNewCategoryViewModelDelegate
+    ) -> AddNewCategoryVMProtocol {
         return AddNewCategoryVM(coordinator: coordinator, delegate: delegate)
     }
 }

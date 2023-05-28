@@ -11,6 +11,6 @@ import UIKit
 protocol AddNewCategoryVMProtocol {
     func finish(shouldMoveToParent: Bool)
     
-    func buttonSaveDidTap(name: String, image: UIImage)
+    func buttonSaveDidTap(name: String, image: UIImage, sum: Double, considerInBalanceFlag: Bool)
     func buttonCloseDidTap()
 }

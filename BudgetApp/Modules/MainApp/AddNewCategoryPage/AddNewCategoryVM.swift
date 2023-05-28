@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol AddNewCategoryViewModelDelegate: AnyObject {
-    func newCategoryCreated(name: String, image: UIImage)
+    func newCategoryCreated(name: String, image: UIImage, sum: Double, considerInBalanceFlag: Bool)
 }
 
 final class AddNewCategoryVM: AddNewCategoryVMProtocol {
@@ -26,8 +26,8 @@ final class AddNewCategoryVM: AddNewCategoryVMProtocol {
         coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
     }
     
-    func buttonSaveDidTap(name: String, image: UIImage) {
-        delegate?.newCategoryCreated(name: name, image: image)
+    func buttonSaveDidTap(name: String, image: UIImage, sum: Double, considerInBalanceFlag: Bool) {
+        delegate?.newCategoryCreated(name: name, image: image, sum: sum, considerInBalanceFlag: considerInBalanceFlag)
         finish(shouldMoveToParent: true)
     }
     

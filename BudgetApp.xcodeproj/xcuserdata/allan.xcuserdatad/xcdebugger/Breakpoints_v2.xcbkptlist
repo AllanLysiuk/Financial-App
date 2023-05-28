@@ -359,22 +359,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "46A361F6-37AD-44C0-BFA1-542B625CEE2B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "BudgetApp/Modules/MainApp/AddNewCategoryPage/AddNewCategoryVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "buttonSaveDidTap()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "48D702A5-907E-4368-B83C-559538727273"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -382,8 +366,8 @@
             filePath = "BudgetApp/Modules/MainApp/AddNewCategoryPage/AddNewCategoryVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
             landmarkName = "viewDidDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -408,7 +392,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "9AD6615B-EB27-4346-B302-DA8C1D290196"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetApp/Services/RepositoryService.swift"
@@ -432,7 +416,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "64"
             endingLineNumber = "64"
-            landmarkName = "addNewAccount(name:type:imageName:)"
+            landmarkName = "addNewAccount(name:type:imageName:sum:considerInBalanceFlag:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -440,7 +424,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "46609D10-22EC-4717-82DF-78D63C626ACE"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetApp/Modules/MainApp/HomePage/TableViewCells/CategoryTableViewCell/CategoryCellViewModel.swift"
@@ -456,7 +440,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "419BA6A4-6F75-4EF5-88D6-6FA2990B4090"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetApp/Modules/MainApp/HomePage/HomePageVM.swift"
@@ -488,14 +472,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CE157A1A-A362-477A-B7CA-473E02F519BB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetApp/Services/RepositoryService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "101"
-            endingLineNumber = "101"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
             landmarkName = "parseAccountsByTypes(accounts:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -504,15 +488,15 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "E295AEBE-2B9C-43F6-906B-92D0C5A352F4"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BudgetApp/Modules/MainApp/HomePage/HomePageVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "newCategoryCreated(name:image:)"
+            startingLineNumber = "66"
+            endingLineNumber = "66"
+            landmarkName = "newCategoryCreated(name:image:sum:considerInBalanceFlag:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -545,6 +529,22 @@
             startingLineNumber = "46"
             endingLineNumber = "46"
             landmarkName = "setUpDelegate(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E1EBA42-4FA6-45B4-B8E5-33F71A139995"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetApp/Modules/MainApp/AddNewCategoryPage/AddNewCategoryVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "buttonSaveDidTap(name:image:sum:considerInBalanceFlag:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

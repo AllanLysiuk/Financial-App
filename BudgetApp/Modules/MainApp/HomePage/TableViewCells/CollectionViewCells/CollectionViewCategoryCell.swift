@@ -20,6 +20,7 @@ final class CollectionViewCategoryCell: UICollectionViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.image?.layer.cornerRadius = 30
         setUpNameLabel()
         setUpMoneyLabel()
     }

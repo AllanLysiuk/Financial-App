@@ -10,5 +10,5 @@ import Foundation
 protocol HomePageCoordinatorProtocol: AnyObject {
     func finish()
     
-    func openAddNewCategoryScene(_ delegate: AddNewCategoryViewModelDelegate)
+    func openAddNewCategoryScene(_ delegate: AddNewCategoryViewModelDelegate, isWalletAdding: Bool)
 }

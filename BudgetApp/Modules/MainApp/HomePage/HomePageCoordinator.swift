@@ -40,10 +40,10 @@ final class HomePageCoordinator: Coordinator {
 }
 
 extension HomePageCoordinator: HomePageCoordinatorProtocol {
-    func openAddNewCategoryScene(_ delegate: AddNewCategoryViewModelDelegate) {
+    func openAddNewCategoryScene(_ delegate: AddNewCategoryViewModelDelegate, isWalletAdding: Bool) {
         let coordinator = AddNewCategoryCoordinator(parentNavigationController: navigationController, rootCoordinator: self)
         childCoordinators.append(coordinator)
-        coordinator.start(delegate: delegate)
+        coordinator.start(delegate: delegate, isWalletAdding: isWalletAdding)
     }
 }
 

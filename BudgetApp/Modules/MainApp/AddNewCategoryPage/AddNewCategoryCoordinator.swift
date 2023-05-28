@@ -20,17 +20,17 @@ final class AddNewCategoryCoordinator: Coordinator {
     }
     
     func start() {
-        assert(false, "Should be open with delegate, please use start(delegate:)")
+        assert(false, "Should be open with arguments, please use start(delegate:, isWalletAdding:)")
     }
     
     func finish() {
         rootCoordinator.addingFinished(self)
     }
     
-    func start(delegate: AddNewCategoryViewModelDelegate) {
-        let vc = AddNewCategoryAssembler.makeAddNewCategoryVC(coordinator: self, delegate: delegate)
+    func start(delegate: AddNewCategoryViewModelDelegate, isWalletAdding: Bool) {
+        let vc = AddNewCategoryAssembler.makeAddNewCategoryVC(coordinator: self, delegate: delegate, isWalletAdding: isWalletAdding)
         if let sheet = vc.sheetPresentationController {
-            sheet.detents = [.medium()]
+            sheet.detents = isWalletAdding ? [.large()] : [.medium()]
         }
         parentNavigationController.present(vc, animated: true)
     }

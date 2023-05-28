@@ -2,7 +2,7 @@
 //  Account+CoreDataProperties.swift
 //  BudgetApp
 //
-//  Created by Allan on 10.05.23.
+//  Created by Allan on 28.05.23.
 //
 //
 
@@ -16,10 +16,11 @@ extension Account {
         return NSFetchRequest<Account>(entityName: "Account")
     }
 
+    @NSManaged public var image: String?
     @NSManaged public var name: String?
     @NSManaged public var sum: Double
     @NSManaged public var type: String?
-    @NSManaged public var image: String?
+    @NSManaged public var considerInBalanceFlag: Bool
 
 }
 

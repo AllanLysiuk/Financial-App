@@ -60,16 +60,17 @@ final class RepositoryService: RepositoryServiceProtocol {
     #warning("можно ли возвращать так при создании нового обджекта")
     #warning("можно ли newAccount сделать опционалом?")
     #warning("можно ли форс анврапить в этой ситуации")
-    func addNewAccount(name: String, type: String, imageName: String) { //-> Account {
+    func addNewAccount(name: String, type: String, imageName: String, sum: Double, considerInBalanceFlag: Bool) { //-> Account {
         let context = CoreDataStack.shared.backgroundContext
         //context.mergePolicy
         //var newAccount: Account?
         context.perform {
            let newAccount = Account(context: context)
-            newAccount.sum = 0
+            newAccount.sum = sum
             newAccount.name = name
             newAccount.type = type
             newAccount.image = imageName
+            newAccount.considerInBalanceFlag = considerInBalanceFlag
             CoreDataStack.shared.saveContext(context: context)
         }
 //        #warning("Во всех методах где меняется кор дата добавить обновление юзер дефолтс")
@@ -80,15 +81,15 @@ final class RepositoryService: RepositoryServiceProtocol {
     
     //MARK: Private functions
     private func createDefaultAccounts() {
-        addNewAccount(name: "Salary", type: AccountType.income.rawValue, imageName: "creditcard")
+        addNewAccount(name: "Salary", type: AccountType.income.rawValue, imageName: "creditcard", sum: 0, considerInBalanceFlag: true)
         
-        addNewAccount(name: "Cash", type: AccountType.wallet.rawValue, imageName: "banknote")
+        addNewAccount(name: "Cash", type: AccountType.wallet.rawValue, imageName: "banknote", sum: 0, considerInBalanceFlag: true)
         #warning("replace default images")
-        addNewAccount(name: "Rent", type: AccountType.cost.rawValue, imageName: "house")
-        addNewAccount(name: "Utilities", type: AccountType.cost.rawValue, imageName: "creditcard")
-        addNewAccount(name: "Food", type: AccountType.cost.rawValue, imageName: "creditcard")
-        addNewAccount(name: "Entertainments", type: AccountType.cost.rawValue, imageName: "creditcard")
-        addNewAccount(name: "Transport", type: AccountType.cost.rawValue, imageName: "creditcard")
+        addNewAccount(name: "Rent", type: AccountType.cost.rawValue, imageName: "house", sum: 0, considerInBalanceFlag: true)
+        addNewAccount(name: "Utilities", type: AccountType.cost.rawValue, imageName: "creditcard", sum: 0, considerInBalanceFlag: true)
+        addNewAccount(name: "Food", type: AccountType.cost.rawValue, imageName: "creditcard", sum: 0, considerInBalanceFlag: true)
+        addNewAccount(name: "Entertainments", type: AccountType.cost.rawValue, imageName: "creditcard", sum: 0, considerInBalanceFlag: true)
+        addNewAccount(name: "Transport", type: AccountType.cost.rawValue, imageName: "creditcard", sum: 0, considerInBalanceFlag: true)
     }
     
     #warning("Нужен ли мне отдельный парсер сервис потому что такая же функция есть в резалт контроллер сервисе")

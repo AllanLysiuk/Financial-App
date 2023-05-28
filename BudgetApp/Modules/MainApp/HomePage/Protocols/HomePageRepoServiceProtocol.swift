@@ -9,6 +9,6 @@ import Foundation
 
 protocol HomePageRepoServiceProtocol {
     func loadInfo() -> [AccountType.RawValue : [Account]]
-    func addNewAccount(name: String, type: String, imageName: String) //-> Account
+    func addNewAccount(name: String, type: String, imageName: String, sum: Double, considerInBalanceFlag: Bool) //-> Account
     func loadInfoByType(type: AccountType) -> [Account]
 }

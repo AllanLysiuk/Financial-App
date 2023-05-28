@@ -110,8 +110,11 @@ extension TableViewAdapter: UITableViewDataSource {
         cell?.headerLabel.text = sections[indexPath.row].headerTitles()
         let section = sections[indexPath.row]
         let items = section.getArray
-        let sum = items.reduce(0) { partialResult, acc in
-            return partialResult + acc.sum
+        let sum = items.reduce(0.0) { partialResult, acc in
+            if acc.considerInBalanceFlag {
+               return partialResult + acc.sum
+            }
+            return partialResult
         }
         cell?.amountLabel.text = "\(sum)"
         

@@ -25,7 +25,7 @@ protocol AuthServiceProtocol: AnyObject, LoginAuthServiceProtocol & ForgotPasswo
 
 protocol AlertFactoryProtocol: AnyObject, AlertControllerFactoryProtocol { }
 
-protocol NetworkServiceProtocol: AnyObject { }
+protocol NetworkServiceProtocol: AnyObject, SettingsNetworkServiceProtocol { }
 
 protocol RepositoryServiceProtocol: AnyObject, HomePageRepoServiceProtocol { }
 

@@ -57,7 +57,7 @@ final class TabBarCoordinator: Coordinator{
     }
 
     private func generateSettingsItem(tabBar: UITabBarController) {
-        let coordinator = SettingsVCCoordinator(tabBarController: tabBar, rootCoordinator: self)
+        let coordinator = SettingsVCCoordinator(tabBarController: tabBar, rootCoordinator: self, container: container)
         coordinator.start()
     }
     

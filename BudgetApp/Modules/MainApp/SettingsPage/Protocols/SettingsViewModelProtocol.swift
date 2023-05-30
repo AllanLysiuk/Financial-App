@@ -6,7 +6,9 @@
 //
 
 import Foundation
+import UIKit
 
 protocol SettingsViewModelProtocol {
-    
+    func setUpTableView(with tableView: UITableView)
+    func loadData()
 }

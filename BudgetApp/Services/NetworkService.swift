@@ -11,7 +11,6 @@ final class NetworkService: NetworkServiceProtocol {
     private let domain: URL = URL(string: "https://openexchangerates.org/api/currencies.json")!
 
     func loadListOfCurrencies(completion: @escaping (([CurrencyElement]) -> Void)) {
-        
         var request = URLRequest(url: domain)
         request.httpMethod = "GET"
 

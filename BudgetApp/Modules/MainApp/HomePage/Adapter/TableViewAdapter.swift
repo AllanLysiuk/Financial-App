@@ -7,20 +7,16 @@
 
 import Foundation
 import UIKit
-#warning("Можно ли использовать такой енам")
-enum SizeOfCell: Double {
-    case elementsInRow = 3
-    case lineInset = 22
-    case heightOfCell = 110
-    case heightOfHeader = 60
-}
 
-//protocol TableViewAdapterDelegate: AnyObject {
-//
-//}
-
-final class TableViewAdapter: NSObject {    
-//    private var heightOfCells: [CGFloat] = [0, 0, 0]
+final class TableViewAdapter: NSObject {
+    
+    private enum SizeOfCell {
+        static let elementsInRow: Double = 3
+        static let lineInset: Double = 22
+        static let heightOfCell: Double = 110
+        static let heightOfHeader: Double = 60
+    }
+    
     private weak var tableView: UITableView?
     private var sections: [Sections] = []
     
@@ -42,9 +38,9 @@ final class TableViewAdapter: NSObject {
     
     private func calculateHeightOfCell(_ indexPath: IndexPath) -> CGFloat {
         let amountOfElements: Double = Double(sections[indexPath.row].rowCount + 1)
-        let collectionViewHeight = (ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue ) * SizeOfCell.heightOfCell.rawValue)
-        let insetsBetweenElements = ((ceil(amountOfElements / SizeOfCell.elementsInRow.rawValue) - 1) * SizeOfCell.lineInset.rawValue)
-        return CGFloat(collectionViewHeight + SizeOfCell.heightOfHeader.rawValue + insetsBetweenElements + 12)
+        let collectionViewHeight = (ceil(amountOfElements / SizeOfCell.elementsInRow) * SizeOfCell.heightOfCell)
+        let insetsBetweenElements = ((ceil(amountOfElements / SizeOfCell.elementsInRow) - 1) * SizeOfCell.lineInset)
+        return CGFloat(collectionViewHeight + SizeOfCell.heightOfHeader + insetsBetweenElements + 12)
     }
 }
 
@@ -73,7 +69,7 @@ extension TableViewAdapter: TableViewAdapterProtocol {
 extension TableViewAdapter: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if shouldHide[indexPath.row] {
-            return SizeOfCell.heightOfHeader.rawValue
+            return SizeOfCell.heightOfHeader
         }
        return calculateHeightOfCell(indexPath)
     }

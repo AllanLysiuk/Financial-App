@@ -1,12 +1,12 @@
 //
-//  SettingsNetworkServiceProtocol.swift
+//  CurrencyPageNetworkServiceProtocol.swift
 //  BudgetApp
 //
-//  Created by Allan on 29.05.23.
+//  Created by Allan on 2.06.23.
 //
 
 import Foundation
 
-protocol SettingsNetworkServiceProtocol {
+protocol CurrencyPageNetworkServiceProtocol {
     func loadListOfCurrencies(completion: @escaping (([CurrencyElement]) -> Void))
 }

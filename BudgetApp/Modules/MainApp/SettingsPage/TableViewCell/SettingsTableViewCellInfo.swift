@@ -1,5 +1,5 @@
 //
-//  SettingsTableViewCell.swift
+//  SettingsTableViewCellInfo.swift
 //  BudgetApp
 //
 //  Created by Allan on 29.05.23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class SettingsTableViewCell: UITableViewCell {
+final class SettingsTableViewCellInfo: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var currencyCodeLabel: UILabel!

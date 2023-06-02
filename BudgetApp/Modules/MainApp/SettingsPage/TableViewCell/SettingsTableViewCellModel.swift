@@ -9,6 +9,6 @@ import Foundation
 
 struct SettingsTableViewCellModel {
     var name: String
-    var infoName: String
-    var currencyCode: String
+    var infoName: String?
+    var currencyCode: String?
 }

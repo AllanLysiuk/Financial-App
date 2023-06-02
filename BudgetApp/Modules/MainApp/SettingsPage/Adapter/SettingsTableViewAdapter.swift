@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol SettingsAdapterDelegate: AnyObject {
-    
+    func openCurrencyScreen()
 }
 
 final class SettingsTableViewAdapter: NSObject {
@@ -24,8 +24,11 @@ final class SettingsTableViewAdapter: NSObject {
     }
     
     private func registerCells() {
-        let nib1 = UINib(nibName: "\(SettingsTableViewCell.self)", bundle: nil)
-        tableView?.register(nib1, forCellReuseIdentifier: "\(SettingsTableViewCell.self)")
+        let nib1 = UINib(nibName: "\(SettingsTableViewCellInfo.self)", bundle: nil)
+        tableView?.register(nib1, forCellReuseIdentifier: "\(SettingsTableViewCellInfo.self)")
+        
+        let nib2 = UINib(nibName: "\(SettingsTableViewCellDefault.self)", bundle: nil)
+        tableView?.register(nib2, forCellReuseIdentifier: "\(SettingsTableViewCellDefault.self)")
     }
 
 }
@@ -58,7 +61,9 @@ extension SettingsTableViewAdapter: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        if indexPath.row == 1 {
+            delegate?.openCurrencyScreen()
+        }
     }
     
 }
@@ -75,14 +80,21 @@ extension SettingsTableViewAdapter: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "\(SettingsTableViewCell.self)") as? SettingsTableViewCell
-        if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
-            cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
+        if indexPath.row < 2 {
+            let cell = (tableView.dequeueReusableCell(withIdentifier: "\(SettingsTableViewCellInfo.self)") as? SettingsTableViewCellInfo)
+             
+            cell?.nameLabel.text = items[indexPath.row].name
+            cell?.infoLabel.text = items[indexPath.row].infoName
+            cell?.currencyCodeLabel.text = items[indexPath.row].currencyCode
+            return cell ?? UITableViewCell()
+        } else {
+            let cell = (tableView.dequeueReusableCell(withIdentifier: "\(SettingsTableViewCellDefault.self)") as? SettingsTableViewCellDefault)
+            if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
+                cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
+            }
+            cell?.nameLabel.text = items[indexPath.row].name
+            return cell ?? UITableViewCell()
         }
-        cell?.nameLabel.text = items[indexPath.row].name
-        cell?.infoLabel.text = items[indexPath.row].infoName
-        cell?.currencyCodeLabel.text = items[indexPath.row].currencyCode
-        return cell ?? UITableViewCell()
     }
     
 }

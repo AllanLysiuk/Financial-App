@@ -17,14 +17,14 @@ final class SettingsVCAssembler {
     }
     
     private static func makeViewModel(coordinator: SettingsCoordinatorProtocol, container: Container) -> SettingsViewModelProtocol {
-        return SettingsVM(coordinator: coordinator, networkService: makeNetworkService(container: container), adapter: makeAdapter() )
+        return SettingsVM(coordinator: coordinator, adapter: makeAdapter() )
     }
     
     private static func makeAdapter() -> SettingsTableViewAdapterProtocol {
         return SettingsTableViewAdapter()
     }
     
-    private static func makeNetworkService(container: Container) -> NetworkServiceProtocol {
-        return container.resolve()
-    }
+//    private static func makeNetworkService(container: Container) -> NetworkServiceProtocol {
+//        return container.resolve()
+//    }
 }

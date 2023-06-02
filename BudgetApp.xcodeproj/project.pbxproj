@@ -119,13 +119,28 @@
 		9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */; };
 		9DDE575D2A20B64100F2CB1A /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */; };
 		9DDE57742A237ACA00F2CB1A /* Account+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57732A237ACA00F2CB1A /* Account+CoreDataProperties.swift */; };
-		9DDE57762A24FAEF00F2CB1A /* SettingsNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57752A24FAEF00F2CB1A /* SettingsNetworkServiceProtocol.swift */; };
 		9DDE57782A24FCBA00F2CB1A /* SettingsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE57772A24FCBA00F2CB1A /* SettingsVC.xib */; };
-		9DDE577A2A25018300F2CB1A /* SettingsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE57792A25018300F2CB1A /* SettingsTableViewCell.xib */; };
-		9DDE577D2A25048200F2CB1A /* SettingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE577C2A25048200F2CB1A /* SettingsTableViewCell.swift */; };
+		9DDE577A2A25018300F2CB1A /* SettingsTableViewCellInfo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE57792A25018300F2CB1A /* SettingsTableViewCellInfo.xib */; };
+		9DDE577D2A25048200F2CB1A /* SettingsTableViewCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE577C2A25048200F2CB1A /* SettingsTableViewCellInfo.swift */; };
 		9DDE57802A25081E00F2CB1A /* SettingsTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE577F2A25081E00F2CB1A /* SettingsTableViewAdapter.swift */; };
 		9DDE57822A25085400F2CB1A /* SettingsTableViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57812A25085400F2CB1A /* SettingsTableViewAdapterProtocol.swift */; };
 		9DDE57842A25E43700F2CB1A /* SettingsTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57832A25E43600F2CB1A /* SettingsTableViewCellModel.swift */; };
+		9DDE57862A27507500F2CB1A /* SettingsTableViewCellDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57852A27507500F2CB1A /* SettingsTableViewCellDefault.swift */; };
+		9DDE578C2A275D2F00F2CB1A /* SettingsTableViewCellDefault.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE578B2A275D2F00F2CB1A /* SettingsTableViewCellDefault.xib */; };
+		9DDE578F2A2A49CE00F2CB1A /* CurrencyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE578E2A2A49CE00F2CB1A /* CurrencyVC.swift */; };
+		9DDE57912A2A49E000F2CB1A /* CurrencyVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57902A2A49E000F2CB1A /* CurrencyVM.swift */; };
+		9DDE57932A2A49F800F2CB1A /* CurrencyVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57922A2A49F800F2CB1A /* CurrencyVCCoordinator.swift */; };
+		9DDE57952A2A4A0C00F2CB1A /* CurrencyVCAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57942A2A4A0C00F2CB1A /* CurrencyVCAssembler.swift */; };
+		9DDE57972A2A4A1B00F2CB1A /* CurrencyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE57962A2A4A1B00F2CB1A /* CurrencyVC.xib */; };
+		9DDE579A2A2A4A6100F2CB1A /* CurrencyViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57992A2A4A6100F2CB1A /* CurrencyViewModelProtocol.swift */; };
+		9DDE579C2A2A4A7C00F2CB1A /* CurrencyCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE579B2A2A4A7C00F2CB1A /* CurrencyCoordinatorProtocol.swift */; };
+		9DDE579E2A2A4AAD00F2CB1A /* CurrencyRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE579D2A2A4AAD00F2CB1A /* CurrencyRootCoordinatorProtocol.swift */; };
+		9DDE57A02A2A4F4400F2CB1A /* CurrencyPageNetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE579F2A2A4F4400F2CB1A /* CurrencyPageNetworkServiceProtocol.swift */; };
+		9DDE57A32A2A6D5000F2CB1A /* CurrenciesTableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57A22A2A6D5000F2CB1A /* CurrenciesTableViewAdapter.swift */; };
+		9DDE57A52A2A6D6400F2CB1A /* CurrenciesTableViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57A42A2A6D6400F2CB1A /* CurrenciesTableViewAdapterProtocol.swift */; };
+		9DDE57A72A2A6DCB00F2CB1A /* CurrencyTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57A62A2A6DCB00F2CB1A /* CurrencyTableViewCellModel.swift */; };
+		9DDE57AA2A2A6E6600F2CB1A /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DDE57A92A2A6E6600F2CB1A /* CurrencyTableViewCell.swift */; };
+		9DDE57AC2A2A6E7500F2CB1A /* CurrencyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9DDE57AB2A2A6E7500F2CB1A /* CurrencyTableViewCell.xib */; };
 		9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */; };
 		9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F129D82E0B00ADA0D2 /* TableViewAdapter.swift */; };
 		9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */; };
@@ -254,13 +269,28 @@
 		9DD7D71029AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		9DDE57732A237ACA00F2CB1A /* Account+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Account+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9DDE57752A24FAEF00F2CB1A /* SettingsNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsNetworkServiceProtocol.swift; sourceTree = "<group>"; };
 		9DDE57772A24FCBA00F2CB1A /* SettingsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsVC.xib; sourceTree = "<group>"; };
-		9DDE57792A25018300F2CB1A /* SettingsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCell.xib; sourceTree = "<group>"; };
-		9DDE577C2A25048200F2CB1A /* SettingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCell.swift; sourceTree = "<group>"; };
+		9DDE57792A25018300F2CB1A /* SettingsTableViewCellInfo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCellInfo.xib; sourceTree = "<group>"; };
+		9DDE577C2A25048200F2CB1A /* SettingsTableViewCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCellInfo.swift; sourceTree = "<group>"; };
 		9DDE577F2A25081E00F2CB1A /* SettingsTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewAdapter.swift; sourceTree = "<group>"; };
 		9DDE57812A25085400F2CB1A /* SettingsTableViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewAdapterProtocol.swift; sourceTree = "<group>"; };
 		9DDE57832A25E43600F2CB1A /* SettingsTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCellModel.swift; sourceTree = "<group>"; };
+		9DDE57852A27507500F2CB1A /* SettingsTableViewCellDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewCellDefault.swift; sourceTree = "<group>"; };
+		9DDE578B2A275D2F00F2CB1A /* SettingsTableViewCellDefault.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewCellDefault.xib; sourceTree = "<group>"; };
+		9DDE578E2A2A49CE00F2CB1A /* CurrencyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVC.swift; sourceTree = "<group>"; };
+		9DDE57902A2A49E000F2CB1A /* CurrencyVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVM.swift; sourceTree = "<group>"; };
+		9DDE57922A2A49F800F2CB1A /* CurrencyVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVCCoordinator.swift; sourceTree = "<group>"; };
+		9DDE57942A2A4A0C00F2CB1A /* CurrencyVCAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyVCAssembler.swift; sourceTree = "<group>"; };
+		9DDE57962A2A4A1B00F2CB1A /* CurrencyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyVC.xib; sourceTree = "<group>"; };
+		9DDE57992A2A4A6100F2CB1A /* CurrencyViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyViewModelProtocol.swift; sourceTree = "<group>"; };
+		9DDE579B2A2A4A7C00F2CB1A /* CurrencyCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9DDE579D2A2A4AAD00F2CB1A /* CurrencyRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9DDE579F2A2A4F4400F2CB1A /* CurrencyPageNetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPageNetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		9DDE57A22A2A6D5000F2CB1A /* CurrenciesTableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewAdapter.swift; sourceTree = "<group>"; };
+		9DDE57A42A2A6D6400F2CB1A /* CurrenciesTableViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesTableViewAdapterProtocol.swift; sourceTree = "<group>"; };
+		9DDE57A62A2A6DCB00F2CB1A /* CurrencyTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCellModel.swift; sourceTree = "<group>"; };
+		9DDE57A92A2A6E6600F2CB1A /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		9DDE57AB2A2A6E7500F2CB1A /* CurrencyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrencyTableViewCell.xib; sourceTree = "<group>"; };
 		9DE574EE29D4B92E00ADA0D2 /* OnBoardingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingPage.swift; sourceTree = "<group>"; };
 		9DE574F129D82E0B00ADA0D2 /* TableViewAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapter.swift; sourceTree = "<group>"; };
 		9DE574F329D82E2300ADA0D2 /* TableViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewAdapterProtocol.swift; sourceTree = "<group>"; };
@@ -410,7 +440,6 @@
 				9D86464429D3144800E216A0 /* SettingsViewModelProtocol.swift */,
 				9D86464629D3146300E216A0 /* SettingsCoordinatorProtocol.swift */,
 				9D86464829D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift */,
-				9DDE57752A24FAEF00F2CB1A /* SettingsNetworkServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -418,6 +447,7 @@
 		9DA81A0F29C230120020E637 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
+				9DDE578D2A2A49AB00F2CB1A /* CurrencyPage */,
 				9DCB044C29CE0361006D4425 /* TabBarController */,
 				9D86463A29D313AD00E216A0 /* SettingsPage */,
 				9D86462A29D2EBB700E216A0 /* ReportPage */,
@@ -683,9 +713,11 @@
 		9DDE577B2A25046000F2CB1A /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				9DDE57792A25018300F2CB1A /* SettingsTableViewCell.xib */,
-				9DDE577C2A25048200F2CB1A /* SettingsTableViewCell.swift */,
+				9DDE57792A25018300F2CB1A /* SettingsTableViewCellInfo.xib */,
+				9DDE577C2A25048200F2CB1A /* SettingsTableViewCellInfo.swift */,
 				9DDE57832A25E43600F2CB1A /* SettingsTableViewCellModel.swift */,
+				9DDE57852A27507500F2CB1A /* SettingsTableViewCellDefault.swift */,
+				9DDE578B2A275D2F00F2CB1A /* SettingsTableViewCellDefault.xib */,
 			);
 			path = TableViewCell;
 			sourceTree = "<group>";
@@ -697,6 +729,51 @@
 				9DDE57812A25085400F2CB1A /* SettingsTableViewAdapterProtocol.swift */,
 			);
 			path = Adapter;
+			sourceTree = "<group>";
+		};
+		9DDE578D2A2A49AB00F2CB1A /* CurrencyPage */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE57A12A2A6D1900F2CB1A /* CurrenciesTableViewAdapter */,
+				9DDE57982A2A4A4700F2CB1A /* Protocols */,
+				9DDE578E2A2A49CE00F2CB1A /* CurrencyVC.swift */,
+				9DDE57902A2A49E000F2CB1A /* CurrencyVM.swift */,
+				9DDE57922A2A49F800F2CB1A /* CurrencyVCCoordinator.swift */,
+				9DDE57942A2A4A0C00F2CB1A /* CurrencyVCAssembler.swift */,
+				9DDE57962A2A4A1B00F2CB1A /* CurrencyVC.xib */,
+			);
+			path = CurrencyPage;
+			sourceTree = "<group>";
+		};
+		9DDE57982A2A4A4700F2CB1A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE57992A2A4A6100F2CB1A /* CurrencyViewModelProtocol.swift */,
+				9DDE579B2A2A4A7C00F2CB1A /* CurrencyCoordinatorProtocol.swift */,
+				9DDE579D2A2A4AAD00F2CB1A /* CurrencyRootCoordinatorProtocol.swift */,
+				9DDE579F2A2A4F4400F2CB1A /* CurrencyPageNetworkServiceProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9DDE57A12A2A6D1900F2CB1A /* CurrenciesTableViewAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE57A82A2A6E4800F2CB1A /* CurrencyTableViewCell */,
+				9DDE57A22A2A6D5000F2CB1A /* CurrenciesTableViewAdapter.swift */,
+				9DDE57A42A2A6D6400F2CB1A /* CurrenciesTableViewAdapterProtocol.swift */,
+			);
+			path = CurrenciesTableViewAdapter;
+			sourceTree = "<group>";
+		};
+		9DDE57A82A2A6E4800F2CB1A /* CurrencyTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9DDE57A62A2A6DCB00F2CB1A /* CurrencyTableViewCellModel.swift */,
+				9DDE57A92A2A6E6600F2CB1A /* CurrencyTableViewCell.swift */,
+				9DDE57AB2A2A6E7500F2CB1A /* CurrencyTableViewCell.xib */,
+			);
+			path = CurrencyTableViewCell;
 			sourceTree = "<group>";
 		};
 		9DE574ED29D4B90000ADA0D2 /* Enums */ = {
@@ -844,10 +921,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DDE57972A2A4A1B00F2CB1A /* CurrencyVC.xib in Resources */,
 				9D75145029E85E9800A93406 /* AddNewCategoryVC.xib in Resources */,
 				9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */,
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
-				9DDE577A2A25018300F2CB1A /* SettingsTableViewCell.xib in Resources */,
+				9DDE577A2A25018300F2CB1A /* SettingsTableViewCellInfo.xib in Resources */,
+				9DDE578C2A275D2F00F2CB1A /* SettingsTableViewCellDefault.xib in Resources */,
 				9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */,
 				9DDE575D2A20B64100F2CB1A /* Montserrat-SemiBold.ttf in Resources */,
 				9D83835E29DC6F10008BCE3D /* CategoryTableViewCell.xib in Resources */,
@@ -856,6 +935,7 @@
 				9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */,
 				9DD7D6D329ADE3B30087E8F1 /* LaunchScreen.storyboard in Resources */,
 				9DD7D6D029ADE3B30087E8F1 /* Assets.xcassets in Resources */,
+				9DDE57AC2A2A6E7500F2CB1A /* CurrencyTableViewCell.xib in Resources */,
 				9DDE57782A24FCBA00F2CB1A /* SettingsVC.xib in Resources */,
 				9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */,
 				9DB802EC29BFACCA00D57CB4 /* GoogleService-Info.plist in Resources */,
@@ -869,6 +949,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DDE578F2A2A49CE00F2CB1A /* CurrencyVC.swift in Sources */,
 				9DD7D6DB29ADE5FC0087E8F1 /* Coordinator.swift in Sources */,
 				9DD7D6DD29ADE6660087E8F1 /* AppCoordinator.swift in Sources */,
 				9DA81A2D29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift in Sources */,
@@ -884,12 +965,13 @@
 				9DDE57742A237ACA00F2CB1A /* Account+CoreDataProperties.swift in Sources */,
 				9D86464529D3144800E216A0 /* SettingsViewModelProtocol.swift in Sources */,
 				9D80152229C7306A00C22EE1 /* PageViewAdapterProtocol.swift in Sources */,
+				9DDE57A32A2A6D5000F2CB1A /* CurrenciesTableViewAdapter.swift in Sources */,
 				9D86462E29D2EBE700E216A0 /* ReportVM.swift in Sources */,
 				9DEA446429F173140091FB31 /* CategoryCellAssembler.swift in Sources */,
 				9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */,
 				9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */,
-				9DDE57762A24FAEF00F2CB1A /* SettingsNetworkServiceProtocol.swift in Sources */,
 				9D71FCDD29EE975B0009408C /* NetworkService.swift in Sources */,
+				9DDE57952A2A4A0C00F2CB1A /* CurrencyVCAssembler.swift in Sources */,
 				9D83835C29DC6EE9008BCE3D /* CategoryTableViewCell.swift in Sources */,
 				9DE574F629D8301C00ADA0D2 /* EnumSections.swift in Sources */,
 				9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */,
@@ -899,13 +981,16 @@
 				9DA81A2329C5BC670020E637 /* OnBoardingVC.swift in Sources */,
 				9D86462C29D2EBDB00E216A0 /* ReportVC.swift in Sources */,
 				9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */,
+				9DDE57932A2A49F800F2CB1A /* CurrencyVCCoordinator.swift in Sources */,
 				9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */,
 				9DB802E129B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift in Sources */,
 				9DD7D6EB29ADEEE30087E8F1 /* LoginVM.swift in Sources */,
 				9D7F27F029B25DCF00075C8B /* ForgotPasswordAssembler.swift in Sources */,
+				9DDE57A02A2A4F4400F2CB1A /* CurrencyPageNetworkServiceProtocol.swift in Sources */,
 				9DDE57802A25081E00F2CB1A /* SettingsTableViewAdapter.swift in Sources */,
 				9D75144A29E8598800A93406 /* AddNewCategoryRootCoordinatorProtocol.swift in Sources */,
 				9D7F27EC29B25D7B00075C8B /* ForgotPasswordCoordinatorProtocol.swift in Sources */,
+				9DDE579E2A2A4AAD00F2CB1A /* CurrencyRootCoordinatorProtocol.swift in Sources */,
 				9D80152129C7306A00C22EE1 /* PageViewAdapter.swift in Sources */,
 				9DA81A2729C5BC8D0020E637 /* OnBoardingCoordinator.swift in Sources */,
 				9DA81A2F29C5C2380020E637 /* OnBoardingCoordinatorProtocol.swift in Sources */,
@@ -913,6 +998,7 @@
 				9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */,
 				9D8D43572A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift in Sources */,
 				9D86463E29D313D600E216A0 /* SettingsVM.swift in Sources */,
+				9DDE57912A2A49E000F2CB1A /* CurrencyVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
 				9D86462529D2E6B500E216A0 /* HistoryViewModelProtocol.swift in Sources */,
 				9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */,
@@ -945,15 +1031,19 @@
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
 				9D75144E29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift in Sources */,
-				9DDE577D2A25048200F2CB1A /* SettingsTableViewCell.swift in Sources */,
+				9DDE577D2A25048200F2CB1A /* SettingsTableViewCellInfo.swift in Sources */,
+				9DDE579A2A2A4A6100F2CB1A /* CurrencyViewModelProtocol.swift in Sources */,
 				9DA81A1729C232500020E637 /* HomePageVM.swift in Sources */,
 				9DC5CD162A0D579D00413531 /* UserDefaultsEnum.swift in Sources */,
 				9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */,
 				9D75144829E8587C00A93406 /* AddNewCategoryCoordinator.swift in Sources */,
+				9DDE57A72A2A6DCB00F2CB1A /* CurrencyTableViewCellModel.swift in Sources */,
 				9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */,
+				9DDE57AA2A2A6E6600F2CB1A /* CurrencyTableViewCell.swift in Sources */,
 				9DD7D6C729ADE3AF0087E8F1 /* AppDelegate.swift in Sources */,
 				9DEA446629F174A10091FB31 /* CollectionViewAdapter.swift in Sources */,
 				9D7F27EA29B2487400075C8B /* ForgotPasswordViewModelProtocol.swift in Sources */,
+				9DDE57A52A2A6D6400F2CB1A /* CurrenciesTableViewAdapterProtocol.swift in Sources */,
 				9DD7D6C929ADE3AF0087E8F1 /* SceneDelegate.swift in Sources */,
 				9DEA446929F174BE0091FB31 /* CollectionViewAdapterProtocol.swift in Sources */,
 				9D75144329E8577E00A93406 /* AddNewCategoryVM.swift in Sources */,
@@ -970,7 +1060,9 @@
 				9DD7D70929AE22420087E8F1 /* RegisterAuthServiceProtocol.swift in Sources */,
 				9DDE57842A25E43700F2CB1A /* SettingsTableViewCellModel.swift in Sources */,
 				9D86464229D313FC00E216A0 /* SettingsVCAssembler.swift in Sources */,
+				9DDE579C2A2A4A7C00F2CB1A /* CurrencyCoordinatorProtocol.swift in Sources */,
 				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
+				9DDE57862A27507500F2CB1A /* SettingsTableViewCellDefault.swift in Sources */,
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
 				9DC5CD182A0F864800413531 /* ResultControllerService.swift in Sources */,
 				9DC5CD142A0C285200413531 /* HomePageRepoServiceProtocol.swift in Sources */,

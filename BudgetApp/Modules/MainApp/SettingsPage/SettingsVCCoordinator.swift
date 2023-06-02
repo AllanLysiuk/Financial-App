@@ -11,6 +11,7 @@ final class SettingsVCCoordinator: Coordinator {
     private var tabBarController: UITabBarController
     private var rootCoordinator: SettingsRootCoordinatorProtocol
     private var container: Container
+    private var navigationController = UINavigationController()
     var childCoordinators: [Coordinator] = []
     
     init(tabBarController: UITabBarController, rootCoordinator: SettingsRootCoordinatorProtocol, container: Container) {
@@ -21,7 +22,8 @@ final class SettingsVCCoordinator: Coordinator {
     
     func start() {
         let vc = SettingsVCAssembler.makeSettingsVC(coordinator: self, container: container)
-        tabBarController.addChild(vc)
+        navigationController.addChild(vc)
+        tabBarController.addChild(navigationController)
     }
     
     func finish() {
@@ -31,5 +33,17 @@ final class SettingsVCCoordinator: Coordinator {
 }
 
 extension SettingsVCCoordinator: SettingsCoordinatorProtocol {
-    
+    func openCurrencyScreen() {
+        let currencyCoordinator = CurrencyVCCoordinator(parentNavigationController: navigationController, rootCoordinator: self, container: container)
+        childCoordinators.append(currencyCoordinator)
+        currencyCoordinator.start()
+    }
+}
+
+extension SettingsVCCoordinator: CurrencyRootCoordinatorProtocol {
+    func finish(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
+    }
 }

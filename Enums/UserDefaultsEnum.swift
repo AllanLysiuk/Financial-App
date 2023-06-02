@@ -11,4 +11,6 @@ enum UserDefaultsEnum: String {
     case isRegistered = "isRegistered"
     case shouldShowOnboarding = "shouldShowOnboarding"
     case userDidChangeCoreData = "userDidChangeCoreData"
+    case userShouldChooseCurrency = "userShouldChooseCurrency"
+    case currentCurrency = "currentCurrency"
 }

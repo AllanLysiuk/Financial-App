@@ -8,5 +8,6 @@
 import Foundation
 
 protocol SettingsCoordinatorProtocol: AnyObject {
+    func openCurrencyScreen()
     func finish()
 }

@@ -28,6 +28,7 @@ final class AppCoordinator: Coordinator {
 //        let isRegistered = UserDefaults.standard.bool(forKey: UserDefaultsEnum.isRegistered.rawValue)
 //       let shouldShowOnboarding = false
         let shouldShowOnboarding = UserDefaults.standard.bool(forKey: UserDefaultsEnum.shouldShowOnboarding.rawValue)
+       
         
         if !isRegistered {
             openLoginScene()
@@ -113,3 +114,4 @@ extension AppCoordinator: TabBarRootCoordinatorProtocol {
         start()
     }
 }
+

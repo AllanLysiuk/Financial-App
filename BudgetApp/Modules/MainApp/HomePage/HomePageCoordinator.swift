@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 final class HomePageCoordinator: Coordinator {
+    
     private var tabBarController: UITabBarController
     private var rootCoordinator: HomePageRootCoordinatorProtocol
     private var container: Container
@@ -30,12 +31,24 @@ final class HomePageCoordinator: Coordinator {
         let vc = HomePageAssembler.makeHomePageVC(coordinator: self, container: container)
         navigationController.addChild(vc)
         tabBarController.addChild(navigationController)
+        
+//        openCurrencyVC()
     }
     
     func finish() {
         tabBarController.removeFromParent()
         rootCoordinator.homePageFinished(self)
     }
+    
+//    private func openCurrencyVC() {
+//        let userShouldChooseCurrency = UserDefaults.standard.bool(forKey: UserDefaultsEnum.userShouldChooseCurrency.rawValue)
+//
+//        if !userShouldChooseCurrency {
+//            let currencyCoordinator = CurrencyVCCoordinator(parentNavigationController: navigationController, rootCoordinator: self, container: container)
+//            childCoordinators.append(currencyCoordinator)
+//            currencyCoordinator.start()
+//        }
+//    }
     
 }
 
@@ -54,4 +67,12 @@ extension HomePageCoordinator: AddNewCategoryRootCoordinatorProtocol {
             tmp === coordinator
         }
     }
+}
+
+extension HomePageCoordinator: CurrencyRootCoordinatorProtocol {
+    func finish(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
+    }    
 }

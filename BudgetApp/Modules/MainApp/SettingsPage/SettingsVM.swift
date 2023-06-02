@@ -9,21 +9,19 @@ import Foundation
 import UIKit
 
 final class SettingsVM: SettingsViewModelProtocol {
-    
+
     private weak var coordinator: SettingsCoordinatorProtocol?
-    private var networkService: SettingsNetworkServiceProtocol
     private var adapter: SettingsTableViewAdapterProtocol
     
     private let items: [SettingsTableViewCellModel] = [
-    SettingsTableViewCellModel(name: "Begining of month", infoName: "1 may", currencyCode: ""),
+    SettingsTableViewCellModel(name: "Begining of month", infoName: "1 may", currencyCode: nil),
     SettingsTableViewCellModel(name: "Currency", infoName: "Belarusian ruble", currencyCode: "Br"),
-    SettingsTableViewCellModel(name: "Language", infoName: "", currencyCode: ""),
-    SettingsTableViewCellModel(name: "Notifications", infoName: "", currencyCode: "")
+    SettingsTableViewCellModel(name: "Language", infoName: nil, currencyCode: nil),
+    SettingsTableViewCellModel(name: "Notifications", infoName: nil, currencyCode: nil)
     ]
     
-    init(coordinator: SettingsCoordinatorProtocol, networkService: SettingsNetworkServiceProtocol, adapter: SettingsTableViewAdapterProtocol) {
+    init(coordinator: SettingsCoordinatorProtocol, adapter: SettingsTableViewAdapterProtocol) {
         self.coordinator = coordinator
-        self.networkService = networkService
         self.adapter = adapter
     }
     
@@ -32,6 +30,7 @@ final class SettingsVM: SettingsViewModelProtocol {
     }
     
     func loadData() {
+        adapter.setUpDelegate(self)
         adapter.setUpItems(items)
     }
     
@@ -39,5 +38,7 @@ final class SettingsVM: SettingsViewModelProtocol {
 }
 
 extension SettingsVM: SettingsAdapterDelegate {
-    
+    func openCurrencyScreen() {
+        coordinator?.openCurrencyScreen()
+    }
 }

@@ -8,7 +8,12 @@
 import Foundation
 import UIKit
 
-final class TabBarCoordinator: Coordinator{
+final class TabBarCoordinator: Coordinator, CurrencyRootCoordinatorProtocol {
+    func finish(_ coordinator: Coordinator) {
+
+    }
+    
+    
     private var rootNavigationController: UINavigationController
     private var rootCoordinator: TabBarRootCoordinatorProtocol
     private var container: Container
@@ -48,16 +53,19 @@ final class TabBarCoordinator: Coordinator{
     
     private func generateHistoryItem(tabBar: UITabBarController) {
         let coordinator = HistoryVCCoordinator(tabBarController: tabBar, rootCoordinator: self)
+        childCoordinators.append(coordinator)
         coordinator.start()
     }
     
     private func generateReportItem(tabBar: UITabBarController) {
         let coordinator = ReportVCCoordinator(tabBarController: tabBar, rootCoordinator: self)
+        childCoordinators.append(coordinator)
         coordinator.start()
     }
 
     private func generateSettingsItem(tabBar: UITabBarController) {
         let coordinator = SettingsVCCoordinator(tabBarController: tabBar, rootCoordinator: self, container: container)
+        childCoordinators.append(coordinator)
         coordinator.start()
     }
     

@@ -8,12 +8,8 @@
 import Foundation
 import UIKit
 
-final class TabBarCoordinator: Coordinator, CurrencyRootCoordinatorProtocol {
-    func finish(_ coordinator: Coordinator) {
+final class TabBarCoordinator: Coordinator {
 
-    }
-    
-    
     private var rootNavigationController: UINavigationController
     private var rootCoordinator: TabBarRootCoordinatorProtocol
     private var container: Container
@@ -27,6 +23,13 @@ final class TabBarCoordinator: Coordinator, CurrencyRootCoordinatorProtocol {
         self.rootNavigationController = rootNavigationController
         self.rootCoordinator = rootCoordinator
         self.container = container
+    }
+    
+    func startAndOpenCurrencySelection() {
+        start()
+        let currencyCoordinator = CurrencyVCCoordinator(parentNavigationController: rootNavigationController, rootCoordinator: self, container: container)
+        childCoordinators.append(currencyCoordinator)
+        currencyCoordinator.start()
     }
     
     func start() {
@@ -95,4 +98,12 @@ extension TabBarCoordinator: SettingsRootCoordinatorProtocol {
     func settingsFinished(_ coordinator: Coordinator) {
         
     }    
+}
+
+extension TabBarCoordinator: CurrencyRootCoordinatorProtocol {
+    func finish(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
+    }
 }

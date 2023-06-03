@@ -63,6 +63,7 @@ final class AppCoordinator: Coordinator {
         let mainWindow = UIWindow(windowScene: windowScene)
         let nc = UINavigationController()
         mainWindow.rootViewController = nc
+        mainWindow.makeKeyAndVisible()
         
         let tabBarCoordinator = TabBarCoordinator(
             rootNavigationController: nc,
@@ -70,7 +71,14 @@ final class AppCoordinator: Coordinator {
             container: container
         )
         childCoordinators.append(tabBarCoordinator)
-        tabBarCoordinator.start()
+        
+        let shouldShowCurrencySelection = UserDefaults.standard.bool(forKey: UserDefaultsEnum.userShouldChooseCurrency.rawValue)
+        if !shouldShowCurrencySelection {
+            tabBarCoordinator.startAndOpenCurrencySelection()
+        } else {
+            tabBarCoordinator.start()
+        }
+        
         window = mainWindow
     }
     

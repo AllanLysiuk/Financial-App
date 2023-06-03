@@ -31,24 +31,12 @@ final class HomePageCoordinator: Coordinator {
         let vc = HomePageAssembler.makeHomePageVC(coordinator: self, container: container)
         navigationController.addChild(vc)
         tabBarController.addChild(navigationController)
-        
-//        openCurrencyVC()
     }
     
     func finish() {
         tabBarController.removeFromParent()
         rootCoordinator.homePageFinished(self)
     }
-    
-//    private func openCurrencyVC() {
-//        let userShouldChooseCurrency = UserDefaults.standard.bool(forKey: UserDefaultsEnum.userShouldChooseCurrency.rawValue)
-//
-//        if !userShouldChooseCurrency {
-//            let currencyCoordinator = CurrencyVCCoordinator(parentNavigationController: navigationController, rootCoordinator: self, container: container)
-//            childCoordinators.append(currencyCoordinator)
-//            currencyCoordinator.start()
-//        }
-//    }
     
 }
 

@@ -7,6 +7,10 @@
         <attribute name="sum" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="type" optional="YES" attributeType="String"/>
     </entity>
+    <entity name="Currencies" representedClassName="Currencies" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="MovementOfAccount" representedClassName="MovementOfAccount" syncable="YES">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="fromWhereDestination" optional="YES" attributeType="String"/>
@@ -17,6 +21,7 @@
     </entity>
     <elements>
         <element name="Account" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="Currencies" positionX="-63" positionY="36" width="128" height="59"/>
         <element name="MovementOfAccount" positionX="-54" positionY="-9" width="128" height="119"/>
     </elements>
 </model>

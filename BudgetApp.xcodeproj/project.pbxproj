@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		9D71FCDD29EE975B0009408C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71FCDC29EE975B0009408C /* NetworkService.swift */; };
 		9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71FCDF29EE99D70009408C /* CurrencyElement.swift */; };
+		9D7244262A2CAAEB001796E1 /* Currencies+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244242A2CAAEB001796E1 /* Currencies+CoreDataClass.swift */; };
+		9D7244272A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244252A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift */; };
+		9D7244292A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244282A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift */; };
 		9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */; };
 		9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */; };
 		9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */; };
@@ -159,6 +162,9 @@
 /* Begin PBXFileReference section */
 		9D71FCDC29EE975B0009408C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9D71FCDF29EE99D70009408C /* CurrencyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyElement.swift; sourceTree = "<group>"; };
+		9D7244242A2CAAEB001796E1 /* Currencies+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currencies+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9D7244252A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currencies+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		9D7244282A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPageRepoServiceProtocol.swift; sourceTree = "<group>"; };
 		9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAddingCell.swift; sourceTree = "<group>"; };
 		9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewAddingCell.xib; sourceTree = "<group>"; };
 		9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVC.swift; sourceTree = "<group>"; };
@@ -752,6 +758,7 @@
 				9DDE579B2A2A4A7C00F2CB1A /* CurrencyCoordinatorProtocol.swift */,
 				9DDE579D2A2A4AAD00F2CB1A /* CurrencyRootCoordinatorProtocol.swift */,
 				9DDE579F2A2A4F4400F2CB1A /* CurrencyPageNetworkServiceProtocol.swift */,
+				9D7244282A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -847,6 +854,8 @@
 		9DEA446D29F3F2330091FB31 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				9D7244242A2CAAEB001796E1 /* Currencies+CoreDataClass.swift */,
+				9D7244252A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift */,
 				9D8D43532A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift */,
 				9D8D43542A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift */,
 				9D8D43552A04FF7C00897829 /* Account+CoreDataClass.swift */,
@@ -997,6 +1006,8 @@
 				9D7F27E229B2479900075C8B /* ForgotPasswordVM.swift in Sources */,
 				9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */,
 				9D8D43572A04FF7C00897829 /* MovementOfAccount+CoreDataClass.swift in Sources */,
+				9D7244262A2CAAEB001796E1 /* Currencies+CoreDataClass.swift in Sources */,
+				9D7244292A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift in Sources */,
 				9D86463E29D313D600E216A0 /* SettingsVM.swift in Sources */,
 				9DDE57912A2A49E000F2CB1A /* CurrencyVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
@@ -1030,6 +1041,7 @@
 				9DEA446129F171B60091FB31 /* CategoryCellViewModelProtocol.swift in Sources */,
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
+				9D7244272A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift in Sources */,
 				9D75144E29E85BC500A93406 /* AddNewCategoryCoordinatorProtocol.swift in Sources */,
 				9DDE577D2A25048200F2CB1A /* SettingsTableViewCellInfo.swift in Sources */,
 				9DDE579A2A2A4A6100F2CB1A /* CurrencyViewModelProtocol.swift in Sources */,

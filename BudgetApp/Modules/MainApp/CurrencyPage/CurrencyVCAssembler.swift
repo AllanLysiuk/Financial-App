@@ -22,7 +22,7 @@ final class CurrencyVCAssembler {
         _ coordinator: CurrencyCoordinatorProtocol,
         _ container: Container
     ) -> CurrencyViewModelProtocol {
-        return CurrencyVM(coordinator: coordinator, networkService: makeNetworkService(container: container), adapter: makeAdapter())
+        return CurrencyVM(coordinator: coordinator, networkService: makeNetworkService(container: container), adapter: makeAdapter(), repoService: makeRepoService(container: container))
     }
     
     private static func makeNetworkService(container: Container) -> NetworkServiceProtocol {
@@ -31,5 +31,9 @@ final class CurrencyVCAssembler {
     
     private static func makeAdapter() -> CurrenciesTableViewAdapterProtocol {
         return CurrenciesTableViewAdapter()
+    }
+    
+    private static func makeRepoService(container: Container) -> RepositoryServiceProtocol {
+        return container.resolve()
     }
 }

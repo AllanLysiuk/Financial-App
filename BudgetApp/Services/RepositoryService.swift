@@ -102,3 +102,28 @@ final class RepositoryService: RepositoryServiceProtocol {
         return dict
     }
 }
+
+extension RepositoryService {
+    func saveCurrenciesToCoreData(items: [CurrencyElement]) {
+        let context = CoreDataStack.shared.backgroundContext
+        for elem in items {
+            context.perform {
+                let newCurrency = Currencies(context: context)
+                newCurrency.name = elem.value
+                newCurrency.code = elem.key
+                CoreDataStack.shared.saveContext(context: context)
+            }
+        }
+    }
+    
+    func loadCurrenciesFromCoreData() -> [CurrencyElement] {
+        let request = Currencies.fetchRequest()
+        request.returnsObjectsAsFaults = false
+        let currencies = try? CoreDataStack.shared.mainContext.fetch(request)
+        var items: [CurrencyElement] = []
+        currencies?.forEach({ acc in
+            items.append(CurrencyElement(key: acc.code!, value: acc.name!))
+        })
+        return items
+    }
+}

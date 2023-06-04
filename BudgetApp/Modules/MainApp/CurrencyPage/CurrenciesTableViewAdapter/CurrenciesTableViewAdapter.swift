@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 protocol CurrencyAdapterDelegate: AnyObject {
-    
+    func currencyChosen(currency: CurrencyElement)
 }
 
 final class CurrenciesTableViewAdapter: NSObject {
@@ -58,7 +58,7 @@ extension CurrenciesTableViewAdapter: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        delegate?.currencyChosen(currency: items[indexPath.row])
     }
     
 }
@@ -79,8 +79,8 @@ extension CurrenciesTableViewAdapter: UITableViewDataSource {
             if indexPath.row == tableView.numberOfRows(inSection: indexPath.section) - 1 {
                 cell?.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.bounds.width)
             }
-            cell?.currencyNameLabel.text = items[indexPath.row].key
-            cell?.currencyCodeLabel.text = items[indexPath.row].value
+            cell?.currencyNameLabel.text = items[indexPath.row].value
+            cell?.currencyCodeLabel.text = items[indexPath.row].key
             return cell ?? UITableViewCell()
     }
     

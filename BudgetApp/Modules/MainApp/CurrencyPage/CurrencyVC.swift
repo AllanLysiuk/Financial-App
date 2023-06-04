@@ -27,6 +27,8 @@ final class CurrencyVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.font = UIFont(name: "Montserrat-SemiBold", size: 16)
+        searchBar.barTintColor = UIColor.white
+        searchBar.setBackgroundImage(UIImage.init(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
         tableView.tableHeaderView = UIView()
         viewModel.setUpTableView(with: tableView)
         viewModel.loadItems()

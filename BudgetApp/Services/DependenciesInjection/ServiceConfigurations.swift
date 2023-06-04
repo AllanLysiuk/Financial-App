@@ -27,7 +27,7 @@ protocol AlertFactoryProtocol: AnyObject, AlertControllerFactoryProtocol { }
 
 protocol NetworkServiceProtocol: AnyObject, CurrencyPageNetworkServiceProtocol { }
 
-protocol RepositoryServiceProtocol: AnyObject, HomePageRepoServiceProtocol { }
+protocol RepositoryServiceProtocol: AnyObject, HomePageRepoServiceProtocol, CurrencyPageRepoServiceProtocol { }
 
 protocol ResultControllerServiceProtocol: AnyObject, HomePageResControllerServiceProtocol { }
 

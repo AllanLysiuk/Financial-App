@@ -113,7 +113,7 @@ extension TableViewAdapter: UITableViewDataSource {
             return partialResult
         }
         let currencyCode = UserDefaults.standard.string(forKey: UserDefaultsEnum.currentCurrency.rawValue)
-        cell?.amountLabel.text = "\(sum) \(currencyCode)"
+        cell?.amountLabel.text = "\(sum) \(currencyCode ?? "")"
         
         #warning("так норм писать или нет")
         if let delegate = delegate {

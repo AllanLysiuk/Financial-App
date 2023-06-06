@@ -26,6 +26,8 @@ final class CurrencyVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchBar.delegate = self
+        self.tableView.keyboardDismissMode = .onDrag
         titleLabel.font = UIFont(name: "Montserrat-SemiBold", size: 16)
         searchBar.barTintColor = UIColor.white
         searchBar.setBackgroundImage(UIImage.init(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
@@ -39,5 +41,15 @@ final class CurrencyVC: UIViewController {
         if parent == nil {
             viewModel.finish(shouldMoveToParent: false)
         }
+    }
+}
+
+extension CurrencyVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        viewModel.seacrhBarTextDidChange(text: searchText)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
     }
 }

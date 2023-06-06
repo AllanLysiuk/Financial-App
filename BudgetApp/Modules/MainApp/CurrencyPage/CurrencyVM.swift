@@ -15,6 +15,7 @@ final class CurrencyVM: CurrencyViewModelProtocol {
     private var adapter: CurrenciesTableViewAdapterProtocol
     private var repoService: CurrencyPageRepoServiceProtocol
     private var items: [CurrencyElement] = []
+    private var filteredItems: [CurrencyElement]!
     
     init(
         coordinator: CurrencyCoordinatorProtocol,
@@ -54,7 +55,21 @@ final class CurrencyVM: CurrencyViewModelProtocol {
                 self.repoService.saveCurrenciesToCoreData(items: self.items)
             }
         }
-       
+    }
+    
+    func seacrhBarTextDidChange(text: String) {
+        filteredItems = []
+        if text.isEmpty {
+            filteredItems = items
+        } else {
+            filteredItems = items.filter { elem in
+                if elem.value.uppercased().contains(text.uppercased()) {
+                    return true
+                }
+                return false
+            }
+        }
+        adapter.setUpItems(filteredItems)
     }
         
 }

@@ -12,4 +12,5 @@ protocol CurrencyViewModelProtocol {
     func setUpTableView(with tableView: UITableView)
     func finish(shouldMoveToParent: Bool)
     func loadItems()
+    func seacrhBarTextDidChange(text: String)
 }

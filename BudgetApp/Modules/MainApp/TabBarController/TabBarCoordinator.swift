@@ -29,7 +29,7 @@ final class TabBarCoordinator: Coordinator {
         start()
         let currencyCoordinator = CurrencyVCCoordinator(parentNavigationController: rootNavigationController, rootCoordinator: self, container: container)
         childCoordinators.append(currencyCoordinator)
-        currencyCoordinator.start()
+        currencyCoordinator.start(animated: false)
     }
     
     func start() {

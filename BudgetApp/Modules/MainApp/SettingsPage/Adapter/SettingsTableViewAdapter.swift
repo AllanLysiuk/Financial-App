@@ -64,6 +64,7 @@ extension SettingsTableViewAdapter: UITableViewDelegate {
         if indexPath.row == 1 {
             delegate?.openCurrencyScreen()
         }
+        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
     }
     
 }

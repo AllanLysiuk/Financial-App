@@ -21,9 +21,13 @@ final class CurrencyVCCoordinator: Coordinator {
         self.container = container
     }
     
-    func start() {
+    func start(animated: Bool) {
         let vc = CurrencyVCAssembler.makeCurrencyVC(coordinator: self, container: container)
-        parentNavigationController.present(vc, animated: false)
+        parentNavigationController.present(vc, animated: animated)
+    }
+    
+    func start() {
+        assert(false, "Should be open with flag for animation, please use start(animated:)")
     }
     
     func finish() {

@@ -36,7 +36,7 @@ extension SettingsVCCoordinator: SettingsCoordinatorProtocol {
     func openCurrencyScreen() {
         let currencyCoordinator = CurrencyVCCoordinator(parentNavigationController: navigationController, rootCoordinator: self, container: container)
         childCoordinators.append(currencyCoordinator)
-        currencyCoordinator.start()
+        currencyCoordinator.start(animated: true)
     }
 }
 

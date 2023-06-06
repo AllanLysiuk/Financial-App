@@ -24,8 +24,8 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-      // let isRegistered = true
-        let isRegistered = UserDefaults.standard.bool(forKey: UserDefaultsEnum.isRegistered.rawValue)
+       let isRegistered = true
+       // let isRegistered = UserDefaults.standard.bool(forKey: UserDefaultsEnum.isRegistered.rawValue)
 //       let shouldShowOnboarding = false
         let shouldShowOnboarding = UserDefaults.standard.bool(forKey: UserDefaultsEnum.shouldShowOnboarding.rawValue)
        

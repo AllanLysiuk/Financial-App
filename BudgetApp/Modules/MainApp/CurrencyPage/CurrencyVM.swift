@@ -77,8 +77,9 @@ final class CurrencyVM: CurrencyViewModelProtocol {
 extension CurrencyVM: CurrencyAdapterDelegate {
     func currencyChosen(currency: CurrencyElement) {
         let ud = UserDefaults()
-        ud.set("\(currency.key)", forKey: UserDefaultsEnum.currentCurrency.rawValue)
+        ud.set("\(currency.value) - \(currency.key)", forKey: UserDefaultsEnum.currentCurrency.rawValue)
         ud.set(true, forKey: UserDefaultsEnum.userShouldChooseCurrency.rawValue)
+        NotificationCenter.default.post(name: .currencyChanged, object: nil)
         coordinator?.finish(shouldMoveToParent: true)
     }
 }

@@ -35,8 +35,13 @@ final class HomePageVC: UIViewController{
         self.view.backgroundColor = UIColor(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
         tableView.backgroundColor = UIColor(red: 0.961, green: 0.961, blue: 0.961, alpha: 1)
         tableView.separatorColor = UIColor.clear
+        viewModel.initNotificationCenter()
         viewModel.setUpTableView(with: tableView)
         viewModel.loadData(dataNeedsToBeLoaded: true)
+    }
+    
+    deinit {
+        viewModel.deinitNotificationCenter()
     }
     
 }

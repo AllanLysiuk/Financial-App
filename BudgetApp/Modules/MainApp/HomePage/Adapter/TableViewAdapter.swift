@@ -112,8 +112,9 @@ extension TableViewAdapter: UITableViewDataSource {
             }
             return partialResult
         }
-        let currencyCode = UserDefaults.standard.string(forKey: UserDefaultsEnum.currentCurrency.rawValue)
-        cell?.amountLabel.text = "\(sum) \(currencyCode ?? "")"
+        let currentCurrency = UserDefaults.standard.string(forKey: UserDefaultsEnum.currentCurrency.rawValue)
+        let tokens = currentCurrency?.parseCurrencyFromUD()
+        cell?.amountLabel.text = "\(sum) \(tokens?[1] ?? "")"
         
         #warning("так норм писать или нет")
         if let delegate = delegate {

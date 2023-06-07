@@ -17,7 +17,7 @@ final class HomePageAssembler{
     }
     
     private static func makeViewModel( coordinator: HomePageCoordinatorProtocol, container: Container) -> HomePageViewModelProtocol{
-        return HomePageVM(coordinator: coordinator, adapter: makeAdapter(), repoService: makeRepoService(container: container), resControllerService: makeResultControllerService(container: container))
+        return HomePageVM(coordinator: coordinator, adapter: makeAdapter(), repoService: makeRepoService(container: container), resControllerService: makeResultControllerService(container: container), notificationCenter: makeNotificationCenter())
     }
     
     private static func makeAdapter() -> TableViewAdapterProtocol {
@@ -30,6 +30,10 @@ final class HomePageAssembler{
     
     private static func makeResultControllerService(container: Container) -> ResultControllerServiceProtocol {
         return container.resolve()
+    }
+    
+    private static func makeNotificationCenter() -> NotificationCenter {
+        return NotificationCenter.default
     }
     
 }

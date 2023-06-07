@@ -446,8 +446,8 @@
             filePath = "BudgetApp/Modules/MainApp/HomePage/HomePageVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "loadData(dataNeedsToBeLoaded:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -494,8 +494,8 @@
             filePath = "BudgetApp/Modules/MainApp/HomePage/HomePageVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "newCategoryCreated(name:image:sum:considerInBalanceFlag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -574,10 +574,10 @@
             filePath = "BudgetApp/Modules/MainApp/SettingsPage/SettingsVM.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "openCurrencyScreen()"
-            landmarkType = "7">
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -626,6 +626,22 @@
             endingLineNumber = "49"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FC644F06-CC79-4CB2-8F7A-F7B024FDD180"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BudgetApp/Modules/MainApp/SettingsPage/SettingsVM.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "currencyChanged(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

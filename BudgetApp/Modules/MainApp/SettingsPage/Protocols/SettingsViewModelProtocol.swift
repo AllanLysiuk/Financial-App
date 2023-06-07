@@ -10,5 +10,8 @@ import UIKit
 
 protocol SettingsViewModelProtocol {
     func setUpTableView(with tableView: UITableView)
+    func setUpDelegate()
     func loadData()
+    func initNotificationCenter()
+    func deinitNotificationCenter()
 }

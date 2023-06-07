@@ -12,6 +12,8 @@
 		9D7244262A2CAAEB001796E1 /* Currencies+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244242A2CAAEB001796E1 /* Currencies+CoreDataClass.swift */; };
 		9D7244272A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244252A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift */; };
 		9D7244292A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244282A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift */; };
+		9D72442B2A306E18001796E1 /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72442A2A306E18001796E1 /* NotificationCenterExtension.swift */; };
+		9D72442D2A3073AC001796E1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72442C2A3073AC001796E1 /* StringExtension.swift */; };
 		9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */; };
 		9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */; };
 		9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */; };
@@ -165,6 +167,8 @@
 		9D7244242A2CAAEB001796E1 /* Currencies+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currencies+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9D7244252A2CAAEB001796E1 /* Currencies+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currencies+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9D7244282A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPageRepoServiceProtocol.swift; sourceTree = "<group>"; };
+		9D72442A2A306E18001796E1 /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
+		9D72442C2A3073AC001796E1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAddingCell.swift; sourceTree = "<group>"; };
 		9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewAddingCell.xib; sourceTree = "<group>"; };
 		9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVC.swift; sourceTree = "<group>"; };
@@ -353,6 +357,8 @@
 			children = (
 				9D75CD3429C0EE8A00186E75 /* UITextFieldExtension.swift */,
 				9D75CD3629C0F45300186E75 /* UIButtonExtension.swift */,
+				9D72442A2A306E18001796E1 /* NotificationCenterExtension.swift */,
+				9D72442C2A3073AC001796E1 /* StringExtension.swift */,
 			);
 			path = GlobalExtensions;
 			sourceTree = "<group>";
@@ -978,6 +984,7 @@
 				9D86462E29D2EBE700E216A0 /* ReportVM.swift in Sources */,
 				9DEA446429F173140091FB31 /* CategoryCellAssembler.swift in Sources */,
 				9D75CD3729C0F45300186E75 /* UIButtonExtension.swift in Sources */,
+				9D72442D2A3073AC001796E1 /* StringExtension.swift in Sources */,
 				9DCB045229CE104E006D4425 /* TabBarCoordinator.swift in Sources */,
 				9D71FCDD29EE975B0009408C /* NetworkService.swift in Sources */,
 				9DDE57952A2A4A0C00F2CB1A /* CurrencyVCAssembler.swift in Sources */,
@@ -1077,6 +1084,7 @@
 				9DDE57862A27507500F2CB1A /* SettingsTableViewCellDefault.swift in Sources */,
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
 				9DC5CD182A0F864800413531 /* ResultControllerService.swift in Sources */,
+				9D72442B2A306E18001796E1 /* NotificationCenterExtension.swift in Sources */,
 				9DC5CD142A0C285200413531 /* HomePageRepoServiceProtocol.swift in Sources */,
 				9DCB045529CE1103006D4425 /* TabBarRootCoordinatorProtocol.swift in Sources */,
 				9D75144629E8579C00A93406 /* AddNewCategoryVMProtocol.swift in Sources */,

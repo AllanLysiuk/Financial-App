@@ -11,4 +11,6 @@ import UIKit
 protocol HomePageViewModelProtocol {
     func setUpTableView(with tableView: UITableView)
     func loadData(dataNeedsToBeLoaded: Bool)
+    func initNotificationCenter()
+    func deinitNotificationCenter()
 }

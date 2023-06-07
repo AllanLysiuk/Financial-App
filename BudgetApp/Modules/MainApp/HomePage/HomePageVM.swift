@@ -12,20 +12,23 @@ final class HomePageVM: HomePageViewModelProtocol{
     private var adapter: TableViewAdapterProtocol
     private var repoService: HomePageRepoServiceProtocol
     private var resControllerService: HomePageResControllerServiceProtocol
-    
+    private var notificationCenter: NotificationCenter
     private var numberOfSection: Int?
     
     var items: [Sections] = [.income([]), .wallets([]), .costs([])]
+    
     init(
         coordinator: HomePageCoordinatorProtocol,
         adapter: TableViewAdapterProtocol,
         repoService: HomePageRepoServiceProtocol,
-        resControllerService: HomePageResControllerServiceProtocol
+        resControllerService: HomePageResControllerServiceProtocol,
+        notificationCenter: NotificationCenter
     ){
         self.coordinator = coordinator
         self.adapter = adapter
         self.repoService = repoService
         self.resControllerService = resControllerService
+        self.notificationCenter = notificationCenter
         self.resControllerService.setUpDelegate(self)
         self.adapter.setUpCollectionViewDelegate(self)
     }
@@ -35,6 +38,7 @@ final class HomePageVM: HomePageViewModelProtocol{
         items[1] = .wallets(dict[AccountType.wallet.rawValue] ?? [])
         items[2] = .costs(dict[AccountType.cost.rawValue] ?? [])
     }
+    
     func setUpTableView(with tableView: UITableView) {
         adapter.setUpTableView(tableView)
     }
@@ -48,6 +52,22 @@ final class HomePageVM: HomePageViewModelProtocol{
         adapter.setUpItems(items)
     }
     
+    private func currencyChanged() {
+        adapter.reloadData()
+    }
+    
+    func initNotificationCenter() {
+        notificationCenter.addObserver(self, selector: #selector(currencyChanged(_:)), name: .currencyChanged, object: nil)
+    }
+    
+    func deinitNotificationCenter() {
+        notificationCenter.removeObserver(self, name: .currencyChanged, object: nil)
+    }
+    
+    @objc private func currencyChanged(_ notification: Notification) {
+        currencyChanged()
+        
+    }
 }
 
 extension HomePageVM: AddNewCategoryDelegate {
@@ -60,6 +80,7 @@ extension HomePageVM: AddNewCategoryDelegate {
         coordinator?.openAddNewCategoryScene(self, isWalletAdding: isWalletAdding)
     }
 }
+
 //instead of UIimage use string
 extension HomePageVM: AddNewCategoryViewModelDelegate {
     func newCategoryCreated(name: String, image: UIImage, sum: Double, considerInBalanceFlag: Bool) {

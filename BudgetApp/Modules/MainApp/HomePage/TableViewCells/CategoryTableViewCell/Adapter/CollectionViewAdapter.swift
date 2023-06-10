@@ -20,6 +20,9 @@ final class CollectionViewAdapter: NSObject {
     
     //MARK: Private functions
     private func setUpCollectionView() {
+        if numberOfSectionInTableView != 2 {
+            collectionView?.dragDelegate = self
+        }
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         registerCells()
@@ -85,12 +88,33 @@ extension CollectionViewAdapter: UICollectionViewDataSource {
 //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
 //        return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
 //    }
-    #warning("правильно ли я предаю делегаты или нужно сначала передавть во вью модель")
-func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    if (elements?.count ?? 0) == indexPath.last {
-        if let number = numberOfSectionInTableView {
-            delegate?.openAddNewCategoryVC(number)
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if (elements?.count ?? 0) == indexPath.last {
+            if let number = numberOfSectionInTableView {
+                delegate?.openAddNewCategoryVC(number)
+            }
         }
     }
 }
+
+extension CollectionViewAdapter: UICollectionViewDragDelegate {
+    func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
+//        let itemType = elements?[indexPath.item].type ?? ""
+//        let itemProvider = NSItemProvider(object: itemType as NSString)
+//        let dragItem = UIDragItem(itemProvider: itemProvider)
+//        dragItem.localObject = itemType
+        let item = elements?[indexPath.item] ?? Account()
+        let itemProvider = NSItemProvider(object: item)
+        let dragItem = UIDragItem(itemProvider: itemProvider)
+        dragItem.localObject = item
+        return [dragItem]
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, dragPreviewParametersForItemAt indexPath: IndexPath) -> UIDragPreviewParameters? {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "\(CollectionViewCategoryCell.self)", for: indexPath) as! CollectionViewCategoryCell
+        let previewParameters = UIDragPreviewParameters()
+        previewParameters.visiblePath = UIBezierPath(roundedRect: CGRect(x: cell.image?.frame.minX ?? 0, y: cell.image?.frame.minY ?? 0, width: cell.image?.frame.width ?? 60, height: cell.image?.frame.height ?? 60), cornerRadius: 30)
+            return previewParameters
+    }
 }

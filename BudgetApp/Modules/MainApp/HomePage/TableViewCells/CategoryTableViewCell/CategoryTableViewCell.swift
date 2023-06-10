@@ -40,12 +40,12 @@ final class CategoryTableViewCell: UITableViewCell {
         viewModel.setUpCollectionView(with: collectionView)
         viewModel.loadData()
     }
+    
     func setStatus(isExpanded: Bool) {
         if isExpanded {
             buttonImage.transform = CGAffineTransform(rotationAngle: .pi)
         }
     }
-    
     
     func animateIndicator(_ shouldOpen: Bool) {
         var endAngle: CGFloat

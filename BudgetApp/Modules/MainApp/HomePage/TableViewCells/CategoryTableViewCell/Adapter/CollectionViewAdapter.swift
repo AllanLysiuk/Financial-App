@@ -23,6 +23,9 @@ final class CollectionViewAdapter: NSObject {
         if numberOfSectionInTableView != 2 {
             collectionView?.dragDelegate = self
         }
+        if numberOfSectionInTableView != 0 {
+            collectionView?.dropDelegate = self
+        }
         self.collectionView?.delegate = self
         self.collectionView?.dataSource = self
         registerCells()
@@ -100,15 +103,15 @@ extension CollectionViewAdapter: UICollectionViewDataSource {
 
 extension CollectionViewAdapter: UICollectionViewDragDelegate {
     func collectionView(_ collectionView: UICollectionView, itemsForBeginning session: UIDragSession, at indexPath: IndexPath) -> [UIDragItem] {
-//        let itemType = elements?[indexPath.item].type ?? ""
-//        let itemProvider = NSItemProvider(object: itemType as NSString)
-//        let dragItem = UIDragItem(itemProvider: itemProvider)
-//        dragItem.localObject = itemType
-        let item = elements?[indexPath.item] ?? Account()
-        let itemProvider = NSItemProvider(object: item)
-        let dragItem = UIDragItem(itemProvider: itemProvider)
-        dragItem.localObject = item
-        return [dragItem]
+        if (collectionView.cellForItem(at: indexPath) as? CollectionViewCategoryCell) != nil {
+            let item = elements?[indexPath.item] ?? Account()
+            let itemProvider = NSItemProvider(object: item)
+            let dragItem = UIDragItem(itemProvider: itemProvider)
+            dragItem.localObject = item
+            return [dragItem]
+        } else {
+            return [UIDragItem]()
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, dragPreviewParametersForItemAt indexPath: IndexPath) -> UIDragPreviewParameters? {
@@ -118,3 +121,63 @@ extension CollectionViewAdapter: UICollectionViewDragDelegate {
             return previewParameters
     }
 }
+
+extension CollectionViewAdapter: UICollectionViewDropDelegate {
+    #warning("тут меня смущает повторение строчек кода со 129-142 и 164-176")
+    func collectionView(_ collectionView: UICollectionView, dropSessionDidUpdate session: UIDropSession, withDestinationIndexPath destinationIndexPath: IndexPath?) -> UICollectionViewDropProposal {
+        if let destinationIndexPath = destinationIndexPath {
+            for (_, item) in session.items.enumerated() {
+                let acc = item.localObject as? Account
+                if let acc = acc {
+                    if let cell = collectionView.cellForItem(at: destinationIndexPath) as? CollectionViewCategoryCell {
+                        if acc.type == AccountType.income.rawValue && cell.type == AccountType.wallet.rawValue {
+                            return .init(operation: .move)
+                    } else if acc.type == AccountType.wallet.rawValue && cell.type == AccountType.cost.rawValue {
+                        return .init(operation: .move)
+                    } else {
+                        return .init(operation: .cancel)
+                    }
+                    }
+                }
+            }
+            if let _ = collectionView.cellForItem(at: destinationIndexPath ) as? CollectionViewAddingCell {
+                return .init(operation: .cancel)
+            } else {
+                return .init(operation: .move)
+            }
+        } else {
+            return .init(operation: .cancel)
+        }
+       
+        
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, performDropWith coordinator: UICollectionViewDropCoordinator) {
+        var destinationIndexPath: IndexPath
+        if let indexPath = coordinator.destinationIndexPath {
+            destinationIndexPath = indexPath
+        } else {
+            let row = collectionView.numberOfItems(inSection: 0)
+            destinationIndexPath = IndexPath(item: row - 1, section: 0)
+        }
+        spendMoney(coordinator: coordinator, destinationIndexPath: destinationIndexPath, collectionView: collectionView)
+    }
+    
+    private func spendMoney(coordinator: UICollectionViewDropCoordinator, destinationIndexPath: IndexPath, collectionView: UICollectionView) {
+           collectionView.performBatchUpdates {
+               for (_, item) in coordinator.items.enumerated() {
+                    let acc = item.dragItem.localObject as? Account
+                    if let acc = acc {
+                        let cell = collectionView.cellForItem(at: destinationIndexPath) as? CollectionViewCategoryCell
+                        if  acc.type == AccountType.income.rawValue && cell?.type == AccountType.wallet.rawValue {
+                            print("From income to wallet")
+                        } else if acc.type == AccountType.wallet.rawValue && cell?.type == AccountType.cost.rawValue {
+                            print("From wallet to cost")
+                        }
+                    }
+                }
+            }
+    }
+}
+

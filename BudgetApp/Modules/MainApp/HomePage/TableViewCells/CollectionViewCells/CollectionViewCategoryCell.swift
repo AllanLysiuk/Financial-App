@@ -13,10 +13,13 @@ final class CollectionViewCategoryCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView?
     @IBOutlet weak var money: UILabel?
     
+    var type: String!
+    
     func setUp(item: Account?) {
         self.nameOfCell?.text = item?.name ?? ""
         self.image?.image = UIImage(systemName: item?.image ?? "creditcard")
         self.money?.text = "\(item?.sum ?? 0) "
+        self.type = item?.type
     }
     override func awakeFromNib() {
         super.awakeFromNib()

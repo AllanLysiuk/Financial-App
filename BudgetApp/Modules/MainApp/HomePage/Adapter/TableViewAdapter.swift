@@ -20,7 +20,7 @@ final class TableViewAdapter: NSObject {
     private weak var tableView: UITableView?
     private var sections: [Sections] = []
     
-    private weak var delegate: AddNewCategoryDelegate?
+    private weak var delegate: HomePageCollectionAdapterDelegate?
     private var shouldHide: [Bool] = [Bool].init(repeating: false, count: 3)
     var shouldAnimate: [IndexPath] = []
     
@@ -46,7 +46,7 @@ final class TableViewAdapter: NSObject {
 
 //MARK: Adapter Protocol
 extension TableViewAdapter: TableViewAdapterProtocol {
-    func setUpCollectionViewDelegate(_ delegate: AddNewCategoryDelegate) {
+    func setUpCollectionViewDelegate(_ delegate: HomePageCollectionAdapterDelegate) {
         self.delegate = delegate
     }
     

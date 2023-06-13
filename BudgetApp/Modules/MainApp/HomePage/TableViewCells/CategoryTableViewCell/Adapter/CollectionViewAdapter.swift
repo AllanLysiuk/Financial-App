@@ -8,15 +8,16 @@
 import Foundation
 import UIKit
 
-protocol AddNewCategoryDelegate: AnyObject {
+protocol HomePageCollectionAdapterDelegate: AnyObject {
     func openAddNewCategoryVC(_ numberOfSectionInTableView: Int)
+    func openMovementOfAccountScreen(from acc: Account, to accIndexPath: Int, isIncome: Bool)
 }
 
 final class CollectionViewAdapter: NSObject {
     private weak var collectionView: UICollectionView?
     private var elements: [Account]?
     private var numberOfSectionInTableView: Int?
-    private weak var delegate: AddNewCategoryDelegate?
+    private weak var delegate: HomePageCollectionAdapterDelegate?
     
     //MARK: Private functions
     private func setUpCollectionView() {
@@ -41,7 +42,7 @@ final class CollectionViewAdapter: NSObject {
 }
 //MARK: Adapter Protocol
 extension CollectionViewAdapter: CollectionViewAdapterProtocol {
-    func setUpDelegate(_ delegate: AddNewCategoryDelegate) {
+    func setUpDelegate(_ delegate: HomePageCollectionAdapterDelegate) {
         self.delegate = delegate
     }
     
@@ -171,8 +172,10 @@ extension CollectionViewAdapter: UICollectionViewDropDelegate {
                     if let acc = acc {
                         let cell = collectionView.cellForItem(at: destinationIndexPath) as? CollectionViewCategoryCell
                         if  acc.type == AccountType.income.rawValue && cell?.type == AccountType.wallet.rawValue {
+                            delegate?.openMovementOfAccountScreen(from: acc, to: destinationIndexPath.row, isIncome: true)
                             print("From income to wallet")
                         } else if acc.type == AccountType.wallet.rawValue && cell?.type == AccountType.cost.rawValue {
+                            delegate?.openMovementOfAccountScreen(from: acc, to: destinationIndexPath.row, isIncome: false)
                             print("From wallet to cost")
                         }
                     }

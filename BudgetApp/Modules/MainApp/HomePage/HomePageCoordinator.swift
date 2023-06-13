@@ -46,6 +46,12 @@ extension HomePageCoordinator: HomePageCoordinatorProtocol {
         childCoordinators.append(coordinator)
         coordinator.start(delegate: delegate, isWalletAdding: isWalletAdding)
     }
+    
+    func openMovementOfAccountScreen(from accFrom: Account, to accTo: Account) {
+        let coordinator = MovementOfAccountCoordinator(parentNavigationController: navigationController, rootCoordinator: self)
+        childCoordinators.append(coordinator)
+        coordinator.start(accFrom: accFrom, accTo: accTo)
+    }
 }
 
 
@@ -63,4 +69,12 @@ extension HomePageCoordinator: CurrencyRootCoordinatorProtocol {
             tmp === coordinator
         }
     }    
+}
+
+extension HomePageCoordinator: MovementOfAccountRootCoordinatorProtocol {
+    func movementFinished(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
+    }
 }

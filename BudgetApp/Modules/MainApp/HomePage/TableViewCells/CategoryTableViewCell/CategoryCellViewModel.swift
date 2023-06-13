@@ -12,7 +12,7 @@ final class CategoryCellViewModel: CategoryCellViewModelProtocol {
     private var elements: [Account]?
     private var adapter: CollectionViewAdapterProtocol
     
-    init(delegate: AddNewCategoryDelegate, elements: [Account]?, adapter: CollectionViewAdapterProtocol, numberOfSectionInTableView: Int) {
+    init(delegate: HomePageCollectionAdapterDelegate, elements: [Account]?, adapter: CollectionViewAdapterProtocol, numberOfSectionInTableView: Int) {
         self.elements = elements
         self.adapter = adapter
         self.adapter.setUpNumberOfSectionTableView(numberOfSection: numberOfSectionInTableView)

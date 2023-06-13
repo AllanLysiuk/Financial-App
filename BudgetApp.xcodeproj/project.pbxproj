@@ -14,6 +14,14 @@
 		9D7244292A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244282A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift */; };
 		9D72442B2A306E18001796E1 /* NotificationCenterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72442A2A306E18001796E1 /* NotificationCenterExtension.swift */; };
 		9D72442D2A3073AC001796E1 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72442C2A3073AC001796E1 /* StringExtension.swift */; };
+		9D7244302A38AA02001796E1 /* MovementOfAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72442F2A38AA02001796E1 /* MovementOfAccountVC.swift */; };
+		9D7244322A38AA1D001796E1 /* MovementOfAccountVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244312A38AA1D001796E1 /* MovementOfAccountVM.swift */; };
+		9D7244342A38AA30001796E1 /* MovementOfAccountCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244332A38AA30001796E1 /* MovementOfAccountCoordinator.swift */; };
+		9D7244362A38AA42001796E1 /* MovementOfAccountAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244352A38AA42001796E1 /* MovementOfAccountAssembler.swift */; };
+		9D7244382A38AA57001796E1 /* MovementOfAccountVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D7244372A38AA57001796E1 /* MovementOfAccountVC.xib */; };
+		9D72443B2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72443A2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift */; };
+		9D72443D2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72443C2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift */; };
+		9D72443F2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72443E2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift */; };
 		9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */; };
 		9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */; };
 		9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */; };
@@ -169,6 +177,14 @@
 		9D7244282A2CB092001796E1 /* CurrencyPageRepoServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyPageRepoServiceProtocol.swift; sourceTree = "<group>"; };
 		9D72442A2A306E18001796E1 /* NotificationCenterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterExtension.swift; sourceTree = "<group>"; };
 		9D72442C2A3073AC001796E1 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		9D72442F2A38AA02001796E1 /* MovementOfAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountVC.swift; sourceTree = "<group>"; };
+		9D7244312A38AA1D001796E1 /* MovementOfAccountVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountVM.swift; sourceTree = "<group>"; };
+		9D7244332A38AA30001796E1 /* MovementOfAccountCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountCoordinator.swift; sourceTree = "<group>"; };
+		9D7244352A38AA42001796E1 /* MovementOfAccountAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountAssembler.swift; sourceTree = "<group>"; };
+		9D7244372A38AA57001796E1 /* MovementOfAccountVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovementOfAccountVC.xib; sourceTree = "<group>"; };
+		9D72443A2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountVMProtocol.swift; sourceTree = "<group>"; };
+		9D72443C2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D72443E2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAddingCell.swift; sourceTree = "<group>"; };
 		9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewAddingCell.xib; sourceTree = "<group>"; };
 		9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVC.swift; sourceTree = "<group>"; };
@@ -329,6 +345,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D72442E2A38A9B5001796E1 /* MovementOfAccountPage */ = {
+			isa = PBXGroup;
+			children = (
+				9D7244392A38AA63001796E1 /* Protocols */,
+				9D72442F2A38AA02001796E1 /* MovementOfAccountVC.swift */,
+				9D7244312A38AA1D001796E1 /* MovementOfAccountVM.swift */,
+				9D7244332A38AA30001796E1 /* MovementOfAccountCoordinator.swift */,
+				9D7244352A38AA42001796E1 /* MovementOfAccountAssembler.swift */,
+				9D7244372A38AA57001796E1 /* MovementOfAccountVC.xib */,
+			);
+			path = MovementOfAccountPage;
+			sourceTree = "<group>";
+		};
+		9D7244392A38AA63001796E1 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D72443A2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift */,
+				9D72443C2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift */,
+				9D72443E2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		9D75143F29E8570500A93406 /* AddNewCategoryPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,6 +504,7 @@
 				9D86462A29D2EBB700E216A0 /* ReportPage */,
 				9D86461A29D2E60200E216A0 /* HistoryPage */,
 				9DA81A1029C230500020E637 /* HomePage */,
+				9D72442E2A38A9B5001796E1 /* MovementOfAccountPage */,
 				9D75143F29E8570500A93406 /* AddNewCategoryPage */,
 			);
 			path = MainApp;
@@ -938,6 +978,7 @@
 			files = (
 				9DDE57972A2A4A1B00F2CB1A /* CurrencyVC.xib in Resources */,
 				9D75145029E85E9800A93406 /* AddNewCategoryVC.xib in Resources */,
+				9D7244382A38AA57001796E1 /* MovementOfAccountVC.xib in Resources */,
 				9D83836429DC7283008BCE3D /* CollectionViewCategoryCell.xib in Resources */,
 				9DD7D6FC29AE101E0087E8F1 /* LoginVC.xib in Resources */,
 				9DDE577A2A25018300F2CB1A /* SettingsTableViewCellInfo.xib in Resources */,
@@ -966,8 +1007,10 @@
 			files = (
 				9DDE578F2A2A49CE00F2CB1A /* CurrencyVC.swift in Sources */,
 				9DD7D6DB29ADE5FC0087E8F1 /* Coordinator.swift in Sources */,
+				9D72443D2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift in Sources */,
 				9DD7D6DD29ADE6660087E8F1 /* AppCoordinator.swift in Sources */,
 				9DA81A2D29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift in Sources */,
+				9D7244362A38AA42001796E1 /* MovementOfAccountAssembler.swift in Sources */,
 				9D86464929D3147500E216A0 /* SettingsRootCoordinatorProtocol.swift in Sources */,
 				9DCB044E29CE0393006D4425 /* TabBarController.swift in Sources */,
 				9DA81A1329C2313D0020E637 /* HomePageVC.swift in Sources */,
@@ -992,6 +1035,7 @@
 				9DE574F629D8301C00ADA0D2 /* EnumSections.swift in Sources */,
 				9D86461E29D2E63400E216A0 /* HistoryVM.swift in Sources */,
 				9DD7D6E529ADEB1F0087E8F1 /* LoginAssembler.swift in Sources */,
+				9D72443B2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift in Sources */,
 				9D86463229D2EC0D00E216A0 /* ReportVCAssembler.swift in Sources */,
 				9DD7D70429AE20900087E8F1 /* RegisterViewModelProtocol.swift in Sources */,
 				9DA81A2329C5BC670020E637 /* OnBoardingVC.swift in Sources */,
@@ -999,6 +1043,7 @@
 				9DD7D70D29AE25A10087E8F1 /* RegisterAssembler.swift in Sources */,
 				9DDE57932A2A49F800F2CB1A /* CurrencyVCCoordinator.swift in Sources */,
 				9DA81A1529C2319A0020E637 /* HomePageViewModelProtocol.swift in Sources */,
+				9D7244302A38AA02001796E1 /* MovementOfAccountVC.swift in Sources */,
 				9DB802E129B7B19800D57CB4 /* AlertControllerFactoryProtocol.swift in Sources */,
 				9DD7D6EB29ADEEE30087E8F1 /* LoginVM.swift in Sources */,
 				9D7F27F029B25DCF00075C8B /* ForgotPasswordAssembler.swift in Sources */,
@@ -1019,6 +1064,7 @@
 				9DDE57912A2A49E000F2CB1A /* CurrencyVM.swift in Sources */,
 				9DD7D6FA29AE0EE60087E8F1 /* LoginRootCoordinatorProtocol.swift in Sources */,
 				9D86462529D2E6B500E216A0 /* HistoryViewModelProtocol.swift in Sources */,
+				9D7244322A38AA1D001796E1 /* MovementOfAccountVM.swift in Sources */,
 				9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */,
 				9D7F27E029B2478200075C8B /* ForgotPassswordVC.swift in Sources */,
 				9DCB045029CE0D0D006D4425 /* TabBarAssembler.swift in Sources */,
@@ -1041,6 +1087,7 @@
 				9DE574FB29D8385C00ADA0D2 /* CollectionViewCategoryCell.swift in Sources */,
 				9DD7D6FF29AE1F970087E8F1 /* RegisterVC.swift in Sources */,
 				9DA81A1F29C2343F0020E637 /* HomePageRootCoordinatorProtocol.swift in Sources */,
+				9D7244342A38AA30001796E1 /* MovementOfAccountCoordinator.swift in Sources */,
 				9DC5CD062A06551000413531 /* Container.swift in Sources */,
 				9DCB045729CE11C5006D4425 /* TabBarCoordinatorProtocol.swift in Sources */,
 				9DA81A1D29C2334F0020E637 /* HomePageAssembler.swift in Sources */,
@@ -1082,6 +1129,7 @@
 				9DDE579C2A2A4A7C00F2CB1A /* CurrencyCoordinatorProtocol.swift in Sources */,
 				9DA81A2929C5BCA70020E637 /* OnBoardingAssembler.swift in Sources */,
 				9DDE57862A27507500F2CB1A /* SettingsTableViewCellDefault.swift in Sources */,
+				9D72443F2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift in Sources */,
 				9D86463729D2F10D00E216A0 /* ReportCoordinatorProtocol.swift in Sources */,
 				9DC5CD182A0F864800413531 /* ResultControllerService.swift in Sources */,
 				9D72442B2A306E18001796E1 /* NotificationCenterExtension.swift in Sources */,

@@ -26,7 +26,6 @@ final class LoginVM: LoginViewModelProtocol {
     }
     
     func login(email: String?, password: String?) {
-    
         if let email = email, let password = password, (email != "" && password != "") {
             authService.login(email: email, password: password) { error in
                 if let error = error {
@@ -42,7 +41,7 @@ final class LoginVM: LoginViewModelProtocol {
             return
         }
     }
-//    #warning("should close screen")
+
     private func openAlertDefault(title: String?, message: String?, shouldCloseScreen: Bool) {
         let alert = alertFactory.makeAlert(title: title, message: message, actions: [
             .default("Ok", {
@@ -73,7 +72,7 @@ final class LoginVM: LoginViewModelProtocol {
 
 extension LoginVM: ForgotPasswordViewModelDelegate {
     func changePasswordFinished(with email: String) {
-        //not get
+        #warning("not get, name needs to be changed")
         delegate?.getEmail(email)
     }
 }

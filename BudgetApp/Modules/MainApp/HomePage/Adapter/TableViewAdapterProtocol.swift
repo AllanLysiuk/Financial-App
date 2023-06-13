@@ -11,6 +11,6 @@ import UIKit
 protocol TableViewAdapterProtocol {
     func setUpTableView(_ tableView: UITableView)
     func setUpItems(_ items: [Sections])
-    func setUpCollectionViewDelegate(_ delegate: AddNewCategoryDelegate)
+    func setUpCollectionViewDelegate(_ delegate: HomePageCollectionAdapterDelegate)
     func reloadData()
 }

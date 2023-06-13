@@ -11,4 +11,5 @@ protocol HomePageCoordinatorProtocol: AnyObject {
     func finish()
     
     func openAddNewCategoryScene(_ delegate: AddNewCategoryViewModelDelegate, isWalletAdding: Bool)
+    func openMovementOfAccountScreen(from accFrom: Account, to accTo: Account)
 }

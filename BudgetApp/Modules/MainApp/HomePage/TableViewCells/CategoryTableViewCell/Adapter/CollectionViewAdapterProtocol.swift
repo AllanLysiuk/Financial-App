@@ -12,6 +12,6 @@ protocol CollectionViewAdapterProtocol {
     func setUpCollectionView(_ collectionView: UICollectionView)
     func setUpItems(_ items: [Account]?)
     func setUpNumberOfSectionTableView(numberOfSection: Int)
-    func setUpDelegate(_ delegate: AddNewCategoryDelegate)
+    func setUpDelegate(_ delegate: HomePageCollectionAdapterDelegate)
     func reloadData()
 }

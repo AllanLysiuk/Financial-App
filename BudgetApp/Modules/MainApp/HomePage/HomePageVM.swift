@@ -70,7 +70,7 @@ final class HomePageVM: HomePageViewModelProtocol{
     }
 }
 
-extension HomePageVM: AddNewCategoryDelegate {
+extension HomePageVM: HomePageCollectionAdapterDelegate {
     func openAddNewCategoryVC(_ numberOfSectionInTableView: Int) {
         self.numberOfSection = numberOfSectionInTableView
         var isWalletAdding = false
@@ -78,6 +78,19 @@ extension HomePageVM: AddNewCategoryDelegate {
             isWalletAdding = true
         }
         coordinator?.openAddNewCategoryScene(self, isWalletAdding: isWalletAdding)
+    }
+    
+    func openMovementOfAccountScreen(from acc: Account, to accIndexPath: Int, isIncome: Bool) {
+        let section: Sections
+        if isIncome {
+            section = items[1]
+        } else {
+            section = items[2]
+        }
+        let items = section.getArray
+        let accTo = items[accIndexPath]
+        print(accTo)
+        coordinator?.openMovementOfAccountScreen(from: acc, to: accTo)
     }
 }
 

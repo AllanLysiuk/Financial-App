@@ -22,6 +22,7 @@
 		9D72443B2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72443A2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift */; };
 		9D72443D2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72443C2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift */; };
 		9D72443F2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D72443E2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift */; };
+		9D7244412A39CF30001796E1 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D7244402A39CF2F001796E1 /* Montserrat-Bold.ttf */; };
 		9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */; };
 		9D75143E29E5E40700A93406 /* CollectionViewAddingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */; };
 		9D75144129E8576A00A93406 /* AddNewCategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */; };
@@ -185,6 +186,7 @@
 		9D72443A2A38AA85001796E1 /* MovementOfAccountVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountVMProtocol.swift; sourceTree = "<group>"; };
 		9D72443C2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		9D72443E2A38AAB7001796E1 /* MovementOfAccountRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementOfAccountRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D7244402A39CF2F001796E1 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
 		9D75143B29E5E3BA00A93406 /* CollectionViewAddingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAddingCell.swift; sourceTree = "<group>"; };
 		9D75143D29E5E40700A93406 /* CollectionViewAddingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewAddingCell.xib; sourceTree = "<group>"; };
 		9D75144029E8576A00A93406 /* AddNewCategoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCategoryVC.swift; sourceTree = "<group>"; };
@@ -758,6 +760,7 @@
 			isa = PBXGroup;
 			children = (
 				9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */,
+				9D7244402A39CF2F001796E1 /* Montserrat-Bold.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -992,6 +995,7 @@
 				9DD7D6D329ADE3B30087E8F1 /* LaunchScreen.storyboard in Resources */,
 				9DD7D6D029ADE3B30087E8F1 /* Assets.xcassets in Resources */,
 				9DDE57AC2A2A6E7500F2CB1A /* CurrencyTableViewCell.xib in Resources */,
+				9D7244412A39CF30001796E1 /* Montserrat-Bold.ttf in Resources */,
 				9DDE57782A24FCBA00F2CB1A /* SettingsVC.xib in Resources */,
 				9DE574F829D8374D00ADA0D2 /* HomePageVC.xib in Resources */,
 				9DB802EC29BFACCA00D57CB4 /* GoogleService-Info.plist in Resources */,

@@ -28,11 +28,12 @@ final class MovementOfAccountVM: MovementOfAccountVMProtocol {
         coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
     }
     
-    func getImageAccFrom() -> UIImage? {
-        return UIImage(systemName: accFrom.image ?? "creditcard")
+    #warning("Я всегда уверен что здесь будет значение могу ли я использовать форсанврап")
+    func getInfoAccFrom() -> (type: String, sum: Double, name: String, image: UIImage?) {
+        return (accFrom.type ?? "", accFrom.sum, accFrom.name ?? "", UIImage(systemName: accFrom.image ?? "creditcard"))
     }
     
-    func getImageAccTo() -> UIImage? {
-        return UIImage(systemName: accTo.image ?? "creditcard")
+    func getInfoAccTo() -> (type: String, name: String, image: UIImage?) {
+        return (accTo.type ?? "", accTo.name ?? "", UIImage(systemName: accTo.image ?? "creditcard"))
     }
 }

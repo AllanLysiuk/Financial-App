@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FSCalendar
 
 final class MovementOfAccountVC: UIViewController {
     @IBOutlet private weak var screenLabel: UILabel!
@@ -21,7 +22,7 @@ final class MovementOfAccountVC: UIViewController {
     @IBOutlet private weak var rightImageView: UIImageView!
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
-    
+    @IBOutlet private weak var calendarView: FSCalendar!
     private var viewModel: MovementOfAccountVMProtocol
     
     private var currencyCode: String = {
@@ -44,6 +45,7 @@ final class MovementOfAccountVC: UIViewController {
         sumTextField.delegate = self
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
+        setupCalendarView()
         setUpUI()
         fillAccFromInfo()
         fillAccToInfo()
@@ -153,3 +155,41 @@ extension MovementOfAccountVC: UITextFieldDelegate {
        }
     }
 }
+
+
+//extension MovementOfAccountVC: FSCalendarDelegate & FSCalendarDataSource {
+//
+//    private func setupCalendarView() {
+//        calendarView.delegate = self
+//        calendarView.dataSource = self
+//        calendarView.select(Date())
+//        calendarView.scope = .week
+//        calendarView.appearance.titleTodayColor = .blue
+//        calendarView.appearance.subtitleTodayColor = .red
+//        calendarView.appearance.subtitleDefaultColor = .black
+//        calendarView.appearance.selectionColor = .brown
+//        calendarView.appearance.todayColor = .clear
+//        calendarView.appearance.borderRadius = 0.4
+//        calendarView.appearance.calendar.weekdayHeight = 15.0
+//        calendarView.firstWeekday = 2
+//        calendarView.headerHeight = 0.0
+//        calendarView.appearance.headerMinimumDissolvedAlpha = 0.0
+//        calendarView.appearance.subtitleFont = UIFont.systemFont(ofSize: 19.0, weight: .medium)
+//        calendarView.appearance.titleFont = UIFont.systemFont(ofSize: 19.0, weight: .medium)
+//    }
+//
+//    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
+//        return dateToStringFromDate(date: date, format: "E")
+//    }
+//
+//    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+//
+//    }
+//
+//    private func dateToStringFromDate(date: Date, format: String) -> String {
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = format
+//        let stringDate = dateFormatter.string(from: date)
+//        return stringDate
+//    }
+//}

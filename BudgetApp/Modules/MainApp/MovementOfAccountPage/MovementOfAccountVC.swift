@@ -45,7 +45,8 @@ final class MovementOfAccountVC: UIViewController {
         sumTextField.delegate = self
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
-        setupCalendarView()
+        viewModel.setUpCalendarView(with: calendarView)
+        setupCalendarViewUI()
         setUpUI()
         fillAccFromInfo()
         fillAccToInfo()
@@ -119,6 +120,44 @@ final class MovementOfAccountVC: UIViewController {
         }
     }
     
+    private func setupCalendarViewUI() {
+        calendarView?.select(Date())
+        
+        calendarView.scrollDirection = .vertical
+        calendarView?.scope = .week
+        calendarView?.firstWeekday = 2
+        
+        calendarView?.appearance.titleFont = UIFont(name: "Montserrat-SemiBold", size: 32)
+        calendarView?.appearance.headerMinimumDissolvedAlpha = 0
+        calendarView.appearance.titleDefaultColor =  UIColor(red: 0.118, green: 0.11, blue: 0.11, alpha: 0.5)
+        calendarView.appearance.titleSelectionColor = .systemBlue
+        
+        calendarView.appearance.subtitleFont = UIFont(name: "Montserrat-SemiBold", size: 14)
+        calendarView.appearance.subtitleSelectionColor = .systemBlue
+        calendarView.appearance.subtitleDefaultColor = .black
+        
+        calendarView.weekdayHeight = 0.0
+        
+        calendarView.appearance.headerTitleFont = UIFont(name: "Montserrat-SemiBold", size: 16)
+        calendarView.appearance.headerTitleColor = .black
+        calendarView?.appearance.selectionColor = .clear
+        
+//        calendarView?.appearance.todayColor = .green
+//        calendarView?.appearance.titleTodayColor = .blue
+//        calendarView?.appearance.subtitleTodayColor = .red
+//        calendarView?.appearance.subtitleDefaultColor = .black
+//
+
+    
+//
+
+//        calendarView?.headerHeight = 0.0
+//        calendarView?.appearance.headerMinimumDissolvedAlpha = 0.0
+//        calendarView?.appearance.subtitleFont = UIFont.systemFont(ofSize: 19.0, weight: .medium)
+        
+    }
+
+    
     @IBAction func closeButtonDidTap() {
         viewModel.finish(shouldMoveToParent: true)
     }
@@ -157,39 +196,4 @@ extension MovementOfAccountVC: UITextFieldDelegate {
 }
 
 
-//extension MovementOfAccountVC: FSCalendarDelegate & FSCalendarDataSource {
-//
-//    private func setupCalendarView() {
-//        calendarView.delegate = self
-//        calendarView.dataSource = self
-//        calendarView.select(Date())
-//        calendarView.scope = .week
-//        calendarView.appearance.titleTodayColor = .blue
-//        calendarView.appearance.subtitleTodayColor = .red
-//        calendarView.appearance.subtitleDefaultColor = .black
-//        calendarView.appearance.selectionColor = .brown
-//        calendarView.appearance.todayColor = .clear
-//        calendarView.appearance.borderRadius = 0.4
-//        calendarView.appearance.calendar.weekdayHeight = 15.0
-//        calendarView.firstWeekday = 2
-//        calendarView.headerHeight = 0.0
-//        calendarView.appearance.headerMinimumDissolvedAlpha = 0.0
-//        calendarView.appearance.subtitleFont = UIFont.systemFont(ofSize: 19.0, weight: .medium)
-//        calendarView.appearance.titleFont = UIFont.systemFont(ofSize: 19.0, weight: .medium)
-//    }
-//
-//    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
-//        return dateToStringFromDate(date: date, format: "E")
-//    }
-//
-//    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-//
-//    }
-//
-//    private func dateToStringFromDate(date: Date, format: String) -> String {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = format
-//        let stringDate = dateFormatter.string(from: date)
-//        return stringDate
-//    }
-//}
+

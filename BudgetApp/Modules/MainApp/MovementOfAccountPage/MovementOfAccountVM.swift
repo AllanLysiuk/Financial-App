@@ -7,22 +7,34 @@
 
 import Foundation
 import UIKit
+import FSCalendar
 
 final class MovementOfAccountVM: MovementOfAccountVMProtocol {
     
     private weak var coordinator: MovementOfAccountCoordinatorProtocol?
+    private var calendarAdapter: FSCalendarAdapterProtocol
     private var accFrom: Account
     private var accTo: Account
     
     init(
         coordinator: MovementOfAccountCoordinatorProtocol,
         accFrom: Account,
-        accTo: Account
+        accTo: Account,
+        calendarAdapter: FSCalendarAdapterProtocol
     ){
         self.coordinator = coordinator
         self.accFrom = accFrom
         self.accTo = accTo
+        self.calendarAdapter = calendarAdapter
     }
+    
+    func setUpCalendarView(with calendarView: FSCalendar) {
+        calendarAdapter.setUpCalendarView(calendarView)
+    }
+    
+//    func setUpDelegate() {
+//        
+//    }
     
     func finish(shouldMoveToParent: Bool) {
         coordinator?.finish(shouldMoveToParent: shouldMoveToParent)

@@ -17,7 +17,10 @@ final class MovementOfAccountAssembler {
     }
     
     private static func makeVM(coordinator: MovementOfAccountCoordinatorProtocol, accFrom: Account, accTo: Account) -> MovementOfAccountVMProtocol {
-        return MovementOfAccountVM(coordinator: coordinator, accFrom: accFrom, accTo: accTo)
+        return MovementOfAccountVM(coordinator: coordinator, accFrom: accFrom, accTo: accTo, calendarAdapter: makeCalendarAdapter())
     }
     
+    private static func makeCalendarAdapter() -> FSCalendarAdapterProtocol {
+        return FSCalendarAdapter()
+    }
 }

@@ -169,6 +169,8 @@
 		9DEA446929F174BE0091FB31 /* CollectionViewAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446829F174BE0091FB31 /* CollectionViewAdapterProtocol.swift */; };
 		9DEA446F29F3F24F0091FB31 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */; };
 		9DEA447D29F3FE800091FB31 /* Categories.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9DEA447B29F3FE800091FB31 /* Categories.xcdatamodeld */; };
+		9DF88C972A3C6DD300BB3D37 /* FSCalendarAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF88C962A3C6DD200BB3D37 /* FSCalendarAdapter.swift */; };
+		9DF88C992A3C6DE700BB3D37 /* FSCalendarAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF88C982A3C6DE700BB3D37 /* FSCalendarAdapterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -335,6 +337,8 @@
 		9DEA446829F174BE0091FB31 /* CollectionViewAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewAdapterProtocol.swift; sourceTree = "<group>"; };
 		9DEA446E29F3F24F0091FB31 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9DEA447C29F3FE800091FB31 /* Categories.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Categories.xcdatamodel; sourceTree = "<group>"; };
+		9DF88C962A3C6DD200BB3D37 /* FSCalendarAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarAdapter.swift; sourceTree = "<group>"; };
+		9DF88C982A3C6DE700BB3D37 /* FSCalendarAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarAdapterProtocol.swift; sourceTree = "<group>"; };
 		A3784E59614409E19CE91A13 /* Pods_BudgetApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudgetApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -355,6 +359,7 @@
 		9D72442E2A38A9B5001796E1 /* MovementOfAccountPage */ = {
 			isa = PBXGroup;
 			children = (
+				9DF88C952A3C6DB300BB3D37 /* FSCalendarAdapter */,
 				9D7244392A38AA63001796E1 /* Protocols */,
 				9D72442F2A38AA02001796E1 /* MovementOfAccountVC.swift */,
 				9D7244312A38AA1D001796E1 /* MovementOfAccountVM.swift */,
@@ -921,13 +926,21 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		9DF88C952A3C6DB300BB3D37 /* FSCalendarAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				9DF88C962A3C6DD200BB3D37 /* FSCalendarAdapter.swift */,
+				9DF88C982A3C6DE700BB3D37 /* FSCalendarAdapterProtocol.swift */,
+			);
+			path = FSCalendarAdapter;
+			sourceTree = "<group>";
+		};
 		CB3A4FFBF5FE25206686E075 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				8A490714539FDC3382BC1050 /* Pods-BudgetApp.debug.xcconfig */,
 				3A25978E084D869F84F0D02F /* Pods-BudgetApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1188,6 +1201,7 @@
 				9D75144329E8577E00A93406 /* AddNewCategoryVM.swift in Sources */,
 				9D86462229D2E65F00E216A0 /* HistoryVCAssembler.swift in Sources */,
 				9DD7D71129AE28800087E8F1 /* RegisterRootCoordinatorProtocol.swift in Sources */,
+				9DF88C992A3C6DE700BB3D37 /* FSCalendarAdapterProtocol.swift in Sources */,
 				9DE574EF29D4B92E00ADA0D2 /* OnBoardingPage.swift in Sources */,
 				9D75CD3529C0EE8A00186E75 /* UITextFieldExtension.swift in Sources */,
 				9D86463929D2F1A300E216A0 /* ReportRootCoordinatorProtocol.swift in Sources */,
@@ -1212,6 +1226,7 @@
 				9DEA446F29F3F24F0091FB31 /* CoreDataStack.swift in Sources */,
 				9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */,
 				9DC5CD082A06552B00413531 /* ServiceConfigurations.swift in Sources */,
+				9DF88C972A3C6DD300BB3D37 /* FSCalendarAdapter.swift in Sources */,
 				9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,
 				9D86464029D313EC00E216A0 /* SettingsVCCoordinator.swift in Sources */,

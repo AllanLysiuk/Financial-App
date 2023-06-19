@@ -10,5 +10,6 @@ import FSCalendar
 
 protocol FSCalendarAdapterProtocol {
     func setUpCalendarView(_ cakendarView: FSCalendar)
-//    func setUpDelegate(_ delegate: SettingsAdapterDelegate)
+    func selectDate(date: Date)
+ //   func setUpDelegate(_ delegate: MovAccAdapterDelegate)
 }

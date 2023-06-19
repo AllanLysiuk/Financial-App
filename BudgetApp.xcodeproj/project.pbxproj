@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		12D9197F9C51E3CC872AC263 /* Pods_BudgetApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3784E59614409E19CE91A13 /* Pods_BudgetApp.framework */; };
+		9D66164E2A3F3FE600B43125 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66164D2A3F3FE600B43125 /* CalendarVC.swift */; };
+		9D6616502A3F3FF400B43125 /* CalendarVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66164F2A3F3FF400B43125 /* CalendarVM.swift */; };
+		9D6616522A3F405800B43125 /* CalendarVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D6616512A3F405800B43125 /* CalendarVC.xib */; };
+		9D6616542A3F406C00B43125 /* CalendarVCCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6616532A3F406C00B43125 /* CalendarVCCoordinator.swift */; };
+		9D6616562A3F408600B43125 /* CalendarVCAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6616552A3F408500B43125 /* CalendarVCAssembler.swift */; };
+		9D6616582A3F409900B43125 /* CalendarVMProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6616572A3F409900B43125 /* CalendarVMProtocol.swift */; };
+		9D66165A2A3F40BD00B43125 /* CalendarCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6616592A3F40BD00B43125 /* CalendarCoordinatorProtocol.swift */; };
+		9D66165C2A3F40D100B43125 /* CalendarRootCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66165B2A3F40D000B43125 /* CalendarRootCoordinatorProtocol.swift */; };
+		9D66165F2A3F46FA00B43125 /* CalendarPageAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D66165E2A3F46FA00B43125 /* CalendarPageAdapter.swift */; };
+		9D6616612A3F470B00B43125 /* CalendarPageAdapterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6616602A3F470B00B43125 /* CalendarPageAdapterProtocol.swift */; };
+		9D6616632A40501E00B43125 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D6616622A40501D00B43125 /* Montserrat-Regular.ttf */; };
 		9D71FCDD29EE975B0009408C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71FCDC29EE975B0009408C /* NetworkService.swift */; };
 		9D71FCE029EE99D70009408C /* CurrencyElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D71FCDF29EE99D70009408C /* CurrencyElement.swift */; };
 		9D7244262A2CAAEB001796E1 /* Currencies+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D7244242A2CAAEB001796E1 /* Currencies+CoreDataClass.swift */; };
@@ -176,6 +187,17 @@
 /* Begin PBXFileReference section */
 		3A25978E084D869F84F0D02F /* Pods-BudgetApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetApp.release.xcconfig"; path = "Target Support Files/Pods-BudgetApp/Pods-BudgetApp.release.xcconfig"; sourceTree = "<group>"; };
 		8A490714539FDC3382BC1050 /* Pods-BudgetApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetApp.debug.xcconfig"; path = "Target Support Files/Pods-BudgetApp/Pods-BudgetApp.debug.xcconfig"; sourceTree = "<group>"; };
+		9D66164D2A3F3FE600B43125 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		9D66164F2A3F3FF400B43125 /* CalendarVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVM.swift; sourceTree = "<group>"; };
+		9D6616512A3F405800B43125 /* CalendarVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarVC.xib; sourceTree = "<group>"; };
+		9D6616532A3F406C00B43125 /* CalendarVCCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarVCCoordinator.swift; path = BudgetApp/Modules/MainApp/CalendarPage/CalendarVCCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		9D6616552A3F408500B43125 /* CalendarVCAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVCAssembler.swift; sourceTree = "<group>"; };
+		9D6616572A3F409900B43125 /* CalendarVMProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CalendarVMProtocol.swift; path = BudgetApp/Modules/MainApp/CalendarPage/CalendarVMProtocol.swift; sourceTree = SOURCE_ROOT; };
+		9D6616592A3F40BD00B43125 /* CalendarCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D66165B2A3F40D000B43125 /* CalendarRootCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarRootCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		9D66165E2A3F46FA00B43125 /* CalendarPageAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPageAdapter.swift; sourceTree = "<group>"; };
+		9D6616602A3F470B00B43125 /* CalendarPageAdapterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarPageAdapterProtocol.swift; sourceTree = "<group>"; };
+		9D6616622A40501D00B43125 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		9D71FCDC29EE975B0009408C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		9D71FCDF29EE99D70009408C /* CurrencyElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyElement.swift; sourceTree = "<group>"; };
 		9D7244242A2CAAEB001796E1 /* Currencies+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Currencies+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -356,6 +378,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9D66164B2A3F3F2E00B43125 /* CalendarPage */ = {
+			isa = PBXGroup;
+			children = (
+				9D66165D2A3F46E300B43125 /* Adapter */,
+				9D66164C2A3F3FD500B43125 /* Protocols */,
+				9D66164D2A3F3FE600B43125 /* CalendarVC.swift */,
+				9D66164F2A3F3FF400B43125 /* CalendarVM.swift */,
+				9D6616532A3F406C00B43125 /* CalendarVCCoordinator.swift */,
+				9D6616552A3F408500B43125 /* CalendarVCAssembler.swift */,
+				9D6616512A3F405800B43125 /* CalendarVC.xib */,
+			);
+			path = CalendarPage;
+			sourceTree = "<group>";
+		};
+		9D66164C2A3F3FD500B43125 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				9D6616572A3F409900B43125 /* CalendarVMProtocol.swift */,
+				9D6616592A3F40BD00B43125 /* CalendarCoordinatorProtocol.swift */,
+				9D66165B2A3F40D000B43125 /* CalendarRootCoordinatorProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		9D66165D2A3F46E300B43125 /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				9D66165E2A3F46FA00B43125 /* CalendarPageAdapter.swift */,
+				9D6616602A3F470B00B43125 /* CalendarPageAdapterProtocol.swift */,
+			);
+			path = Adapter;
+			sourceTree = "<group>";
+		};
 		9D72442E2A38A9B5001796E1 /* MovementOfAccountPage */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +565,7 @@
 		9DA81A0F29C230120020E637 /* MainApp */ = {
 			isa = PBXGroup;
 			children = (
+				9D66164B2A3F3F2E00B43125 /* CalendarPage */,
 				9DDE578D2A2A49AB00F2CB1A /* CurrencyPage */,
 				9DCB044C29CE0361006D4425 /* TabBarController */,
 				9D86463A29D313AD00E216A0 /* SettingsPage */,
@@ -771,6 +827,7 @@
 		9DDE575E2A20B66000F2CB1A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				9D6616622A40501D00B43125 /* Montserrat-Regular.ttf */,
 				9DDE575C2A20B64100F2CB1A /* Montserrat-SemiBold.ttf */,
 				9D7244402A39CF2F001796E1 /* Montserrat-Bold.ttf */,
 			);
@@ -1031,7 +1088,9 @@
 				9D83835E29DC6F10008BCE3D /* CategoryTableViewCell.xib in Resources */,
 				9D7F27F429B261A100075C8B /* ForgotPasswordVC.xib in Resources */,
 				9D80152629C8A6C100C22EE1 /* OnBoardingPageList.xib in Resources */,
+				9D6616632A40501E00B43125 /* Montserrat-Regular.ttf in Resources */,
 				9D7F278A29AE51C000075C8B /* RegisterVC.xib in Resources */,
+				9D6616522A3F405800B43125 /* CalendarVC.xib in Resources */,
 				9DD7D6D329ADE3B30087E8F1 /* LaunchScreen.storyboard in Resources */,
 				9DD7D6D029ADE3B30087E8F1 /* Assets.xcassets in Resources */,
 				9DDE57AC2A2A6E7500F2CB1A /* CurrencyTableViewCell.xib in Resources */,
@@ -1093,6 +1152,7 @@
 			files = (
 				9DDE578F2A2A49CE00F2CB1A /* CurrencyVC.swift in Sources */,
 				9DD7D6DB29ADE5FC0087E8F1 /* Coordinator.swift in Sources */,
+				9D6616542A3F406C00B43125 /* CalendarVCCoordinator.swift in Sources */,
 				9D72443D2A38AA9B001796E1 /* MovementOfAccountCoordinatorProtocol.swift in Sources */,
 				9DD7D6DD29ADE6660087E8F1 /* AppCoordinator.swift in Sources */,
 				9DA81A2D29C5BFD60020E637 /* OnBoardingRootCoordinatorProtocol.swift in Sources */,
@@ -1154,12 +1214,15 @@
 				9D80152429C8A56800C22EE1 /* OnBoardingPageList.swift in Sources */,
 				9D7F27E029B2478200075C8B /* ForgotPassswordVC.swift in Sources */,
 				9DCB045029CE0D0D006D4425 /* TabBarAssembler.swift in Sources */,
+				9D66165A2A3F40BD00B43125 /* CalendarCoordinatorProtocol.swift in Sources */,
+				9D6616562A3F408600B43125 /* CalendarVCAssembler.swift in Sources */,
 				9D7F27E829B2480000075C8B /* ForgotPasswordAuthServiceProtocol.swift in Sources */,
 				9D86463C29D313C800E216A0 /* SettingsVC.swift in Sources */,
 				9DA81A2B29C5BCD40020E637 /* OnBoardingViewModelProtocol.swift in Sources */,
 				9D86461C29D2E62700E216A0 /* HistoryVC.swift in Sources */,
 				9D8D43582A04FF7C00897829 /* MovementOfAccount+CoreDataProperties.swift in Sources */,
 				9DDE57822A25085400F2CB1A /* SettingsTableViewAdapterProtocol.swift in Sources */,
+				9D66165F2A3F46FA00B43125 /* CalendarPageAdapter.swift in Sources */,
 				9DD7D70B29AE251A0087E8F1 /* RegisterCoordinator.swift in Sources */,
 				9DA81A1929C232970020E637 /* HomePageCoordinatorProtocol.swift in Sources */,
 				9D75144C29E85AFE00A93406 /* AddNewCategoryAssembler.swift in Sources */,
@@ -1176,8 +1239,10 @@
 				9D7244342A38AA30001796E1 /* MovementOfAccountCoordinator.swift in Sources */,
 				9DC5CD062A06551000413531 /* Container.swift in Sources */,
 				9DCB045729CE11C5006D4425 /* TabBarCoordinatorProtocol.swift in Sources */,
+				9D66165C2A3F40D100B43125 /* CalendarRootCoordinatorProtocol.swift in Sources */,
 				9DA81A1D29C2334F0020E637 /* HomePageAssembler.swift in Sources */,
 				9D7F27EE29B25D9700075C8B /* ForgotPasswordCoordinator.swift in Sources */,
+				9D6616612A3F470B00B43125 /* CalendarPageAdapterProtocol.swift in Sources */,
 				9DEA446129F171B60091FB31 /* CategoryCellViewModelProtocol.swift in Sources */,
 				9DD7D6EE29ADEF130087E8F1 /* LoginViewModelProtocol.swift in Sources */,
 				9DD7D6F129ADEFB00087E8F1 /* AuthService.swift in Sources */,
@@ -1189,6 +1254,7 @@
 				9DC5CD162A0D579D00413531 /* UserDefaultsEnum.swift in Sources */,
 				9D75143C29E5E3BA00A93406 /* CollectionViewAddingCell.swift in Sources */,
 				9D75144829E8587C00A93406 /* AddNewCategoryCoordinator.swift in Sources */,
+				9D6616582A3F409900B43125 /* CalendarVMProtocol.swift in Sources */,
 				9DDE57A72A2A6DCB00F2CB1A /* CurrencyTableViewCellModel.swift in Sources */,
 				9DE574F429D82E2300ADA0D2 /* TableViewAdapterProtocol.swift in Sources */,
 				9DDE57AA2A2A6E6600F2CB1A /* CurrencyTableViewCell.swift in Sources */,
@@ -1226,11 +1292,13 @@
 				9DEA446F29F3F24F0091FB31 /* CoreDataStack.swift in Sources */,
 				9DE574F229D82E0B00ADA0D2 /* TableViewAdapter.swift in Sources */,
 				9DC5CD082A06552B00413531 /* ServiceConfigurations.swift in Sources */,
+				9D6616502A3F3FF400B43125 /* CalendarVM.swift in Sources */,
 				9DF88C972A3C6DD300BB3D37 /* FSCalendarAdapter.swift in Sources */,
 				9D86464729D3146300E216A0 /* SettingsCoordinatorProtocol.swift in Sources */,
 				9DD7D70F29AE27150087E8F1 /* RegisterCoordinatorProtocol.swift in Sources */,
 				9D86464029D313EC00E216A0 /* SettingsVCCoordinator.swift in Sources */,
 				9D86463029D2EBFA00E216A0 /* ReportVCCoordinator.swift in Sources */,
+				9D66164E2A3F3FE600B43125 /* CalendarVC.swift in Sources */,
 				9DA81A2529C5BC7A0020E637 /* OnBoardingVM.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

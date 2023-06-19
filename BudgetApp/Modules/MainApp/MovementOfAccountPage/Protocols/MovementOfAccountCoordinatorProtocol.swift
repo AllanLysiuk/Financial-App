@@ -9,4 +9,5 @@ import Foundation
 
 protocol MovementOfAccountCoordinatorProtocol: AnyObject {
     func finish(shouldMoveToParent: Bool)
+    func openCalendarVC(delegate: MovAccCalendarDelegate)
 }

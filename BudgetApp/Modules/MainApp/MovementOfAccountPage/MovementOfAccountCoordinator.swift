@@ -13,7 +13,11 @@ final class MovementOfAccountCoordinator: Coordinator {
     private var rootCoordinator: MovementOfAccountRootCoordinatorProtocol
     var childCoordinators: [Coordinator] = []
     
-    init(parentNavigationController: UINavigationController, rootCoordinator: MovementOfAccountRootCoordinatorProtocol) {
+    private var rootVC: UIViewController?
+    init(
+        parentNavigationController: UINavigationController,
+        rootCoordinator: MovementOfAccountRootCoordinatorProtocol
+    ) {
         self.rootCoordinator = rootCoordinator
         self.parentNavigationController = parentNavigationController
     }
@@ -24,6 +28,7 @@ final class MovementOfAccountCoordinator: Coordinator {
     
     func start(accFrom: Account, accTo: Account) {
         let vc = MovementOfAccountAssembler.makeMovementVC(coordinator: self, accFrom: accFrom, accTo: accTo)
+        rootVC = vc
         parentNavigationController.present(vc, animated: true)
     }
     
@@ -34,10 +39,26 @@ final class MovementOfAccountCoordinator: Coordinator {
 }
 
 extension MovementOfAccountCoordinator: MovementOfAccountCoordinatorProtocol {
+
     func finish(shouldMoveToParent: Bool) {
         if shouldMoveToParent {
             parentNavigationController.dismiss(animated: true)
         }
         finish()
+    }
+    
+    func openCalendarVC(delegate: MovAccCalendarDelegate) {
+        let coordinator = CalendarVCCoordinator(rootVC: rootVC!, rootCoordinator: self)
+        childCoordinators.append(coordinator)
+        coordinator.start(delegate: delegate)
+    }
+    
+}
+
+extension MovementOfAccountCoordinator: CalendarRootCoordinatorProtocol {
+    func dateSelectingFinished(_ coordinator: Coordinator) {
+        childCoordinators.removeAll { tmp in
+            tmp === coordinator
+        }
     }
 }

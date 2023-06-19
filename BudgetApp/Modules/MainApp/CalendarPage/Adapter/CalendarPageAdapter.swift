@@ -1,24 +1,23 @@
 //
-//  FSCalendarAdapter.swift
+//  CalendarPageAdapter.swift
 //  BudgetApp
 //
-//  Created by Allan on 16.06.23.
+//  Created by Allan on 18.06.23.
 //
 
 import Foundation
-import UIKit
 import FSCalendar
 
-//protocol MovAccAdapterDelegate: AnyObject {
-//    func dateSelected(date: Date)
-//}
+protocol CalendarVMAdapterDelegate: AnyObject {
+    func dateSelected(date: Date)
+}
 
-final class FSCalendarAdapter: NSObject {
+final class CalendarPageAdapter: NSObject {
     private weak var calendarView: FSCalendar?
-   // private weak var delegate: MovAccAdapterDelegate?
+    private weak var delegate: CalendarVMAdapterDelegate?
     
     private func setUPCalendarView() {
-       calendarView?.delegate = self
+        calendarView?.delegate = self
         calendarView?.dataSource = self
     }
     
@@ -30,30 +29,27 @@ final class FSCalendarAdapter: NSObject {
     }
 }
 
-extension FSCalendarAdapter: FSCalendarAdapterProtocol {
+extension CalendarPageAdapter: CalendarPageAdapterProtocol {
     
     func setUpCalendarView(_ calendarView: FSCalendar) {
         self.calendarView = calendarView
-       setUPCalendarView()
+        setUPCalendarView()
     }
     
-    func selectDate(date: Date) {
-        calendarView?.select(date)
+    func setUpDelegate(_ delegate: CalendarVMAdapterDelegate) {
+        self.delegate = delegate
     }
-//    func setUpDelegate(_ delegate: MovAccAdapterDelegate) {
-//        self.delegate = delegate
-//    }
     
 }
 
-extension FSCalendarAdapter: FSCalendarDataSource {
+extension CalendarPageAdapter: FSCalendarDataSource {
     func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
         return dateToStringFromDate(date: date, format: "E")
     }
 }
 
-extension FSCalendarAdapter: FSCalendarDelegate {
+extension CalendarPageAdapter: FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-
+        delegate?.dateSelected(date: date)
     }
 }

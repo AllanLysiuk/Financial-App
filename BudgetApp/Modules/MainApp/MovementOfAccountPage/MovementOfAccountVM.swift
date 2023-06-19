@@ -32,12 +32,12 @@ final class MovementOfAccountVM: MovementOfAccountVMProtocol {
         calendarAdapter.setUpCalendarView(calendarView)
     }
     
-//    func setUpDelegate() {
-//        
-//    }
+    func saveButtonDidTap(date: Date) {
+        coordinator?.finish(shouldMoveToParent: true)
+    }
     
-    func finish(shouldMoveToParent: Bool) {
-        coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
+    func buttonCalendarDidTap() {
+        coordinator?.openCalendarVC(delegate: self)
     }
     
     #warning("Я всегда уверен что здесь будет значение могу ли я использовать форсанврап")
@@ -48,4 +48,15 @@ final class MovementOfAccountVM: MovementOfAccountVMProtocol {
     func getInfoAccTo() -> (type: String, name: String, image: UIImage?) {
         return (accTo.type ?? "", accTo.name ?? "", UIImage(systemName: accTo.image ?? "creditcard"))
     }
+    
+    func finish(shouldMoveToParent: Bool) {
+        coordinator?.finish(shouldMoveToParent: shouldMoveToParent)
+    }
+}
+
+extension MovementOfAccountVM: MovAccCalendarDelegate {
+    func dateSelected(date: Date) {
+        self.calendarAdapter.selectDate(date: date)
+    }
+
 }

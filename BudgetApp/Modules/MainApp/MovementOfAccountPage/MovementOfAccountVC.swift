@@ -23,6 +23,7 @@ final class MovementOfAccountVC: UIViewController {
     @IBOutlet private weak var closeButton: UIButton!
     @IBOutlet private weak var saveButton: UIButton!
     @IBOutlet private weak var calendarView: FSCalendar!
+    
     private var viewModel: MovementOfAccountVMProtocol
     
     private var currencyCode: String = {
@@ -43,13 +44,8 @@ final class MovementOfAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         sumTextField.delegate = self
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGesture)
         viewModel.setUpCalendarView(with: calendarView)
-        setupCalendarViewUI()
-        setUpUI()
-        fillAccFromInfo()
-        fillAccToInfo()
+        setUPAllUI()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -57,6 +53,24 @@ final class MovementOfAccountVC: UIViewController {
         if parent == nil {
             viewModel.finish(shouldMoveToParent: false)
         }
+    }
+    
+    private func setUPAllUI(){
+        setUPDoneButtonKeybard()
+        setupCalendarViewUI()
+        setUpUI()
+        fillAccFromInfo()
+        fillAccToInfo()
+    }
+    
+    private func setUPDoneButtonKeybard() {
+        let keypadToolbar: UIToolbar = UIToolbar()
+        keypadToolbar.items=[
+            UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: textField, action: #selector(doneButtonKeyboardDidTap(_:))),
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: self, action: nil)
+        ]
+        keypadToolbar.sizeToFit()
+        sumTextField.inputAccessoryView = keypadToolbar
     }
     
     private func setUpUI() {
@@ -122,51 +136,50 @@ final class MovementOfAccountVC: UIViewController {
     
     private func setupCalendarViewUI() {
         calendarView?.select(Date())
-        
-        calendarView.scrollDirection = .vertical
+        calendarView?.scrollDirection = .vertical
         calendarView?.scope = .week
         calendarView?.firstWeekday = 2
-        
-        calendarView?.appearance.titleFont = UIFont(name: "Montserrat-SemiBold", size: 32)
+
+        calendarView?.appearance.headerTitleFont = UIFont(name: "Montserrat-SemiBold", size: 16)
+        calendarView?.appearance.headerTitleColor = UIColor(red: 0.157, green: 0.157, blue: 0.161, alpha: 1)
         calendarView?.appearance.headerMinimumDissolvedAlpha = 0
-        calendarView.appearance.titleDefaultColor =  UIColor(red: 0.118, green: 0.11, blue: 0.11, alpha: 0.5)
-        calendarView.appearance.titleSelectionColor = .systemBlue
         
-        calendarView.appearance.subtitleFont = UIFont(name: "Montserrat-SemiBold", size: 14)
-        calendarView.appearance.subtitleSelectionColor = .systemBlue
-        calendarView.appearance.subtitleDefaultColor = .black
+        calendarView?.appearance.titleFont = UIFont(name: "Montserrat-SemiBold", size: 30)
+        calendarView?.appearance.titleDefaultColor =  UIColor(red: 0.118, green: 0.11, blue: 0.11, alpha: 0.5)
+        calendarView?.appearance.titleSelectionColor = UIColor(red: 0.204, green: 0.412, blue: 0.945, alpha: 1)
+        calendarView?.appearance.titleTodayColor = .red
+
         
+        calendarView?.appearance.subtitleFont = UIFont(name: "Montserrat-SemiBold", size: 14)
+        calendarView?.appearance.subtitleSelectionColor = UIColor(red: 0.204, green: 0.412, blue: 0.945, alpha: 1)
+        calendarView?.appearance.subtitleDefaultColor = UIColor(red: 0.157, green: 0.157, blue: 0.161, alpha: 1)
+        calendarView?.appearance.subtitleTodayColor = .red
+
         calendarView.weekdayHeight = 0.0
-        
-        calendarView.appearance.headerTitleFont = UIFont(name: "Montserrat-SemiBold", size: 16)
-        calendarView.appearance.headerTitleColor = .black
+
         calendarView?.appearance.selectionColor = .clear
-        
-//        calendarView?.appearance.todayColor = .green
-//        calendarView?.appearance.titleTodayColor = .blue
-//        calendarView?.appearance.subtitleTodayColor = .red
-//        calendarView?.appearance.subtitleDefaultColor = .black
-//
-
-    
-//
-
-//        calendarView?.headerHeight = 0.0
-//        calendarView?.appearance.headerMinimumDissolvedAlpha = 0.0
-//        calendarView?.appearance.subtitleFont = UIFont.systemFont(ofSize: 19.0, weight: .medium)
-        
+        calendarView?.appearance.todayColor = .clear
     }
 
+    
     
     @IBAction func closeButtonDidTap() {
         viewModel.finish(shouldMoveToParent: true)
     }
     
     @IBAction func saveButtonDidTap() {
-        viewModel.finish(shouldMoveToParent: true)
+        viewModel.saveButtonDidTap(date: calendarView.selectedDate ?? Date())
     }
-
+    
+    @IBAction func buttonCalendarDidTap() {
+        viewModel.buttonCalendarDidTap()
+    }
+    
+    @objc private func doneButtonKeyboardDidTap(_ sender: UIBarButtonItem) {
+        sumTextField.resignFirstResponder()
+    }
 }
+
 #warning("сомневаюсь в последних двух методах")
 extension MovementOfAccountVC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -194,6 +207,3 @@ extension MovementOfAccountVC: UITextFieldDelegate {
        }
     }
 }
-
-
-
